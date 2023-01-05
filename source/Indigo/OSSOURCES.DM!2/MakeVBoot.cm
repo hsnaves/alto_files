@@ -1,0 +1,1 @@
+BuildBoot NewOSv.Map/L NewOSv.Boot/O DiskBoot.run/B 300/N OSTop.xc/S OSTop.Run/E OSVMain.Run/EBootFrom NewOSv.bootCopy NewOSv.boot _ Sys.bootInstall Sys.boot

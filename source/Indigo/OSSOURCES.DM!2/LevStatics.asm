@@ -1,0 +1,1 @@
+; LevStatics.asm - just to mark beginning of os statics; Copyright Xerox Corporation 1979; Last modified November 1, 1978  12:37 AM by Boggs.ent LevStatics	.srelLevStatics:	.LevStatics	.nrel.LevStatics:	0	.end

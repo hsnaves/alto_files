@@ -1,0 +1,1 @@
+//// User definitions for file searching package// last edited June 16, 1977  4:41 PM//// Copyright Xerox Corporation 1979manifest	// character classes[	classOther = -1	classExit = -2	classSkip = -3	classRecord = -4]

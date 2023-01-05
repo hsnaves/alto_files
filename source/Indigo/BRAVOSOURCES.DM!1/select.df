@@ -1,0 +1,1 @@
+// select.dfmanifest	[ uloff = 0;	ulunknown = 1;	ulmode1 = 2;	ulmode2 = 3;	sell = (offset SEL.last)/16	xbugloc = #424;	ybugloc = #425;	bug = #177030;	curmap = #431;	snone = 0;	sline = 1;	sreset = 2;	sdown = 3;	sup = 4;	sjump = 5;	schar = 6;	sword = 7;	sstar = 8;	sph = 9;	scaret = 10;	]structure LT:	[	cMin	word;	cCyc	word;	]

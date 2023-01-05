@@ -1,0 +1,1 @@
+; DummyLog.asm -- the Log feature was de-implemented in OS 14; Copyright Xerox Corporation 1979; Last modified December 31, 1977  5:10 PM by Boggs.ent LogOpen LogClose MakeLogEntry	.srelLogOpen: DummyLogClose: DummyMakeLogEntry: Dummy	.nrelDummy: jmp 1 3	.end

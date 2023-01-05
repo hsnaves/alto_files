@@ -1,0 +1,279 @@
+// BuildBoot.bcpl -- Ed McCreight
+
+//	A program to create a type B boot file
+//	from run files and segment files.// Copyright Xerox Corporation 1979// Last modified December 22, 1978  5:44 PM by Boggsget "Streams.d"get "BcplFiles.d"get "AltoFileSys.d"
+external[// incoming proceduresSetupReadParam; 
+ReadParam; 
+EvalParamPutTemplateReadBlock; WriteBlock; GetCurrentFa; RealDiskDAOpenFile; PositionPage; PositionPtr; SetFilePosResets; Closes; Endofs; Gets; PutsCreateDisplayStream; ShowDisplayStream; SetLmargWss; Ws; Usc; ReadCalendar// incoming staticsfpComCm; keys; sysDisk
+]
+
+static[currentLC = 0; maxLC = 0defaultStartAddr = 1000blayoutloc; layoutVec; useLayout = falsetxtStr; lstStr; outStrdspStr; dspCnt = 0
+]
+
+
+manifest[
+ts = 0		// it is a real os word stream
+tv = 2		// it is a fake word stream
+tz = 1		// it is a block of zeros
+bufSize = 8192	// a big bufferdspLines = 30]
+
+//----------------------------------------------------------------------------
+let BuildBoot() be
+//----------------------------------------------------------------------------
+[
+Ws("Buildboot of December 22, 1978.....*n")let comCm = OpenFile("Com.Cm", ksTypeReadOnly, 1, 0, fpComCm)
+
+let switchVec, stringVec = vec 256, vec 256
+SetupReadParam(stringVec, switchVec, comCm, 0)
+until ReadParam(0, -1) eq -1 do   if switchVec!0 ne 0 & (switchVec!1 eq $O % switchVec!1 eq $o) breakoutStr = EvalParam(stringVec, "OW", "Output file: ", 0)
+Resets(comCm); 
+ReadParam()	// skip over program nameuntil ReadParam(0, -1) eq -1 % lstStr ne 0 do   if switchVec!0 ne 0 & (switchVec!1 eq $L % switchVec!1 eq $l) then
+       lstStr = EvalParam(stringVec, "OC", "Listing file: ", 0)
+
+let da = vec 20000dspStr = CreateDisplayStream(dspLines, da, 20000)ShowDisplayStream(dspStr)SetLmarg(dspStr, 40b)let v = vec lST; txtStr = vtxtStr>>ST.puts = PutOnBoth
+
+
+let hasLoader = false
+let hasStartAddr, startAddr = false, nillet installDate, dateAddress = false, nillet blv = vec size BLV/16; layoutVec = blv
+
+Resets(comCm); 
+ReadParam()	// skip over the program name
+while ReadParam(0, -1) ne true do
+   [   let switch = switchVec!0 eq 0? $~, (switchVec!0 gr 1? $#, switchVec!1)
+   PutTemplate(txtStr, "*N$US/$US*N", stringVec, switchVec)
+   switchon switch into
+
+      [      case $D: case $d:         [         installDate = true         dateAddress = EvalParam(stringVec, $B, "Date address: ", 0)         endcase          ]      case $~:      case $R: case $r:
+      case $E: case $e:         [         let inStr = EvalParam(stringVec, "IW", "Executable (.Run) file: ", 0)
+         DoRunFile(inStr, outStr)         Closes(inStr)         endcase
+         ]
+      case $N: case $n:         [         currentLC = EvalParam(stringVec, $B, "Location ctr: ", 0)         endcase
+         ]
+      case $S: case $s:         [         let inStr = EvalParam(stringVec, "IW", "Segment (.XC) file: ", 0)         let olc = currentLC         currentLC = currentLC + TransferBlock(currentLC, 177777b,          ts, inStr, outStr)         PutTemplate(txtStr, "*T$UO - $UO*N", olc, currentLC-1)
+         Closes(inStr)         endcase
+
+         ]
+
+      case $B: case $b:         [         let inStr = EvalParam(stringVec, "IW", "Boot loader file:", 0)
+         CopyBootLoader(inStr, outStr)         Closes(inStr)
+         hasLoader = true
+         endcase
+         ]
+
+      case $G: case $g:         [         hasStartAddr = true         startAddr = EvalParam(stringVec, $B, "Start address: ", 0)         endcase
+         ]
+
+      case $L: case $l: endcase
+
+      case $O: case $o: endcase
+
+      case $V: case $v:         [         useLayout = true         layoutloc = EvalParam(stringVec, $B, "Layout vector address: ", 0)         endcase
+         ]
+
+
+      case $#:         [         Wss(txtStr, "*TMultiple switches ignored*N")         endcase
+
+         ]
+
+
+      default: Wss(txtStr, "*TUnknown switch ignored*N")
+      ]
+   ]Closes(comCm)Puts(txtStr, $*N)
+unless hasLoader do
+   [   let inStr = OpenFile("DiskBoot.Run", ksTypeReadOnly)   test inStr eq 0      ifso Wss(txtStr, "*TNo boot loader*N")      ifnot         [         Wss(txtStr, "Boot loader defaulted to DiskBoot.run*N")         CopyBootLoader(inStr, outStr)         Closes(inStr)         ]
+   ]if installDate then   [   let dv = vec 1; ReadCalendar(dv)   SetFilePos(outStr, 0, dateAddress lshift 1)   WriteBlock(outStr, dv, 2)   ]
+unless hasStartAddr do   [   PutTemplate(txtStr, 
+"Start address defaulted to $UO*N", defaultStartAddr)   startAddr = defaultStartAddr   ]
+let fws = vec 3		// set up fake word streamfws!0 = 1		// lengthfws!1 = 0		// current positionfws!2 = lv startAddr	// block
+TransferBlock(0, 1, tv, fws, outStr)
+
+Resets(outStr)let fa = vec lFA; GetCurrentFa(outStr, fa)let addr = nil; RealDiskDA(sysDisk, fa>>FA.da, lv addr)PutTemplate(txtStr, "*NBoot disk address is $UO, accessed by: ", addr)
+
+let maskBit, bitNo = 100000b, 0
+while bitNo ls 16 do
+   [   if (addr & maskBit) ne 0 then      Wss(txtStr, selecton bitNo into         [         case 0: "5 "         case 1: "4 "         case 2: "6 "         case 3: "E "         case 4: "7 "         case 5: "D "         case 6: "U "         case 7: "V "         case 8: "zero "         case 9: "K "         case 10: "minus "         case 11: "P "         case 12: "/ "         case 13: "\ "         case 14: "linefeed "         case 15: "backspace "
+         ])   maskBit = maskBit rshift 1   bitNo = bitNo +1
+   ]Puts(txtStr, $*N)
+SetLC(outStr, maxLC+1)
+Closes(outStr)  //truncates filetest lstStr eq 0   ifso      [      Wss(txtStr, "*NType any character to finish")      Gets(keys)      ]   ifnot Closes(lstStr)Closes(dspStr)
+]
+//----------------------------------------------------------------------------
+and SetLC(outStr, address) = valof
+//----------------------------------------------------------------------------// Position 'outStr' so that the next word written//  will appear at 'address' in the boot image.
+[unless outStr resultis true
+let page = (address rshift 8) & 377bif page eq 1 resultis false	// page 1 is illegalif page eq 0 then page = 1	// page 0 goes to pg 1 of boot filePositionPage(outStr, page+1)PositionPtr(outStr, (address & 377b) lshift 1)resultis true]
+
+
+//----------------------------------------------------------------------------and PutOnBoth(s, c) be
+//----------------------------------------------------------------------------[Puts(dspStr, c)if lstStr then Puts(lstStr, c)if c eq $*n then   [   dspCnt = dspCnt +1   if dspCnt gr dspLines & lstStr eq 0 then      [      Wss(dspStr, "*nReady for more?*n")      Gets(keys)      dspCnt = 0
+      ]   ]]
+
+
+//----------------------------------------------------------------------------
+and CopyBootLoader(inStr, outStr) be
+//----------------------------------------------------------------------------
+
+[Resets(outStr)
+
+let staticStart = nil
+let staticLength = nil
+let codeStart = nil
+let codeLength = nil
+let dummy = nil
+
+unless ReadLayout(lv staticStart, lv staticLength, lv codeStart, lv codeLength, lv dummy, inStr) do
+   [   Wss(txtStr, "*TBoot loader file ended in layout vector*N")
+   return
+   ]
+unless CopyBlock(size SV.page0/16, ts, inStr, 0) eq size SV.page0/16 do
+   [   Wss(txtStr, "*TBoot loader file ended in page 0*N")
+   return
+   ]
+
+unless CopyBlock(staticLength, ts, inStr, 0) eq staticLength do
+   [   Wss(txtStr, "*TBoot loader file ended in statics*N")
+   return
+   ]
+
+if Usc(codeLength, 256) gr 0 then
+   [   Wss(txtStr, "*TBoot loader code truncated*N")
+   codeLength = 256
+   ]
+
+if CopyBlock(codeLength, ts, inStr, outStr) ne codeLength then
+   Wss(txtStr, "*TBoot loader file ended in code*N")WriteLayout(outStr)
+]
+
+
+//----------------------------------------------------------------------------
+and DoRunFile(inStr, outStr) be
+//----------------------------------------------------------------------------
+[let staticStart = nil
+let staticLength = nil
+let codeStart = nil
+let codeLength = nil
+
+unless ReadLayout(lv staticStart, lv staticLength, lv codeStart,
+ lv codeLength, lv defaultStartAddr, inStr) do
+
+   [   Wss(txtStr, "*TInput file ended in layout vector*N")   return
+   ]
+PutTemplate(txtStr, "*TStatics: $UO - $UO*N", staticStart, staticStart+staticLength-1)PutTemplate(txtStr, "*TCode: $UO - $UO*N", codeStart, codeStart+codeLength-1)PutTemplate(txtStr, "*TStart address: $UO*N", defaultStartAddr)
+unless TransferBlock(0, size SV.page0/16, ts, inStr, outStr) do
+   [   Wss(txtStr, "*TInput file ended in page 0 statics*N")
+   return
+   ]
+unless TransferBlock(staticStart, staticLength, ts, inStr, outStr) do
+   [   Wss(txtStr, "*TInput file ended in statics*N")   return
+   ]
+unless TransferBlock(codeStart, codeLength, ts, inStr, outStr) do
+
+   [   Wss(txtStr, "*TInput file ended in code*N")
+   return
+   ]WriteLayout(outStr)
+]
+
+//----------------------------------------------------------------------------
+and ReadLayout(pss, psl, pcs, pcl, psa, inStr) = valof
+//----------------------------------------------------------------------------
+
+[Resets(inStr)
+
+let h = vec size SV.H/16
+if ReadBlock(inStr, h, size SV.H/16) ne size SV.H/16 resultis false
+@psa = h>>SV.H.startingAddress
+
+if Endofs(inStr) resultis false
+if ReadBlock(inStr, layoutVec, size BLV/16) ne size BLV/16 resultis false
+
+@pss = layoutVec>>BLV.startOfStatics
+@psl = layoutVec>>BLV.endOfStatics+1-@pss
+@pcs = layoutVec>>BLV.startOfCode
+@pcl = layoutVec>>BLV.endCode-@pcs
+	
+resultis true
+]
+//----------------------------------------------------------------------------and WriteLayout(outStr) be if useLayout then
+//----------------------------------------------------------------------------
+   [   let fws = vec 3	// make word stream of layout   fws!0 = size BLV/16   fws!1 = 0   fws!2 = layoutVec
+   TransferBlock(layoutloc, size BLV/16, tv, fws, outStr)   PutTemplate(txtStr, "*TLayout vec: $UO - $UO*N",    layoutloc, layoutloc+size BLV/16-1)
+   ]
+
+
+//----------------------------------------------------------------------------
+and TransferBlock(lowAddr, length, iType, inStr, outStr) = valof
+//----------------------------------------------------------------------------
+
+[let wordsDone = 0
+let highAddr = lowAddr + length -1
+
+if Usc(lowAddr, maxLC+1) gr 0 then   TransferBlock(maxLC+1, lowAddr-maxLC-1, tz, false, outStr)
+test Usc(1000b, lowAddr) gr 0 & Usc(highAddr, 377b) gr 0
+
+   ifso      [
+      // this 'ifso' code should be disabled in the
+      // event that page 1 is included in the boot file      let nl = nil	// nominal block length
+      let al = nil	// actual block length
+      if Usc(400b, lowAddr) gr 0 then
+
+         [         SetLC(outStr, lowAddr)         nl = 400b - lowAddr         al = CopyBlock(nl, iType, inStr, outStr)         wordsDone = wordsDone + al         if al ne nl then break
+         ]
+      nl = (Usc(highAddr, 777b) gr 0? 777b, highAddr) -       (Usc(lowAddr, 400b) gr 0? lowAddr, 400b)+1
+      al = CopyBlock(nl, iType, inStr, false)
+      wordsDone = wordsDone + al
+
+      if al ne 0 & iType ne tz then         Wss(txtStr, "*TWords overlapping page 1 ignored*N")
+
+      if al ne nl break
+
+      if Usc(highAddr, 777b) gr 0 then
+
+         [         SetLC(outStr, 1000b)         nl = highAddr - 777b         al = CopyBlock(nl, iType, inStr, outStr)         wordsDone = wordsDone+al
+         ]
+
+      break
+      ] repeat
+
+   ifnot      [      SetLC(outStr, lowAddr)
+      wordsDone = wordsDone + CopyBlock(length, iType, inStr, outStr)
+
+      ]
+highAddr = lowAddr + wordsDone -1if Usc(highAddr, maxLC) gr 0 then maxLC = highAddr
+resultis length eq 177777b? wordsDone, (wordsDone eq length)
+]
+
+
+//----------------------------------------------------------------------------
+and CopyBlock(nWords, iType, inStr, oStream) = valof
+//----------------------------------------------------------------------------
+[let wordsToGo = nWords
+let endOfFile = false
+let buffer = vec bufSize
+let bufIsClear = false
+
+while Usc(wordsToGo, 0) gr 0 & not endOfFile do
+
+   [   let wordsToRead = Usc(wordsToGo, bufSize) gr 0? bufSize, wordsToGo
+
+   let wordsRead = selecton iType into
+
+      [      case ts: Endofs(inStr)? 0, ReadBlock(inStr, buffer, wordsToRead)
+      case tv: valof
+         [         buffer = inStr!1 + inStr!2         let nw = Usc(inStr!0, nWords+inStr!1) gr 0? nWords, inStr!0-inStr!1         inStr!1 = inStr!1 + nw         resultis nw
+         ]
+
+
+      case tz: valof
+         [         unless bufIsClear do            for i = 0 to wordsToRead do buffer!i = 0
+         bufIsClear = true
+         resultis wordsToRead
+
+         ]
+      ]
+   if wordsRead gr 0 & oStream ne 0 then      WriteBlock(oStream, buffer, wordsRead)
+
+   if wordsRead ne wordsToRead then endOfFile = true
+   wordsToGo = wordsToGo - wordsRead
+   ]
+resultis nWords - wordsToGo
+]

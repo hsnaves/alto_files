@@ -1,0 +1,100 @@
+// BLDRINIT.BCPL// Copyright Xerox Corporation 1979
+//  Taft, February 22, 1980  2:02 PM, /D global switch, rearranged init
+//  Swinehart, June 20, 1977  8:35 PM
+get "BLDR.DECL"let BeforeJuntaInit(blv) be  [  savedUserFinishProc = @lvUserFinishProc  @lvUserFinishProc = BldrFinishProc  relPairList = blv!#37  if malFormedRoutine eq -1 then malFormedRoutine = SysErr  let freeEnd = MyFrame() - 1500  freeBegin = @stackLim  @stackLim = freeEnd  test freeEnd - freeBegin < 0    ifnot sysZone = InitializeZone(freeBegin, freeEnd-freeBegin,SysErr,malFormedRoutine)    ifso	 [  	sysZone = InitializeZone(freeEnd-32767, 32767,SysErr,malFormedRoutine)  	freeEnd =freeEnd - 32767  	if freeEnd - freeBegin > 100 then  		AddToZone(sysZone, freeBegin, freeEnd - freeBegin)  	]  @lvSysZone = sysZone  @424B = 300; @425B = 150  // tweak mouse position  DisplayInCursor(0)  ParseGlobalSwitches()  Junta((noDisplaySw? levDirectory, levDisplay), Main)  ]
+and AfterJuntaInit() be  [  @lvSysZone = sysZone  let freeEnd = MyFrame() - 1500  // additional space gained by Junta  let freeBegin = @stackLim  @stackLim = freeEnd  AddToZone(sysZone, freeBegin, freeEnd - freeBegin)  dsp = lv Noop - offset ST.puts/16  // Noop display stream  unless noDisplaySw do    [    let font = OpenFile("SysFont.al", ksTypeReadOnly, wordItem, 0, fpSysFont)    unless font do CallSwat("Can't open SysFont.al")    let lenFont = (FileLength(font)+1)/2    sysFont = Allocate(sysZone, lenFont)    Resets(font); ReadBlock(font, sysFont, lenFont); Closes(font)    sysFont = sysFont+2    // lineWords = lDCB+38*2*((sysFont!-2+1)/2)+1    dsp = CreateDisplayStream(5, Allocate(sysZone, 1500), 1500, sysFont)    ShowDisplayStream(dsp,DSalone)    ]  ParseCommands() // all initialization  ]and ParseGlobalSwitches() be  [
+  TSTREAM = dsp; LSTREAM = TSTREAM  // Global switches
+  NAME = Zmem(FILENAMELENGTH+1)
+  SW = Zmem(32)  LFILENAME = Zmem(FILENAMELENGTH/2+1)
+  MAPSW = true
+  WARNINGSW = true  OSBKSW = true
+  SetupReadParam(NAME, SW)
+  EvalParam(NAME,$P,0,LFILENAME) // Save loader name
+  for I = 1 to SW!0 switchon CAPITALIZE(SW!I) into
+   [	case $M:	MAPSW = false; loop
+	case $U:	CASESW = true; loop
+	case $N:	LISTNUMSW = true; loop
+	case $L:	LISTLABSW = true; loop
+	case $V:	LISTVARSW = true; loop
+	case $T:	TTYPESW = true; loop
+	case $F:	TFILESW = true; loop
+	case $W:	WARNINGSW = false; loop
+	case $R:	DUPSW = true; loop
+	case $I:	INITSWAPSW = 1; loop
+	case $B:	BBINSAVESW = true; loop
+	case $K:	OSBKSW = false; loop	case $D:	noDisplaySw = true; loop	case $$:	DEBUGSW = true ;loop
+	default:	BADSWITCH(I)
+     ]  LISTSW = not TTYPESW&(LISTNUMSW%LISTLABSW%LISTVARSW)  ]
+and ParseCommands() be  [
+  TSTREAM = dsp; LSTREAM = TSTREAM  PutTemplate(dsp,"*N*N$S $O.$O -- ",LFILENAME,VERSION rshift 8, VERSION&#377)
+  // global local switches  SYMMAX = ISYMMAX; CODEMAX = ICODEMAX
+  COMMONSTART, COMMONMAX = -1, -1
+  STATICSTART, STATICMAX = -1, -1
+  CODESTART = -1
+  fileNameVec = Zmem(ALLFILEMAX)  eventList = Zmem(2)  DICT = Zmem(DICTHEADLENGTH)
+  let MOREGLOBALS = true
+  while MOREGLOBALS do
+ [GLOB
+// unpacked to NAME, switches to SW, quit on null 
+  if ReadParam(0, -1) eq -1 %
+ NAME!0 eq 0 then ERROR("No .BR name")  let oV = nil  if BETWEEN(NAME!1,$0,$7+1) then oV = EvalParam(NAME,$B,-1)
+  test SW!0 eq 0  then MOREGLOBALS = false
+  or for I = 1 to SW!0 switchon CAPITALIZE(SW!I) into
+    [	case $S:	SFILENUM = FormFileName($S)
+			if MAPSW & MFILENUM eq -1 do
+			   MFILENUM = FormFileName($M)
+			if (TFILESW % LISTSW) & TFILENUM eq -1 do
+			   TFILENUM = FormFileName($T)
+			loop
+	case $M:	MFILENUM = FormFileName($M); loop
+	case $F:	TFILESW = true
+			TFILENUM = FormFileName($T); loop
+	case $V:	STATICSTART = oV; loop
+	case $W:	STATICMAX = oV; loop
+	case $Z:	COMMONSTART = oV; loop
+	case $N:	SYMMAX = oV; loop
+	case $C:	CODEMAX = oV; loop
+	case $O:	CODESTART= oV; loop
+	default:	test I eq 1 then [ MOREGLOBALS = false; break ]
+			or BADSWITCH(I)
+      ]
+
+  ]GLOB  // file names and local switches
+
+  let MOREFILES = true
+  while MOREFILES do
+    [FILES    NEWRFILE = 0
+    test SW!0 eq 0 then NEWRFILE = $R
+      or for I = 1 to SW!0 do	[	let sw = CAPITALIZE(SW!I)	switchon sw into
+	   [	   case $A: case $B:		unless SFILENUM ge 0 do ERROR("No .RUN file name")		FormFileName(sw); loop	   case $R: case $I: case $H: case $J: case $K: NEWRFILE = sw; loop
+	   case $X: case $Y: case $Q: case $P: ParsePC(sw); loop
+	   default: BADSWITCH(I)
+	   ]	]
+  if NEWRFILE eq $R & SFILENUM eq -1 then	[
+	SFILENUM = FormFileName($S)
+	if MAPSW & MFILENUM eq -1 do MFILENUM = FormFileName($M)
+	if (TFILESW%LISTSW) & TFILENUM eq -1 then 
+TFILENUM = FormFileName($T)
+ 	]
+  if NEWRFILE then FormFileName(NEWRFILE)
+
+  if ReadParam(0,-1) eq -1 then MOREFILES = false
+  ]FILESCloses(ReadParamStream)
+if OSBKSW then // look up SYS.BK unless inhibited 	[ let t = table [ 3; $S; $Y; $S]; MoveBlock(NAME, t, 4); FormFileName($K) ]// Prepare to load
+if TFILESW do TTYPESW = false
+
+MHEAD = Zmem(MHEADLENGTH)
+BHEAD = Zmem(BHEADLENGTH)
+RHEAD = Zmem(RHEADLENGTH)
+ZCODE = Zmem(#400)	// IN THEORY, ONLY 400 ARE USED
+
+LABLIST = Zmem(SYMMAX*2+1)
+SYMLIST = Zmem(SYMMAX+1)
+SYMTAB  = Zmem(SYMMAX+1)
+CODE = Zmem(CODEMAX)
+PARAMLIST = Zmem(#40, -1)startOverlayFa = Zmem(lFA)staticLinksFa = Zmem(lFA)
+
+unless SFILENUM ge 0 do ERROR("No .RUN file name")
+SFILENAME = fileNameVec!SFILENUMOPENBLDRFILES()]
+
+and ParsePC(sw) be 	[	let letterVbl = CAPITALIZE(NAME!1)	let nameLen, lN = NAME!0, lPCsave	unless nameLen eq 1 & BETWEEN(letterVbl, $A, $Z+1) do	    test sw eq $P ifnot BADSWITCH(1)	    ifso [		test letterVbl eq $$ then		    [ nameLen = nameLen-1; NAME!0 = nameLen;		      MoveBlock(lv NAME!1, lv NAME!2, nameLen) ]		or letterVbl = 0		lN = lPCmod		]	let event = Zmem(lN)	Enqueue(eventList, event)	event>>PCsave.cmd = sw	event>>PCsave.letterVbl = letterVbl	if lN eq lPCmod then event>>PCmod.newValue = EvalParam(NAME,$B,-1)	]and FormFileName(code, regardless; numargs na) = valof	[	if na < 2 then regardless = false// select extension	let ext = selecton code into	  [	  case $S: ".RUN"	  case $A: case $B: ".BB"	  case $R: case $I: ".BR"	  case $H: case $J: ".BJ"	  case $K: ".BK"	  case $M: ".SYMS"	  case $T: ".BS"	  case $X: ".XC"	  ]	let dict = FixFileName(NAME, ext, regardless)// enter file name in dictionary	fileCount = fileCount+1	fileNameVec ! fileCount = lv dict>>DIct.name// create event entries for principal files	let append, useCode = true, BFILECODE	switchon code into	   [	   case $R: case $H to $K: useCode = RFILECODE; docase $A	   case $S: append = false // (docase $A)	   case $A: case $B:		[		let event = Zmem(lFile)		test append then Enqueue(eventList,event)			  or InsertAfter(eventList,eventList,event)		event>>RFile.cmd = code		event>>RFile.useCode = useCode		event>>RFile.fileNum = fileCount		]	   default: endcase	   ]// produce ".XC" name matching ".RUN"	let res = fileCount	if code eq $S then FormFileName($X, true)	resultis res	]and FixFileName(uName, ext, cmd) = valof  [  // cmd = 0: pack uName to new string, append ext unless uName contains a $.  // cmd = 1: pack to new string, replace extension by supplied one regardless  let lN = uName!0  cmd = valof    [ for i = 1 to lN do if uName!i eq $. then	[ if cmd then lN = i-1; resultis cmd ]; resultis 1 ]  uName!0 = lN  let lExt = ext>>STRING.length  let name = vec FILENAMELENGTH/2+1  EvalParam(NAME,$P,-1,name)  if cmd then for i = 1 to lExt do	[ lN = lN+1; name>>STRING.char^lN = ext>>STRING.char^i ]  name>>STRING.length = lN  if (lN&1) eq 0 then name>>STRING.char^(lN+1) = 0  resultis DICTENTRY(name)  ]and OPENBLDRFILES() be[PREAMBLEVEC = Zmem(lDV*(fileCount+1))let sysDir = OpenFileFromFp(fpSysDir)LookupEntries(sysDir, fileNameVec+1, PREAMBLEVEC+lDV, fileCount, true)for i = 1 to fileCount do    [    let preamble = PREAMOF(i)    let fileName = fileNameVec!i    if @preamble loop // found and not duplicated    let j = valof	[ for j = 0 to i-1 do if fileNameVec!j eq fileName resultis j;	resultis 0 ]    if j eq 0 loop    MoveBlock(preamble, PREAMOF(j),lDV)    @preamble = -1 // mark duplicated    ]]

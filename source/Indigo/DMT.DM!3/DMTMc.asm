@@ -1,0 +1,1 @@
+; DMTMc.asm - Dummy microcode ram image; Copyright Xerox Corporation 1979; Last modified December 9, 1977  5:44 PM by Boggs.BEXT	RamImage	.SRELRamImage:	0	.END

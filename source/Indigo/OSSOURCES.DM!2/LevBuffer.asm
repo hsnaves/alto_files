@@ -1,0 +1,1 @@
+; LevBuffer.asm -- Keyboard buffer; Copyright Xerox Corporation 1979; Last modified December 9, 1978  7:05 AM by Boggs.ent LevBuffer.ent OsBuffer	.srelLevBuffer:	.LevBufferOsBuffer:	.Osbuffer	.nrellOsBuffer = 100..LevBuffer:		lOsBuffer		; its length in words.Osbuffer:	.blk 4			; structure OsBUFF in SysDefs.d		.blk lOsBuffer		; keyboard buffer.

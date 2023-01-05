@@ -1,0 +1,1 @@
+Ftp/N Maxc Connect/C altosource @AltoSourcePassword@ Dump/C isf.dm isf.d isfinit.bcpl isf.bcpl compileisf.cm sendisf.cm Connect/C alto @AltoPassword@ Dump/C isf.dm isfinit.BR isf.BR

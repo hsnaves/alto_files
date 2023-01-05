@@ -1,0 +1,1 @@
+To produce another version of redraw:    Make your change    Change version number printed in ReDraw.bcpl    @CompileReDraw    @LoadReDraw    Enter change in ChangeLog.tty    Change name of "ReDrawX.YSource.dm" in dump command in MakeReDrawDMFile.cm    @ListReDraw    @MakeReDrawDMFile    

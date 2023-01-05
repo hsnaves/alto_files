@@ -1,0 +1,1 @@
+FTP Maxc ^ connect/c Alto dump/c Grapevine.dm @GrapevineBRs@ ^ connect/c AltoSource dump/c GrapevineSources.dm @Grapevine@FTP Indigo connect/c Grapevine dir/c Grapevine>test ^ store/c GrapevineTest.run GrapevineTest.syms

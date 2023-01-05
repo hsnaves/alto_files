@@ -1,0 +1,1 @@
+; RelocTable.asm -- temporary space for initialization static table; Last modified November 2, 1979  7:41 PM by Taft.ent relocTable.srelrelocTable: .relocTable.nrellRelocTable = 100.	; must be greater than the number of statics			; in Bravo resident init modules (PjInit & beyond).relocTable: lRelocTable	.blk lRelocTable.end

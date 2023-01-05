@@ -1,0 +1,1 @@
+// PupNetDir.decl -- definitions needed by clients of PupNetDirLookup.// Copyright Xerox Corporation 1981// Last modified October 26, 1981  11:35 AM by Taftmanifest[// error codesecNameNotFound = 2250ecAddressNotFound = 2251ecNoServerResponded = 2252ecCantGetThere = 2253]

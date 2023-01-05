@@ -1,0 +1,1 @@
+// param.dfstructure PRM:	[ pt	word	cchMax	word	astr	word	] manifest lprmovh = (size PRM)/16manifest ptNil = -1

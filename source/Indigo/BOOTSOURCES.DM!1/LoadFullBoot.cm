@@ -1,0 +1,1 @@
+Bldr/LVK 300/Z 310/W FullBootBase/S FullBootBase/H BootBase ^DummyLevBasic SwatResident ParityErrors UpdateTimer ^EtherBootLoader EtherBootCaller TeleSwat ^levBCPL levBuffer BfsMl BcplTricks Calls Calendar DVec Alloc ^KeyStreamsB KeyStreamsA DspStreamsB DspStreamsA Gacha10 OsUtils ^FullBootInit BasicBootInit// normal number of warnings = 1 (not enough common space)

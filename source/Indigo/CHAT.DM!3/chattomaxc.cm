@@ -1,0 +1,1 @@
+ftp maxc conn/c altosource isfwgi dump/c chat.dm @chat@ ^conn/c alto isfwgi store/c chat.run chat.syms;

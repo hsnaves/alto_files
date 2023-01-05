@@ -1,0 +1,1 @@
+ftp xeos connect/c PaulLam  dump/c RSilSources.dm ^Sil.defs RSil*.bcpl MDI.bcpl FontWidths.bcpl ^Paint.asm Write.asm WriteR90.asm WriteR270.asm  ^*RSil.cm CursorStream.bcpl  ^mdi.br readusercmitem.br TimeConvA.br TimeConvB.br TimeIO.br user.cm RSil.bs ^store/c RSil.run RSil.syms RSil.dm ^

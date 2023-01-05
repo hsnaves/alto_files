@@ -1,0 +1,80 @@
+// BLDRSTATICS.BCPL// Copyright Xerox Corporation 1979
+//  Swinehart, May 23, 1977  5:15 PM
+//  Taft, February 22, 1980  2:03 PM
+get "BLDR.DECL"
+static [	//DEFINE ALL STATIC VARIABLES
+NAME	=nil
+SW	=nil
+
+VERSION	=nil
+PARAMLIST	=nil
+
+SFILENAME	=nil
+RFILENAME	=nilLFILENAME	=nil
+SFILENUM	=-1
+MFILENUM	=-1
+TFILENUM	=-1
+BFILENUM	=-1
+RFILENUM	=-1
+SSTREAM	=nil
+TSTREAM	=nil
+LSTREAM	=nil
+BSTREAM	=nil
+RSTREAM	=nilESTREAM	=0
+
+DEBUGSW	=nil
+MAPSW	=nil
+CASESW	=nil
+TTYPESW	=nil
+TFILESW	=nil
+LISTSW	=nil
+LISTNUMSW	=nil
+LISTLABSW	=nil
+LISTVARSW	=nil
+DUPSW		=nilINITSWAPSW	=nilBBINSAVESW	=nilOSBKSW		=nilnoDisplaySw	=nilSWAPPEDOUTSYM	=0
+DEBGSTARTADDR	=nil
+JSTATICMIN	=-1JSTATICMAX	=0JCOMMONMIN	=-1JCOMMONMAX	=0 KSTATICCOUNT = 0
+STATICSTART	=nil
+STATICMAX	=nil
+STATICLOC	=nil
+STATICSPACESIZE	=nil
+COMMONSTART	=nil
+COMMONMAX	=nil
+COMMONLOC	=nil
+CODESTART	=nil
+CODEMAX		=nil
+CODELOC		=nil
+STARTCODEIMAGE	=nilSRELPAIRLOC	= nil	// ***
+
+CODELENGTH	=nil
+
+SYMMAX	=nil
+
+NEWRFILE	=nil
+BFILEMODE	=nilRELPAIRSW	=0
+LABLISTBASE	=nil
+LABLIST	=nil
+SYMLIST	=nil
+SYMTAB	=nil
+
+BFILE	=nil
+RFILE	=nil
+SFILE	=0fileNameVec = nilfileCount = 0eventList = nilbFileCount = 0rFileCount = 0PREAMBLEVEC = nil
+
+BHEAD	=nil
+RHEAD	=nil
+MHEAD	=nil
+
+ZCODE	=nil
+CODE	=nil
+
+DICT		=nil
+
+FIRSTSYM	=nil
+LASTSYM 	=nil
+
+WARNINGSW	=nil
+WARNINGCOUNT	=nil
+ERRORCOUNT = nilsavedUserFinishProc = nilmalFormedRoutine = 0 // 0: no auto checking, -1:  requests SysErrfreeBegin = nil // initted by InitBldr; used by init code releaserrelPairList = nileStream = 0eBuf = 0startOverlayFa = nilstaticLinksFa = nil
+
+]	

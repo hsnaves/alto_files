@@ -1,0 +1,1 @@
+manifest   [//Overlays   NumOvs = 8   CommandInterpret = 1   TridentFile = 2   CUMunge = 3   Conversion = 4   Edit = 5   ReadALov = 6   MicroFloatLoad = 7   SoftwareFloat = 8   ]structure FaTbl^1,NumOvs : @FAmanifest [ lFaTbl = size FaTbl / 16 ]

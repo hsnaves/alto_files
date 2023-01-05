@@ -1,0 +1,1 @@
+Bldr/L/V/K 300/Z 100/W BasicBootBase/S BasicBootBase/H BootBase TeleSwat SwatResident ParityErrors UpdateTimer DummyLevBasic EtherBoot levBCPL levBuffer BasicBootInit//normal number of warnings = 1 (not enough common space)//normal number of undefs = 1 (FullBootInit)

@@ -1,0 +1,66 @@
+// Routines for dynamic vectors and argument defaulting.// Copyright Xerox Corporation 1979// Last modified July 12, 1979  8:15 PM by Taft
+external[// outgoing procedures
+Dvec; 
+DefaultArgs
+
+// incoming proceduresCallersFrame; GotoFrame; Usc; SysErr
+]
+
+manifest[endCode = #335ecDvecStackOverflow = 1002ecTooFewArguments = 1003]structure F:	//BCPL frame[callersFrame wordsavedPC wordtemp wordextraArguments wordformals word]manifest formalsOffset = offset F.formals/16
+
+//---------------------------------------------------------------------------
+let Dvec(caller, newVecs, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil,
+  nil, nil, nil, nil, nil, nil, nil, nil, nil,
+ nil; numargs na) = valof
+//---------------------------------------------------------------------------[let myArgs = lv callerlet cf = CallersFrame()let cfs = CallersFrame(cf) - cflet top = cf + cfs
+let length = 0let i = 0while i ls na-1 do   [
+   i = i+1
+   if myArgs!i eq 0 break
+   length = length + rv myArgs!i+1
+   rv myArgs!i = top - length
+   ]
+
+while i ls na-1 do   [
+   i = i+1
+   let t = rv myArgs!i
+   if t ge cf & t ls top then rv myArgs!i = t-length
+   ]
+
+let newCf = cf-length
+if Usc(newCf, rv endCode) le 0 then SysErr(length, ecDvecStackOverflow)
+
+// MoveBlock(newCf, cf, cfs)
+// resultis newCf+cfs
+let DoMove = table   [
+   #35003	// lda 3 extraArgs,2
+   #131400	// inc 1 2
+   #173000	// add 3 2
+   #61005	// blt
+   #121400	// inc 1 0	return address of first new word
+   #35001	// lda 3 savedPC,2
+   #1401	// jmp 1,3
+   ]
+
+resultis DoMove(cf-1, newCf+cfs-1, -cfs)
+]
+
+//---------------------------------------------------------------------------
+and DefaultArgs(lvNa, base, defaultValue, nil, nil, nil, nil,
+  nil, nil, nil, nil, nil; numargs na) be
+//---------------------------------------------------------------------------
+[
+if na ls 2 then base = 0
+let defaultOnZero = false
+if base ls 0 then [ defaultOnZero = true; base = -base ]
+
+let dvVec = lv defaultValue - base
+let actualNumDVs = na-3 + base
+let defaultDV = (na ls 3? 0, dvVec!actualNumDVs)
+let callersFormals = CallersFrame() + formalsOffset
+
+if @lvNa ls base then SysErr(nil, ecTooFewArguments)
+
+for i = base to (lvNa-callersFormals-1) do
+   if i ge @lvNa % (defaultOnZero & callersFormals!i eq 0) then
+      callersFormals!i = (i le actualNumDVs ? dvVec!i, defaultDV)
+]

@@ -1,0 +1,1 @@
+chat.d chatbsp.d chataudio.d ^chat.bcpl chataudio.bcpl chataudioa.asm chattty.bcpl chattty1.bcpl chatcominit.bcpl chatparams.bcpl chataudioinit.bcpl ^chatdis.d chatdis.bcpl chatdisbsp.bcpl chatdisinit.bcpl chatdisops.bcpl chatdiscurve.bcpl  dcbpress.bcpl ^chattomaxc.cm compilechat.cm ldchat.cm chat.cm ^

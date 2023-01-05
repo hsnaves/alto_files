@@ -1,0 +1,1 @@
+// parse.dfstructure TXP:	[	doc	word	cp	word	cpMac	word	]manifest	[	lntxp = size TXP / 16	]manifest	[	itkNil = -1	itkEol = -2	itkEotx = -3	]

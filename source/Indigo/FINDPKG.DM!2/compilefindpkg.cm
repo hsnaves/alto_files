@@ -1,0 +1,1 @@
+Mu/L findpkg.muPackmu/T findpkg.mb findpkg.ls// Now edit findpkg.ls by removing all but the first 40 (decimal)// lines of the table data -- findcompmu.bcpl does a get "findpkg.ls"BravoBcpl/F findcompile.bcplBcpl/F findcompmu.bcplBcpl/F findnext.bcplAsm findnextasm.asm

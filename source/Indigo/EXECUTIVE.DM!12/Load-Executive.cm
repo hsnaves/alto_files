@@ -1,0 +1,1 @@
+// The following command loads Alto Executive/11Bldr/B/I/L/V 1200/N 1000/W Executive.run/S ^NewCommand ExecInput QMaint DKS DRTNS2 ^Sort Format ^TimeConvB TimeConvA ^GP LocalTab EtherBoot ^SplitFileName Overlays ^ExecInit OnceOnly OverlaysInit ReadUserCmItem ^Type/B Type Partition ^SetTimeQFD/B SetTime QFD TimeIO ^Rename/B Rename RenameFile ^DumpLoad/B DumpLoad

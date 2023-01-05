@@ -1,0 +1,1 @@
+ftp/-e maxc connect/q alto store/c oedit.run oedit.syms ^connect/q altosource @DumpOedit.cm@

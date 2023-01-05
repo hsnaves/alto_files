@@ -1,0 +1,1 @@
+Ftp Indigo conn/c Alto store/c Tfu.run Tfu.syms ^dump/c Tfs.dm TfsInit.br TfsBase.br TfsA.br TfsWrite.br TfsCreate.br TfsClose.br TfsDDMgr.br TfsSwat.br TfsNewDisk.br ^TriConMc.br DiskFindHole.br Tfs.d ^conn/c AltoSource dump/c TfsSources.dm @Tfs@;

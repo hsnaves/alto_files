@@ -1,0 +1,1 @@
+Ftp Maxc conn/c Alto store/c EFTP.run EFTP.syms ^dump/c EFTPpackage.dm PupEFTP.decl PupEFTPSend.br PupEFTPReceive.br PupEFTPCommon.br ^conn/c AltoSource dump/c EFTPSources.dm @EFTP.cm@

@@ -1,0 +1,1 @@
+// calc.dfstructure REAL:	[ fsign	word	exponent	word	[ cch	byte	ch^0,255	byte ] =	[ asb	word ]	]manifest	[	offasbreal = offset REAL.asb / 16;	realnil = 0;	];manifest	[	frealfixed = 0;	frealsci = 1;	frealeng = 2;	cchmaxreal = 10;	cwmaxreal = cchmaxreal / 2 + offasbreal + 1;	fhpnumber = 1;	fhpsel = 2;	fhpoptor = 3;	];

@@ -1,0 +1,1 @@
+; Page0.asm; This must be the last file in the OS init/install code region; Copyright Xerox Corporation 1979; Last modified November 1, 1978  1:48 AM by Boggs.ent page0, initStackLimit	.srelpage0:		.page0initStackLimit:	.initStackLimit	.nrel.page0:		.blk 64..initStackLimit:0	.end

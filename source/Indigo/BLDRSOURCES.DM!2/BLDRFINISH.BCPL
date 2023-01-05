@@ -1,0 +1,48 @@
+// BLDRFINISH.BCPL//  Taft, November 13, 1981  2:56 PM//  Swinehart, May 23, 1977  5:53 PM// Copyright Xerox Corporation 1979, 1981get "BLDR.DECL" let FinishBldr() be [ ENDBINFILE()
+ ENDSAVEFILE()
+
+  if MAPSW do WriteSyms()
+ //
+FOO.RUN 45321b wds of code--24 undefs--56 warnings--34 errors BeginReport(false) PutTemplate(ESTREAM,"$S $6UOb wds of code",	SFILENAME,SFILE>>BFile.maxCodeLoc-CODESTART)
+  PRINTLISTINGS()
+
+  if WARNINGSW & (WARNINGCOUNT ne 0) then
+    PutTemplate(ESTREAM,"--$D warning$S",WARNINGCOUNT,	 WARNINGCOUNT eq 1? "","s")
+  if ERRORCOUNT then
+    PutTemplate(ESTREAM,"--$D error$S",ERRORCOUNT,	 ERRORCOUNT eq 1? "","s") Puts(ESTREAM,$*N) EndReport()
+ if LSTREAM ne dsp do Closes(LSTREAM) // will truncate ]	and ENDSAVEFILE() be   [ // write the common and static images      let endFa = vec lFA   GetCurrentFa(SSTREAM,endFa)      // Write static links   JumpToFa(SSTREAM,staticLinksFa)   for i = 0 to KSTATICCOUNT-1 do Puts(SSTREAM,CODE!i>>SYm.staticAddress)      if not BBINSAVESW then GetCurrentFa(SSTREAM, endFa)	   Zero(CODE,STATICMAX-STATICSTART) // MAKE SURE IT FITS!!!!   for I = 1 to SYMTAB!0 do	[	let sym = SYMTAB!I	if sym>>SYm.jOnly loop	let ADDR = sym>>SYm.staticAddress	if INITSWAPSW eq 2 & sym>>SYm.initSwappedOut then		sym>>SYm.initialValue = SWAPPEDOUTSYM>>SYm.initialValue	let VALUE = sym>>SYm.initialValue	test sym>>SYm.z		then test VALUE & not BETWEEN(ADDR,#50,#400)			ifso OUTWARNING(sym)			ifnot ZCODE!ADDR = VALUE		or test VALUE & not BETWEEN(ADDR,STATICSTART,STATICMAX)			ifso OUTWARNING(sym)			ifnot CODE!(ADDR - STATICSTART) = VALUE	]      STATICLOC = Umax(STATICLOC, JSTATICMAX) // ****      if Usc(STATICLOC , STATICMAX) ge 0 do   	WARNING("Not enough static space was reserved")      // Kludge to maintain compatibility with sifted format, which requires the   //   statics to come first, hence requiring BLDR to assume the actual length   //   of the statics before it can write out any code   let realStaticLoc = STATICLOC   STATICLOC=STATICMAX-1      PARAMLIST>>BLV.startOfStatics = STATICSTART   PARAMLIST>>BLV.endOfStatics = STATICLOC   PARAMLIST>>BLV.startOfCode = SFILE>>BFile.codeLoc + 1   PARAMLIST>>BLV.afterLastCodeWord = SFILE>>BFile.maxCodeLoc   PARAMLIST>>BLV.endCode = SFILE>>BFile.rFileCodeLoc   PARAMLIST>>BLV.relPairTable = SRELPAIRLOC         if COMMONLOC ge COMMONMAX do WARNING("Not enough common space")   Resets(SSTREAM) // back to word 0   Puts(SSTREAM,PARAMLIST>>BLV.startOfCode) // initial value for PC   Puts(SSTREAM,SFILE>>BFile.pageLength) // Length of .RUN File in pages (less BBs)   Puts(SSTREAM,0) //  type   Puts(SSTREAM,KSTATICCOUNT)   Zero(BHEAD,#15-#4+1)   WriteBlock(SSTREAM,BHEAD,#15-#4+1)   WriteBlock(SSTREAM,PARAMLIST,#40)   WriteBlock(SSTREAM,ZCODE,#300)   WriteBlock(SSTREAM,CODE,STATICLOC-STATICSTART+1)   JumpToFa(SSTREAM, endFa)      Closes(SSTREAM)      for I=#300 to #377 do if ZCODE!I ne 0 then	[	let xcNum = SFILENUM+1 // they are created contiguous	let xcStream = Openfile(xcNum, ksTypeWriteOnly, wordItem)	PutTemplate(LSTREAM,	    "*NWriting locations #300-#377 on $S", fileNameVec!xcNum)	WriteBlock(xcStream, ZCODE+#300, #100) // *****	Closes(xcStream)	break	]      PutTemplate(LSTREAM,"*NCOMMON *T$6UO*T$6UO*NSTATICS*T$6UO*T$6UO*N*N",	COMMONSTART, COMMONLOC, STATICSTART, realStaticLoc)   ]and WriteSyms() be
+[
+  MHEAD!0 = verSyms
+
+  let symStream = Openfile(MFILENUM,ksTypeWriteOnly,wordItem)
+  WriteBlock(symStream,MHEAD,MHEADLENGTH)
+
+  MHEAD!2 = MHEADLENGTH
+  Puts(symStream,0)
+
+  let SLENGTH = 1
+  for i = 0 to DICTHEADLENGTH-1 do   [ // not the same order as before!   let d = DICT!i   while d do	[	let name = lv d>>DIct.name	let lN = name>>STRING.length/2+1	d>>DIct.mFileOffset = SLENGTH	WriteBlock(symStream,name,lN)	SLENGTH = SLENGTH + lN	d = @d	]   ]
+
+  MHEAD!3 = CURBOPOS(symStream)
+  Puts(symStream,SYMTAB!0)
+  for i = 1 to SYMTAB!0 do
+	[ let sym = SYMTAB!i	if sym>>SYm.jOnly loop	Puts(symStream,sym>>SYm.dictEntry>>DIct.mFileOffset)
+	let T = sym>>SYm.type lshift 11
+	if sym>>SYm.local then T = T + #2000
+	if sym>>SYm.relocatable then T = T + #1000
+	T = T + sym>>SYm.rFile>>RFile.rFileId
+	Puts(symStream,T)
+	Puts(symStream,sym>>SYm.staticAddress)
+	Puts(symStream,sym>>SYm.initialValue)
+	]
+
+  for code = RFILECODE to BFILECODE do	[ // record RFile, BFile information in symbol file	MHEAD!(4+(code-RFILECODE)) = CURBOPOS(symStream)	Puts(symStream, code eq RFILECODE? rFileCount, bFileCount)	let nextFile = @eventList	while nextFile do		[ let file = nextFile; nextFile = @nextFile		unless file>>RFile.useCode eq code loop		let d = fileNameVec!(file>>RFile.fileNum) - offsetDIctName		Puts(symStream,d>>DIct.mFileOffset)		WriteBlock(symStream,lv file>>RFile.bFileId, 3)		]	]
+
+  MHEAD!1 = CURBOPOS(symStream)  let endFa = vec lFA; GetCurrentFa(symStream,endFa)
+  Resets(symStream)
+  WriteBlock(symStream,MHEAD,MHEADLENGTH)
+  Puts(symStream,SLENGTH)
+
+  JumpToFa(symStream,endFa)
+  Closes(symStream)
+]and PRINTLISTINGS() be	[	FIRSTSYM = 1	LASTSYM  = SYMTAB!0	let UNDEFCOUNT = PRINTUNDEFINED()	if UNDEFCOUNT then	    PutTemplate(ESTREAM,"--$D undef$S",UNDEFCOUNT,UNDEFCOUNT eq 1?"","s")	if LISTVARSW do [ Puts(LSTREAM,#14); PRINTVARS() ]	if LISTNUMSW do [ Puts(LSTREAM,#14); PRINTNUMERIC() ]	]and PRINTUNDEFINED() = valof  [   let undefCt = 0  let firstRefSym = -1  for i = FIRSTSYM to LASTSYM do [    let sym = SYMTAB!i    if sym>>SYm.type eq 0 & sym>>SYm.jOnly eq 0 then [	if undefCt eq 0 do  Wss(LSTREAM,"*NUndefined names*N")	if sym ne firstRefSym then	   PutTemplate(LSTREAM,"    first referenced in $S:*N",NameOfRfile(sym))	firstRefSym = sym	PRINTSYM(sym)	undefCt = undefCt + 1	]    ]  resultis undefCt  ]and PRINTVARS() be[let rFile = @eventListwhile rFile do    [    if rFile>>RFile.useCode eq RFILECODE then      [      Wss(LSTREAM,fileNameVec!(rFile>>RFile.fileNum)); Puts(LSTREAM,$*N)      for i = FIRSTSYM to LASTSYM do	[	let sym = SYMTAB!i	unless sym>>SYm.jOnly %  sym>>SYm.rFile ne rFile % sym>>SYm.type ne 1 do		PRINTSYM(sym)	]       ]    rFile = @rFile    ]]and PRINTNUMERIC() be[let sym = nilfor i = FIRSTSYM to LASTSYM do   [ sym = SYMTAB!i    if (not sym>>SYm.jOnly) & sym>>SYm.z then PRINTSYM(sym)   ]for i = FIRSTSYM to LASTSYM do   [ sym = SYMTAB!i    if (not sym>>SYm.jOnly) & (not sym>>SYm.z) then PRINTSYM(sym)   ]]

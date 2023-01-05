@@ -1,0 +1,1 @@
+// CondenseNames.d  --  Manifest names for menu windows.// Copyright Xerox Corporation 1981manifest	[	swat=1	swatee=2	other=3	Infilename=4	display=5	disk=6	cursor=7	start=8	quit=9	Outfilename=10	press=11	ais=12	box1=13	box2=14	box3=15	box4=16	box6=17	box7=18	newfile=19	box12=20	box21=21	box23=22	endmenu=23	box24=24	]

@@ -1,0 +1,1 @@
+CmdScan.decl CmdScan.bcpl CmdScanEdit.bcpl CmdScanDisplay.bcpl CmdScanTty.bcpl CmdScanAux.bcpl CmdScanOEP.bcpl Keyword.decl Keyword.bcpl KeywordInit.bcpl KeywordOEP.bcpl CmdScanTest.bcpl LoadCmdScanTest.cm CompileCmdScan.cm ReleaseCmdScan.cm CmdScan.cm

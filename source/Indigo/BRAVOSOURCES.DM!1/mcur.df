@@ -1,0 +1,1 @@
+// mcur.dfstructure CLOC:	[ x	word	y	word	] structure MCUR:	[ fDispLinked	word	acmapLinked	word 16	acmapOther	word 16	aclocOther	@CLOC	] manifest	[ lCloc = (size CLOC)/16	lMcur = (size MCUR)/16	cmapHwr = #431	clocHwr = #426	] 

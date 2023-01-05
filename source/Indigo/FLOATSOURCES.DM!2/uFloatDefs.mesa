@@ -1,0 +1,1 @@
+-- uFloatDefs.mesaz18591l3712d2998j(1792)-- Copywrite Xerox Corporation 1980z18591l3712d2998j-- Secret definition for a RAM image built into mesa floating point-- microcode-- L. Stewart August 7, 1979  11:18 PMuFloatDefs: DEFINITIONS =BEGINuCodeImage: PROGRAM;END.\121b10B

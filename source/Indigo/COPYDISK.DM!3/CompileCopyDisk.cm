@@ -1,0 +1,1 @@
+Bcpl/f CopyDisk.bcpl CopyDiskInit.bcplBcpl/f CopyDiskBoot.bcpl CopyDiskRun.bcplBcpl/f CopyDiskCmd.bcplBcpl/f CopyDiskNet.bcpl CopyDiskNet1.bcplBcpl/f CopyDiskBfs.bcpl CopyDiskBfs1.bcplBcpl/f CopyDiskTfs.bcpl CopyDiskTfs1.bcplBcpl/f CopyDiskUtilB.bcplAsm/e  CopyDiskUtilA.asmMu CopyDiskMc.muPackMu CopyDiskMc.mb CopyDiskMc.br 77766 CopyDiskRamImageDelete CopyDiskMc.mb

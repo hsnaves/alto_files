@@ -1,0 +1,528 @@
+//		Q U E U E   M A I N T E N A N C E// Copyright Xerox Corporation 1979
+//	E. McCreight//	last edited March 22, 1976  2:30 PM
+external [
+	Allocate
+	Free	MoveBlock	ReadBlock	Gets	Puts	Endofs	CZ
+
+	GETQF
+	GETQR
+	GETNWQF
+	PUTQF
+	PUTQR
+	PUTNWQR
+	ISEMPTYQ
+	APPENDQ
+	INITQ
+	EMPTYOUTQ
+	CHARSINQ
+	STREAMTOQR
+	QFTOSTREAM
+	COPYQ	COMPAREQ
+	QFTOSTRING
+	STRINGTOQR
+	XFERQWHILE
+	GETWFILE
+	]
+
+manifest [
+	DEFLEN = 20
+	]
+
+static [
+	OOPS
+	SFILE
+	]
+
+
+structure STRING:	[ length byte
+	char^1,255 byte
+	]
+
+structure QS:	[ FRONT word
+		REAR word
+		FILLERUP word
+		]
+
+structure QE:	[ FLINK word
+		RLINK word
+		MAXLEN word
+		FRONT word
+		REAR word
+		DATA word =		[ CHAR^0,0 byte
+		] =
+
+		[ WD^0,0 word
+		]
+
+		]
+
+
+
+
+//	When these subroutines are called, and when they return, the
+//	two-way queues on which they work have the following format:
+
+//	1) If Q is empty, then Q>>QS.FRONT = Q>>QS.REAR = 0
+
+//	2) If Q is not empty, then it is a doubly-linked list of
+//	non-empty queue elements, from Q>>QS.FRONT linked
+//	by the QE>.FLINK field, and from Q>>QS.REAR
+//	linked by the QE.RLINK field. These lists terminate with
+//	a 0 link.
+
+//	3) A queue element Z contains from 1 to Z>>QE.MAXLEN+1
+//	characters, addressed by Z>>QE.CHAR^(Z>>QE>FRONT)
+//	through Z>>QE.CHAR^(Z>>QE.REAR), wrapping around from
+//	^(Z>>QE.MAXLEN) to ^0 if appropriate.
+
+//	4) Q>>QS.FILLERUP contains the address of a routine
+//	which will either add at least one element to Q
+//	or return FALSE if it can't.
+
+
+let ISEMPTYQ(Q) = (Q>>QS.FRONT eq 0)? not ((Q>>QS.FILLERUP)(Q)),
+			false
+
+
+
+and INITQ(Q, FILLUPRTN; numargs NA) be
+
+	[ if NA ls 2 then FILLUPRTN = NOPE
+	Q>>QS.FRONT = 0
+	Q>>QS.REAR = 0
+	Q>>QS.FILLERUP = FILLUPRTN
+	return
+	]
+
+
+and EMPTYOUTQ(Q) be
+
+	[ until ISEMPTYQ(Q) do
+
+		[ let QF = Q>>QS.FRONT
+		let NQF = QF>>QE.FLINK
+		Free(CZ, QF, lv OOPS)
+
+		test NQF eq 0
+
+		ifso Q>>QS.REAR = 0
+
+		ifnot NQF>>QE.RLINK = 0
+
+		Q>>QS.FRONT = NQF
+		]
+
+	return
+	]
+
+
+and NOPE(Q) = false
+
+
+and GETQF(Q) = valof
+
+	[ while Q>>QS.FRONT eq 0 do		if (Q>>QS.FILLERUP)(Q) eq false then
+			resultis 0
+
+	let QF = Q>>QS.FRONT
+	let QEF = QF>>QE.FRONT
+	let C = QF>>QE.CHAR^QEF
+
+	test QEF eq QF>>QE.REAR
+
+	ifso	[ let NF = QF>>QE.FLINK
+		test NF eq 0
+
+		ifso Q>>QS.REAR = 0
+
+		ifnot NF>>QE.RLINK = 0
+
+		Free(CZ, QF, lv OOPS)
+		Q>>QS.FRONT = NF
+		]
+
+	ifnot	[ QEF = QEF+1
+		if QEF gr QF>>QE.MAXLEN then QEF = 0
+		QF>>QE.FRONT = QEF
+		]
+
+	resultis C
+	]
+
+
+and GETQR(Q) = valof
+
+	[ while Q>>QS.REAR eq 0 do		if (Q>>QS.FILLERUP)(Q) eq false then
+			resultis 0
+
+	let QR = Q>>QS.REAR
+	let QER = QR>>QE.REAR
+	let C = QR>>QE.CHAR^QER
+
+	test QER eq QR>>QE.FRONT
+
+	ifso	[ let NR = QR>>QE.RLINK
+		test NR eq 0
+
+		ifso Q>>QS.FRONT = 0
+
+		ifnot NR>>QE.FLINK = 0
+
+		Free(CZ, QR, lv OOPS)
+		Q>>QS.REAR = NR
+		]
+
+	ifnot	[ QER = QER-1
+		if QER ls 0 then QER = QR>>QE.MAXLEN
+		QR>>QE.REAR = QER
+		]
+
+	resultis C
+	]
+
+
+and GETNWQF(N, Q, BLK, MoveBlockF; numargs na) = valof
+
+	[ OOPS = false	let NWTOGO = N	if na ls 4 then MoveBlockF = MoveBlock
+
+	while (NWTOGO gr 0) & not ISEMPTYQ(Q) & not OOPS do
+
+		[ let QF = Q>>QS.FRONT
+		let FX = (QF>>QE.FRONT) rshift 1	// 2 BYTES/WD
+		let RX = (QF>>QE.REAR) rshift 1
+		let MX = (QF>>QE.MAXLEN) rshift 1
+
+		let NWAVAIL = ((RX ls FX)? MX, RX)+1-FX
+
+		let NWTOXF = (NWAVAIL ls NWTOGO)? NWAVAIL,
+				NWTOGO
+
+		let WBLT = MoveBlockF(BLK, lv (QF>>QE.WD^FX), NWTOXF)		if MoveBlockF ne MoveBlock & WBLT ne NWTOXF then			[ NWTOXF = WBLT			OOPS = true			]
+
+		test RX eq FX+NWTOXF-1
+
+		ifso	[ let NF = QF>>QE.FLINK
+			test NF eq 0
+
+			ifso Q>>QS.REAR = 0
+
+			ifnot NF>>QE.RLINK = 0
+
+			Free(CZ, QF)
+
+			Q>>QS.FRONT = NF
+			]
+
+		ifnot	[ FX = FX+NWTOXF
+			if FX gr MX then FX = 0
+
+			QF>>QE.FRONT = FX lshift 1
+			]
+
+		NWTOGO = NWTOGO-NWTOXF
+		BLK = BLK+NWTOXF
+		]
+
+	resultis N-NWTOGO
+	]
+
+
+and PUTQF(Q, C) = valof
+
+	[ let QF = Q>>QS.FRONT
+	let QEF = nil
+
+	if (QF eq 0) % valof
+		[ QEF = QF>>QE.FRONT
+		QEF = QEF-1
+		if QEF ls 0 then QEF = QF>>QE.MAXLEN
+		resultis (QEF eq QF>>QE.REAR)
+		] then
+
+		[ let NF = GETNQE(DEFLEN)
+
+		if NF eq false then resultis false
+
+		NF>>QE.FLINK = QF
+		NF>>QE.RLINK = 0
+
+		test QF eq 0
+
+		ifso Q>>QS.REAR = NF
+
+		ifnot QF>>QE.RLINK = NF
+
+		NF>>QE.REAR = 0
+		QEF = 0
+		Q>>QS.FRONT = NF
+		QF = NF
+		]
+
+	QF>>QE.CHAR^QEF = C
+	QF>>QE.FRONT = QEF
+	resultis true
+	]
+
+
+and PUTQR(Q, C) = valof
+
+	[ let QR = Q>>QS.REAR
+	let QER = nil
+
+	if (QR eq 0) % valof
+		[ QER = QR>>QE.REAR
+		QER = QER+1
+		if QER gr QR>>QE.MAXLEN then QER = 0
+		resultis (QER eq QR>>QE.FRONT)
+		] then
+
+		[ let NR = GETNQE(DEFLEN)
+
+		if NR eq false then resultis false
+
+		NR>>QE.RLINK = QR
+		NR>>QE.FLINK = 0
+
+		test QR eq 0
+
+		ifso Q>>QS.FRONT = NR
+
+		ifnot QR>>QE.FLINK = NR
+
+		NR>>QE.FRONT = 0
+		QER = 0
+		Q>>QS.REAR = NR
+		QR = NR
+		]
+
+	QR>>QE.CHAR^QER = C
+	QR>>QE.REAR = QER
+	resultis true
+	]
+
+
+and PUTNWQR(N, Q, BLK, MoveBlockF; numargs na) = valof
+
+	[ let NWTOGO = N
+	OOPS = false	if na ls 4 then MoveBlockF = MoveBlock
+
+	while (NWTOGO gr 0) & not OOPS do
+
+		[ let QR = Q>>QS.REAR
+		let FX = nil
+		let RX = nil
+		let MX = nil
+
+		if (QR eq 0) % valof
+
+			[ FX = (QR>>QE.FRONT) rshift 1
+			RX = (QR>>QE.REAR) rshift 1
+			MX = (QR>>QE.MAXLEN) rshift 1
+
+			RX = (RX+1 gr MX)? 0, RX+1
+			resultis RX eq FX
+			] then
+
+			[ let NQE = GETNQE(((DEFLEN ls NWTOGO)?					NWTOGO, DEFLEN))
+
+			if NQE eq false then
+				[ OOPS = true
+				loop
+				]
+
+			test QR eq 0
+
+			ifso Q>>QS.FRONT = NQE
+
+			ifnot QR>>QE.FLINK = NQE
+
+			NQE>>QE.FLINK = 0
+			NQE>>QE.RLINK = QR
+			NQE>>QE.FRONT = 0
+			QR = NQE
+			Q>>QS.REAR = QR
+
+			FX = 0
+			RX = 0
+			MX = (QR>>QE.MAXLEN) rshift 1
+			]
+
+		let NWAVAIL = ((FX gr RX)? FX, MX+1)-RX
+		let NWTOXF = (NWAVAIL ls NWTOGO)? NWAVAIL,
+				NWTOGO
+
+		let WBLT = MoveBlockF(lv (QR>>QE.WD^RX), BLK, NWTOXF)
+
+		if MoveBlockF ne MoveBlock & WBLT ne NWTOXF then
+			[ NWTOXF = WBLT
+			OOPS = true
+			]
+
+		QR>>QE.REAR = ((RX+NWTOXF-1) lshift 1)+1
+		BLK = BLK+NWTOXF
+		NWTOGO = NWTOGO-NWTOXF
+		]
+
+	resultis N-NWTOGO
+	]
+
+
+and APPENDQ(RESULT, Q1, Q2) be
+
+	[ test Q1>>QS.FRONT eq 0
+
+		ifso [ RESULT>>QS.FRONT = Q2>>QS.FRONT
+			RESULT>>QS.REAR = Q2>>QS.REAR
+			]
+
+		ifnot test Q2>>QS.FRONT eq 0
+
+			ifso	[ RESULT>>QS.FRONT = Q1>>QS.FRONT
+				RESULT>>QS.REAR = Q1>>QS.REAR
+				]
+
+			ifnot	[ let Q1R = Q1>>QS.REAR
+				let Q2F = Q2>>QS.FRONT
+				Q1R>>QE.FLINK = Q2F
+				Q2F>>QE.RLINK = Q1R
+				RESULT>>QS.FRONT = Q1>>QS.FRONT
+				RESULT>>QS.REAR = Q2>>QS.REAR
+				]
+
+	return
+	]
+
+
+
+and CHARSINQ(Q) = valof
+
+	[ let COUNT = 0
+	let QP = Q>>QS.FRONT
+
+	while QP ne 0 do
+		[ test QP>>QE.FRONT gr QP>>QE.REAR
+
+		ifso COUNT = COUNT+(QP>>QE.MAXLEN-QP>>QE.FRONT)+
+			QP>>QE.REAR+2
+
+		ifnot COUNT = COUNT+(QP>>QE.REAR-QP>>QE.FRONT)+1
+
+		QP = QP>>QE.FLINK
+		]
+
+	resultis COUNT
+	]
+
+
+and COPYQ(SQ, DQ) be
+
+	[ let MYQ = vec size QS/16
+	INITQ(MYQ)
+
+	until ISEMPTYQ(SQ) do
+		[ let C = GETQF(SQ)
+		PUTQR(DQ, C)
+		PUTQR(MYQ, C)
+		]
+
+	APPENDQ(SQ, MYQ, SQ)
+	return
+	]
+
+
+and COMPAREQ(Q1, Q2) = valof	[ let FQ1 = vec size QS/16	let FQ2 = vec size QS/16	INITQ(FQ1)	INITQ(FQ2)	let Compare = 0	until ISEMPTYQ(Q1) % ISEMPTYQ(Q2) % (Compare ne 0) do		[ let C1 = GETQF(Q1)		PUTQR(FQ1, C1)		let C2 = GETQF(Q2)		PUTQR(FQ2, C2)		if C1 ls C2 then Compare = -1		if C1 gr C2 then Compare = 1		]	if Compare eq 0 &		((not ISEMPTYQ(Q1)) % (not ISEMPTYQ(Q2))) then		Compare = ISEMPTYQ(Q2)? 1, -1	APPENDQ(Q1, FQ1, Q1)	APPENDQ(Q2, FQ2, Q2)	resultis Compare	]
+and QFTOSTRING(Q, S) be
+
+	[ let SL = 0
+	until ISEMPTYQ(Q) do
+		[ SL = SL+1
+		S>>STRING.char^SL = GETQF(Q)
+		]
+	S>>STRING.length = SL
+	return
+	]
+
+
+and STRINGTOQR(S, Q) be
+
+	[ let SL = S>>STRING.length
+	for I=1 to SL do PUTQR(Q, S>>STRING.char^I)
+	return
+	]
+
+
+and XFERQWHILE(SRCRTN, PBSRTN, SRCQ, DESTRTN, DESTQ, WHILEFN) be
+
+	[ until ISEMPTYQ(SRCQ) do
+
+		[ let C = SRCRTN(SRCQ)
+		test WHILEFN(C)
+
+		ifso DESTRTN(DESTQ, C)
+
+		ifnot	[ PBSRTN(SRCQ, C)
+			break
+			]
+		]
+
+	return
+	]
+
+
+and STREAMTOQR(STREAM, Q) = valof
+
+	[ until Endofs(STREAM) do
+
+		unless PUTQR(Q, Gets(STREAM)) do resultis false
+	resultis true
+	]
+
+
+and QFTOSTREAM(Q, STREAM) be
+
+	[ until ISEMPTYQ(Q) do
+		Puts(STREAM, GETQF(Q))
+	return
+	]
+
+
+and GETNQE(NWDS) = valof
+
+	[ let GOTIT = false
+	let NQE = nil
+
+	[ let MYOOPS = false
+	NQE = Allocate(CZ, NWDS+(offset QE.DATA/16), true)
+
+	test NQE eq 0
+
+	ifso NWDS = NWDS rshift 1
+
+	ifnot	[ GOTIT = true
+		NQE>>QE.MAXLEN = NWDS+NWDS-1
+		]
+
+	] repeatuntil GOTIT % (NWDS ls DEFLEN)
+
+	resultis GOTIT?		NQE,		Allocate(CZ, DEFLEN+(offset QE.DATA/16))
+	]
+
+
+and GETWFILE(FILE, QUEUE, ISPAUSE; numargs NA) = valof
+
+	[ SFILE = FILE
+
+	until Endofs(FILE) do
+		[ if NA gr 2 then
+			if ISPAUSE() then resultis true
+		PUTNWQR(512, QUEUE, 0, MYRDVEC)
+		]
+
+	resultis false
+	]
+
+
+and MYRDVEC(DEST, SRC, N) = ReadBlock(SFILE, DEST, N)
+
+
+ 

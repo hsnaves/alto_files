@@ -1,0 +1,139 @@
+// BLDR.DECL -- loader definitions// Copyright Xerox Corporation 1979, 1980, 1981// Last modified November 13, 1981  2:54 PM by Taftget "sysdefs.d"get "altofilesys.d"get "streams.d"get "BcplFiles.d"get "AltoDefs.d"
+//  Constants
+
+manifest [USERBOTTOM = #1000 // *** Operating System dependent!!COREMAX = #177777 // *** Since we don't know where the OS isstackLim = #335STARTMEMIMAGE = #356 // lSV + COMMONMAX, fileAddr of non-@ statics
+FILENAMELENGTH = 40
+NAMELENGTH = 24
+
+ISTATICMAX = #400
+ISYMMAX = #700
+ICODEMAX = #5000
+ALLFILEMAX = 500
+
+DICTHEADLENGTH = 53
+RFILECODE = 1	// Use Codes in event (RFile, BFile) entries;BFILECODE = 2	//  correspond to, but never equal, PCsave letterVbl entriesverSyms = 1006B	// Format version for Syms files -- change when incompatible		// changes are made in Syms file format.// (Note: this is intended to be major,,minor version number, but Swat// improperly checks both parts.)
+]
+
+external [	
+
+//  Static variables
+
+VERSION
+
+@NAME
+@SW
+PARAMLIST
+@SFILENAME
+@RFILENAME@LFILENAME
+@SFILENUM
+@MFILENUM
+@TFILENUM
+@BFILENUM
+@RFILENUM@bFileCount@rFileCount@PREAMBLEVEC @fileNameVec@fileCount
+
+@SSTREAM
+@TSTREAM
+@LSTREAM
+@BSTREAM
+@RSTREAMESTREAM   // for fatal errors
+
+DEBUGSW
+MAPSW
+CASESW
+TFILESW
+TTYPESW
+LISTSW
+LISTNUMSW
+LISTLABSW
+LISTVARSW
+DUPSWINITSWAPSWBBINSAVESW  OSBKSWnoDisplaySw
+SWAPPEDOUTSYM  
+@DEBGSTARTADDRJSTATICMIN  JSTATICMAX  JCOMMONMIN  JCOMMONMAX  KSTATICCOUNT  
+@STATICSTART
+@STATICMAX
+@STATICLOC
+STATICSPACESIZE
+@COMMONSTART
+@COMMONMAX
+@COMMONLOC
+@CODESTART
+@CODEMAX	
+@CODELOC	
+STARTCODEIMAGE
+SRELPAIRLOC  
+@CODELENGTH
+
+@SYMMAX
+
+@NEWRFILE
+@BFILEMODE
+RELPAIRSW  
+LABLISTBASE  
+@LABLIST
+@SYMLIST
+@SYMTAB
+
+@BFILE
+@RFILE
+@SFILE@eventList // Q of BFile, RFile, SFile, PCsave structures, in command order
+
+@BHEAD
+@RHEAD
+@MHEAD
+
+@ZCODE
+@CODE
+
+@DICT	
+
+@FIRSTSYM
+@LASTSYMstartOverlayFa // file addresses, for rapid return to selected localesstaticLinksFa
+
+@WARNINGSW
+@WARNINGCOUNT
+@ERRORCOUNTsavedUserFinishProcmalFormedRoutine // 0 for none, -1 for SysErr, else a routine addressfreeBegin // For use after init in releasing spacerelPairList // For clearing statics after releasing spaceeStream // internal to error report codeeBuf // ditto
+
+//  Procedures
+
+Main
+INITSAVEFILE
+INITBINFILE
+READRELFILE
+ENDBINFILESTOPSAVEFILE
+ENDSAVEFILE
+WRITERELPAIRS
+READJKFILE	 
+READSTATICS
+READLABELS
+READCODE
+READCHAINS
+READZCHAINS
+SYMENTRY
+NEWSYMENTRY
+COMMONERROR
+MULTDEFERROR
+DICTENTRY
+PRINTLISTINGS
+PRINTUNDEFINED
+PRINTVARS
+PRINTNUMERIC
+PRINTSYM
+
+@BADSWITCH
+@ERRORBeginReportEndReport
+@WARNING
+@CODEWARNING
+@BETWEEN
+@FixFileName
+@Zmem
+@Openfile
+@CURBOPOS
+
+CURBOPAGE  
+@SETBOPOS
+@CURPOS	
+@SETPOS	FormFileNameOPENBLDRFILESPREAMOFCHKFILECAPITALIZE WssWs SKIPTO
+READJKSTATICSPROCESSJSTATICPROCESSKSTATICBldrFinishProcBeforeJuntaInitAfterJuntaInitIncreaseStorageFinishBldrOUTWARNINGSwappedOutNameOfRfileDisplayInCursor
+]// IN GP.Cexternal[SetupReadParamReadParamReadParamStreamEvalParam]// IN MDI.Cexternal[LookupEntries]// IN TEMPLATEexternal PutTemplate// IN QUEUEexternal [ Enqueue; InsertAfter ]// IN OSexternal[AddToZoneAllocateBitBltCallSwatClosesCreateDisplayStreamdspEndofsFileLengthFilePosfpRemCmfpSysDirfpSysFontFreeGetCurrentFaGetsInitializeZoneJumpToFaJuntalvSysZonelvUserFinishProcMoveBlockMyFrameNoopOpenFileOpenFileFromFpPositionPagePositionPtrPutsReadBlockResetsSetBlockSetFilePosShowDisplayStream
+SysErrsysFontsysZoneUmaxUminUscWoWriteBlockZero]
+// Structuresstructure SYm:	[	link word // others w/ same name	dictEntry word // name of sym	rFile word // RFile description of defining .BR	flags word =		[		blank bit 8		jOnly bit // 1=only mentioned in a BJ, not in any BR		type bit 2 // 0=und, 1=static, 2=let, 3=label		z bit // page 0 static = 1		local bit // 0=external (comes from compiler as 4 bits)		relocatable bit // 1 = let%label def in /B ov'lay or in /I		initSwappedOut bit // 1=let%label only def in /B overlays		dupDef bit = // 1=let%label def twice or more legally		]	initialValue word // 0 default	staticAddress word // -1 if unallocated	]manifest lSYm = size SYm/16structure DIct:	[	link word // more in bucket	sym word = mFileOffset word	name: @STRING	]manifest offsetDIctName = offset DIct.name/16// These describe instances of file occurrences; they are linked in the// order of the command file. They should be kept approximately the// same lengthstructure BFile:	[	link word // next file in load sequence	cmd byte; useCode byte	fileNum word // index into fileNameVec	bFileId word // this is the Id'th .RUN or .BB file (1st is 1)	nRelPairs word // number of relocatable statics in this .RUN or .BB file	codeLoc word // PC of first .BR file	maxCodeLoc word // max codeLoc encountered?	rFileCodeLoc word // codeLoc of this .BR file	pageLength word // SFile only?	]manifest lBFile = size BFile/16structure RFile:	[	link word // next file in load sequence	cmd byte; useCode byte	fileNum word // index into fileNameVec, locates file name, pointer	rFileId word // this is the Id'th .BR file (1st is 1)	bFileId word // it belongs to the Id'th .RUN or .BB "file"	codeLoc word // PC at start of .BR file load	codeLength word // includes all concatenated .BR files	fileCode word // code location within .RUN or .BB "file"	]manifest lRFile = size RFile/16manifest lFile = lBFile ge lRFile? lBFile, lRfilestructure PCsave:	[	link word	cmd byte // from loader switch	letterVbl byte // A-Z, one-char letter vbls for multi-PCs (or $ from $n/P)	]manifest lPCsave = size PCsave/16structure PCmod:	[	@PCsave	newValue word // n argument to n/P or $n/P	]manifest lPCmod = size PCmod/16structure ZOne:	[ // **** dependent on ALLOC implementation !!! See .rover code in bldr1	Allocate	word	Free		word	OutOfSpaceRtn	word	MalFormedRtn	word	anchor:		[		length word		data word 2 =		  [		  pSbNext word // next free block		  pSbPrevious word // previous free block		  ]		]	rover		word	minAdr	word	maxAdr	word	]structure BRHeader: // header of .BR file	[	version word	fileLength word; blank word	namesAddr word; blank word	labelsAddr word; blank word	codeAddr word; blank word	chainsAddr word; blank word	zChainsAddr word; blank word	blank^#15,#16 word	]manifest [ lBRHeader = size BRHeader/16; RHEADLENGTH = lBRHeader ]// Defined in BcplFiles.d//structure BBHeader: // header of .BB overlay file or file segment//	[//	codeLoc word		// PC of first code word, as controlled by /P//	codeLength word	// # code words in overlay//	type word		// 0 for /A, 1 for /B//	relPairTable word	// FILE word location of relocation table//	fileLength word	// file or segment length, in words//	overlayPage word	// (alto page #)-1 of this disk page//	blank ^ #6, #17 word	// reserved//	]//manifest lBBHeader = size BBHeader/16manifest BHEADLENGTH = lBBHeader//structure SYmsHeader: // header of .SYMS file//	[//	version word 1		// version of BLDR that loaded//	fileLength word 1	// in words//	namesAddr word	// file word location of name strings//	symsAddr word	// location of static symbol descriptions//	brFilesAddr word	// location of .BR file descriptions//	binFilesAddr word	// location of .RUN and .BB file descriptions//	blank^#6,#17 word	// reserved//	]//manifest lSYmsHeader = size SYmsHeader/16manifest MHEADLENGTH = lSYmsHeader
