@@ -1,0 +1,1 @@
+-- File: JuniperStub.mesa-- Last edited by Levin:   5-Dec-80 15:51:10DIRECTORY  FileDefs USING [Operations];JuniperStub: PROGRAM  EXPORTS FileDefs =  BEGIN OPEN FileDefs;  -- Procedures Exported to FileDefs --  InitializeJuniper: PUBLIC PROCEDURE RETURNS [Operations] = {RETURN[NIL]};  FinalizeJuniper: PUBLIC PROCEDURE = {NULL};  END.

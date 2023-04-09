@@ -1,0 +1,1 @@
+//command file for blowing I2716 PROMS w/ PNEW.//<*>/f -- insert file name here (*.mb)//$absolute/m -- info for PNEW//15/t -- id for prom//ad/r -- invert address and data from PNEWs table//0/c, 0/b --chip start addr and start bit = 0//<*>R8/a -- starting addr in .mb file (now set at $0000)//0/s --hit it!!pnew Gnat.MB/f $absolute/m 15/t d/r 0/c 0/b 0R8/a 0/s

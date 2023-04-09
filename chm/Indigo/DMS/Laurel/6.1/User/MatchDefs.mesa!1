@@ -1,0 +1,1 @@
+-- MatchDefs.mesa-- written by McCreight, August 28, 1980  10:07 AMMatchDefs: DEFINITIONS =  BEGIN  IsMatch: PROCEDURE[name, pattern: STRING] RETURNS [BOOLEAN];  Capitalize: PROCEDURE[s, capS: STRING];  UnCapitalize: PROCEDURE[s, unCapS: STRING];  END.z19932e12(1270)\f1

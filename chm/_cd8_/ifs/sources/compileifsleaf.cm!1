@@ -1,0 +1,1 @@
+Bcpl/fo IfsLeafRes.bcpl IfsLeafSwap.bcpl IfsLeafInit.bcpl IfsLeafOEP.bcpl IfsLeafClose.bcpl IfsLeafOpen.bcpl IfsLeafRare.bcpl IfsLeafRead.bcpl IfsLeafWrite.bcpl IfsLeafVMemClose.bcpl IfsLeafVMemOpen.bcpl IfsLeafVMemRes.bcpl IfsSequinFeed.bcpl IfsSequinReaper.bcpl IfsSequinUtil.bcpl IfsSequinSwap.bcpl IfsLeafVPBIUtil.bcpl IfsTelnetLeafStat.bcpl IfsTelnetLeafMemStat.bcpl

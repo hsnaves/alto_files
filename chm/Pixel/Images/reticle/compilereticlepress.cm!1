@@ -1,0 +1,1 @@
+//This compiles all the code needed to make a Mesa Press Server//Compile PressNetSender to get test sender programCompiler /~p~b~n PressDefs /p ^PressNetDefs /p ^SlotDefs /p ^PressBandsDefs /p ^Press /p ^PressInit /p ^PressLockCode /p ^PrintSlot /p ^BootRam /p ^ReticlePressNetListener /p ^PressBandsOps /p ^ExperimentalPrintSlot ^

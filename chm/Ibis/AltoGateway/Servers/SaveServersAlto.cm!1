@@ -1,0 +1,1 @@
+// SaveServersAlto.cm, HGM, March 2, 1981  10:33 PMFTP @where@>Servers Sto/ua ^  @source.servers@ @object.servers@ ^  PupBooterFastAlto.mesa PupBooterFastAlto.bcd ^  PupMicrocodeBooterAlto.mesa PupMicrocodeBooterAlto.bcd ^  NetDirFileAlto.mesa NetDirFileAlto.bcd ^  Servers.config Servers.bcd ^  source.servers object.servers SaveServersAlto.cm

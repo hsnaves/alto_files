@@ -1,0 +1,1 @@
+// MakePilotGatewayFromScratch.cm, HGM, March 3, 1981  12:43 AMFTP @where@ ^  Retr/c '*source'* '*object'* ^  Retr/c '*.cm '*.mesa '*.config ^@FetchAltoThings.cm@@CompileAltoWorld.cm@@BindAltoWorld.cm@@MakeGateway.cm@@SignalListingForGateway.cm@

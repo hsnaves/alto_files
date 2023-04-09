@@ -1,0 +1,1 @@
+-- File: Stats.config,  Last Edit: HGM July 6, 1980  10:52 PMStats: CONFIGURATION LINKS: CODE  IMPORTS Process, Put, String, Time  EXPORTS StatsDefs  CONTROL StatsCold =    BEGIN    StatsHot;    StatsStrings;    StatsCold;    StatsPrint;    END.

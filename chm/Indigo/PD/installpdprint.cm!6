@@ -1,0 +1,1 @@
+ftp indigo dir/c pd ^ret/c PDPrint.run PDPrint.syms PDPrint.errors Decide.run Server.cm ^close/c open/c maxc dir/c <press> ret/c TridentEftp.run//delete installpdprint.cmPDPrint/i

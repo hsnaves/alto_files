@@ -1,0 +1,1 @@
+Copy Helvetica14.foo _ Helvetica18.strike; ^Copy Helvetica8.foo _ Helvetica10.strike; ^TableCompiler Helvetica8.foo/m ALEOps/ig ^  Helvetica14.foo/m ALEOps/ig ^  Gacha10.strike/m ALEOps/ig; ^Type TableCompiler.log

@@ -1,0 +1,1 @@
+//  LoadOrbitMC - initialization routine for OVInit and OVPrintget "SpruceMisc.d"   external LoadOrbitMC	// defined here   external [ InitRam; PRamImage; XPRamImage; xmFonts ]let LoadOrbitMC() be	[	test xmFonts then InitRam(XPRamImage, OrbitRMR)	or InitRam(PRamImage, OrbitRMR)	]// January 30, 1980 2:20 PM, invented

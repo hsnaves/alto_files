@@ -1,0 +1,1 @@
+-- SortMail.config-- edited by Brotz: August 20, 1982  5:09 PMSortMail: CONFIGURATION  IMPORTS csD, exD, intCommon, Inline, IODefs, MessageParse, mfD, Storage, String, vmD  CONTROL SortMailMain =BEGINSortMailMain;DateAndTimeImpl;END.  -- of SortMail.config --(635)\f1

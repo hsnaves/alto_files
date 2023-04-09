@@ -1,0 +1,1 @@
+--File SlotDefs.mesa Last edited April 14, 1982  1:42 PM By Glen WilliamsDIRECTORY;SlotDefs: DEFINITIONS =BEGINlongScans: CARDINAL = 800;END. --of SlotDefs--Created April 14, 1982  1:43 PM by Glen Williams(635)\i74I13b8B50b1B6i

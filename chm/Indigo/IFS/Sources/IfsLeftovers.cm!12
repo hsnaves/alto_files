@@ -1,0 +1,1 @@
+IfsSystemInfo.decl ^^IfsLogConn.bcpl IfsCachedDIF.bcpl IfsAccessControl.bcpl IfsGroupName.bcpl ^IfsSwapUtil.bcpl IfsHeapSort.bcpl IfsTimeIO.bcpl IfsMemoryError.bcpl ^IfsPrintError.bcpl IfsPrintErrorInit.bcpl IfsSwapUtilOEP.bcpl ^^IfsSpyRes.bcpl IfsAllocSpy.bcpl IfsAllocSpyStack.asm ^IfsVMemSpy.decl IfsVMemSpy.bcpl ^

@@ -1,0 +1,1 @@
+-- OISCPTypesAdditions.mesa , Last editted by BLyon on March 12, 1981  1:03 PM-- This file should be merged with OISCPTypes at the "appropriate timesDIRECTORY  OISCPTypes USING [PacketType];OISCPTypesAdditions: DEFINITIONS =  BEGIN  pupAddrTransPacket: OISCPTypes.PacketType = LOOPHOLE[6];  -- use by the EthernetOne head for DLion  END.

@@ -1,0 +1,1 @@
+compile /j LaurelTTYDefs ChatServer LaurelTTYEditor LaurelTTYInterface localttydriver.mesa;Bind LocalTTY.laurel _ LocalTTY/c;Bind RemoteTTY.laurel _ RemoteTTY/c

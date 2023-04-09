@@ -1,0 +1,769 @@
+XEROXPALO ALTO RESEARCH CENTER3333 Coyote Hill RoadPalo Alto   California 94304Jasmine Scanner ManualBY Joe MalesonVersion of August 11, 1980[IVY]<Jasmine>Docs>JasmineManual.PRESSThis is the manual for Jasmine, a low-cost experimental optical scanner which operates at amaximum resolution of 96 8-bit samples per inch.  It is intended to contain all the informationnecessary to build hardware and software interfaces, and to understand the scanner electronics.  ‹‹›Ÿ› ¤¤£§¨ª«££§¨§ª¬°¯°¯ª«±³¨§ª¯¬¬««±°¯³±¬°µ´³¹´¯··½½»¸µ®©ª§¬­§’ƒeN?;99A>BHKMLGCA?9?66@[a_XRSPLQQ^gqthXKINWODDFLIBIA:>0-424//4/-%.HNQFED>IINSMPXMT`S>WWSUSbSX[^MVVPWQCb`VZRTKKcSaZSHUXORe\YUOKFIPKGIIF@B?C5;C5437414-.164:=¹ÇÅÆÄÂÉĞĞÉËÉÂÊÈÂÅÀ·´Œ"$.&(4<@CIRJLFCHEA=9<8NPPQG=<IELNKPQOOWNJPSRYY[MW^\KPWTUXEiaU\^UKLeTe[NNUXYYh\ZPGFF@SJEMM@CJ7A6;7455?:50&&1/108›ÁÂÈÉÇÍÑÎÉÉÅÅÆÊÅÂ¾¼¶w"(&%3<>FDOJHGB?;=>A<7MVTJJ@BJHFNVZXMRSDFX`T\RVNV__NNVTTVJjYSW]PDHcYa]YRSSW`fVVTECMESNGLE<?D=98<3234?361+(0,922v¾ÃÊÇÆÈĞÍËÌËÅÆÉÄÁ»º¸j",&"26@EEMJEBD@=;?;76OOZRKDFJKRP\SZKQTFQY[V^S_RW]_LUZVX\UsfZ]`ROQiVeeYQTOYZfURUE=C?OIFOJD:@>3;E3167;321/.22123K¿ÂÉËÊÃËÓĞÑÔÑÎÉÆÅ¿¼½o$(+#$59CJLKKB@GDBA=@;6OU\OIBJLGIO]S`JRUKCSXNYP\P^^ePV\]_\]nb^aW\UXjUb_MHVZ^]m\WQA?RGZVDHEC:CA9=8095A@7540/89039A«ÃÊÆÍÌÎÑÕÕÙÕÒÊÊÈ¾Å½c#0,).27HNNPPBHEEEDBA82INXKKFKKNLMXWZQXXIJURMWZ^SacbMZ^ao^dmbccX_NQkSi^UHUPa^bZUWDCJKZN>GLF5HB7G:250=:992)-86228=ˆÇÌÏÏËÌÕ×ØÚØÑÖÑÎÇÉÀ[%2(&-8;UQMJHDBCA?C==<8KOQLKMOJIFFXTYIORMUWSJVWWL_\dTW`fthjebdcZ^OMbU^[URNZ_Zd[ZYGGRITP?HNI4CH>H<372?=77404:83.9C\ÄÍÑÒÒÖ×Õ×ÑÒĞÔÑÑÎË¼Q$/*'/?DNIKMKDAFC?CA:82EIRMABKOFKGZRQIRHDHIRLQXRS`Y_QWa`m_ccc`_WXML]TbcRIPT[XaUUZLAJEPO6>II7@DGL--54<84:5/686,)1;D©ÒÖÖÕ××ÖÖÕ×ÔÒÔÒÉÄ»G#-*#35;GIFFA?@<<=;978=>@JK?8JMA@@QNLGKN?DHPDDSLJZXXKP][j`a]V]UT]IM\RUYSDPQTUZWIK<<??LR8?GK0A@H>0+2.?:570/.7.&$+3;ŒÓÕØÔÕÔÒÓÒÑĞÇÌÌÅ¿·<#%$#237:?GHGG@=7=8675-?EJL>8NP:<FSVOEGP=DOP?HPIEONP>STWe\\WQ_UN^HI\W[XGCHMQYXQKJAA??LM6<:B3A:H<+3.,876/6015,#'-&2eÚ×ÛÙÙÕÉÎÉÇÉĞÂ¿½Ã²2&)(%096A@>>:<985752:40DKJJ>CNQG@FT\K@OOAGOT?JTQBQRQHSQTdYXQNbQPZCO]ZXYOCHITSSUMJ?;B=DG::=E:B<B8152078518//41//107DĞÙÜÚÛĞÃÊÊÇÊÒÇÄÂ¼©/%'$#-48<6::=;=996720,*CHKA;BLSNLBMZRAJNCLKP:D[QBTIPEOLO\PWCX^ONUFWWSUTNCKIPLPRKJA9ABIF8;CI8;==>9552<=75:646320/)03ª×İİŞÆÁÊËÍÑÏÇÄÁ½£($+*.548@=AAA><:9944657JRKCHXZXRMLSXZHMUFPLVBRZWFPO[GVYT\TNLb^VV\U_WZZ]RBLMTQWWQMC?GGQN?@DN:@A=?@8;8BB;;:=EGV^lyƒ”¬ËßàáÏÉÉÇÌÓÍÊÇÂ¿),..0=86<?EB>>=;:8;675:MQN;UW[VYNFS^YKIOFRO\FJUZFUNVO\[SZRK[b\XU]P]V\YZUDMKZYT[VPGAF=NP<EIK:BA:;88Wq‹¨©±¾ÉÌĞÑÑËÄÃ¶ºÎßàßÒ×ÓÕØÒÌÍÍÉÇ)-/(+288;@?<?CA;<9<:754MNP>UY]XWRKO`XLOO>POUDOOSBTOZEW]PNGPa[ZVW]QWOYY]RJUKXW[ZVSGA@DNL?EIMB<C;G:O¼àåãŞßÜáÜŞİ×ÑÑÅÅ¹ÁË×ÙÑÛáÕ×ÚÕÙÕĞÊÉ•'-/)/;97;=:C<@<><;>;61-GFK>KNZSUJOEVMGHQ<KPUIIRSFRVYERQJHH\[VUN]TISNXWYVDMGUVWRTLFEB@KJ<AFH95><A8kÚãäÜÖÏßØÓŞÚÔÙÏÄÁÁ¾½ÏØÑÎÌĞÔÕÖÔÍÍÍÉ‹').)03599==@<;67:;74722>>>:@CLJGBE;SFC@M9HGD=@DH<HML<JQDCGPWIRCSIAOHPMRK@ACKKJAGA:=759:18@B84:9;<ĞÕĞÏĞÈÎËÉÎÑÒÑÊÂ½´¶²ÄĞË¾ÃÇËÍÉÉ¾Á»¹~"+' ..3026;65:36672-/,/@E75=JIJEE?6LFC:B;>HD:@GE=FMR8@LCJHNLCKCGE@E=EFKRU\ey†’©³µ´«œŠzg`R@4-05<–ÊÍÍËËÇÅÃÀÇÉÇÅÉÄ½¼¸´»ÆÆ¾¼ÄÅÄÄÅÂÀ¹µw!(&")+*/,1412631-0/,*(&7;12:A=7=>>2@?=8<27=<5<A<4=CB98C>GIOT[fnx„š§¬¸Ã¾ÆÆÊÊÆÇÈÌËÄÄ¿¼»¿ÆÆÀ»±¥0=ªÆÆÇÄÈÈ¿¹ÁÄÅÁÁÅÁ½ºº±±Á¼»½¿¿¿Ã¼»º·´m!"!#&%*'*)'*)'(&$14&45@4:5=95;;96800<B8GQV]lv~‹› ¨³µ»¼ÃÃÂ¿Â¾½¹¸¾½ÁÃÀÄÁÃÁ¼¼¿ÄÄÂÄÀÅÄ¿Á½»¸¬%9´ÅÄÁÀ¼¾»ºÅÈÄÀÂÅÅÃº¼ºµ¾ÁÀ¼¾½¼º¾¿¹´²e !## &"$#  /4+226274DKKT_hp|…–¤¦¦§§¬®­««¯²³³¶º±»¼ÃÂÁÀ¹¸·¸½Â¾ÃÃÁÀ½¾¾º¾ÀÀ¿¿ÀÃÃÀ¾¼¾¾¶';µ¿ÄÄ¿¼»¼¼¿½½ÁÄÂ¾Áº¸¸´º¿¼º¹¹µ¸·º·±®Y!%$  ""&5*//00<~¥©¬¬§«¨¨§Ÿ£ª§¦¤¨¦¨©©©©°±²²«¸¸½½½º´²´¸¹¸½¸¹··º»º¸·¸º·¸»¼»½»·´´²-I³µ¹¸µ¸·¹¶¶¶¶º¼½º»º´³¯®µ²·¸µ´»¸·³­¬T!&""#($)'%!'""+-*-&+-4‚¤ª¯®««©­¯­°¯¯¯®²«¬°³¶³³¶µ¶¹¸º»»¹¹µ´¶¸µ·¶¶¸¸µ¶¹·µµ·¶µ´´´¸ºº»´¶´²8U´³²¸¶³¶¸¶»¶º½¼¹¹µº´¶±¬µ¶µ····¹º´ª«K " ) #"% $+.+/47BLyªª³³­ªªª²³³¶³µ¸º¶¶µ¯®¯³µ¶·»·µ¶»¶¶¶¹µ¶¸´µµ··²²·²«¡”€vr ·¹® –ˆ³´³>m±³µ¹µ³µ¶¹¼¸º¹¸µ³µ¶³µ³²³·¸º¹¶µ·¶³®©B"+:H«¯°²²¦º¼¸¶´´²·»º»¹´¾¿½¹¸²°´³µ¹»À¼¸¸»½¼½»½¹¼¶¯©}eO?/(! *0œ¼¾«“‰}³ººRx©´¼¾ºµ´¸¼¿¾º»º¸»½º¸¹·»´º¹¸·¹¸¸·´´°B)7@«·´´³¸¹»ºº²´µ¼¾¼½¼¶¼»¶º¾´¹¹·º»¶»ºº²ª‘|n`VF9+&(%&!!!"$#*C·¿¾›P{€´¿Á«–­¸½Àº¹½ÂÀ½»·»·»ºº·´¼¸´³·°´¸¹½µµ³¨7(4;¡¾¼º½¼¾ÃÄÂ¾¿ÂÃÀÅÁ½·º¾ÁÀ¿º¯¡’…rcSI>0.)'$#!#%" (!      #TÀÁ¿¡`»´®¼¼½º¦§±·½»¹¾ÄÄ½½¶¹¸½¹¹·»ºº·¶´³¶¸¿¼¸¸¶¬3 %$)+)#&'!%/7˜®»¿Â¿Ä½ÁÅÄÇÇÄÄÃ¿½»½¾§NB70,.*%)&'* ! !!"E!SÈÌÇ¨O¤•¥¼¾º¹½³ª³µ¸µº¾¼¼¿¿¼¾»»ºÄÁÂ¿¾»¶´·¹½¿º·ºµ/ "#"#" &+6•¥»½¼¿ÅÀ¼¾ÂÆÃÃ¾À½¶¹»½€!*(&""#! /.MÄÄÃ·ƒœ³»½¹¶»¾·®¬­­²½¿½¼¾ÀÃÀ¿¿ÆÂ¾Á¾¼¶±³´·»·¶·±)"!$(/•´¼À¾¾¼¸º½½À¹ÀÂ¸´µ·µƒ#   ';¸¾¿»»º¹µ¸·¶²´º¹µ Ÿ¬³¿¾¿¿À½¿¼»Â¿¸»¸¹¶³²µ³¹¸·µ¯"5ˆD  !'2’Ÿ­ÁÅ¾¿¼ÁÁÀÀ½ÀÂÇ¼½º¼»!!  9¹ÃÀ¼»¾¸¶³¹¯´¶º¹·µ£¦´ÀÄÃÃÄÄÂÀ¾Ã¾¼¿½À¿¸³¸´»½¶¶ª#$-+9B–£ª·¾¿¾ÀÀ»¸¾¿¿¾¿¿Á½¼¾ !#$$#""!2£¿¿¾»¹¶²²´µ³¶·¸¸º³£š¨»ÁÀÀÁÃÃ¿ÀÀ¿º½º»»¸µ¶¹¹·³´©"! baa•£«±ÃÅÆÇÃ½¼ÀÅÈÇÆÅÃ½ÂÄ¶$$$&" " %;j¤ÇÅÁ¾¸µ¼¿··¹½ÃÃÁ·¥¶¿ÂÆÅÈÉÌÊÈÆÇÅÀÃÂÁº¾¹¿¹¶µª`c^’¥­¬²½¾ÁÄ¿ÁÀÄÄÆÇÄÃÂÇ¿»*!!# %6M\¤¼ºº·µº¹¶³µµ¹º½´³®³¹½¿ÄÆÁÃÆÃÂÁÀ¿¾¾ºµ¸µ´µ¶µ©%(&-24ZWR£¬§­½¸¹º¹»»¾ÂÂÁÂÁÀ¿»¸0  $6DOYœº¸µ´¶¸¸¶µ¶´·¶··¶¶´µ´º¾¿ÀÃ½¼¹º¹µ¼»·µ±©¥­² AEGKKOYY[aahmpvu‚‡Šˆ[`\‘£²°³ÇÅÆÇÂÅÇÇÌÍÌÉÇÆÆÀ¾Y(#'%$"! "")8BEAS¼½ÂÀÂÄ¼ÀÁ½½¾Á½º¿»ºµ»ÄÇÎÉÅÂÁ¾ÄÂÄÀ°¨¢‰} ±«®°®¯±³­°®¦®©š“‹‡‚wpd[KBZae•§²²³ºÊÊËÅ¿ÃÅÊÍÓÊÊÉÇÁÇÀ‚"'%%$!" 0:E?<G^§¿ÀÂÂÇÅÇÄÃ½½ÀÅÆÀÃ¾¹½ÁÄÊÌÄÂ¿À¼®¡‰lV>-# 3gkjd]VUROE820&SQT–ª«°±±ÃÉĞÍÌÏÈÌĞÏËÑÉËÈËÉÂQ$(+&! ##   (:FFGILTe³ÃÉÉÌËÊÆÃ¿¾ÃÍÇÂÉÂ¾¼ÀÅÊ¹s]G5$!\YV‘§©ª«©´ÄËÈÎÎÕÈÑËÉÎÉÅÇÇÅÄ£)*&%!"!#-9@KOGEJFU[b«ÂÅÅÆÃÂ½½¾ÁÁÂÁÃ½¿¼¾¿À¶e^a¥¨¦©ª±ÁÈÊÎÉÌÅÊÍËËÇÁÁÁ½»ºr)+(&!!!! # !"$#)..,,,222AJMNKAA==CECV¡¿ÁÀÁÀ½¼½º¾º¹»»½¾¼ººº_	[[Xk¡¡¦§«³¼ÅÈÈÅÊÆ¾ÇÆÆÃ¼¸¸¼¶»®C0.'##$"!$')%"*/33469:;;87;66;=C?7485:96/2K«¼¸¹·¹¸¹¹»··´¶¹¹·¶¶³£^_\]’¤¥¢ª­²ÀÄÀ¾»½¶¶¶µ¶µµµ·¶¸¶•761442533:?84769:9:=;562//*,298/&,.243+&)6Z©·²±µº¸´·´·´µµ·´³µ³±ajhmh{¬¨©ª®´¼¼Ä¿½ÄÄ¶·¸»¾º¼¹½¶»¹}PSRTSMHLKGG@?89:411.+-+'('(-22*##(+.'!"#(2T¦¶´´¶¹¶µ´¸·¸¹º¸º¶³²©(otprm£®§©­´¸ÆÊÊÉÌÌÂ¹ÃÃÆÊĞÈÆÂÆÂ¹faa`aZVULF@;987730310.-+(*131.+,(-./$ #')4T©Áº¸¼ÁÃ¾ÄÃÌÈÊÊÈÂ½´²!$!!!$$"{z~}w´¯¯²¸½ÂËÌËÊÎÍ¹ÆÈÅÊÑÈÇÄÃÇÇ¢V[ZVOHHED;887872/1..*/('+.13,*&+5.(# "%!&,3X£Â¾¾ÅÉÅÅÉÎÎËËÌÇÂ½½¸V #$(+)(*69=;=<6/43,#%†‹‡ˆ‘‚®¹º¸¾ÂÆÒ×ËÊ×ÙÆÁÒÎÕŞÒÍÔÍÌÍÃ‡MTYTLJHGF?=<A;7:64234..467360243.)(%)'$'*/<]¯ÌÉËÉÏÎĞÑ×ÑÓËÉÅËÊÂ¹m'205:GKPVUROF;:3250/!!#*1&%%26KZr†‡ˆˆƒ‡ƒ”ÁÈÇÍËÌÎÙĞÓİİÚÊİÙáäáİáÛØÒ×ÊZHOTIECA?::<=?<;:456414593537482+'+)1++++.6GfºÏÏÔÛàÛ×ŞÚÜØÑÍÌÍÈÈÄ|:??BIDGJLGJJJPCE??;<>J\r…’š©©¬¨£ŸŸ•šœ ‰·ÁÊÌÍÑÎÖÓ×ØÜâßÖäâäåäääâÜÙÚ±EJLIFE??<=9;>879:410.3872203450*)(),-*%%-1@Jd¹ÒÏÒÜàÚÚØßÖÖ¿ÍÏÇÊË¨4416@PSUOMSYau~œ­ºÃÈÍ¶»½¯´°® ¡«™‹…’„–ÈÉÉĞİÛŞáßààâãÊâàâæååäâŞŞŞİFIKKFDA;:8=9;95533469851643751./,+/,.*,',:DMj²ÔŞáßŞàßàİ×¼ÙÑÌÑÖŸEIITmzŠœ¦·¾ÇÍÎÖ“™¼ÕÉÍÆÇ¼°¹¯¢¨ Ÿš›Ÿ˜¢ŸŸ¿ÌÑÓÜİßßääåáàÛÅßàáæãàßŞÜÛÜÌKFGEGA;786:67454969751277<210*++(")'*/>EVch^XvÒÜÜİİİààÜÙ¼ÛÚÑÃÊLW€ÊÖÚÚÒÒİÜÕÕÏ¶|up¸Ë½¯¿°§³¯£ª¦¤­œ›‹ŒŠ…‚€Š«ÊÔÖÙÜŞßáİÜÛİÛ¿×ÙÛßàÜÜÛØÙÙÚ™AIE<D<=;<79<9>:53174-537963+/9FNQXTTF>5)%%*4fÓØÙÜÙÙÙÙÛÛ¸ÚÙÏÁÄyBJËÙÚÚÚ×ÚØØÑÕœuDK€¡§¾¾º²³«¬« ¡œ¥ ‘—•™’ÌÓÕÖØİÚÚÜÛÜÙØÓ½ÜØÛÛÙ×ÔÖÕÚØÑlFB;A:;88<B;8010/.2-/;HPVSVPKD7-"#$ & #&$'3cÕ××ÖÖÕØÖÖ×¹ÕÕÑĞÍe>N™¯ÇÉ×Ø×Û×Ù×ØÇkw‡€ii¥Ë¹©³®©¤©£››‘ˆ’Œ‘‘˜˜Š´ĞÒÑÓØÔÖÚÚ×ÖØØÂÔßÜÚÔÕÖ×Ñ××ÒÈT9:=:7369;24<JZ]]WWMC:*%#$ ! $##"!"#%-lÔÒÕ×ÖÓÔÓÕÑ¹ÑÓÒÒÄXU_£¢¦³ÎÕÕ×ÑÒÒÕ”…^EB>Kq ­¶¯®·°±ª®£šŒ‡…‡ŠŒ’„ÊĞÒÒÕÕÖÖÜÙÛŞÚÓÁàŞÜÖÒÕØÕÚØÕÑ 2=69=IU`c`UJ<*" !""#   # #,rĞÒÕÛØÚÙ×ÒÕºÑÓÏÑÅAPkŸ «¾ÔÕ×ÙÙØ×»\>bi{ytƒ¶°­£µ§–¬¡—‹‘“–“’‡³ÍÑ×ÓÙÖÚÛÛÜÜÖÒÀ×àŞßÛÚÙØŞÛÚÕÅ\__YOC2*%%(()! #!$#!# "! !  "!!0yÎÍØÜÙİİØÔĞ¾ÎÔÍÊ¿6St—›¯ÔİÙÜÙÖØÓ½¡hK?>:J†–°´±´¶«§ˆ‹‘”‘’‘†”ÏĞÖÖ×ÖÓØØÕÓÕÕØ¶İİÜŞ×ØÛŞÛØ×ÍE++$$!&%,%#$'# %!!"##"! !&!!! !"$.‚×ÖÙÙÜßŞÖÖÏÂÏÒÒĞº+i~Œ’š­ÔÙÒÙÛ××ÓÖ×Q@CicvnY_‹±¬¡¢•ƒ„„‡Œ““•‘‰¾ÉÎÏÎÍÏÖÕÒÑÔØÔ¤ÔÕØÒÓÓ×ØÙÕÉÃC**%&$%#&$'!%$ $$% ! "$-ƒÒÓÔÕ×ØÒËÍÈÀÉĞÎÌª8TR‡‹‹‘¥ËÓÎĞÒÕÔÒÔË˜„qZ^MCABE\ª¥Ÿ¬ª¡ˆ‘–’””’ˆ¤ÇÈÆÈÌĞÍĞÑÍÌËÉÁÈÊÎËÅÌÒÖÊÄÂD#%%# $%("&"!#!"$ '…ÏÍĞÓ×ÏÌÏÏÈÃÇÍÅÇ¡PT@Q‹“§ÆÓĞÓÓÖÙÚÙÎy`<<?JVg{˜Ÿ»Ä¸½¦›‹Œ”™›–‡½ÅÆÉĞÕĞÍÑÊÈÉÉ”¸ÆÌÑÉÇÇÎÏÈÇÃF'%%$!$%&$& ""   !! $%-’ÔÖÑÌÕÎÆÊÇÈÅÊËÊÈPH?,y’”ªÌÒÔÒÓÔÛÙÛÕÄ’£±ÀÌÏĞÕÊÌËÆ¸˜—‰”™ŸšŸ¤ÊÍËÍÚ×ÏÎÈËÎÒ¢·ÍÌĞÏÒÓÑÓÌÈÄK)((#$&&&$%" !!  !""" !$!  ""'3“ÖÛÙÕÔËÇÃÆĞÍÎÎÍÈ‹[YP/;“«ÄÍÑØÕÏÒÕÙÖÌÑÍÌÔÖÓÕ××ÒÄÄÂ¸³°’‘“••™˜“‡ÈĞĞÖÜÜÓÍÆÌÒÙ¤½ÙÌÕ×ÖÔ×ÙÎÇÇP/(&$!#&'!"'"#" $"#  "#  !!$%%/ÖÜÙ×ÙÕÔ¼¹ÇÏĞËÒÉ‚bdR2%g™±ÌÑĞÙÕÒÍĞĞÍÏÓÙÙÜÙÔ×ÖÓÑËÊÅ¾·³‹Š‰Œ™ ™¢¡¡•­ÏÓ×ÙÜÕĞÄÊÚ×¬¸ÖÎİÜÔÓÔÙÏÆÆV*)'$%**%'&-$! #"$!+!" #$!$#$####$$#'0£ÓİÚÙØÖ×ÂÀÇËÍÍÏÇub[P:63“µÆÍÎÎÏĞÍĞÏÍĞÔ×ÛŞØÑÏÊÊÇ¾¶´¯›Œ‹••£¥§§¢˜—ÉĞÔØ×ÕÍÄÍÔÓ±³ÖÓÕÙÏÎĞÒÓÉÇV-+'%+&'%'**%$# "$""&+%!! "#%#!"&"##%>jÁĞØÚÚÛÚÖÇ¿ÅÈÊÊÈÇpd_W<3*T¸ËÍÙÎÎÊÍÓĞĞÓÕÔÕÏÇ¹´²²³®¬¬ª–ˆ‚…””™£¤©¨¦ª ”ºÑĞÙÙÙÈÈÔÛÙ¹°ÖÔÏÕÓÑÔÔØÒÍY/.)1(&)/',')$$'%$$$(/*$&"'#$#$'1BQl~•­³½ÈÍÑÜÙ×ØÓÔÊÊÉÆÌÂÀÆrnmeZE:5‰ÑÍÓÌÒËËÅÀÃ¿½¼···¯­¯®®¨ª¬¦˜ŒŒ‘œŸ¡ŸŸ¡¡¤¥£“—ÈÌÙÔÎÇÈÒÔÕ¾©ÑÏÔÕÕÎÑÓ×ÔÈ[//()%,+(('*'%$&&&)$"##"&-AQo‚—²ÀÇÎÎÎÇÇÄÅÉÊÒÓÙİÚÑÔÑËÇÆÄ¾¾µxtmeYNE?D¾ÌËÍÕÄ¹¾¸¾ÅÁÂ¸¸°¯¯®¬­ª¦¥£“‰€~‚‚ˆ“˜™œ¹ÍÒÌÌÈÈËÓÎÂ¢ÍËÔÕÎËĞÎÛÑÆ[--)'$*&('%&)#"%!!-1B[v­¼ÅËËÉÂÌĞĞÔÍÏÍÉÈÇÌÑÒÎÕÜÜÕÕÎÈ¸ˆpmrrz{uwofZUWuÃÉË×¿µ¶½¸ÀÀÀ¼¼¶´²²°©¦§¤¢œ—’Œœš˜š›œ›œÍÌÌÍÇÅÅÌÑÅ§ÍÕŞÚÑÓÏÏÓÌÆ]*,(%%'&($&+2EaxŸ¶ÆÃÇĞÑÏËĞÎÊÆÇËÍÓ×ÎÎÈÈÆÆÊĞÏÓÍÈ·Ÿ‚fI-!3K\lŒ’”“„wi]S“ÑÏĞ¸¹¸µ¸¾¹¼À·¶´´´©ª©©¬¦¡›€„…•”™Ÿœ ›› –‰¿ËÏÓÅÃÈĞÕĞ«ÓÒ×ÚÕ×ÕÍËËËg.'*)4K]vŠ§¿ÊÓ××ÖÏÖ×ÖÔÖ×ÍÍÓËÍÉÉÆÇÎÎÍÑÊÀ¼±–mS9- !")7Bb|–•™•‡†ƒzpj²ÑÑ¿¿¼µÀ¹¹¾¼·¶´¶²­©–‡t\70Œ‰„‰“”ŸŸ›š™•ŒœÇÃÉ½½ÆĞÓÎªĞÎÏÑÓÌÔÑÊÉÈ‘pˆ®¼ÈÏÏĞ×ÙÕÖÒÕÙÔ×ÙİÜÙÙÔÑÔÏÌĞÇÄÁ²—nP8+$#").5?NXluv}z†–¡œ£ š–}qeZa¶Ï¹º½¶·¶»´¥ŒqaO;,   !Š……ŒŒŠ’•˜š› šš™¹ÅÇ»º¿ËËË¤ÍÍÉÈÉÍÓÑĞÇÉÍÇÆÇÆÀÆÇÌÍÓÔÓÓÑĞÒÑÏÓÜÙÒÒÑÏÈ¹¥‚\>.!"4FWmˆ‚„‰‹’—›š–—’¢¢¡¨Ÿ‹yoqqmlcwÀ³³­ˆcL7)"(4DLQ__V–•”•–‘™™œŸŸ˜‹¥ÊÌÅÅÆÌÏÎ¦ËÈÇËÍËÒÒĞÕÓĞÍÊÄÈÈÍÎÏÏ×ØÖÙ×ÙÓÕÖÑÇ· |`J2# # (4DWat‰–Ÿ™™—”—š••‘”‘›Ÿ ¤¢˜•‘“–”Šƒytgb># '1:DYdjmqmrqurkƒ‹“‘––•– ¢©¨¤¤£ —’ÉÍÉÇÇÈÉÉ§ÈÈÇËÊÊĞÏĞÙÙÕÏÓÉÊÆÅÊÒÔÙÙÑÄ­›}bP9*)()2;H[esƒ™ ——“›£¤¡ §¦ Ÿ ›šŸ¦£ŸŸ›Ÿ¡¤¥¥¢›••‘Šˆƒ|xskdYamv€‚zvzx€€†{|vts‹‘’’”˜œ¢š ¢¢£œ‘¶ÔÏÉÃÍĞÊ¥ÇÍÊÌĞÌĞÈËÖÜ×ÚÕÍÇÈµ«›iO=($/3AQYh|ƒ—¥§¬¯ª¥Ÿ›˜›¡££§¢ Ÿ¢¤§œšš›˜˜š›šš¡˜›•–›–”“’“””–“•‘”•Œˆ„ƒ…‰‹‹{ŒŒ’‘–œ™•œ£®ª¡˜ŸÑÑÍÇÇÊÇ§ÂÏÈÍÔÓÒÉÌĞÒÃ³ŸxX?'$&'5L]yŠ˜ £¬¥¬µ³¹®«Ÿ¡¨¯¨¯®®¬­£ŸŸ œ¢ª¥£¤§¤œ ¤¦¨­¤¡£¢¨§§¢¡¡¤˜“‘•—šš••“”’ŠŒ—•’‘Šƒ——šŸª§¢Ÿ¤¢¢š”Œ½ĞËÉÎËÉ©ÃÊÇÊÈ¿¯“xYH6'&.7M[tŠ˜ª¥®¹·Á¿µµ®§œ¡§ª§«³«£¤¤­¬±µ²²·µºº¼³¬¨«¤Ÿœ£¦ª§©¥¥ ¡¥¤¥œ›˜š¦ š–•’˜™˜’’‘““”“‘”“‹Œ‘‘•“•šœ™š”ƒœÎÃ¹¼£Švˆu_P;)))/BVkz”Ÿ®³·½¸¼¹¯±®¥¥ª¦¡¡¨§§¬­­ª±¸¹¹¹µ±«®·³°²³­¬³±´¯¯°¦§¨¦¦¨Ÿ£¦¥¢¢¡£–š¤§ ¤Ÿšœ™œ˜šœŸ›˜””|o]H7†Šƒ…‹ˆ†‹–š”•’‹E0&!"&(,AO`l|ŒŸ¨®±²³¬ª©¢¦¦¥¥©­²·µ¹³°¬¥§§°²·³´°ª¨§©¨§¬¯¬©«©¦«¬°®¨§®¨¦ ¦§§¬­®©¡ ¢¡¡¥¥£›š¥¨  ¥ ¢¡¤œ’jP=5%#&,)ˆ„s{…Œ•¦¢¦¤¡¤ ¦—Š}IPZs{…”Ÿ¥­®±²³°±µ­¥¥˜˜™•£ª¯²²ºÁÁº¸»´­ §¬±¸»¹°©¬¤˜›š¥©©§—™˜› ´·°­¨¨¢¢¡œ¦ª «ª¨ª¤œ›”•¡¢©¨§¦œyhTC-! #.-0.,/4!††•“”š™œ™–™—›Ÿ›š™œŸ––—™«¨©§©®´¹º°¥œ £­·½½»ÀÃÄµ®¯¨§¦¢¥™£¡› œ”–“—š£¦¥¬°²°±³§£§¬ª«§§©©Ÿ¦¦¥©©«¥¥¡Ÿ”„l\D5)!$()-/*/0(# #‹ŠŠˆ‰“–š ¡ Ÿ›—œšš’‘‘”˜ª´²¹µ²§¤©©«²­¨¨¨®²©«±³­°¯³¥Ÿ œ›Ÿ¢¦ §¬¥šœ¡Ÿ›¢¡©ª§¦ £¨¬°¯º·®œ¢§©¨©«²°ª«¨©¥˜ƒlZ@1&,(++$/-.0,&*"&,)( !"‚ƒ…‚ˆ™“‘–’–œ¦¥ª¨¬¬­ª§£§¦˜£¦²­«··¹ª§¢¡¢˜—œ££œ¡§±·­°«­©¤Ÿœ”œ¬¤ ¦®©£Ÿ¥¥ª­°¯­°³±³­²¯·¶³·µ¯¥v_L9,""*06;;716,%-&&+!)%'('#!#!’ˆ…‡ˆŠŒ‘• ¡¥§©±¾Á·³°¦¦–š¢Ÿ¬ª©¦§¢¤¡¡¦¬´²ª š–“¦´À¾ÀÂÅ¶¢ Ÿ™›£¢­¨¯²«£££§««¥¨­®¶¹²µ¾¼¶¹µ³°«™mX;-'&$,1846;91,)$# &,*))$")23,#~pfy…•™˜›¥¨´¨­´¶±®­¢¢¢›£§­¨©«¢¥°©­«®±¯°­®°³±«¨Ÿ¡ ©¯®ª©¦¤©¢¨­¬¨¬§¨­«¬¯¯¶¸¿Ãº¹¶ª¡v^F6'"'(19861+.,-)) $,042(!!""./3.)##),"!€„…†‰–•™››¡¨šœ¤¤¨¥¡¥ ¤¨¨¤§¡£ª¯®²®µÄ»´±¦¦¥Ÿ¥©²´³¶¶´°«¬¡¤ª­­³«²¯³ª¢©®°²°¸°±§’…eW@5,,5,35/4670%,#"#'"()0+(*$'2661*##+,154363-…‹‡‡‰‹„„ˆ‰…“¢¦¥ª¨­©¬¦¨ª©¡¡¤¦¯­¯­²¶³°µµ©©¤Ÿ¦©¯­¶´¾½¶¹ÄÁÅ¿À¼³¬°®®©°¯¯±¬«§š…pZJ@./115?><;A6251(+'"#--**)&!(6<@<:3("**0167755+'   ô pî)WïÏğô Xqî)`ïğô Frî)`ï¤ğrî)`ïfğô sî·ï`0ğrî·ï\âğqî;ï\âğrî·ïX2ğtî·ïS¦ğ&ô çuî·ïJğ?ô èuî5mïJğô ·uî·ïI
+ğCô ¸uî7ïI
+ğô Íuî·ïG…ğô ÎuîïG…ğMô uîH–ïG…ğövîâïAsğ„vîâïA	ğ„vîâï@ ğ„vîâï@6ğ„vîâï?Ìğ„vîâï?bğ„vîâï>øğ„vîâï>ğ„vîâï>%ğ„vîâï=»ğ„vîâï=Qğ„vîâï<çğ„vîâï<}ğ„vîâï<ğ„vîâï;ªğ„vîâï;@ğ„vîâï:Öğ„vîâï:lğ„vîâï:ğ„vîâï9˜ğ„vîâï9/ğ„vîâï8Åğ„vîâï8[ğ„vîâï7ñğ„vîâï7‡ğ„vîâï7ğ„vîâï6´ğ„vîâï6Jğ„vîâï5àğ„vîâï5vğ„vîâï5ğ„vîâï4¢ğ„vîâï49ğ„vîâï3Ïğ„vîâï3eğ„vîâï2ûğ„vîâï2‘ğ„vîâï2'ğ„vîâï1¾ğ„vîâï1Tğ„vîâï0êğ„vîâï0€ğ„vîâï0ğ„vîâï/¬ğ„vîâï/Cğ„vîâï.Ùğ„vîâï.oğ„vîâï.ğ„vîâï-›ğ„vîâï-1ğ„vîâï,Èğ„vîâï,^ğ„vîâï+ôğ„vîâï+Šğ„vîâï+ ğ„vîâï*¶ğ„vîâï*Mğ„vîâï)ãğ„vîâï)yğ„vîâï)ğ„vîâï(¥ğ„vîâï(;ğ„vîâï'Òğ„vîâï'hğ„vîâï&şğ„vîâï&”ğ„vîâï&*ğ„vîâï%Àğ„vîâï%Wğ„vîâï$íğ„vîâï$ƒğ„vîâï$ğ„vîâï#¯ğ„vîâï#Eğ„vîâï"Üğ„vîâï"rğ„vîâï"ğ„vîâï!ğ„vîâï!4ğ„vîâï Êğ„vîâï ağ„vîâï÷ğ„vîâïğ„vîâï#ğ„vîâï¹ğ„vîâïOğ„        .(        TVm$èÎšÉ Ê   Jasmine Scanner Manual2Contents1. Introduction2. External Interface2.1Jasmine Control2.2Commands2.3Data Transfer2.4Timing 3. Analog Electronics3.1Detector Array3.2Video Signal3.3A-D Conversion3.4Noise Filtering 4. Digital Electronics4.1Finite State Machine4.2Sequencing Logic4.3Stepper Motor Control5. Mechano-Optical Design5.1Paper Transport5.2Document Illumination5.3Optical Path5.4Lens Alignment/Focus/Magnification6. User Software6.1User level interfaces: Jasmine.RUN, Scan.RUN, Scope.RUN6.2Procedural interface6.3Microcode Interface and Implementation7. Check-out Procedures7.1Adjusting the Output Level7.2Optical Assembly7.2.1Alignment7.2.2Focus7.2.3MagnificationAppendix 1. SchematicsA1.1Analog BoardA1.2Finite State MachineA1.3Sequencing LogicA1.4Stepper Motor DriversA1.5PC board layoutA1.6Power WiringA1.7External CableA1.8 TC200 Paper Transport ModificationsAppendix 2. PROM MicrocodeA2.1PROM Blowing ProcedureA2.2Microcode ListingAppendix 3. RevisionsA3.1Rev Gb   ô uî·ïfñğuîGïïfñğqî'‡ïbğqî·ï]Kğqî·ïZ ğuî2ïXœğuî­ïXœğuî2ïWğuî­ïWğuî2ïU”ğuî­ïU”ğuî2ïTğuî­ïTğqî·ïPäğuî2ïO`ğuî­ïO`ğuî2ïMÜğuî­ïMÜğuî2ïLXğuî­ïLXğuî2ïJÔğuî­ïJÔğqî·ïG¨ğuî2ïF$ğuî­ïF$ğuî2ïD ğuî­ïD ğuî2ïCğuî­ïCğqî·ï?ñğuî2ï>mğuî­ï>mğuî2ï<éğuî­ï<éğuî2ï;eğuî­ï;eğuî2ï9áğuî­ï9áğ"qî·ï6µğuî2ï51ğuî­ï51ğ7uî2ï3­ğuî­ï3­ğuî2ï2)ğuî­ï2)ğ&qî·ï.şğuî2ï-zğuî­ï-zğuî2ï+öğuî­ï+öğuî2ï*rğuî(ï*rğ	uî2ï(îğuî(ï(îğuî2ï'iğuî(ï'iğqî·ï$>ğuî2ï"ºğuî(ï"ºğuî2ï!6ğuî(ï!6ğuî2ï²ğuî(ï²ğuî2ï.ğuî(ï.ğuî2ïªğuî(ïªğuî2ï&ğuî(ï&ğuî2ï¢ğuî(ï¢ğuî2ïğ(qî·ïòğuî2ïnğuî(ïnğuî2ïêğuî(ïêğqî·ï¿ğuî2ï;ğuî(ï;ğÿ        Ğ        TVm$vÎšÉ Ê     ÎÔ          tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà· ¸ º çz   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (JManCover.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                        Jasmine Scanner Manual31.  IntroductionThis document describes Jasmine, a low-cost experimental scanner.  Jasmine moves an originaldocument past a linear detector array to produce a gray-level image which can be displayedimmediately on a CRT, stored on a file, or transmitted to a printer for hardcopy.  It operates at amaximum resolution of 96 8-bit samples per inch, and moves paper at a maximum speed of 2inches per second.  It communicates through a simple computer interface which allows it to connectto an unmodified AltoII or D0.  The scanner speed and resolution closely matches the Alto/D0capabilities: neither machine can accept data at paper speeds above 2"/sec; doubling the resolutionwould produce about 4Mbits/page which is unrealistic for the Alto/D0 storage capacities.The scanner hardware consists of two printed circuit boards containing about 40 TTL chips, twopower supplies (+5V and -12V), a modified TC200 telecopier paper transport driven by a smallstepper motor, an f4.0 28mm lens, a front-surface mirror, and a light bar containing ten 48V ACbulbs.  The unit is packaged for desktop use in a sheet metal box measuring 15 3/4" x 19" x 4";the paper transport housing rises about 3" above the top of the box, and lifts on hinges for clearingdocuments.  The on/off button is mounted on the transport top.  Four screws attach the metalcover of the scanner box to the base.  On the rear plate are a female AC plug, a 3/4 amp fuse, anda female 25 pin connector.The electronics consists of a simple state machine which drives an A/D converter and feeds the 8-bit output values into a FIFO.  In addition, per-pixel correction is provided in order to produce auniform digital output range for each element in the detector array.   There are 6 bits of offsetcorrection and 6 bits of gain correction for each element, held in three 1024x4 static RAMs.  Theoutput variance among elements when no light is incident is called dark current leakage, andproduces a DC offset which must be corrected.  The gain correction takes care of the light responsevariation among elements.PeopleThe Jasmine scanner represents a joint effort between the Computer Science Lab and the OpticalSciences Lab at Xerox PARC.  The analog electronics were designed by Ed McCreight (CSL), theoriginal mechanical and optical design were done by Gary Starkweather (OSL) and the digitalelectronics and software were produced by Joe Maleson (CSL).  Fabrication and test of initial buildof 25 units was carried out by Terry Haney, Frank Vest, and John Henning (Garage).    uî·ïfñğuîGïïfñğô Xqî%£ïbğô Ìuî·ï]’ğô Íuî÷ï]’ğOô ãuî·ï\ğ2ô äuî-mï\ğ(ô ˜uî·ïZŠğcô Àuî·ïYğô ÁuîaïYğ@ô †uî·ïWğ+ô ‡uî&åïWğ7ô ´uî·ïUığô µuî§ïUığ>ô ‘uî·ïTyğô ’uîzïTyğNô uî·ïRõğXô ±uî·ïOíğSô ²uîA ïOíğô ³uî·ïNiğ\ô ¨uî·ïLåğXô ©uîBàïLåğô œuî·ïKağ1ô uî*zïKağ.ô ‡uî·ïIİğ	ô ˆuîqïIİğ\ô ¹uî·ïHYğ>ô ºuî4âïHYğô †uî·ïFÕğô ‡uî^ïFÕğGô uî·ïEQğô –uî·ïBIğô —uî«ïBIğFô ™uî·ï@Åğaô šuîGIï@Åğô ±uî·ï?Ağ4ô ²uî,øï?Ağ-ô uî·ï=¼ğOô Ÿuî<‚ï=¼ğô ×uî·ï<8ğCwî8Dï<8ğô Øwî:îï<8ğuîE/ï<8ğô ‡uî·ï:´ğ.ô ˆuî(áï:´ğ5ô uî·ï90ğwî·ï6(ğô £uî·ï3 ğô ¤uîï3 ğ@ô šuî·ï1œğ8ô ›uî0tï1œğ$ô Îuî·ï0ğô ÏuîŸï0ğDô ‰uî·ï.”ğ5ô Šuî-£ï.”ğ.ô uî·ï-ğRô Xuî·ï+Œğÿ        	ø        TVm$[ÎšÉ Ê     ÎÔ          tóÊÎ°Î½         Xÿÿ    » ¼ ¾ Î„óà· ¸ º çz   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (JManCover.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                      Jasmine Scanner Manual42.External InterfaceJasmine connects to an external computer through an 8-bit input and 8-bit output bus.  Datatransfer from Jasmine requires an additional input and output control bit.2.1Jasmine ControlThe command byte from the controlling computer to the scanner is functionally divided into:Enable[0], Command[1-3], and Data[4-7].  To avoid hardware transition states, the command byte isfirst sent with Enable low (0), then high (1), and finally low (0).  For commands which do notrequire any data, the state of the four Data bits is not important.The Jasmine logic package is controlled by a state machine (sequencer), implemented with a ROM.There are four possible sequencer states: Wait, Scan, Load, and Init.  When Jasmine is powered up,this sequencer will be in some random state.  The sequencer is moved from any state to its Waitstate by a LOAD command followed by a START command.  From the Wait state, a STARTcommand moves the sequencer into Scan state, in which it produces the next scan line of samples.From the Wait state, a LOAD command moves the sequencer into Load state, in which it loads thecorrection RAMs with data received from the external computer.  The Init state is entered wheneither 1) the sequencer is Scanning, and a LOAD command is received, or 2) the sequencer isLoading, and a START command is recived.  The sequencer moves from Init to Wait on the fallingedge of the START command line.  2.2CommandsSTART (111)The start command begins a new Scan cycle.  In this cycle, the detector array first receivesa pulse which causes it to begin clocking out samples, and then a uniform train of clockpulses is generated.  The amount of time that light is integrated on a particular detectorelement is exactly the interval between output clocks for that element.  The timing intervalbetween start pulses is entirely regulated by the controlling computer.  Variations in theduration of this interval will cause variations in the output levels of the samples.In addition, the 4 bit Data field of the start command specifies the number of samples toskip after a sample has been digitized.  This feature enables a scanner with 1024 elementsto deliver either 1024, 512, 340, 256, 204, ..., or 64 [=1024/(skipCount+1)] digitizedsamples per scan line.     LOAD (110)The load command begins a new Load cycle, and sets the internal address counters toreceive the correction values for the first detector.  Each successive load command causesthe address counters to increment by one.  When the last element has been corrected, orwhen a start command is received, the sequencer enters its Wait state.MOTORCTL (101)This command controls the stepper motor which moves the paper.  Taking advantage of themotor's short duty cycle, increased torque is obtained by supplying high current for shortperiods (< 60 seconds).  Current is cut off from the motor by asserting data bit 2 (x1xx).Leaving the motor on for extended periods will cause overheating and possible damage.  Themotor is turned by applying power to two coils according to the two low order data bits.The motor moves forward one step for each value in the sequence {3,2,0,1}, and in reversefor {1,0,2,3}.WE1 (011)WE2 (010)WE3 (001)These three commands load the 4 bit Data field into the top, middle, or low 4 bit fields ofthe currently selected 12 bit word of the correction RAMs.  The top 6 bits of this wordcorrespond to the offset correction, and the low 6 bits are the gain correction.  ô uî·ïfñğuîGïïfñğqî#ïbğô Xqî&”ïbğô Îuî·ï_ğ?ô Ïuî5¥ï_ğô uî·ï]’ğJwî·ïZŠğwî2ïZŠğô Ôuî·ïWğô ÕuîÄïWğFô uî·ïUığ(ô uî$ÿïUığ9ô µuî·ïTyğHô ¶uî8gïTyğô uî·ïRõğCô uî·ïOíğô uî£ïOíğNô ƒuî·ïNiğ*wî$ÏïNiğuî'°ïNiğwî(‹ïNiğuî+oïNiğwî,JïNiğuî/LïNiğwî2ÛïNiğuî5ïNiğô ¢uî·ïLåğSô £uîAJïLåğwîE¯ïLåğô ¼uî·ïKağ%ô ½uî&ÈïKağwî;+ïKağuî>ïKağô ”uî·ïIİğ!wî":ïIİğuî%ïIİğ;ô ‡uî·ïHYğô ˆuîdïHYğwîìïHYğuîÍïHYğ0wî4øïHYğuî7úïHYğô ªuî·ïFÕğô «uî4ïFÕğ5wî8’ïFÕğuî:»ïFÕğô ½uî·ïEQğô ¾uî7ïEQğwî™ïEQğuî}ïEQğ<wî·ïCÍğô ƒuî¹ïCÍğ
+ô „uîÅïCÍğ5wî8²ïCÍğuî;_ïCÍğwî=ïCÍğuî?ìïCÍğô uî·ïBIğ!wî·ï?Ağwî2ï?AğuîÀï<8ğô uîÀï:´ğwî%Ÿï:´ğuî(ƒï:´ğ0ô uîCcï:´ğ	ô ©uîÀï90ğ?ô ªuî8Ìï90ğô ®uîÀï7¬ğô ¯uîdï7¬ğEô uîÀï6(ğSô ‘uîCˆï6(ğ	wîÀï4¤ğô ¼uîQï4¤ğ#ô ½uî)üï4¤ğ0ô uîÀï3 ğTô uîÀï0ğ$ô uî&`ï0ğ5ô ›uîÀï.”ğZô æuîÀï-ğ!ô çuî%ºï-ğ5ô uîÀï+ŒğuîÀï*ğuîÀï(„ğ
+ô ÆuîÀï' ğwî&çï' ğuî)éï' ğ%ô Çuî@ãï' ğô ¦uîÀï%|ğKô §uî=»ï%|ğô ¦uîÀï#øğWô uîÀï"sğ;wî9¬ï"sğuî<ï"sğuîÀïkğô ‚uîÀïçğ!ô ƒuî&ïçğ6ô ¤uîÀïcğ9ô ¥uî4ïcğ!ô ¤uîÀïßğ#ô ¥uî&]ïßğ7ô •wîÀï[ğ!ô –wî%­ï[ğ4uîEï[ğô £uîÀï×ğô ¤uîdï×ğIô ‹uîÀïSğ)ô Œuî+¯ïSğ0ô uîÀïÏğuîÀïÇğ	uîÀïCğ	uîÀï¿ğ	ô uîÀï;ğGô uî=ï;ğô ­uîÀï·ğWô uîÀï
+3ğPÿ                TVm$~ÎšÉ Ê     ÎÔ $         tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà· ¸ º çz   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (JManCover.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                          Jasmine Scanner Manual5 SETDELAY (000)The potentially large bandwidth required to transfer samples from the Jasmine FIFO to theexternal computer is a problem in some applications where the computer cannot keep upwith the transfer rate.  A delay counter is implemented which provides additional delaybetween digitized samples in units of 1 microsecond.  The 4 bit Data field thus specifies upto 15 microseconds of additional delay between output samples.  (see also section 2.4 fortiming details).  2.3Data TransferA 64x8 FIFO buffers data bytes between Jasmine and the external computer.  An output bit fromthe scanner (XBus.0) is high when the FIFO is ready with a data word.  Two control bits from thecomputer are used to shift a data word out of the FIFO: the falling edge of XBus.Read' sendsXBus.A0' on the FIFO shift-out line.  After the FIFO receives the shift signal, the output ready bitwill stay low until the next data byte is ready.  This will take more than a microsecond for someFIFOs.On the Alto, the XBus provides the input path from the scanner.  Each time the XBus is read, two addressbits are available on the connector, and a third bit indicates that the read is taking place.  For convenience andspeed, the "XBus read" signal is used to clock a flip-flop, with one of the address bits used as the input data.Thus, two XBus addresses are "safe," causing no change to the FIFO, and two XBus addresses cause the FIFOto shift out.  For computers with other I/O interfaces, both the clock and data can be driven fromcomplementary versions of the same output bit (clock low, data high causes a shift).Note that the XBus read signal goes high when any XBus address fetch is issued, so in order to shift theFIFO, a non-XBus address must be stored into the Alto MAR.   The FIFO is reset at every START pulse, so that any data not read out at that time will be lost.Because the inter-sample timing is critical, it is impossible to do anything if a new data byte is readyand the FIFO is full:  in this case, either the new data byte, or the first data byte in the FIFO,must be discarded.  It is up to the external computer to ensure that the combination of integrationtime, skip count, and delay setting will not cause data to be lost.  On the other hand, if the onlypurpose of the START pulse is to maintain constant integration time, there is no error signalgenerated if none of the data bytes are read out. 2.4Timing The maximum speed of the Reticon chip used as the detector array is 1MHz.  Each sample which isskipped thus produces  a minimum of 1 microsecond of delay.  The A to D converter implementedfor Jasmine provides a bit every clock time.  Currently, Jasmine runs on a 250 nsec clock;including overhead for other control functions, Jasmine will deliver a digitized value every 15 clocks(3.75 microseconds).  Thus, the time between digitized samples is (3.75+skipCount+delayCount)microseconds.  The minimum time per scan line for the various values of skipCount anddelayCount are given in Table 1.   uî·ïfñğuîGïïfñğuîÀïbğuîÀï`šğô ‡uîÀï_ğ+ô ˆuî+Tï_ğ.ô ¥uîÀï]’ğFô ¦uî>Vï]’ğô ¹uîÀï\ğô ºuî æï\ğ=ô ‡uîÀïZŠğ'ô ˆuî(lïZŠğ5ô ©uîÀïYğDô ªuî< ïYğô uîÀïWğwî·ïTyğwî2ïTyğô —uî·ïQqğ&ô ˜uî%ïQqğ7ô uî·ïOíğô uîõïOíğDô ¸uî·ïNiğô ¹uîuïNiğBô ‹uî·ïLåğ/ô Œuî(ØïLåğ5ô ¡uî·ïKağô ¢uîÛïKağNuî·ïIİğô štî­ïFøğô ›tî@ïFøğXô tî­ïE»ğ0ô ‚tî(&ïE»ğBô Štî­ïD}ğ(ô ‹tî%&ïD}ğHô „tî­ïC@ğ/ô …tî(ıïC@ğ:ô Ütî­ïBğSô İtî?‘ïBğô tî­ï@ÅğTô ªtî­ï>Jğ-ô «tî)±ï>Jğ;ô tî­ï=ğ<uî·ï;«ğô ¢uî·ï:'ğ/ô £uî*˜ï:'ğ1ô €uî·ï8£ğ2ô uî'Öï8£ğ6ô ¨uî·ï7ğô ©uîsï7ğVô ’uî·ï5›ğô “uî„ï5›ğDô  uî·ï4ğô ¡uîùï4ğRô Ïuî·ï2“ğPô Ğuî@ï2“ğô uî·ï1ğ1uî·ï/‹ğwî·ï.ğwî2ï.ğuî·ï,ƒğô uî·ï*ÿğô ‚uîï*ÿğKô ˆuî·ï){ğô ‰uî·ï){ğGô æuî·ï'÷ğZô …uî·ï&sğ\ô †uîBŒï&sğ
+ô ±uî·ï$îğô ²uîï$îğIôuî·ï#jğ-ôuî,{ï#jğ(ô uî·ï!æğ         Î        TVm$ªÎšÉ Ê     ÎÔ .         tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà· ¸ º çz   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (JManCover.PRESS                         Ò  €  d          Jasmine Scanner Manual6delayCount  0 1 2 3 4 5 6 7 8  9 10 11 12 13 14 15skipCount(nSamples)0(1024)3.844.865.896.917.948.969.9811.0112.0313.0614.0815.1016.1317.1518.1819.201( 512)2.432.943.463.974.484.995.50 6.02 6.53 7.04 7.55 8.06 8.58 9.09 9.6010.112( 340)1.962.302.642.983.333.674.01 4.35 4.69 5.03 5.37 5.71 6.05 6.39 6.74 7.083( 256)1.731.982.242.502.753.013.26 3.52 3.78 4.03 4.29 4.54 4.80 5.06 5.31 5.574( 204)1.581.791.992.192.402.602.81 3.01 3.21 3.42 3.62 3.83 4.03 4.23 4.44 4.645( 170)1.491.661.832.002.172.342.51 2.68 2.85 3.02 3.19 3.36 3.53 3.70 3.87 4.046( 146)1.421.571.721.862.012.152.30 2.45 2.59 2.74 2.88 3.03 3.18 3.32 3.47 3.617( 128)1.381.501.631.761.892.022.14 2.27 2.40 2.53 2.66 2.78 2.91 3.04 3.17 3.308( 113)1.331.441.551.671.781.892.01 2.12 2.23 2.35 2.46 2.57 2.68 2.80 2.91 3.029( 102)1.301.401.511.611.711.811.91 2.02 2.12 2.22 2.32 2.42 2.53 2.63 2.73 2.8310(  93)1.281.371.471.561.651.741.84 1.93 2.02 2.12 2.21 2.30 2.40 2.49 2.58 2.6711(  85)1.251.341.421.511.591.681.76 1.85 1.93 2.02 2.10 2.19 2.27 2.36 2.44 2.5312(  78)1.231.311.391.461.541.621.70 1.78 1.85 1.93 2.01 2.09 2.17 2.24 2.32 2.4013(  73)1.221.301.371.441.521.591.66 1.73 1.81 1.88 1.95 2.03 2.10 2.17 2.25 2.3214(  68)1.211.281.341.411.481.551.62 1.68 1.75 1.82 1.89 1.96 2.02 2.09 2.16 2.2315(  64)1.201.261.331.391.461.521.58 1.65 1.71 1.78 1.84 1.90 1.97 2.03 2.10 2.16Table 1.  Scan line time in milliseconds for various sample resolutions and rates   uî·ïfñğuîGïïfñğtîâïbAğ
+ô Ftî8ïbAğtîcïbAğtîïbAğtî¹ïbAğtî!äïbAğtî%ïbAğtî(:ïbAğtî+eïbAğtî.ïbAğtî1»ïbAğtî4æïbAğtî8ïbAğtî;<ïbAğtî>gïbAğtîA’ïbAğtîD½ïbAğtî·ïağ	tî·ï_Æğ
+tî·ï]Kğtîâï]Kğtî8ï]Kğtîcï]Kğtîï]Kğtî¹ï]Kğtî!äï]Kğtî%ï]Kğtî(:ï]Kğtî+eï]Kğtî.ï]Kğtî1»ï]Kğtî4æï]Kğtî8ï]Kğtî;<ï]Kğtî>gï]KğtîA’ï]KğtîD½ï]Kğtî·ï[êğtîâï[êğtî8ï[êğtîcï[êğtîï[êğtî¹ï[êğtî!äï[êğtî%ï[êğtî(:ï[êğô Xuî+eï[êğtî+½ï[êğuî.ï[êğtî.èï[êğuî1»ï[êğtî2ï[êğuî4æï[êğtî5>ï[êğuî8ï[êğtî8iï[êğuî;<ï[êğtî;”ï[êğuî>gï[êğtî>¿ï[êğô FtîA’ï[êğtîD½ï[êğtî·ïZfğtîâïZfğtî8ïZfğtîcïZfğtîïZfğtî¹ïZfğtî!äïZfğtî%ïZfğtî(:ïZfğô Xuî+eïZfğtî+½ïZfğuî.ïZfğtî.èïZfğuî1»ïZfğtî2ïZfğuî4æïZfğtî5>ïZfğuî8ïZfğtî8iïZfğuî;<ïZfğtî;”ïZfğuî>gïZfğtî>¿ïZfğô FtîA’ïZfğtîD½ïZfğtî·ïXâğtîâïXâğtî8ïXâğtîcïXâğtîïXâğtî¹ïXâğtî!äïXâğtî%ïXâğtî(:ïXâğô Xuî+eïXâğtî+½ïXâğuî.ïXâğtî.èïXâğuî1»ïXâğtî2ïXâğuî4æïXâğtî5>ïXâğuî8ïXâğtî8iïXâğuî;<ïXâğtî;”ïXâğuî>gïXâğtî>¿ïXâğô FtîA’ïXâğtîD½ïXâğtî·ïW^ğtîâïW^ğtî8ïW^ğtîcïW^ğtîïW^ğtî¹ïW^ğtî!äïW^ğtî%ïW^ğtî(:ïW^ğô Xuî+eïW^ğtî+½ïW^ğuî.ïW^ğtî.èïW^ğuî1»ïW^ğtî2ïW^ğuî4æïW^ğtî5>ïW^ğuî8ïW^ğtî8iïW^ğuî;<ïW^ğtî;”ïW^ğuî>gïW^ğtî>¿ïW^ğô FtîA’ïW^ğtîD½ïW^ğtî·ïUÚğtîâïUÚğtî8ïUÚğtîcïUÚğtîïUÚğtî¹ïUÚğtî!äïUÚğtî%ïUÚğtî(:ïUÚğô Xuî+eïUÚğtî+½ïUÚğuî.ïUÚğtî.èïUÚğuî1»ïUÚğtî2ïUÚğuî4æïUÚğtî5>ïUÚğuî8ïUÚğtî8iïUÚğuî;<ïUÚğtî;”ïUÚğuî>gïUÚğtî>¿ïUÚğô FtîA’ïUÚğtîD½ïUÚğtî·ïTVğtîâïTVğtî8ïTVğtîcïTVğtîïTVğtî¹ïTVğtî!äïTVğtî%ïTVğtî(:ïTVğô Xuî+eïTVğtî+½ïTVğuî.ïTVğtî.èïTVğuî1»ïTVğtî2ïTVğuî4æïTVğtî5>ïTVğuî8ïTVğtî8iïTVğuî;<ïTVğtî;”ïTVğuî>gïTVğtî>¿ïTVğô FtîA’ïTVğtîD½ïTVğtî·ïRÒğtîâïRÒğtî8ïRÒğtîcïRÒğtîïRÒğtî¹ïRÒğtî!äïRÒğtî%ïRÒğtî(:ïRÒğô Xuî+eïRÒğtî+½ïRÒğuî.ïRÒğtî.èïRÒğuî1»ïRÒğtî2ïRÒğuî4æïRÒğtî5>ïRÒğuî8ïRÒğtî8iïRÒğuî;<ïRÒğtî;”ïRÒğuî>gïRÒğtî>¿ïRÒğô FtîA’ïRÒğtîD½ïRÒğtî·ïQNğtîâïQNğtî8ïQNğtîcïQNğtîïQNğtî¹ïQNğtî!äïQNğtî%ïQNğtî(:ïQNğô Xuî+eïQNğtî+½ïQNğuî.ïQNğtî.èïQNğuî1»ïQNğtî2ïQNğuî4æïQNğtî5>ïQNğuî8ïQNğtî8iïQNğuî;<ïQNğtî;”ïQNğuî>gïQNğtî>¿ïQNğô FtîA’ïQNğtîD½ïQNğtî·ïOÊğtîâïOÊğtî8ïOÊğtîcïOÊğtîïOÊğtî¹ïOÊğtî!äïOÊğtî%ïOÊğtî(:ïOÊğô Xuî+eïOÊğtî+½ïOÊğuî.ïOÊğtî.èïOÊğuî1»ïOÊğtî2ïOÊğuî4æïOÊğtî5>ïOÊğuî8ïOÊğtî8iïOÊğuî;<ïOÊğtî;”ïOÊğuî>gïOÊğtî>¿ïOÊğô FtîA’ïOÊğtîD½ïOÊğtî·ïNFğtîâïNFğtî8ïNFğtîcïNFğtîïNFğtî¹ïNFğtî!äïNFğtî%ïNFğtî(:ïNFğô Xuî+eïNFğtî+½ïNFğuî.ïNFğtî.èïNFğuî1»ïNFğtî2ïNFğuî4æïNFğtî5>ïNFğuî8ïNFğtî8iïNFğuî;<ïNFğtî;”ïNFğuî>gïNFğtî>¿ïNFğô FtîA’ïNFğtîD½ïNFğtî·ïLÂğtîâïLÂğtî8ïLÂğtîcïLÂğtîïLÂğtî¹ïLÂğtî!äïLÂğtî%ïLÂğtî(:ïLÂğô Xuî+eïLÂğtî+½ïLÂğuî.ïLÂğtî.èïLÂğuî1»ïLÂğtî2ïLÂğuî4æïLÂğtî5>ïLÂğuî8ïLÂğtî8iïLÂğuî;<ïLÂğtî;”ïLÂğuî>gïLÂğtî>¿ïLÂğô FtîA’ïLÂğtîD½ïLÂğtî·ïK>ğtîâïK>ğtî8ïK>ğtîcïK>ğtîïK>ğtî¹ïK>ğtî!äïK>ğtî%ïK>ğtî(:ïK>ğô Xuî+eïK>ğtî+½ïK>ğuî.ïK>ğtî.èïK>ğuî1»ïK>ğtî2ïK>ğuî4æïK>ğtî5>ïK>ğuî8ïK>ğtî8iïK>ğuî;<ïK>ğtî;”ïK>ğuî>gïK>ğtî>¿ïK>ğô FtîA’ïK>ğtîD½ïK>ğtî·ïIºğtîâïIºğtî8ïIºğtîcïIºğtîïIºğtî¹ïIºğtî!äïIºğtî%ïIºğtî(:ïIºğô Xuî+eïIºğtî+½ïIºğuî.ïIºğtî.èïIºğuî1»ïIºğtî2ïIºğuî4æïIºğtî5>ïIºğuî8ïIºğtî8iïIºğuî;<ïIºğtî;”ïIºğuî>gïIºğtî>¿ïIºğuîA’ïIºğtîAêïIºğô FtîD½ïIºğtî·ïH6ğtîâïH6ğtî8ïH6ğtîcïH6ğtîïH6ğtî¹ïH6ğtî!äïH6ğtî%ïH6ğtî(:ïH6ğô Xuî+eïH6ğtî+½ïH6ğuî.ïH6ğtî.èïH6ğuî1»ïH6ğtî2ïH6ğuî4æïH6ğtî5>ïH6ğuî8ïH6ğtî8iïH6ğuî;<ïH6ğtî;”ïH6ğuî>gïH6ğtî>¿ïH6ğuîA’ïH6ğtîAêïH6ğô FtîD½ïH6ğtî·ïF²ğtîâïF²ğtî8ïF²ğtîcïF²ğtîïF²ğtî¹ïF²ğtî!äïF²ğtî%ïF²ğtî(:ïF²ğô Xuî+eïF²ğtî+½ïF²ğuî.ïF²ğtî.èïF²ğuî1»ïF²ğtî2ïF²ğuî4æïF²ğtî5>ïF²ğuî8ïF²ğtî8iïF²ğuî;<ïF²ğtî;”ïF²ğuî>gïF²ğtî>¿ïF²ğuîA’ïF²ğtîAêïF²ğô FtîD½ïF²ğô XuîïCğğQ        ¶        TVm$•ÎšÉ Ê     ÎÔ 6         tóÊÎ°Î½         Xÿÿ    » ¼ ¾ Î„óà· ¸ º çz   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (JManCover.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                    Jasmine Scanner Manual73.Analog ElectronicsThe analog electronics converts the detector array outputs to 8-bit digital values, individuallycorrected for gain and offset variations.  A separate analog board is used due to packagingconstraints.  For noise reduction, some of the analog components are in a shielded area formed by asolid ground plane and the metal lens shroud.  A single point ground connection is used betweenthe analog and digital electronics.3.1Detector ArrayThe Reticon RL1024G detector array uses photodiodes to discharge capacitors.  The chargeremoved from each capacitor is proportional to the light incident on the associated photodiode.Each detector cell is connected to the video line by a MOS switch.  The switches are sequentiallyclosed for one clock period, during which time the residual charge must be sensed, and then thecapacitor must be recharged.The differential video buffer outputs are common source amplifiers, and are connected to +5vthrough a 10K pot.  The pot is adjusted to provide balanced inputs to the LM733 video amplifier.The buffer outputs operate with an offset voltage near +5V, and the zener/capacitor/resistor circuitis designed to provide -2.3 volts to the video recharge lines so as to maintain a common modevoltage at the LM733 differential inputs midway between the amplifier reference voltages of 0V and+5V.  The end of scan signal is not used, and is tied high to avoid introducing noise.  The rechargegate is normally held high (off) by a 10k resistor to +5v, and is turned on (connected to -10v)when the LM339 comparator's negative input rises above TTL threshold (~1.5v). 3.2Video SignalThe LM733 differential video amplifier provides a linear voltage gain of  ~100 to boost the ~25mvdetector array output to the 2.5v range.  A CD4053 analog multiplexor is switched for 1msec toallow charge sharing between the .01mf capacitor and a 220pf capacitor connected to the holdamplifier.  When the switch is opened, the detector cell is recharged and a DC restore is performed,while the analog sample is digitized.  During the recharge operation, the video buffer outputs are attheir fully charged (black) state.DC restore is accomplished by connecting the analog multiplexor input to ground, thereby makingthe voltage drop across the .01mf capacitor equal to the difference between Vblack and ground.When the next sample is presented, the LM733 output voltage will increase to Vsample; themultiplexor input voltage must increase by the same amount, and since it was originally at ground,it is now at Vsample-Vblack, the sample voltage with the DC component removed.  When themultiplexor is switched for charge sharing between the capacitors, the hold capacitor will move tothis level.  Note that the previous voltage difference across the hold capacitor will have a very small effect on the finalvoltage, typically ~1%.  This slight blurring between adjacent sample levels is equivalent to shifting the input image by.0001".       The hold amplifier is implemented with a CA3140 Op Amp, providing a final voltage gain setting.The exact gain is the ratio of the feedback resistor (marked 5.1K, but typically 820 ohms) and theresistor to ground (1.1k).  To avoid clipping problems near black level in the A-D conversion, anoffset bias is added by a large resistor to +5v (marked 80K, but typically 1M); decreasing the valueof this resistor will increase the offset bias.  On the output of the hold amplifier is a 1k biasbalancing resistor.  3.3A-D ConversionThe A-D converter is implemented with a NE5008 multiplying DAC, a comparator, and asuccessive approximation register.  The SAR provides an 8-bit input value to the DAC, with themost significant unknown bit set to 1, and the other unkown bits set to 0.  The DAC produces anoutput between 0 and 2.55 volts (~.01 volts/bit).  This voltage is compared to the output of thehold amplifier; if it is higher, the most significant unknown bit is set to 0, and if lower 1.  The SAR  ô uî·ïfñğuîGïïfñğqî"Ùïbğô Xqî&\ïbğô èuî·ï^Bğ=ô éuî3tï^Bğ#ô êuî·ï\¾ğ[ô uî·ï[:ğ"ô ‚uî‡ï[:ğAô uî·ïY¶ğô uîÿïY¶ğIô uî·ïX2ğ#wî·ïU*ğwî2ïU*ğô ÷uî·ïR"ğQô øuîC»ïR"ğô Áuî·ïPğ8ô Âuî/°ïPğ'ô uî·ïOğô Ÿuî¥ïOğOô ©uî·ïM•ğ;ô ªuî0âïM•ğ$ô uî·ïLğô Ãuî·ïI	ğ\ô •uî·ïG…ğOô –uî>vïG…ğô †uî·ïFğ\ô ‡uîDZïFğô ºuî·ïD}ğXô »uîDƒïD}ğô …uî·ïBùğ[ô †uîC§ïBùğô uî·ïAuğ[ô ‚uîCïAuğ	ô ³uî·ï?ñğô ´uî¸ï?ñğXô uî·ï>mğNwî·ï;eğwî2ï;eğô ‹uî·ï8]ğQô Œuî= ï8]ğô µuî·ï6Ùğ!ô ¶uî Vï6Ùğ6xîDï6ÙğuîDïï6Ùğô Ïuî·ï5Uğ$xî#ï5Uğuî$`ï5Uğô Ğuî$Ùï5Uğ6ô ƒuî·ï3Ğğ&ô „uî#+ï3Ğğ>ô ‡uî·ï2Lğbô ˆuîFòï2Lğô uî·ï0Èğ"ô —uî·ï-Àğô ˜uîvï-ÀğEô Èuî·ï,<ğxî‹ï,<ğuî jï,<ğô Éuî/ï,<ğtî=¹ï+¯ğuî@;ï,<ğô íuî·ï*rğNtîBï)åğuîEUï*rğô “uî·ï(§ğbô Úuî·ï'#ğtîbï&–ğuî¯ï'#ğtî%ï&–ğuî§ï'#ğ3tî@œï'#ğuîBPï'#ğô ¡uî·ï%XğBô ¢uî4jï%Xğ ô …uî·ï#Ôğ
+tîï#Ôğ!ô †tî!ï#ÔğPô •tî·ï"sğ-ô –tî!Áï"sğLô tî·ï!ğ
+uîï!ğtîï!ğô –uî·ïQğ_ô ™uî·ïÍğ"ô šuî 4ïÍğ@ô ¢uî·ïIğtîşïIğuîBïIğô £uî!»ïIğ=ô „uî·ïÅğOô …uî;ØïÅğô Æuî·ïAğEô Çuî6–ïAğô uî·ï½ğtî÷ï½ğuî÷ï½ğwî·ïµğwî2ïµğô üuî·ï­ğô ıuî¢ï­ğLô ­uî·ï)ğCô ®uî6qï)ğô •uî·ï¥ğ*ô –uî%Âï¥ğ5ô ­uî·ï ğNô ®uî=ï ğô uî·ï
+œğ)ô ‚uî#ï
+œğ>ÿ                TVm$lÎšÉ Ê     ÎÔ A      	   tóÊÎ°Î½         ‚ÿÿ    » ¼ ¾ Î„óà· ¸ º çz   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (JManCover.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                              Jasmine Scanner Manual8then provides a new 8-bit input value, using the known high order bits, and a 1 in the mostsignificant unknown position.  After 8 clocks (2msecs), all 8 bits are known, and the SAR's EOC'goes low, indicating that the digital approximation is complete.The per-pixel gain correction is implemented by using an ADC-MC8BC DAC to vary the NE5008negative reference voltage.  The scale DAC reference output is connected through a unity gainbuffer amp to provide a high impedence positive reference for the NE5008.  15pf to -10?3.4Noise FilteringThe low level analog outputs of the detector array make it important to reduce electrical noise.This is the motivation for the shielded analog section, the various capacitors on the analog board,and the standard pi filters on the power supplies.  ô uî·ïfñğuîGïïfñğô Êuî·ïbğ0ô Ëuî+ïbğ+ô ¥uî·ï`šğô ¦uî£ï`šğxî)_ï`šğuî*>ï`šğ/ô uî·ï_ğ@ô –uî·ï\ğYô Âuî·ïZŠğ;ô Ãuî2FïZŠğ"ô uî·ïYğItî>óïYğwî·ïUığwî2ïUığô ¼uî·ïRõğNô ½uî>tïRõğô ¢uî·ïQqğ;ô £uî/¦ïQqğ(ô uî·ïOíğ2        (        TVm$ ÎšÉ Ê     ÎÔ L      	   tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà· ¸ º çz   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (JManCover.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                                                          Jasmine Scanner Manual94.Digital ElectronicsThe digital electronics provide the control signals for image sampling, handling the correctionRAMs, A/D conversion, and stepper motor control.  The user's view of the digital functionality wascovered in section 2: External Interface.  This section discusses the internal operation in more detail.4.1Finite State MachineDigital control is based on a small finite state machine (FSM) with 32 states, built out of two ROMsand two latches.  The FSM operates on a 250 nsec clock.  The 512x8 State ROM produces the nextstate number based on the current state and the values of four input signals: the START andLOAD signals from the controlling processor, and the Sample and ScanDone signals from thesequencing logic.  The 32x8 Control ROM produces 7 output signals based on the current statenumber.  The ROM outputs are loaded into the latches at every clock cycle.  Five signals(VirScanClk, AnalogOn, DCRestore, and ScanStart) are concerned with the analog sampling logic.One signal (ResetAD) controls the successive approximation register used for A/D conversion.  Thelast signal (ResetCtrs) controls various registers in the sequencing logic.  A complete code listing forthe state machine is included as Appendix 2.2.  4.2Sequencing LogicThe sequencing logic consists of three counters: the Delay counter, the Sample counter, and theScan counters.  The Delay counter is provided for control flow, as described in section 2 on Timing.The Sample counter provides another level of bandwidth control:  reducing the number of inputsamples per scan line allows the controlling processor to accept more scan lines per unit time, andwill also reduce the storage necessary for holding an image.   The Sample counter is loaded on eachexternal START pulse with the four data bits, as described in section 2.2.The Scan counters are three four-bit counters which cycle through the RAM addresses.  They areinitialized with a constant value (-1025, based on the array size of 1024 elements) at every externalSTART pulse.  The Scan counters increment once per scan clock.  The high order carry-out bit isthe input signal ScanDone to the FSM, and causes the FSM to return to its Wait state.4.3Stepper Motor ControlThe stepper motor is made up of two coils, each with two windings.  The motor turns when currentis applied in proper sequence to each winding.  The two windings of each coil are always inopposite states, so that when current is flowing through one winding no current is flowing throughthe other.  Each winding is connected to -12V through a TIP 122 Darlington pair.  An LM339comparator is used to produce a 0V or -12V input at the TIP 122 base from the TTL output of  aNAND gate.  Each NAND gate has one input from the RunMotor signal, and one input fromeither StepControlA, StepControlB, StepControlA', or StepControlB'.  These three signals are heldin a latch which is set by the external MotorCtl command.  The RunMotor signal should normallybe FALSE, in order to avoid motor overheating.  See Appendix 1.4 for the electronics schematic.   uî·ïfñğuîGïïfñğqî"äïbğô Xqî&gïbğô Üuî·ï^Bğ7ô İuî.ï^Bğ(ô …uî·ï\¾ğô †uî=ï\¾ğIô uî·ï[:ğ/ô ‚uî'[ï[:ğ9wî·ïX2ğô wî2ïX2ğô €uî·ïU*ğ0ô uî'!ïU*ğ4ô ‡uî·ïS¦ğBô ˆuî5ÛïS¦ğô Æuî·ïR"ğ>ô Çuî4…ïR"ğô Ïuî·ïPğ0ô Ğuî+ÂïPğ)ô ¶uî·ïOğGô ·uî;qïOğô ëuî·ïM•ğ(ô ìuî)[ïM•ğ0ô £uî·ïLğ>ô ¤uî4 ïLğ ô ‰uî·ïJğHô Šuî8KïJğô ‡uî·ïI	ğLô ˆuî7yïI	ğô uî·ïG…ğ0wî·ïD}ğwî2ïD}ğô ´uî·ïAuğNô µuî=™ïAuğô ‚uî·ï?ñğ?ô ƒuî2 ï?ñğ%ô ªuî·ï>mğWô «uîDÂï>mğô ˜uî·ï<éğô ™uîáï<éğXô ƒuî·ï;eğ&ô „uî"0ï;eğ=ô uî·ï9áğJô  uî·ï6ÙğIô ¡uî;`ï6Ùğô •uî·ï5Uğ6ô –uî,"ï5Uğ/ô ™uî·ï3Ğğô šuîFï3ĞğIô uî·ï2LğJwîA…ï2LğuîDfï2Lğwî·ï/Dğwî2ï/Dğô …uî·ï,<ğ*ô †uî&ï,<ğ6ô Íuî·ï*¸ğ3ô Îuî-éï*¸ğ(ô •uî·ï)4ğOô –uî<Íï)4ğô ¸uî·ï'°ğQô ¹uîAï'°ğ	ô ’uî·ï&,ğô “uî3ï&,ğLô ºuî·ï$¨ğBô »uî;Lï$¨ğô Ÿuî·ï#$ğCô  uî6ï#$ğô “uî·ï! ğ'ô ”uî"ûï! ğ7ô £uî·ï ğ<ô ¤uî3Àï ğ#ô uîH‹ï ğ        
+        TVm$¹ÎšÉ Ê     ÎÔ O      	   tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà· ¸ º çz   (JasmineBravo.PRESS                        (JasmineManual.Jasmine Scanner Manual105.Mechano-Optical Design5.1Paper TransportThe Jasmine scanner uses a modified Xerox TC-200 telecopier paper transport.  TC-200 partsremoved include:  DC motor assembly, illuminator bar, LED and light sensor, automatic paper feedwheel, and plastic cover.  The base casting is somewhat modified (see Appendix 2.8).  A new coverand a release bar extender are added.  After the paper moves through the transport, it exits thescanner housing through a rectangular rear aperture, and is turned up to an angle of about 60o by acurved metal platform.  The final paper turner allows the Jasmine unit to be placed close to a wall,and will generally handle documents as stiff as photographic paper.  For installations whereexcessively heavy input material commonly causes jamming problems at the paper turner, amodified platform with smaller curvature should be used.  One turn of the paper drive gear results in 2" of paper movement.  A 48 step/revolution steppermotor turns a 12 tooth pulley, connected by a drive belt to the transport's 48 tooth gear, resulting in96 steps/inch.  The stepper motor typically generates 6 oz-inches of torque, and so the 4:1 gearingprovides 24 oz-inches at the paper.  The torque decreases as paper speed increases above .4"/sec.Jamming problems may be caused by attempting to move thick documents at high speed.   (Thestandard software positions the document by moving the paper at 2"/sec; there should be a "thickdocument" setting which slows down the positioning rate).5.2Document IlluminationIllumination is provided by a strip of 48V incandescent bulbs.   This causes non-uniformillumination, which is brightest in the center, and falls off at either side.  In order to partiallycompensate for this non-uniformity, the center two bulbs are removed.  The remaining variation iscorrected by the Gain RAMs, in the same way that non-uniform detector element response ishandled.5.3Optical PathA scan line from the document is reflected off a 45o mirror and imaged through a SchneiderComponon f4.0 28mm lens onto the detector array.  The optical path measurements for figure 5.1are derived as follows:array length = 1.008"; (8.5" x 96pixels/inch)x1.008" = .803"magnification m = 8.5"/.803" = 10.585F = effective focal length = 29.4 mmO = F(1+m) = 339.44mm = 13.363"P = F(1+1/m) = 32.17mm = 1.267"D  = object to image = O+P+(N1-N2) = 368.41mm = 14.504"Allowing for + or - 1% focal length variations,364.75mm = 14.36" < Dtypical < 14.65" = 372.16mmand image plane variation is +/-0.32mmImage PlaneFront Conjugate= ORear Conj = PN1N2O = F(1+m)P=F(1+1/m)sh  .¸ º»  EÅ  ¾ˆğ BQ„ Cá‰ ¾P  ,îe -l DÂµ€º;  DÆ\`BQ„ ¼#m ¾P  .Õ  .Ü .¿ .¸  ,îe ¼c Dæ  CK6 BTE AÛ ¾¤  ,·  ,× Aå4 »  Ch BTE ¾ƒ ¾¤  -l ,îe  ,·  À À Bà  ?^€ @_@ ;À  À   ,· ,Ö     ½   ?^€ @_ ;À  À@  ,× ,·   ,·     DÚ  CVY€BMÊ ¾x ¾H  ,Ş„ ,ı} ¼5ƒ@»&  CB– BMĞ ATH ¾@  ,Ö ,·  ,Ş„ Cò6ÀEE  CÎ¨ BF& ½’v ¾"x  -‘¯ -®¢ »ŒÆ€º»  CV€BF& BPš ¾"x  ,ı} ,Ş„  -‘¯ DÁ €EN  Ci´ A_( ½7¸ ¿   .¸  .¿. .Ü  .Õ »2  º²  @×  A_( BÁ ¿   -®¢ -‘¯  2Õ  EE  º;  Aw ½®| ¼w Aì°  4ŸÌ 4€Å »=J€EÅ  »9£ ½®| CÜ“ Aì°  2¸ 2±  2Î. 2Õ   4ŸÌ Câ »  ¼´È€½«¸ ¾$ô Ağ`  4Ö1 4¶0 ¾Ì Dæ  ¼˜ ½«¸ A|Ø Ağ`  4€Å 4ŸÌ  4Ö1 ?ß@ ½   À£  ¿¡  Ã   ?ş€  4Ö 4·     Bà  À€ ¿ À <`  ?ÿ   4¶0 4Ö1  4Ö     »&  ¼©£€½²0 A~¨ AçÀ  4¯­ 4´ CÊ|ÀDÚ  ¼½m ½²3 ¾«˜ Aç¼  4· 4Ö  4¯­ ¼É@º»  ¼1Y€½¹İ Bm‚ Aİ„  3ü‚ 3ß Ds9€EE  ¼©ú€½¹İ ½¯n Aİ„  4´ 4¯­  3ü‚ »>ß€º²  ¼–L ¾ Ø BÈH @şà  2Õ 2Î 2± 2¸  DÎ  EN  ¿)  ¾ Ø ½>ø @şà  3ß 3ü‚  *ÇObject ( Document Plane)Flange3.2 mmshFigure 5.1Optical Path Distances  uî·ïfñğuîG?ïfñğqî!ïbğô Xqî$‰ïbğwî·ï]’ğô wî2ï]’ğô Õuî·ïZŠğô Öuî¥ïZŠğ@ô „uî·ïYğKô …uî;NïYğô Œuî·ïWğô uî‚ïWğOô °uî·ïUığ<ô ±uî2îïUığ$ô ƒuî·ïTğ]uîD¹ïTœğuîEsïTğô „uîGlïTğô ‹uî·ïR‹ğ^ô ŒuîECïR‹ğô ëuî·ïQğ#ô ìuî#xïQğ9ô ÷uî·ïOƒğXô uî·ïMÿğ:ô ¢uî·ïJ÷ğGô £uî9éïJ÷ğô uî·ïIsğô ‚uîĞïIsğWô •uî·ïGïğ5ô –uî,?ïGïğ.ô ¤uî·ïFkğXô ¥uîCpïFkğ	ô ¦uî·ïDçğô §uî!ïDçğ<ô –uî·ïCcğ+ô —uî'ïCcğ5ô uî·ïAßğ9wî·ï>×ğwî2ï>×ğôuî·ï;ÏğEôuî;Iï;Ïğô Âuî·ï:Kğ=ô Ãuî0İï:Kğ'ô –uî·ï8Æğ8ô —uî.Ãï8Æğ)ô Ïuî·ï7BğYuî·ï5¾ğwî·ï2¶ğô wî2ï2¶ğô Éuî·ï/Dğ3uî-ï/Ñğuî.Xï/Dğô ÊuîAåï/Dğ
+ô œuî·ï-Àğô uî¨ï-ÀğBô uî·ï,<ğtî2ï*Ûğ<tî2ï)ğyî§ï)ğtî…ï)ğtî2ï(`ğ$tî2ï'#ğtî2ï%åğtî2ï$¨ğ7tî2ï#jğ/tî­ï"-ğtî!ï! ğtî"Bï"-ğtî­ï †ğ&öuî>çïYğqîçïyğqî$çïyğqî4çïyğqî0çïyğqî.çïyğqîçïyğ
+qî6çïyğ
+zîÇï™ğzîAçï™ğî¸ï	ş&  î0·ï	ş   î¸ï	ş  îB·ï	ş !!î2‡ïÙş  î0‡ïÙş  î0·ï
+ş  
+î2·ï
+ş  
+û /û )û )û )û )û /û /û )û )û )û )û /î2·ï	ş !!î2·ï	ş !!î0·ï!	ş! !û uîï ğqî4]ï ğqî8Gï8ğzî2Çï¸ğzî/çï¸ğî,·ïş! !î2·ïş! !uî ï	Éğ
+uîï	Éğÿ        |        TVm$-ÎšÉ Ê     ÎÔ W     	    tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ Î„óà­ ® ¹ ºê   (JasmineBravo.PRESS                        (JasmineManual.PRESS                      	 (OPD.PRESS.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                              Jasmine Scanner Manual115.4Lens Alignment/Focus/MagnificationThe scanner must be set up so that each scan line from the document falls across the detector arrayin focus and at the appropriate magnification.  Any skew present in the detector array due toinexact bonding is corrected by adjusting the position of the analog board in its mounting assembly.Minor adjustments to the angle of the lens are made with the top alignment screw so that the scanline hits the entire detector array.  Focus is set by changing the distance between the lens and thedetector.  This can be accomplished by inserting a test pattern into the scanner, and rotating thelens in the lens mount until optimal focus is reached.  Magnification is determined by the distancefrom the lens to the document.  The lens assembly and circuit boards are moved as a unit until thedesired magnification is reached.  For additional set-up instructions, see Chapter 7: Check-out Procedures.  ô uî·ïfñğuîG?ïfñğwî·ïbğô Xwî2ïbğ"ô ˆuî·ï_ğ'ô ‰uî$^ï_ğ<ô Çuî·ï]’ğô Èuî/ï]’ğJô …uî·ï\ğô †uîµï\ğRô uî·ïZŠğ3ô ‘uî,ïZŠğ.ô ˜uî·ïYğ2ô ™uî(³ïYğ2ô «uî·ïWğ0ô ¬uî*ïWğ2ô “uî·ïUığ-ô ”uî'
+ïUığ6ô Šuî·ïTyğXô ‹uîBäïTyğ
+ô Úuî·ïRõğ#tî"ïRõğHÿ        º        TVm$ ŒÎšÉ Ê     ÎÔ a     
+    tóÊÎ°Î½         Úÿÿ    » ¼ ¾ Î„óà­ ® ¹ ºê   (JasmineBravo.PRESS                        (JasmineManual.PRESS                      	 (OPD.PRESS.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                  Jasmine Scanner Manual126. User Software6.1User level interface: Scan.BCD, Scan.RUN[IVY]<Jasmine>Scan.BCD is a Mesa 6 system for driving the Jasmine scanner.  It runs on either D0s orAltoIIs.  It will display input pages on the screen, allows zooming, enables a user to set various of theJasmine device parameters, and writes output files.  The output files have an AIS header, and a PRESStrailer, and can be used as input to systems expecting either AIS or PRESS format files.  Scan4.BCDprovides the same interface, but with output to the D0 4-bit per point display.  A similar package existsin BCPL for AltoIIs as Scan.RUN.In specifying to a page position, the term Jasmine coordinate is used: this refers to the basic Jasminepixel resolution of 1/96".  In addition to the hardware state maintained in the scanner, there is somestate maintained in the software.  The current window refers to a rectangle on the page in Jasminecoordinates; when a new page is inserted, the current window is set to (xstart: 0,xlength: 1024,ystart:0,ylength: 1024).  Any of the four coordinates can be changed using the XS, XL, YS, or YL commands.All four coordinates will be updated by the Zoom command.  The current scan length refers to thenumber of output dots per scan line to be displayed on the screen.  Normally, the scan length is set to608 (full screen width), but the user may desire a narrower length in order to display a narrow, tallimage.  The current scan length is also used in creating an output file.The user interface to Scan consists of a key letter interpreter.  Each command is initiated by typing thefirst (and sometimes second) characters of the command.  Unrecognized letters are ignored.The key letters in the following list of commands are capitalized.?: The question mark causes the current settings of black, white, xstart, xlength, ystart, and ylength to beprinted out.Black: Prompts the user for a decimal number to be used by the halftoning routine; any pixels less thanor equal to this number will be printed as black.Calibrate: The scanner has a separate correction value for each pixel.  The calibrate command promptsthe user to "Insert sheet of white paper" and to "Press any key when ready."  Best results will beobtained from an opaque, flat white sheet such as photographic paper.  Any irregularities in thecalibration sheet will cause uneven calibration.  When the user presses a key to indicate that thecalibration sheet is in place, the scanner will average a number of white lines, and set the correctionvalues so that each pixel produces the same white response.  This is not an optimal calibration scheme: itsearches iteratively for the best solution.  After each iteration it prints out the minimum and maximum value for the line,and the cumulative difference of the 1024 elements from the desired value.  This routine does not incorporate darkcorrection, so that while a light image will be fairly uniform, a dark image will contain streaks.  John Warnock is currentlyworking on a better procedure.     ô uî·ïfñğuîG?ïfñğô Xqî%Jïbğwî·ï_ğô wî2ï_ğ(ô ”uî·ïXœğô •uî¹ïXœğKô ¡uî·ïVôğbô ¢uîGdïVôğô ”uî·ïUMğJô •uî9ïUMğô ­uî·ïS¦ğ$ô ®uî"ïS¦ğ?ô ’uî·ïQşğRô “uî>ïQşğô uî·ïPWğ ô ²uî·ïJğ+wî&±ïJğuî2ïJğô ³uîB±ïJğô ®uî·ïHæğOô ¯uî=:ïHæğô Èuî·ïG?ğ'wî%ïG?ğuî.GïG?ğô Éuî>ïG?ğô ¶uî·ïE—ğô ·uî¿ïE—ğKô uî·ïCğğOô uî=zïCğğô ¿uî·ïBIğ9ô Àuî2ĞïBIğwî7aïBIğuîC'ïBIğô ˜uî·ï@¡ğô ™uî°ï@¡ğRô ¹uî·ï>úğô ºuîgï>úğUô uî·ï=SğHô —uî·ï7‰ğ^ô ˜uîDõï7‰ğô uî·ï5âğZuî·ï0ğBqî·ï,Éğô ‰uîQï,Éğô Šuî¤ï,Éğfô uî1ï+"ğqî·ï'Óğô ‹uîï'Óğ5ô Œuî1ï'Óğ-ô uî1ï&,ğ1qî·ï"
+ğ	ô uîï"
+ğô uî'ï"
+ğKô ¢uî1ï bğ7ô £uî0ï bğ+ô ¼uî1ï»ğJô ½uî?ï»ğô ·uî1ïğIô ¸uî<*ïğô uî1ïlğ*ô ‘uî&˜ïlğ=ô £uî1ïÅğ;tî3nïÅğô ¤tî:LïÅğ"ô ‰tî1ïAğ7ô Štî(jïAğDô ¹tî1ïàğmô ºtîHîïàğô tî1ïğô ‚tîïğdô tî1ïûğuî‹ïûğ        Ú        TVm$­ÎšÉ Ê     ÎÔ d         tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà­ ® ¹ ºê   (JasmineBravo.PRESS                        (JasmineManual.PRESS                      	 (OPD.PRESS.PRESS                         ÒJasmine Scanner Manual13Delay: Prompts the user for a decimal number from 0 to 15 to be used as the delay (in microcoseconds)between pixels delivered from the Jasmine.  This control is mainly for hardware debugging.  Incorrectsettings will cause the scanner to stop working, and all settings in the correct range will cause identicaloutput.  The Scan program will automatically set the delay correctly.Erase: Erases the user screen.Forward: Prompts the user for a decimal number ("nSteps").  The paper will be moved forward thismany steps.  (1 step = 1 Jasmine coordinate = 1/96")Halftone: The scanner will read in pixels from the current window and halftone them onto the screenusing the current scan length.  Pressing any key will terminate the halfonte command.Initialize: The correction values in the scanner will all be initialized to a constant value.  This commandis useful for determining how well the calibration routines are working.Length of scan: Prompts the user for a decimal number to be used as the current scan length.New page: This command ejects the current page, and prompts the user to "Press any key when ready";the user should insert the new page, and press a key.  This command sets the current window to(xstart: 0,xlength: 1024,ystart: 0,ylength: 1024).  Quit: Ejects the current page, and returns to the Executive.Reverse: Prompts the user for a decimal number ("nSteps").  The paper will be moved in reverse thismany steps.  (1 step = 1 Jasmine coordinate = 1/96").Skip count: Prompts the user for a decimal number from 0 to 15 to be used by the scanner as a "skipcount": that many pixels will be skipped for each pixel delivered.  The software will use the sameskip count to drop out scan lines.  This command is useful for reducing the storage required for alow resolution image.  Note that the image produced by skipping pixels is undersampled, which may cause severealiasing and other problems.  A better way to create the lower resolution image would be by averaging the pixels insteadof throwing them away.  The hardware does not support this function.Time for integration: Prompts the user for a decimal number to be used as the integration time in 38.08microsecond "ticks".  This setting defaults to 656 ticks, or about 1/40 second.  For dark documents,it is possible to get more dynamic range by increasing the integration time.  Reducing the integrationtime may create impossible timing constraints.  If the integration time is less than the time required toread in a scan line, the scanner will stop working.White: Prompts the user for a decimal number to be used by the halftoning routine; any pixels greaterthan or equal to this number will be printed as white.XStart: Prompts the user for a decimal number from 0 to 1023 which will be used as the current windowhorizontal start in Jasmine coordinates.XLen: Prompts the user for a decimal number which will be used as the current window length inJasmine coordinates.  If XStart+XLen is greater than 1024, XLen will be set to 1024-XStart.YStart: Prompts the user for a decimal number which will be used as the current window vertical start inJasmine coordinates.   uî·ïfñğuîG?ïfñğqî·ïbğô Œuî%ïbğBô uî9.ïbğô Šuî1ï`vğ,wî)|ï`vğô ‹wî2ï`vğ*ô Œwî1ï^Ïğkô wî1ï](ğDuî;kï](ğqî·ïYÙğuîïYÙğqî·ïVŠğô µuî›ïVŠğYô uî1ïTãğ4qî·ïQ”ğô ­uîñïQ”ğ&ô ®uî)ïQ”ğwî,EïQ”ğuî5dïQ”ğ"ô uî1ïOíğ
+wî,ïOíğuî!rïOíğqî!ÉïOíğuî#ÉïOíğ5qî·ïLğ
+ô ‘uîåïLğSô ’uîAïLğô uî1ïJ÷ğHô ïqî·ïG¨ğuîïG¨ğ'ô ğuî1VïG¨ğwî?@ïG¨ğuîKfïG¨ğô qî·ïDZğuî–ïDZğô uî’ïDZğMô ²uî1ïB²ğ;ô ³uî4(ïB²ğwî@¿ïB²ğuîIãïB²ğô uî1ïAğ2qî,zïAğqî·ï=¼ğuîjï=¼ğ8qî·ï:nğô ¤uîOï:nğ3ô ¥uî1Mï:nğ)ô uî1ï8Æğ5ô ›qî·ï5xğ
+uîFï5xğFô œuî?ñï5xğô ¢uî1ï3Ğğô £uî|ï3ĞğJô Ÿuî1ï2)ğô  uîKï2)ğUô ©uî1ï0‚ğô ªuîWï0‚ğtî«ï0‚ğ3yî87ï0‚ğtî>ï0‚ğô tî1ï.şğ8ô tî*Éï.şğ@ô tî1ï-zğCuî6˜ï-zğô qî·ï*+ğuî÷ï*+ğô uî&Îï*+ğ;ô ’uî1ï(„ğô “uîï(„ğPô Œuî1ï&ÜğFô uî8‚ï&Üğwî=ï&Üğô ‘wî1ï%5ğ/ô ’wî*/ï%5ğ:ô wî1ï#ğ2uî/»ï#ğqî·ï ?ğô ™uîQï ?ğ-ô šuî,‘ï ?ğ3ô uî1ï˜ğ6qî·ïIğô uî¶ïIğIô ‚uî=ÑïIğô uî1ï¢ğ(qî·ïSğô ÂuîùïSğ	ô Ãuî$ïSğQô äuî1ï¬ğqîáï¬ğuî©ï¬ğ$ô åuî5Xï¬ğ!qî·ï]ğô uî«ï]ğ'ô ‚uî(~ï]ğ;ô uî1ï¶ğ        R        TVm$ÎšÉ Ê     ÎÔ l         tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà­ ® ¹ ºê   (JasmineBravo.PRESS                        (JasmineManual.PRESS                      	 (OPD.PRESS.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                      Jasmine Scanner Manual14YLen: Prompts the user for a decimal number which will be used as the current window height inJasmine coordinates.Zoom: The zoom command waits for a new window to be indicated by the mouse.  Pressing the leftmouse button indicates the corner of the window.  Holding down the left mouse button will allowthe user to stretch the rectangle indicating the current window from the window origin to the mouse.Holding down the middle mouse button allows the user to reposition the window origin.  When theappropriate window has been selected, hitting the right mouse button will terminate the zoomcommand, and the new window will be scanned in and displayed.  Note that in the BCPL version, norectangle is displayed, and the new window is indicated by depressing the left mouse button at onewindow corner, holding the button down as you move the mouse to the second corner, and thenreleasing the button.6.2Procedural interfaceThe interface to the Jasmine scanner is implemented in both MESA and BCPL.  The MESA syntaxis used in this document, but the transformation to BCPL syntax is straightforward.  The interfacedescribed here handles the scanner data as an input stream.  For speed, a number of buffers arepre-filled with input data; typically the calling routine will not have to wait for additional inputfrom the scanner, because at least one of the buffers will already be full.  The following routines aresufficient for most scanner operations.JasmineInit: PROCEDURE;Loads the device microcode, sets up appropriate Debugger and Finish processes, and gets thescanner into the Wait state with a reasonable delay setting.  This routine must be called exactlyonce, before any of the other routines.JasmineScanInit: PROCEDURE[block: POINTER,nWords: CARDINAL] RETURNS [scanStream:POINTER];This routine initializes the nWords of memory beginning at address block for use as a ring ofinput buffers.  It moves the paper so that the first scan line of the current window is imaged onthe detector array.  The routine returns a pointer which must be passed to subsequentprocedures.JasmineReadLine: PROCEDURE [scanStream: POINTER] RETURNS [data: POINTER TOPACKED ARRAY OF [0..377B]];This routine returns a pointer to the next scan line of data.  The number of bytes in the scanline is determined by the current window setting, which defaults to the entire scan line, and thecurrent resolution (setting of the Sample counter).  Because of the input buffering, the data willonly be valid until the next call to JasmineReadLine.JasmineScanClose: PROCEDURE [scanStream: POINTER];This routine should be called before the next call to JasmineScanInit.  It ensures that everythingis left in a clean state.JasmineSetWindow: PROCEDURE [xStart,xLen: CARDINAL, yStart: CARDINAL _ 0,yLen:CARDINAL _ 1400];Sets the input window for the reading routines.  After changing the input window,JasmineScanInit must be called before any additional calls to JasmineReadLine.JasmineSetReadMode: PROCEDURE [readMode: [1..3]];There are three modes of running JasmineReadLine: when readMode = 1, the current scan lineis read without moving the paper; for readMode = 2, the line is read and the paper is moved(this is the default setting); for readMode = 3, the scan line is read, the paper is moved, and adelay of one integration time is inserted.    On the Alto, when the display is running, the currentmicrocode often "misses" clock ticks when reading a scan line (this is seen in the jittery motion of the cursor).  Byadding a delay cycle, two desirable effects are achieved: there will be no paper motion during the integration time,and the integration time of the line being digitized will not vary since that integration time was calculated when themicrocode was not reading, and therefore not missing clocks.The following low level routines allow the user to set various scanning parameters.   Somecombinations of parameters are impossible (i.e. integration time too short for digitizing the requiredsamples, or delay time too short to allow the controlling processor to acquire the data); not all of   uî·ïfñğuîG?ïfñğqî·ïbğô Ãuîîïbğ-ô Äuî-×ïbğ-ô uî1ï`vğqî·ï](ğô ®uî/ï](ğ@ô ¯uî;‚ï](ğô ¡uî1ï[€ğô ¢uîŒï[€ğSô ‡uî1ïYÙğVô ˆuîBùïYÙğô uî1ïX2ğô ‘uî"VïX2ğBô Şuî1ïVŠğSô ßuîDìïVŠğ	ô °uî1ïTãğ#ô ±uî'"ïTãğtî9FïTãğ!ô Ítî1ïS<ğ uî'ïS<ğô Îuî(±ïS<ğ5ô ±uî1ïQ”ğVô ²uîHkïQ”ğô uî1ïOíğwî·ïLåğwî2ïLåğô ‡uî·ïIİğOô ˆuî?ºïIİğô šuî·ïHYğ8ô ›uî/ƒïHYğ*ô §uî·ïFÕğGô ¨uî8ÜïFÕğô ´uî·ïEQğ%ô µuî!ïEQğ?ô €uî·ïCÍğ&ô uî"¯ïCÍğAô uî·ïBIğ'qîÀï?Ağuî¤ï?Ağô ¤uî@ï=¼ğ8ô ¥uî2¬ï=¼ğ#ô ‹uî@ï<8ğô Œuî“ï<8ğUô uî@ï:´ğ'qîÀï90ğô ›uîï90ğ,ô œuî8İï90ğuî@ï7¬ğ	ô  uî@ï6(ğwîïï6(ğuî#uï6(ğ wî8£ï6(ğuî;Åï6(ğô ¡uî>ï6(ğô ƒuî@ï4¤ğô „uîúï4¤ğEô óuî@ï3 ğ@ô ôuî:ï3 ğuî@ï1œğqîÀï0ğô%uî4ï0ğ0ô&uî=çï0ğô uî@ï.”ğô ™uî@ï-ğ!ô šuî"Eï-ğ=ô ‡uî@ï+Œğ]ô ˆuîF1ï+Œğô ‡uî@ï*ğCô ˆuî6uï*ğô uî@ï(„ğ5qîÀï' ğuî·ï' ğ"ô uî@ï%|ğ2ô ‚uî,ï%|ğ0ô uî@ï#øğqîÀï"sğô øuîQï"sğ>ô uî@ï ïğô%uî@ïkğ?ô&uî;,ïkğô uî@ïçğNqîÀïcğuîöïcğô ‚uî@ïßğô ƒuîïßğ(wî2~ïßğuî8Iïßğô –uî@ï[ğ&wî&#ï[ğuî+îï[ğ'ô —uîCşï[ğô uî@ï×ğ#wî!…ï×ğuî'Pï×ğô uî*Òï×ğ1ô Åuî@ïSğ*ô Æuî(EïSğtî+]ïSğ5ô Štî@ïòğaô ‹tî>¡ïòğô tî@ïµğnô tîE±ïµğô †tî@ïwğ^ô ‡tî<ïwğô tî@ïğ;uî03ïğô éuî·ïğ*ô êuî'—ïğ0ô ‹uî·ïŠğJô Œuî8FïŠğô  uî·ïğ]ô ¡uîD©ïğÿ                 TVm$ŠÎšÉ Ê     ÎÔ u         tóÊÎ°Î½         ¡ÿÿ    » ¼ ¾ Î„óà­ ® ¹ ºê   (JasmineBravo.PRESS                        (JasmineManual.PRESS                      	 (OPD.PRESS.PRESS                         Ò  €  d          •F ½    F  BJasmine Scanner Manual15the impossible combinations are checked for, so that the programmer should invoke the follwoingroutines with caution.JasmineSetDelay: PROCEDURE [delay: [0..15]];Sets the delay in microseconds/sample.JasmineSetResolution: PROCEDURE [nSkips: [0..15]];Sets the number of samples to be skipped for each sample digitized.  The software will alsoskip nSkips scan lines between each digitized line.  Resolution defaults to 0 (1024 elements).JasmineSetTime: PROCEDURE [ticks: CARDINAL];This routine sets the integration time per scan line in 38.08 microsecond ticks.  Because there isAC variation in illuminator brightness at 120Hz, the integration time should be set to closemultiples of 218.84 ticks (=1/120 second).JasmineLoadRam: PROCEDURE [array: POINTER,len: CARDINAL];A low level interface used to set the Gain/Offset RAMs.  This routine is called by thecalibration routine, and is of limited use to the casual programmer.JasmineStep: PROCEDURE [nSteps: CARDINAL,forward: BOOLEAN];A low level routine which moves the stepper motor forward and back.  Moving the motor maycause the current page position to be lost.JasmineCoord: PROCEDURE [coord: CARDINAL] RETURNS[nSamples: CARDINAL];Converts scanning resolution coordinates (~250 microns) to pixel coordinates based on thecurrent resolution setting.  This routine will return the number of pixels on a scan line whencoord=1024.JasmineNewPage: PROCEDURE;Feeds the new sheet of paper up to the document window, and resets the internal line counter.JasmineEject: PROCEDURE;Ejects the current page.JasmineMotorOff: PROCEDURE;Sets the RunMode line to FALSE, thereby cutting off current to the stepper motor.6.3Microcode Interface and ImplementationThe microcode uses three fixed locations in low memory.  Location 526B contains the integrationtime in 38.08 microsecond ticks.  Location 736B is a pointer to  a linked list of control blocks.Location 737B contains the data bits for the START command.  The Alto microcode runs as part ofthe Memory Refresh Task, which is activated every 38.08 microseconds.  A counter is initialized tothe contents of 526B (ScanTime), and is decremented once per MRT activation.  Normally, whenthe counter reaches zero the command at 737B (StartCommand) is issued, and location 736B(ScanCBHead) is examined: if it is non-zero, the command it points to is performed.  If, however, acurrent command block is still being processed when the integration time counter reaches zero, thestatus of that command block is set to "StatusDATALATE," and ScanCBHead is set to zero.The data types for a command block are:ScanCommand: TYPE = CARDINAL;CommandREAD: ScanCommand = 0CommandDELAY: ScanCommand = 1CommandFORWARD: ScanCommand = 2CommandBACK: ScanCommand = 3ScanStatus: TYPE = CARDINAL;StatusINUSE: ScanStatus = 1//in general, all positive numbers are "in use" flagsStatusFREE: ScanStatus = 0StatusDONE: ScanStatus = -1StatusDATALATE: ScanStatus = -2ScanCB: TYPE = RECORD [link:POINTER TO ScanCB,command: ScanCommand,status: ScanStatus,buffer: POINTER ];CommandREAD interprets the status field as the number of bytes to be read.  If buffer=NIL (0)the input data is discarded.  The high level read commands implement a horizontal window by inserting two read  ô uî·ïfñğuîG?ïfñğô ¢uî·ïbğ_ô uî·ï`šğqîÀï]’ğuîóï]’ğuî@ï\ğ&qîÀïZŠğuîÚïZŠğô ®uî@ïYğCô ¯uî9yïYğô ­uî@ïWğwîSïWğuîIïWğBô ®uî=öïWğqîÀïUığô uî‘ïUığô ‰uî@ïTyğPô Šuî=ÄïTyğô ¼uî@ïRõğô ½uîïRõğMô uî@ïQqğ*qîÀïOíğuîJïOíğ+ô áuî@ïNiğHô âuî?+ïNiğô uî@ïLåğDqîÀïKağuî5ïKağ0ô uî@ïIİğCô uî9KïIİğô uî@ïHYğ+qîÀïFÕğuî%ïFÕğ:ô Óuî@ïEQğ:ô Ôuî4ïEQğô ¤uî@ïCÍğ^wî@ïBIğuînïBIğqîÀï@Åğô uîï@Åğô Œuî@ï?Ağô uî"^ï?Ağ>qîÀï=¼ğô uî–ï=¼ğuî@ï<8ğqîÀï:´ğuîUï:´ğuî@ï90ğQwî·ï4¤ğwî2ï4¤ğ&ô ¥uî·ï1œğ7ô ¦uî/iï1œğ(ô ¸uî·ï0ğ?ô ¹uî3şï0ğ"ô ƒuî·ï.”ğ\ô „uîFÓï.”ğô “uî·ï-ğô ”uî`ï-ğPô ¤uî·ï+Œğwî§ï+Œğuî‚ï+Œğ>ô âuî·ï*ğ.wî,ï*ğuî4ÿï*ğô ãuî7@ï*ğuî·ï(„ğwî0ï(„ğ
+ô ‚uî&ï(„ğô ƒuîï(„ğGô “uî·ï' ğHô ”uî8Ãï' ğô Öuî·ï%|ğô ×uîÙï%|ğAô uî·ï"sğ'tî2ï!ğtî­ïÕğtî­ï˜ğtî­ïZğtî­ïğtî2ïßğô €tî­ï¢ğtî"
+ï¢ğô tî$ï¢ğ1tî­ïdğtî­ï'ğtî­ïéğtî2ï¬ğô €tî2ïnğtî­ïnğtî(ïnğô tî?ïnğtî­ï1ğtî­ïóğtî­ï¶ğtî2ïxğô ˜uî·ïğ*ô ™uî'•ïğ3ô uî·ï“ğtîmï“ğ=ô ‘tî?ï“ğÿ        ²        TVm$!ÎšÉ Ê     ÎÔ €         tóÊÎ°Î½         ‘ÿÿ    » ¼ ¾ Î„óà­ ® ¹ ºê   (JasmineBravo.PRESS                        (JasmineManual.PRESS                      	 (OPD.PRESS.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                Jasmine Scanner Manual16commands on the command block chain, with the first block containing a NIL buffer pointer.  When the currentread command is completed, the status field is set to StatusDONE, and the next command on thechain is immediately interpreted.  The other three commands cause command block execution tostop until the integration counter reaches zero.  In addition to waiting for the next line time,CommandFORWARD and CommandBACK issue the appropriate output signals to move the paperin the desired direction.   ô uî·ïfñğuîG?ïfñğô ¡tî·ïbğFô ¢tî1äïbğuî=¯ïbğô ›uî·ï`šğAô œuî5'ï`šğô ­uî·ï_ğYô ®uîF¹ï_ğô Îuî·ï]’ğ0ô Ïuî)™ï]’ğ0ô …uî·ï\ğKô †uîBOï\ğ
+ô uî·ïZŠğ                TVm$ ]ÎšÉ Ê     ÎÔ ‰         tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà­ ® ¹ ºê   (JasmineBravo.PRESS                        (JasmineManual.PRESS                      	 (OPD.PRESS.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                            These images are printed using gray level fonts.  If you have access to a full PRESS printer, the real images are contained in[IVY]<Jasmine>Docs>CheckOut.PRESS. 
+
+
+	
+	"  	
+		
+		
+	
+
+
+
+						
+
+
+			
+				
+
+				
+
+	
+
+	
+			
+
+	
+	
+
+		
+	
+
+
+	
+
+		
+
+	
+
+	
+	
+
+	
+
+								
+				
+		
+
+
+		
+
+		
+
+			
+
+
+
+
+			
+		
+		
+					
+	
+
+
+
+
+	
+
+								
+		
+		
+	
+				
+
+
+
+			
+	
+
+	
+	
+
+
+		
+
+
+
+		
+	,/798ADEEJGSUZZXW`aeficmqsvz~|{vxqqzy‚w‡œ¬¦£†Œ€~m}vu{j/&«•™™–‡Œ…‹…‡‰…€q{‚€‚x‡‡ˆ„~‚‡|qv‚‚ƒz‰–££™‡€vsmj^hc_^`[)#uxxrrqlpqirpqpc[cdifkcljokhcnnfk^`oejnfq|‡Šxogc^`ZVQRSQP"qgjhjag`d\][efii_X]b_ae_ecfmfcki`dU\cb`h\kx†€zhf^ZRSMNNEJHG#jWb`cddlaa_fjjzigdagexdlonsl}vtplodpvptuqs–Œ‡|yjwhe]\]Z^X_*&Ÿ“›‘“›ŒŒƒŒ”Œ‰v„„ˆ‘Œ“‘‹y‡‘‘‹“¥®ª©”•‘†…w€…{|}v00°§©¦¯¬´¯¬±¬¢²¯¶«¦««¬²³³®»¾¾¾¾³ÄÄ¹¿©¿ÂÀÇÃ¹ÉËÌÏÍÆËÄ¼ÄÀ¶¿Á¾¼À½WM*ÛÑÏĞ×ÌÑÏÌËÍÃÍÊËË¿ÂÂÄËÆÌÆÉÊÍÍÍÍÑÎÉÉÀÃÍÊĞÏËÑ×ÕÙİÏÏĞÛÓĞÎÑÔÑÒÖÙ´ŒRèßßŞãİåäŞİß×ÚÖÚÓÊÎÉÉÒÏÑÏÑĞÓÓÕØÕØÑÓÊÍÔÒÖÖÓÓÕÕÜàÚÕÔÓÓĞÈĞÓÒÍÎÌ…g@ÓÇÄÈÊ¼À¹·±²¥°©©¨Ÿ–›–Ÿœ›¡¡Š›—{†“”––£¯§¥‹ƒ€ygmklb]`#*ZTXXVNXPRKJNPMRUCEFDMKGGMIRMKJJICIBFKGKPJQZeb\RNNPMNKKE@==G%s|ŒŠVRIKLMIMKQTEFCBGCGCFHHGEBCA?E<>D?FHEGMVQMKFC?@>4310*NŸ=>½¯š§}.,.(*,.&..$$'#(&')&'(*'-)+&(# (((-)(2741-*+)+'' (?6Ba#&"#$"!)''  !!!"#!$!!!" $"" &0*(& c{wQQ !+#"#!¥›P#'!06	'_‡}yhNJ7:168;9=D?5RO_oke[gedOTQ>BHTYWMReowŠ}r2))),t›¡¦¥˜¥¢—‰¸¿ËÉÄ½ÈÃÎĞÏ½ÆÆÔ¼³¢¤¨£©›…¢¯±³°ÃÌÛÔÏ·®’„zskmjjd`\<+7
+			
+	
+				
+	
+	
+
+					
+
+	
+	
+		
+
+			
+
+	
+
+			
+
+		
+			
+	
+
+
+	
+			
+
+	
+				
+			
+
+	
+
+
+	
+
+				
+!%
+				
+
+
+"
+			
+
+	
+	
+
+
+
+	
+
+
+	
+
+		
+
+			
+
+	
+
+	
+
+
+	
+
+				
+
+	
+
+	
+
+
+
+	
+
+	
+
+
+
+	
+	
+	
+
+
+		
+	
+
+	
+
+
+
+
+	
+	
+
+		
+
+					
+
+	
+
+	
+
+
+
+
+			
+				
+	
+
+
+
+
+
+	
+
+				
+	
+		
+			
+
+		
+
+
+
+
+"!$ "% & !""$*&$&%*%''*',,),'$$$'# $! 1!#'').*2,'*,*3.+1-10.124273933126.,/(#"88?:?@CAB@@EABA@BACOECHJTZWVRIKJGGDAD@ADCDBEAIGDE@:@>757/#!·×ÓÎĞÎÌĞÌËÈÇÄÁÄ¾ÀÈÉÈÈÅÉÈÆÎĞÍÎÈÂÉÌÌĞÔÏÕÖÕÖÕÔÎÑÒÓÏĞÉĞÌÕÏÏÌÏ¾–QèääàÚÚİÛÖ×ÔĞÍÊÉÌÌÏÎËÏÍÏÎÍÎÒÌĞÌÉÍĞÏØÛÓÜÕßßÜÜÔ×ÖØÕÕ×ÔĞÔ××ÕÙ×Ñpqposxuxryukqz~~„€Œ‡ˆ–©·¯ ¢›™˜™ŸŸ£¢¨¦¨¥¦«¬¥§¥Ÿ¥¨§©¥‹P*(479;:9?:@B;?AEGDEECMLVOThupfbZ[[ZYUTXVWWVWXXSZSWVPKPNLHL:&|š£¦^(%%,(,')*)(..-2487<GLNKB=C>@A<9;@><@B=?=C>A8986755pk<+36/03q"% $$""!'&%'&'0/065;BB<;5744552304445224420-*+&<EA_L- 1 $" &(,511.'--'/+(-+*)'**(,)&*%#" „†‰Dn?  $+'('"!%"!! 8/wjE($'(($$%# $KQw„s\G=:*7-25854AXIqXkLU`Y/3,'"#!&"'7Kvœ-?[myƒ—‹Ÿ•œ”¥±º¹ªroyg{¤«¨—Œw]mqx•¨¤Œ[$
+0.);Z{jgG9
+	
+
+
+
+
+
+	
+
+
+
+
+
+'22206195751767589<;<>8=BHTNG=5520,1,++()('*'%&"#"$!$$(3>=41+,,05427899<@BD>AB?>=;:?<7:.
+
+
+	
+	
+			
+		
+	
+		
+	
+
+		
+
+	
+		
+		
+
+	
+	
+
+				
+										
+	
+
+
+		
+
+	
+
+	
+
+			
+
+	
+
+	
+	
+			
+	
+		
+		
+	
+					
+		
+
+	
+	
+
+
+
+		
+
+			
+
+
+		
+			
+	
+	
+	
+		
+	
+	
+			
+					
+
+
+
+
+	
+
+		-		
+	
+
+"'	
+			
+		
+
+	"	
+
+
+	
+			
+
+
+
+		
+
+
+
+					
+
+
+
+
+
+	
+
+	
+	
+	
+			
+		
+	
+
+
+
+
+
+
+		
+"
+
+"" ((" # "   #"!!!!"&!#() &%")$'&#)1(''+)).'(+.'(,+$)(#*!$!! !&"" #$'#"*''*&*))/+&*,)/*3.,5::2.5488138665563/88>1-3.1/(-%%##&&))--.-.,0*/-)36086190<93?@JF69;9=789:97755:=B:7(.+6E,.)*!Huqzxyxvzkonv€{z}s„Š‡†|‡|‚„ƒw}smlc\\Y]`YYTWYWTIC?FN_DB)#ÌéîéëëèàèŞŞâÛÜØÒÕØÔÖØÖ×ÒáÖÑŞåİÖÒÖØÖŞŞàéáæéğäßëêëìæêíêíïğğìè'*@?ILUUa ºÆÃ³š“™††‰‹’‹œ‰‹£›»±¨ª¨£§Œ{y{|~t~‚œ»¼“jrmdJE%%&)**-&,E\vŠ ¢´¬¾±®¨½É½°¤€„œ‹z’°®¾ºÅ´­­»¶º—s? " #!!!%'&+*,.(-+-,--..35*9964573+/&()(#9?:(" '%&&"*,*./+.*52,5624/1,-,+$%)&%%$!&# "&# *$$%"-*&.-+,,23*5225,--,,(&'$,$%!%$ !#!"&%)&*("++$(&'$$#$""!"# ##)&%&!%)!  #!&"* &&+($--)/)/.*36-0/,'&+$%#"!! !#  #"  !			
+	
+
+
+
+
+
+	
+
+			
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+
+
+
+
+
+
+	
+	
+		
+
+
+
+				
+
+	
+
+
+
+
+
+	
+
+		
+
+	
+
+
+
+
+
+
+		
+,
+				
+			
+		
+	
+
+							
+		
+			
+		
+
+
+		
+
+
+
+
+	
+
+			
+$	Jasmine Scanner Manual177. Check-out Procedures7.1Adjusting the Output LevelThe value of the 10K pot on the analog board is set to provide balanced input to the LM733 videoamplifier.  With your scope set at 2mV/division, sync on the ScanStart signal (pin #3B-10).  Placea white strip of paper on the document window and examine the output of the video amplifier (pin#IC2-7).  When the pot is below the minimum allowable value, the output is a constant high value(~4V).  Turning the pot clockwise will cause the output signal to move through the correct settingrange (Figure 7.1) to a point above the maximum allowable value, where the output will be aconstant low value (~2V).   The optimum setting is where high light level produces an output valuejust above the bottom constant line, and zero light level produces an output value just below thetop line.Figure 7.1: output at #IC2-7 with low, optimum, and high settings of potWith the pot set to its optimum position, examine pin #IC8-3.  The signal here should varybetween 0V (black) and about -2.2V (white).  If the signal goes below -2.5V, reduce the value of thefinal gain resistor #R10 until the maximum value falls into the permissable range.  If the signalgoes much above -2V, increase the value.  (Levels below -2.5V will cause the A/D system to wraparound so that high light levels read as "black", and levels above -2.5V will reduce the maximumrange of output values.  Setting the gain for a nominal value of -2.2V reduces output range onlyslightly, and guarantees no wrap-around).7.2Optical AssemblyFasten the analog board to the lens mount assembly.  There is play in the board position due tooversized mounting holes:  this allows corrections for minor variations in the position of thedetector array elements.  Fasten the lens mount assembly to the chassis at the midpoint of theadjustment slots.  Thread the lens into the mounting collar as far as it will go.  Set the lens apertureto f4 (full open).The three optical adjustment steps are performed with an alternating pattern of broad black andwhite stripes in the transport; this allows easy identification of the image window for alignment andprovides the appropriate patterns for magnification and focus adjustment.  There is a small amountof interdependence in the adjustment steps:  changing the focus may alter the alignment slightly.7.2.1 AlignmentThe lens axis must be positioned so that the image of the document window reflected by the mirrorfalls across the detector elements.  Small variations in the tilt of the lens to achieve this goal are   ô FtîìïK§ğ~tîìïJjğ"övî6üïH›ğ>vî6üïH2ğ>vî6üïGÈğ>vî6üïG^ğ>vî6üïFôğ>vî6üïFŠğ>vî6üïF ğ>vî6üïE·ğ>vî6üïEMğ>vî6üïDãğ>vî6üïDyğ>vî6üïDğ>vî6üïC¥ğ>vî6üïC<ğ>vî6üïBÒğ>vî6üïBhğ>vî6üïAşğ>vî6üïA”ğ>vî6üïA*ğ>vî6üï@Áğ>vî6üï@Wğ>vî6üï?íğ>vî6üï?ƒğ>vî6üï?ğ>vî6üï>¯ğ>vî6üï>Fğ>vî6üï=Üğ>vî6üï=rğ>vî6üï=ğ>vî6üï<ğ>vî6üï<4ğ>vî6üï;Ëğ>vî6üï;ağ>vî6üï:÷ğ>vî6üï:ğ>vî6üï:#ğ>vî6üï9¹ğ>vî6üï9Pğ>vî6üï8æğ>vî6üï8|ğ>vî6üï8ğ>vî6üï7¨ğ>vîÄïH›ğ<vîÄïH2ğ<vîÄïGÈğ<vîÄïG^ğ<vîÄïFôğ<vîÄïFŠğ<vîÄïF ğ<vîÄïE·ğ<vîÄïEMğ<vîÄïDãğ<vîÄïDyğ<vîÄïDğ<vîÄïC¥ğ<vîÄïC<ğ<vîÄïBÒğ<vîÄïBhğ<vîÄïAşğ<vîÄïA”ğ<vîÄïA*ğ<vîÄï@Áğ<vîÄï@Wğ<vîÄï?íğ<vîÄï?ƒğ<vîÄï?ğ<vîÄï>¯ğ<vîÄï>Fğ<vîÄï=Üğ<vîÄï=rğ<vîÄï=ğ<vîÄï<ğ<vîÄï<4ğ<vîÄï;Ëğ<vîÄï;ağ<vîÄï:÷ğ<vîÄï:ğ<vîÄï:#ğ<vîÄï9¹ğ<vîÄï9Pğ<vîÄï8æğ<vîÄï8|ğ<vîÄï8ğ<vîÄï7¨ğ<vîïH›ğ<vîïH2ğ<vîïGÈğ<vîïG^ğ<vîïFôğ<vîïFŠğ<vîïF ğ<vîïE·ğ<vîïEMğ<vîïDãğ<vîïDyğ<vîïDğ<vîïC¥ğ<vîïC<ğ<vîïBÒğ<vîïBhğ<vîïAşğ<vîïA”ğ<vîïA*ğ<vîï@Áğ<vîï@Wğ<vîï?íğ<vîï?ƒğ<vîï?ğ<vîï>¯ğ<vîï>Fğ<vîï=Üğ<vîï=rğ<vîï=ğ<vîï<ğ<vîï<4ğ<vîï;Ëğ<vîï;ağ<vîï:÷ğ<vîï:ğ<vîï:#ğ<vîï9¹ğ<vîï9Pğ<vîï8æğ<vîï8|ğ<vîï8ğ<vîï7¨ğ<ô uî·ïfñğuîG?ïfñğô Xqî"ıïbğwî·ï]’ğô wî2ï]’ğô ‰uî·ïZŠğ	ô Šuî³ïZŠğWô Œuî·ïYğô uîöïYğ2wî1zïYğ	uî7LïYğô ˆuî·ïWğKô ‰uî;úïWğô †uî·ïUığGô ‡uî9¼ïUığô –uî·ïTyğô —uîKïTyğ[ô Äuî·ïRõğFô Åuî:ÂïRõğô …uî·ïQqğô †uîDïQqğCô ¦uî·ïOíğ$ô §uî"ïOíğ=ô uî·ïNiğ	ô Ftîõï4ÇğHô Íuî·ï2)ğô ÎuîSï2)ğRô ‚uî·ï0¥ğ,ô ƒuî'#ï0¥ğ8ô ªuî·ï/!ğSô «uî@Tï/!ğô –uî·ï-ğ7ô —uî.¥ï-ğ(ô Ÿuî·ï,ğô  uî¯ï,ğRô §uî·ï*•ğ=ô ¨uî2ï*•ğ#ô uî·ï)ğ)wî·ï$…ğwî2ï$…ğô ¤uî·ï!}ğô ¥uîøï!}ğAô Şuî·ïøğô ßuîÿïøğ?ô ¿uî·ïtğ8ô Àuî0@ïtğ&ô ƒuî·ïğğQô „uî;ïğğô uî·ïlğwîßïlğuîMïlğô ±uî·ïdğUô ²uîAÜïdğ
+ô ˆuî·ïàğô ‰uî£ïàğFô uî·ï\ğSô ‘uî>Ÿï\ğô ªuî·ïØğMô «uî<ÇïØğô wî·ïLğô …uî·ïDğ(ô †uî$)ïDğ9ô ¨uî·ï
+ÀğDô ©uî3àï
+Àğ"        (Š        TVm$ÂÎšÉ Ê     ÎÔ ‹         tóÊÎ°Î½         ©ÿÿ    » ¼ ¾ Î„óà¶ · ¹ º¤   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (Jasmine17.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                                                                                      Jasmine Scanner Manual18controlled by the 2" lens mount adjusting screw.  A rough setting can be performed by visuallychecking that the image is correctly aligned.  Fine adjustment is performed by watching the scanneroutput on the Alto screen, and ajusting for the best image.7.2.2FocusThe image is focused by varying the distance from the lens to the detector array.  This is achievedby turning the lens in the mounting threads until the edges of the stripe pattern are as sharp aspossible.  When the mounting bracket is under tension from the adjusting screw, the resultingpressure on the lens threads will hold the lens securely.  For final focus, insert a text page into thescanner, and use the software to zoom in on a small (~100x100 pixel) area.  Rescan the area whileadjusting the focus for an optimal image.   While adjusting focus, it is easy to change the lens aperture, therebycutting down the brightness of the image.  Make sure the aperture is always fully open.7.2.3MagnificationThe image magnification is determined by the distance from the lens mount assembly to thedocument window.  Moving the assembly away from the document window increases themagnification.    ô uî·ïfñğuîG?ïfñğô ±uî·ïbğô ²uîpïbğEô ˆuî·ï`šğ[ô ‰uîCï`šğô uî·ï_ğ;wî·ï\ğwî­ï\ğô “uî·ïYğ,ô ”uî'nïYğ7ô ­uî·ïWğQô ®uî>…ïWğô Êuî·ïUığ:ô Ëuî2ÔïUığ#ô uî·ïTyğô uîïTyğXô ‘uî·ïRõğô ’uî´ïRõğDô …uî·ïQqğô †uîJïQqğtî&5ïQqğFô tî·ïOíğWwî·ïLåğwî­ïLåğô Ûuî·ïIİğ,ô Üuî)²ïIİğ-ôuî·ïHYğ/ôuî/¸ïHYğ"ô uî·ïFÕğ                TVm$ ·ÎšÉ Ê     ÎÔ ¤         tóÊÎ°Î½         ÿÿ    » ¼ ¾ Î„óà¶ · ¹ º¤   (JasmineBravo.PRESS                        (JasmineManual.PRESS                       (Jasmine17.PRESS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                                                                                        Jasmine Scanner Manual Appendix19Appendix 1. SchematicsA1.1Analog Board2121211414131211654315XEROXFileProjectDesignerRevDatePageParc CSLMcCreight01GHRRT+-TRTRTRGND1VCC1ANALOGTTREFoREFiCTRSELCLK'RESET'RRRADC-MC8BClsbRRRRRRRRD0D1D2D3D4D5D6D7RRRmsbScale.0Scale.1Scale.2Scale.3Scale.4Scale.5GHRRT+-TRhdhdhdhdLM360CA3140GNDGNDTRhdnCA3140jasmana.silJasmineAnalog sectionGHRRiT+-TDD'D0D1D2D3D4D5D6D7RRRRRRRRV+V-REF+REF-COMPII'RRRRRTTTGND*msblsbTRGNDSAR.0SAR.1SAR.2SAR.3SAR.4SAR.5SAR.6SAR.7TREOC'Q0Q1Q2Q3Q4Q5Q6Q7lsbmsbCLKQ7'RES'E'DTTTTTTTTTTRRRRNextBitGND.DM2503GNDTRScaleCorr15pf1k1k1k.hdhdhdTR.GHRRiT+-TDD'LM733nCYXTSSYTRTTRRRRRRRRRTREOSRecGateDRecVRecVBufDBufBufSupGND*STARTCLKV-V2+V1+nGNDScanStartCD4053GND*RV+V-RRE'RG2BG2AG1BG1ARRRRRRV-V+CD4053LM733hdGND*RRRV-V+Clock-Pwr+PwrRRGND-10v-10v+5v+5v+5vGND+5v-10v-5v+5v+5vCA3140LM360NE5008RL1024GDCRestoreAnalogOn'.01uf8.2k-10v220pfTRTRTRnhdhdPi filterPi filterhdhdnTRTRTRVCC+5v-10vNegSupplyGND*RRRV-V+nTR-5vnPower SupplyGHRRT+-TRTRTRnVCChdhdhd1.5k3.9kLM339Scale DACScannerVideo AmplifierSample/Hold/Restore SwitchHold AmplifierSuccessive approx.DACComparator+5v+5v-10vCA3140-Pwr+PwrRRRechargeTRhd1.1kRefD3D2RRRRRRRRTTTTSD1D0E0E1E2E3H0H1H2H3COTCID3D2RRRRRRRRTTTTSD1D0E0E1E2E3H0H1H2H3COTCIOffset.5Offset.4Offset.3Offset.2Offset.1Successiveapprox.registernOffset adderLS283LS283.SAR.0SAR.1SAR.2SAR.3SAR.4SAR.5SAR.6SAR.7* adjust for proper gainData.0Data.1Data.2Data.3Data.4Data.5Data.6Data.7-10v#aa61-Pwr+PwrRRVCCLM339#bb34hdruA7905312652315141112101314796523151411121013147921742121214521231221212121748541051112436716861617118212791312101187121211091722121162415141313121110987657623212123614162431151385679121110212121236hdhd1221ScanClk'ResetAD'22uf+10k6.8uf6.8uf6.8uf6.8uf++++3.9uH3.9uH6.8ufiGHRTLS04SampleDoneTRTRnTR-5v22ufzener300 ohmshdhdhdTrue5.1k*n12nhd1kTR..**adjust for proper offset80k**7/19/79n.01ufTRTRTRn.1uf.1ufBOffset.0Truenn#C3#C2#1A#1B#IC4#IC6#IC3#IC1#IC2#IC2#IC1#IC8#IC8#IC5#IC9#IC7#IC7#IC6#IC3#2B21#C5#R10#R11#R12#R13#C6ADD#C12#R15#R16#R14#C9#R22#D6#C11#R17#R19#R18#C10#C7#H1#H2#C8#C13#C1512131411note: C2,C3 polarityis mismarked on PC board+5v+5v(#R21b)k#R20a#R21aSee modification listnrevGbrevGb   uî·ïfñğuîG?ïfñğô Xqî#5ïbğwî·ï_ğô wî­ï_ğúÿøÿö{îòï1Pğ{îAï1Pğ{îòï4ğ{îAï4ğ{îòï6Pğ{îAï6Pğ{î	İï3ğú ø {î6—ï53ğ{î6—ï4ğ{î6—ï2ûğ{î6—ï1Şğ{î6»ï0Âğ{î6»ï/¥ğ{î6»ï.‰ğ{î6»ï-lğ{î6—ï,Pğ|î ïyğ}î(ïÀğî2ï Õş Gr}îïÀğ}î3ïÀğ}î?XïÀğ}îB­ïÀğ}îK‘ïÀğîKï Õş GrîBï Õş Grî>Éï Õş Grî'sï Õş Grî
+ï Õş Grîäï şO» GîSXï ş G¹îäï şOt Gîäï Õş Gr}îïğ|î4;ïÎğ	|îM<ïÎğúÿøÿ~î(ïH’ğ~î(ïH’ğ~î(ïH’ğ~î(ïFYğ~î+åïGvğ{î)ïJ	ğ{î)ïK´ğî5ïJ˜ş $dî1PïJ˜şr $î1PïJ˜ş $dî1PïKØşN $~î5ïGvğ~î0åïGvğî+åïK&ş $ú ø î5æïK&şr $úÿøÿî"ºïI{ş $dîlïI{şr $îlïI{ş $dîlïJ»şN $~î"ºïFYğ~îïFYğî#ïJ	ş $î,»ïMíş $dî(lïMíşr $î(lïMíş $dî(lïO-şN $~î,»ïJËğ~î(ïJËğú ø îïK&şV $îïLBşV $îïM_şV $îïN{şV $îïO˜şV $îïP´şÇ $îïPØş $îïQÑşV ${î+ïWğ{î+ïX5ğ{îïOßğ~îÈïLvğ~îÈïX¯ğ{î%ï\ğ{î+ï\ğ{î+ïS4ğ{î+ïTQğ{î+ïUmğ~îVïOËğ~îVïPèğ~îVïRğ{îïYßğ	îÁïHíş $²îÁïHíş	+ $îÈïIş $îÁï]|ş	 $}îdïIÂğ~îVïS¯ğ~îVïX¯ğ~îVïN!ğ~îVïTÌğ~îVïFYğ~îVïGvğ~îVïH’ğ~îVïI¯ğ{î+ïIÂğ{î+ïJßğ{î+ïKûğ{î+ïMğ{î+ïN4ğ{î+ïOQğ{î+ïPmğ{î+ïQŠğ~îVïMğ~îVïKèğ~îVïJËğ}îdïQŠğùxúÿøÿ{îïOßğ{îïNÃğ{îïM¦ğ{îïLŠğ{îïKmğ{îïJQğù ú ø ~îïZèğ~îïZèğ~îïZèğ~îïX¯ğ~î"sïYÌğ{î¬ï\_ğ{î¬ï^
+ğîåï^˜ş9 $úÿøÿî"ºïMíş $dîlïMíşr $îlïMíş $dîlïO-şN $~î"ºïJËğ~îïJËğî-ïN{ş« $î.¬ïKJş $U{î5æïJQğ{î-ïM¦ğ{î#ïI4ğ{î#ïM¦ğú ø {îH<ïJßğúÿøÿ{î*;ïJQğú ø îÈïX|ş ${îÈïW¦ğîÈïW_ş $îÈïS|ş ${îÈïSÃğî«ïT˜ş« $î«ïS|ş $]î«ïUµş9 $î",ïY
+ş $dîŞïY
+şr $îŞïY
+ş $dîŞïZJşN $~î",ïUèğ~îsïUèğî:ïY˜şÇ ${î"sïXÃğ~î%ÉïTÌğî&WïY.ş $ î"sïY˜şä ${î Èï\§ğ|î(ïÎğ|î«ïÎğ|î:ï]ğ~îDïI!ğ~îDïI!ğ~îCÊïGvğ~îCÊïH’ğ~îF‘ïGvğ~îGïGvğ{îDXïJßğ{îDXïKûğ~îF‘ïH’ğ{îEtïKûğ{îEtïJßğî7ïN{ş $]î7ïN{ş] $î>;ïNŸş $9î7ï_µş9 ${î7ï^Qğ{î7ï]5ğ{î7ï\ğ{î7ïZüğ{î7ïYßğ{î7ïXÃğ{î7ïW¦ğ{î7ïVŠğ~î6tïZèğ~î6tïYÌğ~î6tïX¯ğ~î6tïW“ğ~î6tïVvğ~î6tïUZğ~î6tïT=ğ~î6tïS!ğ{î7ïTßğ{î7ïSÃğ{î7ïPûğ{î7ïOßğ{î:æïR¦ğ{î<ï]5ğ{î<ï\ğ~î6tïQvğ~î6tïPZğ~î6tïO=ğ~î6tïM’ğ~î6tïLvğ~î>;ïYÌğ~î>;ïX¯ğ~î>;ïO=ğ{î7ïR¦ğ}î9;ï^Qğ}î9;ïVŠğîGÑïY
+ş $dîC‚ïY
+şr $îC‚ïY
+ş $dîC‚ïZJşN $~îGÑïUèğ~îCïUèğîHïY˜ş9 $î@tïLBşä $î0Wï^˜ş« $î0Wï]|ş« $î0Wï\_ş« $î0Wï[Cş« $î0WïZ&ş« $î0WïY
+ş« $î0WïWíş« $î0WïVÑş« $î2ïU&ş  $î2ïT
+ş  $î2ïRíş  ${î2ïS4ğ{î0Wï^ßğ{î0Wï]Ãğ{î0Wï\§ğ{î0Wï[Šğ{î0WïZnğ{î0WïYQğ{î0WïX5ğ{î0WïWğîFØïR_ş $dîBŠïR_şr $îBŠïR_ş $dîBŠïSŸşN $~îFØïO=ğ~îBïO=ğî>;ïRíşr $îGïRíş $î:ïY¼ş $Ç{î3­ï6Pğ{î4Éï,Şğ{î4Éï-úğ{î4Éï/ğ{î4Éï03ğ{î4Éï1Pğ{î4Éï2lğ{î4Éï3‰ğ{î4Éï4¥ğî/;ï7´ş9 $î6tï*ş $Vî/;ï*^ş] $î/;ï*^ş $y}î2ï,Şğ}î2ï4¥ğ{î/Éï/ğ{î4;ï+Áğ{î/Éï-úğ{î/Éï03ğ{î/Éï2lğ~î6tï2çğ~î6tï1<ğ~î6tï0 ğ~î6tï/ğ~î6tï-çğ~î6tï,Êğ~î6tï+®ğ~î6tï*‘ğ~î6tï)uğ~î6tï(Xğ~î.¬ï/ğ~î.¬ï,Êğ~î.¬ï+®ğ~î.¬ï*‘ğ{îHÊïLŠğî(ï0zş9 ${î(ï0Âğ~î6tï(Xğ{î0Wï*¥ğ{îïRğî,,ï\îş $dî'Şï\îşr $î'Şï\îş $dî'Şï^.şN $~î,,ïYÌğ~î'sïYÌğî"sï]|ş $î,tï]|ş« $î.ïQfş $9î.ïQCşä ${î/ÉïPmğ	}îC;ïQŠğî@tïLfş $}îDÃïX5ğ}î)ï\ğúÿøÿ}î2ïIÂğú ø ~îGïGvğ{î,tï\§ğ{îHïXÃğ{îGïRğî(ï/^ş« $î(ï.Aş9 $úÿøÿî%ï]ş $dîÖï]şr $îÖï]ş $dîÖïşN $~î%ï;ğ~îlï;ğ~îäïXğ~îdïæğ~îdïæğ~îï;ğ~îïXğ~îäï;ğ~îsï;ğ{î«ï¤ğ{î«ïÁğ~îäïXğ{îÈïÁğ{îÈï¤ğ{îVïˆğú ø ~îIÃïS¯ğúÿøÿî	rïş9 $îVïìşU ${îúï¤ğ{î!Áïğ{î!Áï3ğ~î"Şï­ğ~î ¥ïXğ{î ïİğ~î"ŞïÊğîlï–şr $î"Şïºş $ îlï–ş• $îlï–ş $$~îŞï;ğîlïìş  $~îåï1Êğ~îåï2çğ~îï-Yğ~îï/ğ~îï0 ğ~îï2Yğ~îï4ğ~îï5 ğ~îï6Ëğ~îï7çğ~îï9ğ~îåï5 ğ~îï: ğ{î¬ï8‰ğ{îï0Âğ{îï2lğ{îï3‰ğ{îï6Pğ{îï53ğ{îï5Âğ{îï:4ğ{îï7lğ{îï8‰ğ{îï;Pğ{îï<mğ{îï=‰ğîï.Aş $Ïîï.Aşy $îåï.eş $«îï>íşV $îåï6—ş $îVïş $î	rï,ş $Uî"Şï]ş $î(ûïóş $ ~î(lï‘ğú ø îï:{ş ${îï:ÂğîÈï8ĞşÇ $îÈï7´şÇ $ùxúÿøÿ{îÈï7ûğ	ù {î#lïúğ{îï2ğ~îsïÉğîï²şr $î"sï¹ş $îï–ş• $îï–ş $@{îïğ{îïùğ~îsï­ğ~îsïğ{îïOğ~îsïæğ{îï2ğ{îïOğ{îïùğ{îïğ~îï	Éğ~îïğ~îï
+æğ~îï­ğ~îïXğ~îïtğ{îïÁğ{îïİğîïÏş $	–îïÏş• $îïòş $	rîïAşr ${î#ïùğ{îï¤ğ{îlïğú ø {îDæïEPğ~îCÊï@Ëğ~îCÊïAçğ~îCÊïCğ{îDæïD4ğ{îDæïFmğîDXïBĞş $$îDXïBĞş• $îHÊïBôş $ îDXïGÑşr $ùxúÿøÿ{î(ï/¥ğù {îïòğ{îï2ğî«ïş  $î¬ïş $+î«ï	–ş$ $î«ï²ş $~îAïÉğ~îAï­ğú ø {î>ÉïEßğî=­ïD{ş« $îï=Ğş $úÿøÿîVï<×ş $îVï<´ş9 $ú ø {îï;Şğ{î1tïTQğ{î2ïUmğ{î>ÉïFûğ{îï>ğîï;—ş $úÿøÿîïyş  ${îïÁğîï]ş  $îïAş  ${îï¤ğ{îïˆğú ø {î>ÉïDÂğ{îÈïXÃğúÿøÿ{îïkğ{î:ïùğú ø {îIXïD4ğ{î9ÉïNÃğúÿøÿ{îVï/ğú ø îsïëşV $úÿøÿî ¥ïëş $Îùx{îOï3ğ	ù ú ø î:ï–şÇ $ùxúÿøÿ{î:ïİğ	ù }îïˆğ}îVï?Âğú ø îï6	şr ${îï6Pğúÿøÿ}îïH¦ğú ø î8ôïş $dî4¦ïşr $î4¦ïş $dî4¦ïHşN $~î8ôïæğ~î4;ïæğùxúÿøÿî3ôïAş $dî/¥ïAşr $î/¥ïAş $dî/¥ïşN $~î3ôïğ~î/;ïğù ú ø î=ôïAş $dî9¦ïAşr $î9¦ïAş $dî9¦ïşN $~î=ôïğ~î9;ïğùxúÿøÿî-ïòş $Çî-ïÏş9 $ù ú ø î?æïòş $Çî>;ïÏşÎ $ùxúÿøÿî*;ï–ş
+ $ù ú ø î9;ï–şä $ùxúÿøÿî6tïdş $ ~î5æïğù ú ø {î9;ïÁğùxúÿøÿ{î4;ïúğù ú ø }î5Wïúğ	}î5WïÁğ	ùxúÿøÿ{î4;ïÀğù ú ø {î9;ïˆğùxúÿøÿ~î5æï	Éğî6tï+ş $ î*;ï]ş
+ $ù ú ø î>;ï–şÎ $î?æï¹ş $Çùxúÿøÿî-ï–ş9 $î-ï¹ş $Çù ú ø î=ôïş $dî9¦ïşr $î9¦ïş $dî9¦ïHşN $~î=ôï
+æğ~î9;ï
+æğùxúÿøÿî3ôïş $dî/¥ïşr $î/¥ïş $dî/¥ïHşN $~î3ôï
+æğ~î/;ï
+æğù ú ø î8ôïÏş $dî4¦ïÏşr $î4¦ïÏş $dî4¦ïşN $~î8ôï­ğ~î4;ï­ğùxúÿøÿ{î*Éïİğù ú ø {î?æïİğ{î?Xï¤ğùxúÿøÿ{î*Éï¤ğ	ù ú ø îÈï Õş Gr{îF‘ï2ğ~îEtï­ğ~îEtïÉğ~îEtïæğ{îF‘ïğ{îF‘ïOğîFï²ş $$îFï²ş• $îJtïÖş $ îFï²şr $î9;ï]şÈ $~îB­ïtğîC;ïyşë $îC;ïÖş $ÇîJ-ï]ş $dîEßï]şr $îEßï]ş $dîEßïşN $~îJ-ï;ğ~îEtï;ğîCÊï–ş] $îCÊï–ş $$îCÊï–ş9 ${îHÊïİğîCÊïëş9 $~îLï‘ğîJtïëş9 $îL­ïòş $|îC;ï]ğ~î«ï)uğ~î«ï)uğ~îï)uğ~îï'<ğ~îï(Xğ{î:ï*ìğ{î:ï,—ğîäï',ş $
+ îäï'ş $îºï&zş $dîlï&zşr $îlï&zş $dîlï'ºşN $~îºï#Xğ~îï#Xğîï'şÇ $îï$Aş $dîOï$Aşr $îOï$Aş $dîOï%şN $~îï!ğ~îäï!ğîºï$Aş $dî
+kï$Aşr $î
+kï$Aş $dî
+kï%şN $~îºï!ğ~î
+ï!ğîï$Ïş  $îï$Ïşr $îåï$Ïş« $îï$eş $ ~îï ğùxúÿøÿ{îï%ğù ú ø {îï#úğ{îåï#úğ{îï&3ğîäï*ìşë $îäï',ş $äîäï'şV $î:ï$óş $9îäï-%şÇ $}îï#lğ}î«ï#lğ{îVï+3ğ|îsïT
+ğ	|î9ï<´ğ|îäï]ğ|îïAğ|î)ïE	ğ|îA‘ïUµğ|îC;ïT
+ğ|îBïH_ğ
+úÿøÿîWïJ	ş9 $ú ø {îï'Oğ{îäï‡ğ{îäï
+kğ{îWïùğ{î3ïòğ{î3ï2ğîÈïş  $îÈïş $+îÈï	–ş$ $îÈï²ş $~î]ïÉğ~î]ï­ğùxúÿøÿ{îäï-lğù ú ø îïş $Çîïyş9 $îï€ş $Çîï]şÇ $îäï]şÇ $îäï€ş $Çî	rïyş9 $î	rïş $Çúÿøÿî"ºïK´ş $dîlïK´şr $îlïK´ş $dîlïLôşN $~î"ºïH’ğ~îïH’ğîWïIş $Uî#ïLBş $î#ïN{ş $î%:ïLfş $9{î#ïKmğ}î¬ïJßğú ø î«ï^
+ş $î«ï\ƒş $«î«ï\_ş9 ${îäï\§ğîÈïP&ş : $îåï^¼ş $«î$¬ï]Ÿş $ÇîÈï\_şV $îï\ƒş $«ùxúÿøÿ{îC_ï4ğ{îC_ï6Pğ~îB­ï/’ğ~îB­ï0®ğ~îB­ï1Êğ~îB­ï2çğ~îB­ï4ğ~îB­ï5 ğ~îB­ï6<ğ~îB­ï7YğîCï1—ş² $îCï=‰ş $~îH¦ï6Ëğ~îH¦ï4’ğ~îH¦ï2Yğ~îH¦ï0 ğ~îEßï-Yğ{îC_ï8‰ğ{îC_ï:Âğ{îC_ï9¥ğ{îC_ï7lğ{îC_ï53ğ{îC_ï2ûğ{îGï:ğ{îGï7×ğ{îGï5ğ{îGï3eğ{îFûï<mğ~îH¦ï9ğ{îE˜ï1ŞğîH¦ï1ºş $òîCï1ºş $ò{îC_ï$ˆğ{îC_ï&Áğ~îB­ï ğ~îB­ï!ğ~îB­ï"<ğ~îB­ï#Xğ~îB­ï$uğ~îB­ï%‘ğ~îB­ï&®ğ~îB­ï'ÊğîCï"ş² $îCï-úş $~îH¦ï'<ğ~îH¦ï%ğ~îH¦ï"Êğ~îH¦ï ‘ğ~îEßïÊğ{îC_ï(úğ{îC_ï+3ğ{îC_ï*ğ{îC_ï'Şğ{îC_ï%¥ğ{îC_ï#lğ{îGï*ğ{îGï(Hğ{îGï&ğ{îGï#Öğ{îFûï,Şğ~îH¦ï)uğ{îE˜ï"OğîH¦ï",ş $òîCï",ş $òù ú ø î6tï-%şU $î9Éï#Öş $	rî9Éï#³şä $î6tï.Aşä $î:Xï&ş $Vî:Xï%ìşä $î6tï/^şr $î:æï(Hş $9î:æï(%şV $î6tï0zş  $î;tï*ş $î;tï*^şÇ $î6tï6—ş9 $ùxúÿøÿîHÊï-%ş  $îIXï-%ş $ëîFï/ìşy $îFï/ìş $Îù ú ø î6tï4ìşU $î9Éï4ìş $$î9Éï9íş	r $î6tï3Ğşä $î:Xï3Ğş $î:Xï7´şä $î6tï2³şr $î:æï2³ş $ëî:æï5{şV $î6tï1—ş  $î;tï1—ş $Îî;tï3BşÇ $ùxúÿøÿî<ï$Ïş« ${î<ï%ğî<ï'ş« $î<ï)Aş« $î<ï+zş« $î<ï4^ş« $ù ú ø î<ï;	ş« $ùxúÿøÿ{î<ï'Oğ{î<ï)ˆğ{î<ï+Áğ{î<ï4¥ğù ú ø |î+åï(%ğ
+|î+åï&zğ|î+åï$ÏğùxúÿøÿîFï!ş $~îEtï­ğù ú ø |îA‘ï–ğùxúÿøÿ{îIXï"Şğ{îIXï2lğ~îHÊï9ğîHÊï:{ş $îHÊï8Bş $îHÊï6	ş $îHÊï3Ğş $îHÊï*ìş $îHÊï(³ş $îHÊï&zş $îHÊï$Aş $ù ú ø {î<ï:4ğ{î<ï7ûğ{î<ï5Âğ{î<ï3‰ğ{î<ï*¥ğ{î<ï(lğ{î<ï&3ğ{î<ï#úğîïJ	şV $îGïLBş9 $îNXïA×ş $
+î,tï2×ş $ î,tï2³şÇ $}î)¬ïG‰ğùxúÿøÿ{îJtï:Âğ{îJtï8‰ğ{îJtï6Pğ{îJtï4ğ{îJtï+3ğ{îJtï(úğ{îJtï&Áğ{îJtï$ˆğù ú ø î,tïA´ş!å $úÿøÿîWïLBş9 $ú ø {îIæïS4ğ{î/Éï6Pğîï]şÇ $îï€ş $Çî¬ïyş9 $î¬ïş $Ç{î"Pïòğ{î"Pï2ğî!åïş  $î&åïş $+î!åï	–ş$ $î!åï²ş $~î!zïÉğ~î!zï­ğîäï
+$ş: $îäï@ş« $îsï@ş9 $ùxúÿøÿ{îsï‡ğù ú ø {î'sïùğî@tï8ĞşÇ ${îF‘ïùğ{îJtïğúÿøÿîï$şr $ú ø }îKïİğ{î!ïÀğ{î ï¤ğùxúÿøÿ{îBï#úğ{îBï%ğ{îBï&3ğ{îBï'Oğ{îA‘ï(lğ{îA‘ï)ˆğ{îA‘ï*¥ğ{îA‘ï+Áğ{îHíï+3ğ{îHíï(úğ{îIï&Áğ{îIï$ˆğ{îE-ï!3ğ{îIï-lğ{îBï3‰ğ{îBï4¥ğ{îBï5Âğ{îBï6Şğ{îA‘ï7ûğ{îA‘ï9ğ{îA‘ï:4ğ{îA‘ï;Pğ{îHíï:Âğ{îHíï8‰ğ{îIï6Pğ{îIï4ğ{îE-ï0Âğ{îIï<ûğù {î#IïLŠğ{î—ïLŠğú ø {îóïÀğ{îóï¤ğ{îHï%ğ{î	–ï%ğ{î,ï%ğ{îzï%ğ{îHï'Oğ{î–ï'Oğ{î
+²ï-lğ{î
+²ï+3ğ{îï,Pğ{îJ¼ï3ğ{îE
+ï3ğ{îE
+ïİğ{îE
+ïÁğ{îE
+ï¤ğ{î9‚ï¤ğ{î3Ğï¤ğùxúÿøÿ{î4‚ïİğ{î.Ğïİğ{î4‚ïğ{î.Ğïğù ú ø {î9‚ïİğ{î3Ğïİğúÿøÿ{î
+ÖïÀğ{î
+Öï¤ğú ø {îC_ïFûğ{îC_ïEßğ{îC_ïDÂğúÿøÿ{îïkğ{î–ïOğ{îï¤ğ{îïİğ{î–ïˆğ{î–ïÀğ{îïİğ{îïˆğ{îzï¤ğ{îïÁğ{î–ï>ğ{îOï9ğ{îï<ûğ{î–ï;Şğ{îï:Âğ{îï9ğ{î–ï7ûğ{î–ï6Pğ{î–ï4ğ{îï2ûğ{îï1Pğ{îOï6Şğ{îOï5Âğ{îsïOğ{îï3ğ{î
+²ïOğ{î³ï3ğ{îï3ğú ø {î,»ï]Ãğ{î'	ï]Ãğ{î-´ï.‰ğ{î.Bï/¥ğ{î.Bï0Âğ{î.Bï2ûğ{î7ï6Şğ{îGfïS4ğ{îA´ïS4ğ{îH_ïYßğ{îB­ïYßğ{î>¦ïS4ğ{î>Éï\§ğ{î>Éï]Ãğ{î5{ïPmğ{î5{ïQŠğ{î6	ïS4ğ{î6	ïTQğ{î5{ïUmğ{î5{ïWğ{î5{ïX5ğ{î5{ïYQğ{î6	ïZnğ{î6	ï[Šğ{î6	ï\§ğ{î6	ï]Ãğ{î6	ï^ßğ{îGïLŠğ{îG­ïKmğ{îC_ïLŠğ{îC_ïKmğ{î"ºïYßğ{îïYßğúÿøÿ{î#IïNÃğ{î—ïNÃğú ø {î%ï^ßğ{î%ï\§ğ{î#ï]Ãğ{î3ïPmğ{î3ï\§ğ{îëïSÃğ{îëïTßğ{îëïUüğ{îëïW¦ğ{î]ï\§ğ{î]ïRğ{îëïXÃğ{îëïJQğ{îëïKmğ{îëïLŠğ{îëïM¦ğ{î]ïPûğ{î]ïOßğ{î]ïNÃğúÿøÿ{î-IïNÃğ{î'—ïNÃğ{î#IïJQğ{î—ïJQğ{î6-ïKmğ{î0{ïKmğ{î'—ïLŠğ{î'—ïJQğ{î,tïKmğú ø {î>;ïÀğ{î>;ïúğ{î8Ğïİğ{î>‚ïİğ{î>‚ïğ{î8Ğïğùxúÿøÿ{îÈï9ğù î¬ïN{şä $ùx{î(ï.‰ğù ú ø }îïX5ğ|îåïWíğ}î¬ï%¥ğùxúÿøÿ}î0Wïkğù ú ø }î:Xïkğ}î:Xï2ğùxúÿøÿ}î0Wï2ğ|î.ï$ğù ú ø |î>;ï–ğùxúÿøÿ|î4;ïÏğù ú ø |î9;ïÏğ}î5Wï3ğ}î4Éïùğ}îF‘ïˆğùxúÿøÿ~î;Pï;Ëğ~î;»ï<çğ~î;»ï<çğ~î:æï;Ëğ~î?ï;Ëğ{î<ï?4ğù ú ø î8­ï?{şë $î8­ï6»ş $äùxúÿøÿî?Xï?{şä ${îAï?Âğ
+ù ú ø îï,	ş9 $úÿøÿîdï5{ş $dîï5{şr $îï5{ş $dîï6»şN $~îdï2Yğ~î«ï2Yğîdï3Bş $dîï3Bşr $îï3Bş $dîï4‚şN $~îdï0 ğ~î«ï0 ğîï6	ş@ $îï3eş $Çîï3Ğş@ $~î ï/ğî«ï6	ş9 $ú ø î:ï,	ş $$î:ï1	şÇ $úÿøÿîdï0zş $dîï0zşr $îï0zş $dîï1ºşN $~îdï-Yğ~î«ï-Yğîäï1	şë ${îäï1Pğî«ï1	ş] $}îÈï4¥ğ}îÈï2lğ}îï/¥ğ{î«ï53ğ{î«ï2ûğ{î«ï03ğîäï1,ş $ î«ï3Ğş9 $îäï2³şÎ $î:ï3Ğşy $î:ï2×ş $îåï5{ş« $ú ø îåï8Ğş  $ùxúÿøÿ{îï9ğù î	rï ]şA $î"sï!ş $¬îVï!zşA $}î)¬ïMğú ø îåï`CşÇ $îJQïWƒş $9úÿøÿ~îÈïD¯ğú ø î>;ï\_ş9 $î@tïY˜şë $î>;ï]|ş  $îJQï[fş $9{îB­ï]Ãğ{îH_ï]Ãğ~îIÃïW“ğ{îHï\§ğ}îDÃï\ğîHï]|ş9 $îGÑï\îş $dîC‚ï\îşr $îC‚ï\îş $dîC‚ï^.şN $~îGÑïYÌğ~îCïYÌğúÿøÿ~îsï­ğ~îsïğîsïìş $î%:ïş $-î#ïzş] $îï–ş• $îïyşr $ú ø }îïEßğúÿøÿ}îïMğú ø |îC;ïÎğúÿøÿîïş $~îrïÉğî ï+ş $î ï$ş@ $}îÏïÁğî
+Öï–ş $dîˆï–şr $îˆï–ş $dîˆïÖşN $~î
+Öïtğ~îïtğî«ïşy $î«ïş $«ú ø î=fïGBş $dî9ïGBşr $î9ïGBş $dî9ïH‚şN $~î=fïD ğ~î8­ïD ğî=fïCíş $dî9ïCíşr $î9ïCíş $dî9ïE-şN $~î=fï@Ëğ~î8­ï@Ëğî7ïD{şÎ $î7ïC‚ş $~î6tï? ğ}î:XïCğî>;ïFØş $î>;ïF´ş $î=­ïGÑş ² $î8ïGÑş ² $î8ïE»ş $9î8ïE˜ş9 $}î:XïFmğ|î?æïÎğî@tï8ôş $9ùxúÿøÿî<ï6—şÎ ${î<ï6Şğù ú ø {î<ï;Pğ~î7ï	Éğî8ï+ş $ î8ïdş $ ~î7ïğî8ï–ş $ùxúÿøÿî4;ï–ş9 $î4;ïÏş9 $ù ú ø î8ïÏş $ùxúÿøÿ{î0WïOğ{î0Wïˆğ{îIXï1Pğ{îIXï!Áğù {îsï<mğú ø {î Èï[Šğúÿøÿ{î*;ïI4ğ{î#lïİğ{îVïkğ{îï‡ğ{î#ïİğú ø {îH<ïIÂğ{îIXïCğ{î9ÉïYßğ{îÈïW¦ğ{îVï*ğ{î"sïùğ{îVïùğúÿøÿ{î:ïùğùx{î<ï>ğ{î?Xï?Âğ{î9Éï?Âğù ú ø {îïIÂğ{î)¬ïN4ğ{îïN4ğ{îïKûğúÿøÿ{î2ïJßğú ø {î:XïD4ğ|î9ÉïGBğ}îC;ïR¦ğ{îDXï]5ğ{îDæïYQğ{î(ï]5ğ{îïYQğ{îVï0Âğ{îÈï3‰ğ{îÈï5Âğ{îï$ˆğ{î«ï$ˆğ{î¬ï&Áğ{îF‘ï¤ğ{î:Xïˆğ{î5WïOğ{î5Wïğ{î:XïOğ{î¬ï¤ğ{îÈïİğúÿøÿ{î#lïÁğ{î#lï¤ğ{îåï3ğ{îˆïÁğú ø |î-ï
+²ğ|î-ï	ğúÿøÿ{î¬ïNÃğú ø {îÈïCğ
+~î¬ï@=ğîÈïBĞşä ${îsïD4ğ{îsï@PğîsïCíş $@î:ïE	ş] $î:ïDş $îsïCíş $îsïA&ş$ $îsï?ş $«î:ï?{ş] $î:ï?{ş $@|îVïA´ğúÿøÿ~îïğú ø |î«ïAğ|îäïD{ğî#ï ş $#ÿ        p        TVm$}ÎšÉ Ê     ÎÔ ¨         tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ º¤óà¯ ³ ¸ ¹ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS             Jasmine Scanner Manual Appendix20A1.2Finite State Machine21211119413512546914101245671531311291410124567153131121516123547910111213141514129719181716542316811131519614715123459101214151113XEROXFileProjectDesignerRevDatePageMalesonCSLJASMINEFINITE STATE MACHINEState.1State.2State.3State.4Q7Q6Q5Q4Q3Q2Q1Q0TTTTTTTTRRRSRRA0A1A2A3A4CS'State.0State.0State.4State.3State.2State.1CL'CKSSRRRRRRD0D1D2D3D4D5TTTTTTQ0Q1Q2Q3Q4Q5State.0State.1State.2State.3State.4ClockSeq.SampleSeq.ScanDoneSQ7Q6Q5Q4TTTTRA8A7A6A5A4A3A2A1A0CS'RRQ3Q2Q1Q0RRRRRRTTTTnn82S147LS174HM7603....fsm.silESRRRSSTTTTTTTTE'E'S1S2S4Q0'Q1'Q2'Q3'Q4'Q5'Q6'Q7'LS138Alto.9'Alto.10'Alto.11'Decode.Start'Decode.Load'Decode.WE1'Decode.WE3'Decode.WE2'Decode.Start'Decode.Load'Alto.8'Alto.8'SE'SBSB3D3B2D2B1D1B0RRRRRRRRD0TTTTQ0Q1Q2Q3XBus.8XBus.9XBus.10XBus.11XBus.12XBus.13XBus.14XBus.15Output section: data to Alto either from  64x8 FIFO orhigh order bits of Init register (describes sensor array)Input decode: 3 bit command, 1 bitfor "command ready"Finite State Machine, controls scan cycle andRAM initialization cycleRechargeDCRestoreAnalogOn'SampleDoneLS257SB=0 selects DSB=1 selects BTrueVGGRMR'SOIRORSISQ3Q2Q1Q0TTTD0RRRRRRD1D2D3TTTVGGRMR'SOIRORSISQ3Q2Q1Q0TTTD0RRRRRRD1D2D3TTTData.0Data.1Data.2Data.3Data.4Data.5Data.6Data.7SampleDoneFIFOReadyiRRTBAFIFOReadynDecode.Load'02..XBus.Read'ppppppppXBus.Read'XBus.A0'XBus.0XBus.8XBus.9XBus.10XBus.11XBus.12XBus.13XBus.14XBus.15pppppppppppAlto.9'Alto.10'Alto.11'Alto.12'Alto.13'Alto.14'Alto.15'pnCable connectionsClockResetCtrs'ResetCtrs'LS00iCDRRTiLS00XBus.0pNegSupplypCL'CKSSRRRRRRD0D1D2D3D4D5TTTTTTQ0Q1Q2Q3Q4Q5TrueClockTrueF3341F3341NegSupplyNegSupplyLS174VirScanClk'Decode.SetDelay'ResetAD'S'R'RTTRSQQQ'DCXBus.A0'iGHRTFIFOReadyTrue.TRTRn200 ohmspVCChdhd.Decode.MotorCtl'4 Mhz XtalK1100ATRFout8TRVCCTrue1kTrueCL'CKSSRRRRRRD0D1D2D3D4D5TTTTTTQ0Q1Q2Q3Q4Q5LS1741210131191Stepper Motor Control..Decode.MotorCtl'Alto.13'Alto.14'Alto.15'....RunMotorStepControlAStepControlB7/19/79GNDGNDGNDTrueSerial No. 1returned onLoad  cmdB470 pfn#7A#7A#4A#6A#3A#2C#6B#1B#2B#4B#3B#5B#5A#3C11 3 413121052ScanStartResetCtrs'  6 31411 7215104614 357152891014131110 2 3 5 6129471012111389891142153164175186197208219221013,2511,231224#R1#C176S74LS74's won't workLS14Note: the inverter must beS'R'RTTRSQQQ'DCS74#1BClock(#3B9)32True(#1B14)Alto.8'(#6B5)5414True(#1B4)Synchronizer modification(blue wires).Alto.8'RAWAlto.8'RAW(C19)an LS14 for noise immunityThe flop must be an S74:  ô uî·ïfñğuîG?ïfñğwî·ïbğwî­ïbğö{îdï53ğ{î
+²ï53ğ{îdï7ûğ{î
+²ï7ûğ{î,ŞïR¦ğ{î,ŞïCğúÿøÿ{îHïúğ{îïúğ{î¬ï&3ğ{îï"Şğ{î ï&3ğ{î ^ï"Şğú ø {îA´ï<ûğ{îA´ï:Âğ{îFØï;Şğ{î04ïLŠğ{î4^ïOQğ{î4^ïTßğ{î4^ïWğ{î-%ïX5ğ{î-%ïWğ{î-%ïUüğ{î-%ïTßğ{î,—ïPmğ{î-%ïOQğ{î4^ïX5ğ{î4^ïUüğ{î4‚ïPmğ{î04ï<ûğ{î4^ï?Âğ{î4^ïEPğ{î4^ïG‰ğ{î-%ïH¦ğ{î-%ïG‰ğ{î-%ïFmğ{î-%ïEPğ{î,—ï@ßğ{î-%ï?Âğ{î4^ïH¦ğ{î4^ïFmğ{î4‚ï@ßğ{îFJï@ßğ{îDŸï@ßğ{îHïB‰ğ{îïFûğ{îïI4ğ{îïKmğ{î+ïB‰ğ{îdïB‰ğ{îäïEPğ{îäïFmğ{îÁïG‰ğ{îÁïH¦ğ{îÁïIÂğ{îÁïJßğ{îÁïKûğ{îÁïMğ{îïOğ{îïˆğ{î:ïÁğ{î:ïúğ{îïÀğ{îïİğ{îïùğ{îïğ{î+ï2ğ{î+ïOğ{î+ïˆğ{î+ïkğ{î+ï¤ğ{î:ïğ{î:ïİğ{îï¤ğ{îïkğ{îï	Oğ{î$eï
+kğ{î",ï
+kğ{î Èïˆğ{î :ï2ğ{î&ïˆğ{î&zï2ğ{îºï'Oğ{îºï&3ğ{îºï%ğ{îºï#úğ{îºï"Şğ{îºïˆğ{îVï%¥ğ{îVï#lğ{îVï!3ğ{îÖïÁğ{îVï$ˆğ{îVï"Oğ|î ïyğ}î(ïÀğî2ï Õş Gr}îïÀğ}î3ïÀğ}î?XïÀğ}îB­ïÀğ}îK‘ïÀğîKï Õş GrîBï Õş Grî>Éï Õş Grî'sï Õş GrîÈï Õş Grî
+ï Õş Grîäï şO» GîSXï ş G¹îäï şOt Gîäï Õş Gr|î4ÉïÎğ}îïğ|î«ïÎğî ï]ş	– $î ïëş	– $î ïÏş	– $î ï²ş	– $î ï–ş	– $î ïyş	– $|îsïÎğ{î ïğ{î ïùğ{î ïİğ{î ïÀğ{îÈïúğ{îÈï ğ{îÈï!3ğ{îÈï"Oğ{îÈï#lğ{îÈï$ˆğ{îÈï%¥ğ{îÈï&Áğîİï–ş $@îİï–ş• $îOïºş $îİï(³şr $~îOï#Xğ~îOï"<ğ~îOï!ğ~îOï ğ~îOïæğ~îOïÊğ~îOï­ğ~îOï‘ğ~îsï!®ğ~îsïuğ~îsï<ğ~îïXğ~îsï ‘ğ~îsïXğ{î$ï$óğ{î$ï#Öğ{î$ï"ºğ{î$ï!ğ{î$ï ğ{îˆïİğ{î ï2ğî ïş
+  ${î ï%¥ğ{î ï!3ğ{î ï"Oğ{î ï#lğ{î ï$ˆğî ï ìş	– $î ï"ş	– $î ï#%ş	– $î ï$Aş	– $î ï%^ş	– $úÿøÿî¥ïÏş• ${îHï ğ{îzï ğ~îúï‘ğ~îÁï‘ğî¥ï)Aşr $î ïóş $	rî¥ïÏş $	–~î:ï#Xğ~î:ï"<ğ~î:ï!ğ~î:ï ğ~î:ïæğ~î:ïÊğ{îï&Áğ{îï%¥ğ{îï$ˆğ{îï#lğ{îï"Oğ{îï!3ğ~î ï#Xğ~î ï"<ğ~î ï!ğ~î ï ğ~î ïæğ~î ïÊğ{îï&åğ{îï%Èğ{îï$¬ğ{îï#ğ{îï"sğ{îï!Vğú ø î¬ïyş« $î¬ï]ş« $î¬ïAş« $î¬ï$ş« $î¬ïş« $î&Wïyş« $î&Wï]ş« $î&WïAş« $î&Wï$ş« $î&Wïş« ${î(ïÁğ{î(ï¤ğ{î(ïˆğ{î(ïkğ{î(ïOğî#ï	¹ş $«îWï	–şÎ ${îWï	İğîsï'şÇ $îsï%ìşÇ $îsï$ÏşÇ $îsï#³şÇ $îsï"–şÇ ${î ïkğ
+{î ïOğîï
+$ş« $î¬ï
+$ş $$îï$ş« $~î3ïæğ{îïğ{îï¹ğ{îïÖğ{î%ïòğ~î¬ïtğ~î¬ï­ğ~î¬ïæğ~î¬ïğ~î–ï­ğ{îkïğ{îkï+ğ{îkïHğ{îkïdğ{îkïğ{îkïğ{îkïºğ{îkïÖğ{îkïòğ{îìï
+kğ~î–ïtğ~î–ï‘ğ{î%ï2ğ{î%ïOğ{î%ïkğ{î%ïˆğî¬ï
+Gş $ îï
+$ş $$~î–ïXğ~î–ï;ğ~î–ïğ~î–ïğ~î–ï
+æğ~î–ï	Éğ~î¬ïğ~î¬ïÉğ~î¬ïğ~î¬ï
+WğîVïş $«~îÈï;ğ~î¬ïğî:ïş $«{îïÁğ{î!åïİğ{îï'Şğ~îsï‘ğ~î¬ïğ~î¬ïğ~î¬ïæğ|î)ïÎğî ïAş
+  $î ï$ş
+  $îsï!zşÇ ${îïC¦ğ~îúï? ğ~îïCğ~îïE=ğ~îïGvğ~îİï? ğ~îï? ğ~îzïAYğ~îzïBvğ~îzïC’ğ~îzïD¯ğ~îzïEËğ~îzïFèğ~îzïHğ~îzïI!ğ{îïC¦ğ{îİïC¦ğ{îOïFIğ{îOïH‚ğ{îOïJ»ğîïN{şr $îzïC‚ş $îïC_ş• $îïC_ş $@{î¬ïLŠğ{î¬ïKmğ{î¬ïJQğ{î¬ïI4ğ{î¬ïHğ{î¬ïFûğ{î¬ïEßğ{î¬ïDÂğ{îsïM¦ğî ïK&ş	 $î ïHíş	 $î ïF´ş	 $îVïLÑşV $îVïK´şV $îVïJ˜şV $îVïH_şV $îVïGBşV $îVïF&şV ${î ïKmğ{î ïI4ğ{î ïFûğ{îÈïMğ{îÈïKûğ{îÈïH¦ğ{îÈïFmğ{îÈïG‰ğ{î ï¤ğ{î ïˆğîïAIş $«î ïA&ş
+$ ${î ïAmğî:ï?ş $r{î ï?4ğî$ïWíş
+$ $î$ïVÑş
+$ $î$ïUµş
+$ $î$ïT˜ş
+$ $î<ïE	ş] $î<ïGBş] $î<ïI{ş] $îIXïD{ş	r $îIXïF´ş	r $îIXïHíş	r $îIXïK&ş	r $î:æïCíşä $~îGŠï=vğ{îG­ïAûğ{îDÃïAûğ~îEQï=vğ{îCíïC¦ğ{îCíïDÂğ{îCíïEßğ{îCíïFûğ{îCíïHğ{îCíïI4ğ{îCíïJQğ~îC;ï@=ğ~îC;ïAYğ~îC;ïBvğ~îC;ïC’ğ~îC;ïD¯ğ~îC;ïEËğ~îC;ïFèğ~îC;ïHğîC¦ïA´ş $]îC¦ïA´ş² $îI4ïA×ş $9îC¦ïMíş ${îCíïKmğ~îI4ïGvğ~îI4ïE=ğ~îI4ïCğ~îI4ï@Ëğ{îG­ïJ»ğ{îG­ïH‚ğ{îG­ïFIğ{îG­ïDğî4;ïWíş $î4;ïVÑş $î4;ïUµş ${î:XïX5ğ{î:XïWğ{î:XïUüğ{î:XïTßğ{îMÊïKmğ{îMÊïI4ğ{îMÊïFûğ{îMÊïDÂğî$ïO
+ş
+$ $î:æïH_ş $]î:æïJ˜şV $î4;ïGBş9 $î;tïGBş $@î;tïH_şV $î4;ïF&ş  $î4;ïE	ş« $î:æïDş $î4;ïO
+ş« $|î$ï_'ğ6|î$ï]|ğ9|îrïQÑğ"|îrïP&ğ|î ï+zğ-|î ï)Ğğúÿøÿ{î!åï&3ğ{î!åï#úğ	{î!åï%ğ	ú ø {î$ï?Âğ
+{îCÊïMğ}îIæïAmğ}îIæï@Pğî4;ïT˜ş $îï@-ş $Uî ï@	ş@ ${î ï@Pğúÿøÿ{î.ïBBğ~î-ï? ğú ø {î04ï>ğ{î.ï@Pğ{î3ï@Pğ{î2´ï?4ğ{î.Bï?4ğ~î0Âï9’ğ{î2mïDÂğ{î2mïEßğ{î2mïFûğ{î2mïHğ~î3ôï;Ëğ~î3ôïAYğ~î3ôïC’ğ{î.BïHğî-ûïJ˜şù $î3ôï=ôş $Èî-ûï=Ğş $î-ûï=Ğş $ë~î-ïD¯ğ~î-ïC’ğ~î-ïBvğ~î-ïAYğ~î-ï<çğ~î-ï;Ëğ{î.BïFûğ{î.BïEßğ{î.BïDÂğ~î3ôïD¯ğ~î3ôïBvğ~î3ôï<çğúÿøÿ{î.ïQÑğ~î-ïN¯ğú ø {î04ïM¦ğ{î.ïOßğ{î3ïOßğ{î2´ïNÃğ{î.BïNÃğ~î0ÂïI!ğ{î2mïTQğ{î2mïUmğ{î2mïVŠğ{î2mïW¦ğ~î3ôïKZğ~î3ôïPèğ~î3ôïS!ğ{î.BïW¦ğî-ûïZ&şù $î3ôïM‚ş $Èî-ûïM_ş $î-ûïM_ş $ë~î-ïT=ğ~î-ïS!ğ~î-ïRğ~î-ïPèğ~î-ïLvğ~î-ïKZğ{î.BïVŠğ{î.BïUmğ{î.BïTQğ~î3ôïT=ğ~î3ôïRğ~î3ôïLvğ{î$ïX5ğ{î$ïWğ{î$ïUüğ{î$ïTßğ{î$¬ïH¦ğ{î$¬ïG‰ğ{î$¬ïFmğ{î$¬ïEPğî$¬ïH_ş	r $î$¬ïGBş	r $î$¬ïF&ş	r $î$¬ïE	ş	r ${î$ïOQğ
+{î9;ïOQğ	~î<ï9ğ~î8ôï7çğ~î8ôï: ğ~î=ï9ğ~î9;ï:®ğ~î9;ï:®ğî2ï;—ş9 ${î2ï;Şğ	~îGï:®ğî3­ï?{şÇ $î6tï=ôş $«î6tï=ĞşÇ $î0åïKØş $«î$ïK´şë $î$ï;—şë $î0åï;»ş $«îEtï?ş $Ç{î;tï?4ğî<ï>íş	– $|îMƒï‡ğ~î3­ï<çğî"sïP&ş« $~î3­ïLvğ{îrï7ûğ
+î$ï?{ş
+  $~îAï2çğ~îAï1Êğ~îAï0®ğ~îAï/’ğ~îAï.uğ~îAï-Yğ~îAï,<ğ~îAï+ ğî8­ï6—şy $î8­ï5{şy $î8­ï4^şy $î8­ï3Bşy $î8­ï2%şy $î8­ï1	şy $î8­ï/ìşy $î8­ï.Ğşy ${î8­ï6Şğ
+{î8­ï5Âğ{î8­ï4¥ğ{î8­ï3‰ğ{î8­ï2lğ{î8­ï1Pğ{î8­ï03ğ{î8­ï/ğ{î8­ï-úğ{î8­ï,Şğ{î8­ï+Áğ~îAï'îğ~îAï(çğ~îAï*ğî8­ï-³şy $î8­ï,—şV $î8­ï+zşy $~îEtï+ ğ~îEtï,<ğ~îEtï-Yğ~îEtï.uğ~îEtï/’ğ~îEtï0®ğ~îEtï1Êğ~îEtï2çğîH<ï6—ş
+  $îH<ï5{ş
+  $îH<ï4^ş
+$ $îH<ï3Bş
+  $îH<ï2%ş
+$ $îH<ï1	ş
+  $îH<ï/ìş
+$ $îH<ï.Ğş
+  ${îMÊï5Âğ{îMÊï4¥ğ{îMÊï3‰ğ{îMÊï2lğ{îMÊï1Pğ{îMÊï03ğ{îMÊï/ğ~îH<ï%‘ğîF‘ï',ş $9îF‘ï)Aş« $~îFï#Xğ|î>;ï8Bğ{îïXÃğî<ïK´ş9 ${î$ïKûğ
+{î$ï;Şğ
+{î9Éï<ûğ~îB­ï6Ëğ~îB­ï9’ğ~îB­ï9’ğ~îBBï9ğ~îBBï6Ëğ~îFmï7çğ~îB­ï9ğî=ï<´ş $îAï:ş $9îAï:{ş« ${îCÊï;ŞğîF‘ï;—ş	r ${îLï;Şğî4;ïH_şÎ $îG­ï>‚ş $U~îM<ï%‘ğî7ï(³ş
+  ${î7ï(úğ	~îAï%ğúÿøÿî :ï'şÇ $î :ï%ìşÇ $î :ï$ÏşÇ $î :ï#³şÇ $î :ï"–şÇ $î :ï!zşÇ $ú ø î!Áï@ş• ${î$eï‡ğ{î"—ï‡ğ~î%ïğ~î"Şïğî!Áï²şr $î&3ïdş $	rî!Áï@ş $	–~î!WïÉğ~î!Wï­ğ~î!Wïğ~î!Wïtğ~î!Wï
+Wğ~î!Wï	;ğ{î",ï2ğ{î",ïğ{î",ïùğ{î",ïİğ{î",ïÀğ{î",ï¤ğ~î&3ïÉğ~î&3ï­ğ~î&3ïğ~î&3ïtğ~î&3ï
+Wğ~î&3ï	;ğ{î$¬ïVğ{î$¬ï9ğ{î$¬ïğ{î$¬ï ğ{î$¬ïäğ{î$¬ïÈğúÿøÿîåïş $rîåïëş
+  $î&Wïëş« $î%:ïş $ÇîWïyş	 ${îWïÀğîåïHş $«îsï%ş• ${îsïlğîï,ş $ÇîsïşÎ ${îsïOğîsï ]şr $ú ø {î/;ïS4ğ{î/;ïC¦ğúÿøÿî$ïR_ş
+  ${î$ïRƒğ	{î$¬ïBôğ	î$¬ïBĞşä ${îÈï(lğ{î!åï'Oğú ø îVïE	şV ${îÈïEPğ{î!åï"Şğ{îï;-ğ{îìï5åğ~îAï4ğ~îï3uğ~îï6Ëğ~îAï7Yğ~î3ï1<ğ~î3ï8Rğ{î,ï:Wğ{îåï6»ğ{îóï:{ğ{îóï7Iğî¬ï<%şU $îï5ş $«î¬ï5{şy $î¬ï5{ş $ÎîÈï;	şä ${îÈï;Pğ~îİï4ğ~îHï5 ğ~îHï5 ğ~îsï4ğ~îï4ğîVï7´şU $îWï1,ş $rîÈï1	ş² ${îÈï1Pğ	îWï<%ş $ÎîÈï=Ğş² ${îÈï>ğ~îï3uğî"sï:ş $«î"sï@—şÏ $îï:{ş• $î ï>íş] $îÖï7%ş $dîˆï7%şr $îˆï7%ş $dîˆï8eşN $~îÖï4ğ~îï4ğîÖï4^ş $dîˆï4^şr $îˆï4^ş $dîˆï5şN $~îÖï1<ğ~îï1<ğîrï7´şÎ $îVï5ş $Çîï4ìş] $îäï4ìş] $~îVï.uğîäï2×ş $9}î
+ï6Pğ~îAï#æğî7ï'—ş
+  ${î7ï'Şğ{îï4ğ{îï6Şğîï7´şU $~îVïEËğ{îÈïJßğ}î:ïZüğ
+{îÈïYQğîÈïVCş  $îëïZJş¹ $~î¤ïTÌğîÈïVfş $î¤ïVfş ${îsïX5ğ{î3ïXÃğîÈïX|ş $îïT˜ş $dî3ïT˜şr $î3ïT˜ş $dî3ïUØşN $~îïQvğ~îÈïQvğîÈïU&ş $îÈïU&ş² ${îVïUmğ{î¬ïUmğ}îsïSÃğúÿøÿ{î5Wï‡ğî5Wï@ş $îC;ïdş $Çú ø î?Âïş• ${îBfïOğ{î@˜ïOğ~îCï	Éğ~î@ßï	Éğî?Âïzşr $îD4ï+ş $	rî?Âïş $	–~î?Xï‘ğ~î?Xïtğ~î?XïXğ~î?Xï;ğ~î?Xïğ~î?Xïğ{î@-ïúğ{î@-ïİğ{î@-ïÁğ{î@-ï¤ğ{î@-ïˆğ{î@-ïkğ~îD4ï‘ğ~îD4ïtğ~îD4ïXğ~îD4ï;ğ~îD4ïğ~îD4ïğ{îB­ïğ{îB­ïğ{îB­ïäğ{îB­ïÈğ{îB­ï«ğ{îB­ïğ{î?æï¤ğî5Wï]şÏ $îAï€ş $«îDXïş
+  $îDXï$ş
+  $îDXïAş
+  ${îD{ïğ{îD{ï2ğ{î>;ïğ{î>;ï2ğ{î@-ï2ğ{îBfï2ğ|î;tï³ğî5WïAş
+² $î5Wï$ş
+² $î5Wïş
+$ $~î>Éïğ~î>Éïğ{î5Wï¤ğ{î5Wïˆğ{î5Wïkğ{î5WïOğ~î>Éï;ğ~îDXï;ğ~îDXïğ~îDXïğ{îHÊïˆğ{îF‘ïkğ{îF‘ïOğ|îC;ïÎğ{î<ïKûğ{î<ïIÂğ{î<ïG‰ğ{î<ïEPğ|îJtïRíğ|îJtïQCğ|îJtïO˜ğ	|î?æïÎğ}î«ï3‰ğ~îQ®ï"ÊğîR<ï',ş $9îPï)Aş9 ${îCÊï:Âğ{î9Éï;Şğ{îEtïKûğ{î/íïOßğ{î/¥ï@Pğ{îsïWğ{îäïC¦ğ{î:ï7ûğ{îï6Pğ{îï&Áğúÿøÿ{î Èï ğú ø {î¬ï¤ğ{î&åï‡ğ{îDæïOğ{î :ï¤ğ{î :ïOğ{î :ïkğ{î :ïÁğ{î&ïÁğ{î&zï¤ğ{î&zïkğ{î&zïOğúÿøÿ{î!åï!Áğ	{î(ï2ğ
+ú ø {îï'Oğ{îï%ğ{îï#úğ{îï!Áğ{î ^ï'Oğ{î ^ï%ğ{î ^ï#úğ{î ^ï!Áğ{î>Éïˆğ{î>Éïkğ{î>;ïOğ{î>;ïùğ{îD{ïˆğ{îD{ïkğ{îD{ïOğ{îDæïùğ{î=‰ï<ûğ{î8fï;Şğ{î8ï>ğ{îBïKûğ{îBïJßğ{îBïIÂğ{îBïH¦ğ{îBïG‰ğ{îBïFmğ{îBïEPğ{îBïD4ğ{îIæïKmğ{îIæïI4ğ{îIæïFûğ{îIæïDÂğ{î¬ï<mğ{îï;Pğ{îï7ûğ{îåï4ğ{îï7lğ{îï:Âğ{îï7ûğ{îäï7ûğ{îBï6Pğ{îA‘ï53ğ{îBï4ğ{îA‘ï2ûğ{îBï1Şğ{îA‘ï0Âğ{îBï/¥ğ{îA‘ï.‰ğ{îBï-lğ{îA‘ï,Pğ{îBï+ğ{îFï6Pğ{îF‘ï53ğ{îFï4ğ{îF‘ï2ûğ{îFï1Şğ{îF‘ï0Âğ{îFï/¥ğ{îFï.‰ğ{îA‘ï(lğ{îA‘ï'Oğ{îHÊï(úğ{îMÊï(úğ{îÈï7lğ{îÈï4¥ğ{îºï!Áğ{îºï ¥ğ{î:ï9ğ|î¬ï1	ğ{îï7lğ|î¬ï6—ğ{î7×ï",ğ{î7´ïäğ~î6	ïğ~î9Éïtğ~î9ÉïÊğ~î6	ïXğ~î7ûï;ğ~î7ûïQğ{î8ôï!Vğ{î8­ïºğ{î6»ï!zğ{î6»ïHğî6tï#%şU $î9Éïş $«î6tïzşy $î6tïzş $Î{î7ï ğ{î7ïúğî.ï³şy ${î.ïúğ{î5Wïúğ{î5Wï"Oğî8ï#%ş $ë{î0åï&3ğî0åï%ìş9 $î9Éï!zş
+ ${î=­ï!Áğ{î:Xï!Áğî8ï$ş $y{î:Xïlğ{î7ï¤ğ{î7ï#lğî0åï$ş] ${î0åïkğ
+|î<ïAğ|î<ï–ğ~î9Éïtğ{îMÊï6Şğ
+{î+åï"Oğî+åï"ş
+ $|î¬ï4ìğ|î¬ï2³ğÿ        	’        TVm$EÎšÉ Ê     ÎÔ Å         tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ º¤óà³ ¶ ¸ º   (JasmineABravo.PRESS                       (JasmineManual.PRESS                      	 (FSM.PRESSRESSSS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                                                                        Jasmine Scanner Manual Appendix21A1.3Sequencing Logic2121658743211716151014131211658743211716151014131211658743211716151014131211111919346132571211312116537109415142113121165371094151421131211653710941514211312116537109415142FileProjectDesignerRevDatePageMalesonJASMINEXEROXFileProjectDesignerRevDatePageMalesonJASMINEB1STTTH3H2H1H0B3B2B0RRRRRSRTLD'TCL'EPETCOSCKB1STTTH3H2H1H0B3B2B0RRRRRSRTLD'TCL'EPETCOSCKB1STTTH3H2H1H0B3B2B0RRRRRSRTLD'TCL'EPETCOSCKCarry0Carry1Offset.0Offset.1Offset.2Offset.3Offset.4Offset.5Scale.0Scale.1Scale.2Scale.3Scale.4Scale.5Addr.2Addr.3Addr.4Addr.5Addr.6Addr.7Addr.8Addr.9Addr.10Addr.11Addr.11Addr.10Addr.9Addr.8Addr.7Addr.6Addr.5Addr.4Addr.3Addr.2Addr.2Addr.4Addr.5Addr.6Addr.7Addr.8Addr.9Addr.10Addr.11B1STTTH3H2H1H0B3B2B0RRRRRSRTLD'TCL'EPETCOSCKCL'CKSSRRRRRRD0D1D2D3D4D5TTTTTTQ0Q1Q2Q3Q4Q5LS174LS163LS163LS163LS163Scan Counters   Cycle Address Lines to Scale/Offset RAMS   Signal ScanDone   Latch contains frequency "n"3-State Drivers forScale/Offset RamsScale/Offset RAMS2 6-bit values arepassed to the analogsection for correction(separate correctionfor each sensor element).Intel 2114SEQUENCING LOGICSequence.SILAddr.2Addr.3Addr.4Addr.5Addr.6Addr.7Addr.8Addr.9Addr.10Addr.11Carry1Carry0Seq.ScanDoneSeq.SampleSeq.SampleCSL........RTiHGiRTiHGiRTiHGiRTiHGiRTiHGiRTiHGiOffset.0Offset.1Offset.2Offset.3Offset.4Offset.5RTiHGiRTiHGiRTiHGiRTiHGiRTiHGiRTiHGiScale.0Scale.1Scale.2Scale.3Scale.4Scale.5SEN'SEN'LS240LS240SEN'Addr.3i2114i2114i2114SamplePreset'1K x 4CDiRRTResetCtrsDecode.WE1'Decode.WE2'Decode.WE2'Decode.WE3'Decode.WE3'Decode.WE1'ResetCtrs'ResetCtrs'ResetCtrs'TrueTrueLS02TrueBAiiRRTTTTTSRRRRRRRRQ0Q1Q2Q3SRRCS'A0A1A2A3A4A5A6A7A9A8WE'TTTTSRRRRRRRRQ0Q1Q2Q3SRRCS'A0A1A2A3A4A5A6A7A9A8WE'TTTTSRRRRRRRRQ0Q1Q2Q3SRRCS'A0A1A2A3A4A5A6A7A9A8WE'nn03LS240#y15a#y15b#y15c#y15d#y4a#y4b#y4c#y4d#y4e#y4f#y4g#y4hLS02Alto.12'Alto.13'Alto.14'Alto.15'Alto.12'Alto.13'Alto.14'Alto.15'Alto.15'Alto.14'Alto.13'Alto.12'Alto.12'Alto.13'Alto.14'Alto.15'ResetCtrs'ResetCtrs..Addr.0Addr.1TrueTrueTrueAlto.15'Alto.14'Alto.13'Alto.12'TrueResetCtrs........   Digitize every nth sample, discard others   Latch contains frequency "n"Sample CounterLS163LS174CL'CKSSRRRRRRD0D1D2D3D4D5TTTTTTQ0Q1Q2Q3Q4Q5B1STTTH3H2H1H0B3B2B0RRRRRSRTLD'TCL'EPETCOSCK21415491073561112131127521364391Delay counterDelay n clocks after every sampleDelayDoneTrueiGHRTBAiiRRTVirScanClk'DelayDoneLS04LS02Decode.SetDelay'DelayDoneDelayDoneDelayDoneVirScanClk'VirScanClk'VirScanClk'DelayDone'DelayDone'DelayDone'TrueVirScanClkVirScanClkiGHRTVirScanClk'VirScanClkCDiRRTResetCtrsScanClk'ScanClkLS02nTRTRn150 ohmshdhdTrueGNDTrueTrueTrueTrue7/19/79B220 pf#5C#5D#5E#6C#6C#6D#4C#4D#4E#1C#1C#2B#3D#2D#3E#2E#2B#1C#1C14111510141115105646512334 9 810111213864211131517864212141618121416189753  ô uî·ïfñğuîG?ïfñğwî·ïbğwî­ïbğö{î8ôïCğ{î3BïCğ{î8ôïEPğ{î3BïEPğ{î,,ï&3ğ{î,,ï'Oğ{î04ïúğ{î,,ï%ğ{î,,ï#úğ{î,,ï"Şğ{î,,ï!Áğ{î,,ï ¥ğ{î+ïˆğ{î+ïlğ{î+ïOğ{î-lïúğ{î2ûï%¥ğ{î2ûï#lğ{î2ûï!3ğ{î2ûïúğ{î,,ï7ûğ{î,,ï9ğ{î04ï+Áğ{î,,ï6Şğ{î,,ï5Âğ{î,,ï4¥ğ{î,,ï3‰ğ{î,,ï2lğ{î+ï1Pğ{î+ï03ğ{î+ï/ğ{î-lï+Áğ{î2ûï7lğ{î2ûï53ğ{î2ûï2ûğ{î2ûï0Âğ{î,,ïkğ{î,,ïˆğ{î04ï2ğ{î,,ïOğ{î,,ï2ğ{î,,ïğ{î,,ïùğ{î,,ïİğ{î+ïÀğ{î+ï¤ğ{î+ï‡ğ{î-lï2ğ{î2ûïİğ{î2ûï¤ğ{î2ûïkğ{î2ûï2ğ{îKüï,Pğ{îKüï‡ğ{îLŠïúğ{î+ïNÃğ{î)eïNÃğ{î(ïWğ{î(ïUüğ{î(ïTßğ{î'sïR¦ğ{î-×ïWğ{î-×ïUüğ{î-×ïTßğ{î-´ïR¦ğ{î:ŸïMğ{î@	ïTßğ{î@	ïUüğ{î@	ïWğ{î9;ïWğ{î9;ïUüğ{î9;ïSÃğ{î9;ïQŠğ{î8­ïPmğ{î=ôïMğ{î9;ïTßğ{î@	ïX5ğ{î@	ïSÃğ{î<IïMğ{î+ï'Oğ{î–ï/ğ{î–ï03ğ{î–ï1Pğ{îÈï1Pğ{îÈï03ğ{îÈï-úğ{îÈï+Áğ{î:ï*¥ğ{îï'Oğ{îÈï/ğ{î–ï2lğ{î–ï-úğ{îÖï'Oğ{î+ïÁğ{î–ïˆğ{î–ï ¥ğ{î–ï!Áğ{îÈï!Áğ{îÈï ¥ğ{îÈïlğ{îÈï3ğ{î:ïğ{îïÁğ{îÈïˆğ{î–ï"Şğ{î–ïlğ{îÖïÁğ{î+ï2ğ{î–ïùğ{î–ïğ{î–ï2ğ{îÈï2ğ{îÈïğ{îÈïİğ{îÈï¤ğ{î:ï‡ğ{îï2ğ{îÈïùğ{î–ïOğ{î–ïİğ{îÖï2ğ}î(ïÀğî2ï Õş Gr}îïÀğ}î3ïÀğ}î?XïÀğ}îB­ïÀğ}îK‘ïÀğîKï Õş GrîBï Õş Grî>Éï Õş Grî'sï Õş GrîÈï Õş Grî
+ï Õş Grîäï şO» GîSXï ş G¹îäï şOt Gîäï Õş Gr|î4ÉïÎğ|î«ïÎğ|î ïyğ}î(ïÀğî2ï Õş Gr}îïÀğ}î3ïÀğ}î?XïÀğ}îB­ïÀğ}îK‘ïÀğîKï Õş GrîBï Õş Grî>Éï Õş Grî'sï Õş GrîÈï Õş Grî
+ï Õş Grîäï şO» GîSXï ş G¹îäï şOt Gîäï Õş Gr|î4ÉïÎğ|î«ïÎğ{î+ïˆğ~îİïÉğîÁï$ş $~îOïğ~îOïğ~îOï;ğîÁï	ş $@îÁï	ş² $îOï	+ş ${îìïOğ{îìïkğ{îìïˆğ{îìï¤ğ{î+ïOğ{î+ïkğ{î+ï¤ğ~îVï;ğ~îVïğ~îVï
+æğ~îVï­ğ~îVïğ~î3ïÉğ~îVïğ~îOïXğ{î¤ï	Oğ~îOï
+æğ{î+ï	Oğ{îïòğ{îï
+Öğ{îïÁğ~îˆïÉğ{îúï	Oğîäï şO» Gîäï şOt Gîäï Õş Grîäï şO» Gîäï şOt Gîäï Õş Grîäï şO» Gîäï şOt Gîäï Õş Gr{î+ï ğ~îİïXğîÁï#³ş $~îOï‘ğ~îOï­ğ~îOïÊğîÁï–ş $@îÁï–ş² $îOïºş ${îìïİğ{îìïúğ{îìï ğ{îìï!3ğ{î+ïİğ{î+ïúğ{î+ï!3ğ~îVïÊğ~îVï­ğ~îVïtğ~îVï;ğ~îVïğ~î3ïXğ~îVï‘ğ~îOïæğ{î¤ïİğ~îOïtğ{î+ïİğ{îïğ{îïdğ{îï"Oğ~îˆïXğ{îúïİğ{î+ï/¥ğ~îİï#æğîÁï3Bş $~îOï+ ğ~îOï,<ğ~îOï-YğîÁï(%ş $@îÁï(%ş² $îOï(Hş ${îìï-lğ{îìï.‰ğ{îìï/¥ğ{îìï0Âğ{î+ï-lğ{î+ï.‰ğ{î+ï0Âğ~îVï-Yğ~îVï,<ğ~îVï*ğ~îVï'Êğ~îVï&®ğ~î3ï#æğ~îVï+ ğ~îOï.uğ{î¤ï(lğ~îOï*ğ{î+ï(lğ{îï+ğ{îï)óğ{îï1Şğ~îˆï#æğ{îúï(lğîï1	ş] $îï!zş] $î
+ï ]şë $î
+ïAşë $î
+ï%şë $îïëş] $î
+ïÏşë $î
+ï–şë $îsï"–ş ${îïğ{îï*¥ğî¬ï&ş $9î¬ïş $9î¬ïòş $9îVï$óş $UîVïdş $UîVïÖş $Uîï]ş] $îï@ş] $î«ïìşÎ $îsï-³ş
+  $îsï.Ğş
+  $îsï!zş $îsï ]ş $îsïAş $îsï%ş $îsï–ş9 $îsï²ş9 $î&WïAşÎ $î&Wï$şÎ $î&WïşÎ $î&WïëşÎ $î&WïÏşÎ $î&Wï²şÎ $î&Wï–şÎ $î&WïyşÎ $î&Wï]şÎ $î&Wï@şÎ ${î5æï7lğ{î5æï53ğ{î5æï2ûğ{î5æï0Âğ{î5æï%¥ğ{î5æï#lğ{î5æï!3ğ{î5æïúğ{î5æïİğ{î5æï¤ğ{î5æïkğ{î5æï2ğî2ï7%şV $î2ï4ìşV $î2ï2³şV $î2ï0zşV $î2ï%^şV $î2ï#%şV $î2ï ìşV $î2ï³şV $î3ï–şÇ $î3ï]şÇ $î3ï$şÇ $î3ïëşÇ ${î&Wïˆğ{î&Wïkğ{î&WïOğ{î&Wï2ğ{î&Wïğ{î&Wïùğ{î&Wïİğ{î&WïÀğ{î&Wï¤ğ{î&Wï‡ğîsï2%ş
+  ${î&WïOğ{î&Wïlğ{î&Wïˆğ{î&Wï ¥ğ{î&Wï!Áğ{î&Wï"Şğ{î&Wï#úğ{î&Wï%ğ{î&Wï&3ğ{î&Wï'Oğî&Wïş@ $î&Wï%ş@ $î&WïAş@ $î&Wï ]ş@ $î&Wï!zş@ $î&Wï"–ş@ $î&Wï#³ş@ $î&Wï$Ïş@ $î&Wï%ìş@ $î&Wï'ş@ $î&Wï5{ş@ $î&Wï4^ş@ $î&Wï3Bş@ $î&Wï2%ş@ $î&Wï1	ş@ $î&Wï/ìş@ $î&Wï.Ğş@ ${î&Wï9ğ{î&Wï6Şğ{î&Wï5Âğ{î&Wï4¥ğ{î&Wï3‰ğ{î&Wï2lğ{î&Wï1Pğ{î&Wï03ğ{î&Wï/ğî.¬ï+ş $î%Éï*ìş	 $î%Éï$ş	 $î.¬ïHş $î.¬ï€ş $î%Éï]ş	 ${î:ŸïUmğ~î;PïI¯ğî:4ïY
+ş $~î?ÂïPèğ~î?ÂïRğ~î?ÂïS!ğî:4ïMíş $@î:4ïMíş² $î?ÂïNş ${î>_ïS4ğ{î>_ïTQğ{î>_ïUmğ{î>_ïVŠğ{î:ŸïS4ğ{î:ŸïTQğ{î:ŸïVŠğ~î9ÉïS!ğ~î9ÉïRğ~î9ÉïOËğ~î9ÉïM’ğ~î9ÉïLvğ~î>¦ïI¯ğ~î9ÉïPèğ~î?ÂïT=ğ{î>ïN4ğ~î?ÂïOËğ{î:ŸïN4ğ{î:{ïPØğ{î:{ïO»ğ{î=ôïW¦ğ~î<ûïI¯ğ{î<mïN4ğî(ûïO˜ş• ${î+ïOßğ{î)ĞïOßğ~î,PïKZğ~î*ïKZğî(ûïY
+şr $î-lïO»ş $	rî(ûïO˜ş $	–~î(ïS!ğ~î(ïRğ~î(ïPèğ~î(ïOËğ~î(ïN¯ğ~î(ïM’ğ{î)eïVŠğ{î)eïUmğ{î)eïTQğ{î)eïS4ğ{î)eïRğ{î)eïPûğ~î-lïS!ğ~î-lïRğ~î-lïPèğ~î-lïOËğ~î-lïN¯ğ~î-lïM’ğ{î+åïV­ğ{î+åïU‘ğ{î+åïTtğ{î+åïSXğ{î+åïR<ğ{î+åïQğî-ïVÑşÈ $î-ïUµşÈ $î-ïT˜şÈ $î-ïS|şÈ $î"sïVÑş« $î"sïUµş« $î"sïT˜ş« $î"sïS|ş« $î*;ïNş $«î:ïLBş $${î)¬ïW¦ğ{î<ïRğ{îï,Pğ{îïÁğ{îï2ğîïÎş
+² $îï²ş] $îï%ìş
+² $îï$Ïş] $îï]ş
+² $îïAş] $î
+ï²şy $|îäï8Ğğ|îäï7%ğ+|îäï5{ğ|î5æï\_ğ|îB­ï@	ğ|îB­ï>^ğ|îïE	ğ|îïBĞğ|îïA&ğ|îï?{ğ|îï=Ğğ|îï<%ğ|îï:{ğ	|îïF´ğ
+î«ïK´şy $î«ïI{şy $|îsïÎğ|î(ïÎğî1tïQCş	 $î1tïP&ş	 ${î¬ï/ğ{î¬ï-úğ{î¬ï!Áğ{î¬ï ¥ğ{î¬ïˆğ{î¬ïlğ{î:ï2ğ{î:ïğ{î:ïùğ{î:ïİğ{î¬ï"Şğ{î:ïOğ{î¬ï2lğ{î«ïKûğ
+{î :ï[Šğ
+}îï‡ğîsïëş9 $îsïÏş9 $~î?æïS!ğ~î?æïRğ~î?æïPèğ~î?æïOËğ~î(ïN¯ğ~î(ïM’ğ~î-ïN¯ğ~î-ïM’ğîï/ìşÇ $îï-³şÇ $~îFØï8uğ~îKï8uğ~îJtï8uğ~îGï9’ğ~îGï9’ğ~îIï7|ğîIXï:4ş $ Õ~îFØï5 ğ~îKï5 ğ~îJtï5 ğ~îGï6<ğ~îGï6<ğ~îIï4'ğîIXï6Şş $ Õ~îFØï1Êğ~îKï1Êğ~îJtï1Êğ~îGï2çğ~îGï2çğ~îIï0ÒğîIXï3‰ş $ Õ~îGôï"<ğ~îLï"<ğ~îK‘ï"<ğ~îH<ï#Xğ~îH<ï#Xğ~îJ-ï!CğîJtï#úş $ Õ~îGôï%‘ğ~îLï%‘ğ~îK‘ï%‘ğ~îH<ï&®ğ~îH<ï&®ğ~îJ-ï$˜ğîJtï'Oş $ Õ~îFØï.uğ~îKï.uğ~îJtï.uğ~îGï/’ğ~îGï/’ğ~îIï-|ğîIXï03ş $ Õî@tï<%şÎ $î@tï8ĞşÎ $î@tï5{şÎ $î@tï2%şÎ $îAï)Aş] $îAï%ìş] $îKï<%şÇ $îKï8ĞşÇ $îKï5{şÇ $îKï2%şÇ $îLï)Aş9 $îLï%ìş9 ${îNXï<mğ{îNXï9ğ{îNXï5Âğ{îNXï2lğ{îNXï)ˆğ{îNXï&3ğîLïyş« $îLïÏş« $îLï$ş« $îLïAş9 $îA‘ïyşÎ $îA‘ïÏşÎ $îA‘ï$şÎ $îA‘ïzşÎ $~îGôïtğ~îLïtğ~îK‘ïtğ~îH<ï‘ğ~îH<ï‘ğ~îJ-ï{ğîJtï2ş $ Õ~îGôïğ~îLïğ~îK‘ïğ~îH<ï;ğ~îH<ï;ğ~îJ-ï&ğîJtïİş $ Õ~îGôï	Éğ~îLï	Éğ~îK‘ï	Éğ~îH<ï
+æğ~îH<ï
+æğ~îJ-ïĞğîJtï‡ş $ Õ~îGôïÊğ~îLïÊğ~îK‘ïÊğ~îH<ïæğ~îH<ïæğ~îJ-ïÑğîJtïˆş $ Õ~îGôï‘ğ~îLï‘ğ~îK‘ï‘ğ~îH<ï­ğ~îH<ï­ğ~îJ-ï˜ğîJtïOş $ Õ~îGôïæğ~îLïæğ~îK‘ïæğ~îH<ï ğ~îH<ï ğ~îJ-ïíğîJtï ¥ş $ Õ{îOuï"Şğ{îOuïˆğ{îNæïÁğ{îNæïkğ{îNæïğ{îNæïÀğîK‘ïÏşr $îPïÏş $yîK‘ï%ş• $îK‘ïóş $U~îM¦ï‘ğ{îM<ïğîJtï]şr $îNæï]ş $yîJtï
+²ş• $îJtï€ş $U~îLŠïğ{îLï¤ğ{îJtï	İğ{îJtï/¥ğîJtï-%şr $îNæï-%ş $yîJtï0zş• $îJtï-Iş $U~îLŠï(çğ{îLï-lğ{î&Wï7ûğî&Wï8Ğş« $î&Wï7´ş« $î&Wï6—ş« $îåïJ˜ş $ÎîBï,	ş
+² $îMÊïÖş $îL­ïdş $îL­ï,	ş $@{î.¬ï9ğ{î.¬ï'Oğ{î.¬ïˆğ{î¬ïJßğîAïAş9 $|î&åïF´ğîA‘ï@ş@ $~îïH’ğ~îïH’ğ~îäïFèğ~îHïHğ~îHïEËğ~îsïFèğ{î«ïIÂğ	{îBï,Pğ{îC;ïúğ{î%Éïkğ{îA‘ï‡ğ{î%Éï¤ğ{î%Éï+3ğ{îï%ğ
+{îïˆğ
+{îïùğ
+î,tïLôş $Çî#ïLÑş	– ${î#ïMğîïM‚ş $äîïM_ş$ ${îïM¦ğîïLBş« ${îïJßğ{îï‡ğ~îï>’ğ~îï>’ğ~îsï>ğ~îsï;Ëğ~îï>ğ~îï;Ëğ~î3ï<çğîï[CşV $î«ïA´şë $îVï@—şä $îï?ş $9îï?{şU $~î2ï	;ğ~î2ïtğ~î2ï­ğ~î2ïæğ~î.‰ïÉğ~î,—ïğ~î,—ï­ğ~î,—ï	Éğ~î,—ï
+æğ~î,—ïğ~î,—ïğ~î,—ï;ğ~î,—ïXğî-ï	ş $î-ï	ş² $î2ï	+ş $äî-ïëş ${î1	ïOğ{î1-ïòğ{î1	ï¹ğ{î1	ï€ğ~î0ÂïÉğ~î,—ï‘ğ~î,—ïtğ{î0Wï	Oğ{î-Iïúğ{î-Iïİğ{î-IïÁğ{î-Iï¤ğ{î-Iïˆğ{î-Iïkğ{î-IïOğ{î-Iï2ğ{î-Iï
+ùğ{î-Iïğ{î-×ï	Oğ~î2ï,Êğ~î2ï/ğ~î2ï1<ğ~î2ï3uğ~î.‰ï(Xğ~î,—ï+ ğ~î,—ï,<ğ~î,—ï-Yğ~î,—ï.uğ~î,—ï/’ğ~î,—ï0®ğ~î,—ï1Êğ~î,—ï2çğî-ï,—ş $î-ï,—ş² $î2ï,ºş $äî-ï:{ş ${î1	ï6Şğ{î1-ï4‚ğ{î1	ï2Iğ{î1	ï0ğ~î0Âï(Xğ~î,—ï5 ğ~î,—ï4ğ{î0Wï,Şğ{î-Iï8‰ğ{î-Iï7lğ{î-Iï6Pğ{î-Iï53ğ{î-Iï4ğ{î-Iï2ûğ{î-Iï1Şğ{î-Iï0Âğ{î-Iï.‰ğ{î-Iï/¥ğ{î-×ï,Şğ~î2ïğ~î2ï<ğ~î2ïuğ~î2ï!®ğ~î.‰ï‘ğ~î,—ïXğ~î,—ïtğ~î,—ï‘ğ~î,—ï­ğ~î,—ïÊğ~î,—ïæğ~î,—ï ğ~î,—ï!ğî-ïÏş $î-ïÏş² $î2ïóş $äî-ï(³ş ${î1	ï%ğ{î1-ï"ºğ{î1	ï ğ{î1	ïHğ~î0Âï‘ğ~î,—ï#Xğ~î,—ï"<ğ{î0Wïğ{î-Iï&Áğ{î-Iï%¥ğ{î-Iï$ˆğ{î-Iï#lğ{î-Iï"Oğ{î-Iï!3ğ{î-Iï ğ{î-Iïúğ{î-IïÁğ{î-Iïİğ{î-×ïğ~î0Wïæğî0åïºş $9î0åï)óş $Ç~î0Wï&ğî0åïòş $9|îMÊïÎğ{îK‘ïOğ{îH<ï3ğ{îH<ïİğ{îH<ïˆğ{îH<ï2ğ{îGï;Şğ{îGï8‰ğ{îGï53ğ{îGï1Şğ{îH<ï(úğ{îH<ï%¥ğ{îH<ï"Oğ{îH<ïúğ{îï@ßğîLïzş« ${î"sïWğ{î"sïUüğ{î"sïTßğ{î"sïSÃğ{î@tï<mğ{î@tï9ğ{î@tï5Âğ{î@tï2lğ{îAïˆğ{îAï"Şğ{îAï&3ğ{îAï)ˆğ{îA‘ïÁğ{îA‘ïkğ{îA‘ïğ{îA‘ïÀğ{î«ïAûğ
+{î¬ï@ßğ	îsïş9 $~îsï-Yğ~îsï,<ğ}î¬ï1Pğ}î¬ï03ğúÿøÿîï',ş $îï'ş	 ${îï'Oğ{îïÁğîïzş	 $îïş $îïş $îïëş	 ${îï2ğú ø {îïWğ{îïX5ğ{îïYQğ{îïZnğ{îïPmğîïP&ş	– $îïPJş $Ç{îïQŠğ	~î¬ïPèğ~î¬ïRğ~îïPèğ~îïRğ~îïS!ğ~îïT=ğ~îïUZğ~îïVvğîsïS|ş$ $îsïT˜ş$ $|î¬ï^
+ğ,|î¬ï_µğ|î«ï^˜ğ{îïUmğ{îÈïZüğîïQCş] $îVïQfş $«îïVÑş« $îïWíş« $îïY
+ş« $îïZ&ş« $î¬ïVÑşÇ $î¬ïWíşÇ $î¬ïY
+şÇ $î¬ïZ&şÇ $îïRíş• ${îºïS4ğ{îëïS4ğ~îkïN¯ğ~î3ïN¯ğîï\_şr $îˆïSş $	rîïRíş $	–~î«ïVvğ~î«ïUZğ~î«ïT=ğ~î«ïS!ğ~î«ïRğ~î«ïPèğ{îïYßğ{îïXÃğ{îïW¦ğ{îïVŠğ{îïUmğ{îïTQğ~îˆïVvğ~îˆïUZğ~îˆïT=ğ~îˆïS!ğ~îˆïRğ~îˆïPèğ{îïZğ{îïXæğ{îïWÊğ{îïV­ğ{îïU‘ğ{îïTtğ{îºïXÃğ~îlïMğîOï\_ş $~îŞïT=ğ~îŞïUZğ~îŞïVvğîOïQCş $@îOïQCş² $îŞïQfş ${îzïVŠğ{îzïW¦ğ{îzïXÃğ{îzïYßğ{îºïVŠğ{îºïW¦ğ{îºïYßğ~îåïVvğ~îåïUZğ~îåïS!ğ~îåïPèğ~îåïOËğ~îÁïMğ~îåïT=ğ~îŞïW“ğ{î3ïQŠğ~îŞïS!ğ{îºïQŠğ{î–ïT-ğ{î–ïSğ{îïZüğ~îïMğ{îˆïQŠğ{îeïPmğ{î%ïWğ{î%ï[Šğ{îVïX5ğ{îïPmğ{îÈïSÃğ{îVïTßğ{îVïWğ{îVïYQğ{îVïZnğ{î%ïZnğ{î%ïYQğ{î%ïX5ğ{îºïPmğ{îÏïUüğ{îóïX5ğ{îóïYQğ{îóïZnğ{î
+ïUüğ{îïX5ğ{îïYQğ{îïZnğ{îïRğ{îºïRğ|î5æï^
+ğ|î8ïZµğ!î?æïWíş9 ${îDæïX5ğ	î;tïLfş $«î4ÉïLBşÎ ${î4ÉïLŠğîB­ïUØş $9îB­ïUµşÇ $~îHÊïRğ~îEtïS!ğ~îEtïS!ğ~îE-ïRğ~îIXïRğ~î<ïD ğ~î<ïD ğ~î<ïC’ğ~î<ïAYğ~î;˜ïC’ğ~î;˜ïAYğ~î?ÂïBvğî4;ïGBşÇ ${î,tïEPğî4ÉïK&şV $î=ïK&ş $ëîsïJ˜ş+W $î>ÉïJ˜ş $yî«ïN{şÇ $îsïN{ş $@{î«ïNÃğ	{îEtïUmğ{î=ïEßğ{îïN4ğîïMíş« ${îï+Áğ	{îï3ğ	{îï¤ğ	îï.ĞşÇ $îï+zşÇ $îï*^şÇ $îïÏşÇ ${îï&3ğ{îï¤ğ{îïğîIXïUµş	r ${îL­ïUüğ
+{î4;ïG‰ğ
+{î1tïQŠğ
+îC;ï³ş
+ $îAï"–ş9 $îLï"–ş9 ${î1tïPmğ{îïLŠğ
+{î4ÉïKmğ
+~îï8uğ~îHï9’ğ~îHï9’ğ~îï8uğ~î,ï8uğî9ï<%şy ${î9ï<mğ{îÖï<mğ
+î,ï<%ş€ $~îH<ïCğ~îH<ïCğ~îLïAYğ~îHƒïBvğ~îHƒï@=ğ~îL­ïAYğî?æïF&şä $îA‘ïCíş] $îA‘ïAIş $Çî:æïA&şÎ ${î:æïAmğ	îL­ïE	ş ${îMÊïEPğ{îB­ïFmğ{îIXïDÂğ~î0Wïğî8­ïE	şy $î8fïD{ş $dî4ïD{şr $î4ïD{ş $dî4ïE»şN $~î8fïAYğ~î3­ïAYğî8fïBBş $dî4ïBBşr $î4ïBBş $dî4ïC‚şN $~î8fï? ğ~î3­ï? ğî,tïE	şë $î:XïBôş $9î8­ïBĞşÎ $î3ïBĞş ² $î3ï@»ş $9~î2ï<Yğ}î3ïC¦ğ{î8­ïD4ğ{î8­ïAûğ{îï1Pğ{îï03ğ{îï/ğ{îï-úğ{îï!Áğ{îï2ğî
+ï%ş $yî
+ï–ş $y|îB­ïÎğ|î?æïÎğ}î4;ïAmğ{î.¬ï7ûğ{î.¬ï&3ğ{î.¬ïkğ{îJtï.‰ğ{îK‘ï3ğ{îJtïÀğ{îï+3ğ{îï¤ğ{îïğ{îïIÂğ{îï?Âğ{îHï;Şğ{î:ï[Šğ{îïTQğ{î.ïX5ğ{î<ïPûğ{îEtïTQğ{î=ïDÂğ{îIXïC¦ğ{î
+ïWğ{î
+ïTßğ{îÏïWğ{îÏïTßğ{î'sïSÃğ{î'sïQŠğ{î-´ïSÃğ{î-´ïQŠğ{îDŸïUüğ{îIÃïUüğ{îİïJßğ{îºïKûğ{îºïIÂğ{îï@ßğ{îzïAûğ{îzï?Âğ{îsï<mğ{î–ï<mğ{î:{ïG‰ğ{î:æïEPğ{î?æïFmğ{îG­ïFmğ{îGôïD4ğ{îK‘ïEßğ{îFmï<mğ{îFmï9ğ{îFmï5Âğ{îFmï2lğ{îFûï)ˆğ{îFûï&3ğ{îFûï"Şğ{îFûïˆğ{îGŠïÁğ{îGŠïkğ{îGŠïğ{îGŠïÀğ{îKmï<mğ{îKmï9ğ{îKmï5Âğ{îKmï2lğ{îL­ïÁğ{îL­ïkğ{îL­ïğ{îL­ïÀğ{îL­ï)ˆğ{îL­ï&3ğ{îL­ï"Şğ{îL­ïˆğ        
+Ä        TVm$ÇÎšÉ Ê     ÎÔ İ         tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ º¤óà³ ¶ ¸ º   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (Sequence.PRESSS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                  Jasmine Scanner Manual Appendix22A1.4Stepper Motor DriversXEROXFileProjectDesignerRevDatePageCSLJASMINEAStepper Motor DriversMalesonMcCreight7/2/79Stepper.SILGHRRT+-GHRRT+-GHRRT+-GHRRT+--Pwr+PwrRRTTLThreshTTLThreshStepControlATRhd6.8knn6.8khdTRTRhd6.8knn6.8khdTRTRhd1N40021N4002hdTRhdTR1N4747nCEBTRTCEBTRTCEBTRTCEBTRTNote: for diodes,KKKCoilA2CoilA1NegSupplyKKTRhd1N40021N4002hdTRCoilB1CoilB2TRnTRTapATapBNegSupplyNegSupplyNegSupplyhdhdK = cathode = banded endVCCNegSupplyiRRTBAiRRTBARunMotorRunMotoriRRTBAiRRTBATTLThreshTTLThreshStepControlBLS00LS00LS00LS00LM339LM339LM339LM339LM339TIP122TIP122TIP122TIP122Stepper motor sequencing:Forward A On B OnA On B OffA Off B OffA Off B OnBackA Off B OnA Off B OffA On B OffA On B OnTIP 122 pin order: B,C,E04#1D#1D#1D#1D#1E#1E#1E#1E81163910121354218910116745141312#1E3125ohm5w5ohm5w  ô uî·ïfñğuîG?ïfñğwî·ïbğwî­ïbğö|î ïyğ}î(ïÀğî2ï Õş Gr}îïÀğ}î3ïÀğ}î?XïÀğ}îB­ïÀğ}îK‘ïÀğîKï Õş GrîBï Õş Grî>Éï Õş Grî'sï Õş GrîÈï Õş Grî
+ï Õş Grîäï şO» GîSXï ş G¹îäï şOt Gîäï Õş Gr{îïğ|î«ïÎğ|î?æïÎğ|îïÎğ|î3­ï]ğ|î4Éï@ğ	|îCÊïÎğ|î)ïÎğ~î¬ïM’ğ~î¬ïM’ğ~îïM’ğ~îïKZğ~îïLvğ{î:ïO
+ğ{î:ïP´ğ~î¬ïFèğ~î¬ïFèğ~îïFèğ~îïD¯ğ~îïEËğ{î:ïH_ğ{î:ïJ	ğ~î¬ï6<ğ~î¬ï6<ğ~îï6<ğ~îï4ğ~îï5 ğ{î:ï7´ğ{î:ï9^ğ~î¬ï/’ğ~î¬ï/’ğ~îï/’ğ~îï-Yğ~îï.uğ{î:ï1	ğ{î:ï2³ğ{îˆï$óğ{îˆï&3ğîï#ş  $îï#ş $+îï'—ş$ $îï#³ş $~î³ï"Êğ~î³ï!®ğîsïH_ş] $îsïO
+ş] ${îsïOQğ	{îsïH¦ğ	{îïIÂğîïP&şV $îïI{şV $îï8ĞşV $î&ïQÑş $dî"PïQÑşr $î"PïQÑş $dî"PïSşN $~î&ïN¯ğ~î!åïN¯ğ{î&åïQŠğ}î#ïPûğî&åïR_şÇ $~î)ïM’ğî)¬ïQfş $î ÈïR_şÎ $î ÈïPJş $9î ÈïIŸş $9î ÈïK´şÎ $î)¬ïJ»ş $~î)ïFèğî&åïK´şÇ $}î#ïJQğ{î&åïJßğî&ïK&ş $dî"PïK&şr $î"PïK&ş $dî"PïLfşN $~î&ïHğ~î!åïHğî&ï:{ş $dî"Pï:{şr $î"Pï:{ş $dî"Pï;»şN $~î&ï7Yğ~î!åï7Yğ{î&åï:4ğ}î#ï9¥ğî&åï;	şÇ $~î)ï6<ğî)¬ï:ş $î Èï;	şÎ $î Èï8ôş $9î Èï2Iş $9î Èï4^şÎ $î)¬ï3eş $~î)ï/’ğî&åï4^şÇ $}î#ï2ûğ{î&åï3‰ğî&ï3Ğş $dî"Pï3Ğşr $î"Pï3Ğş $dî"Pï5şN $~î&ï0®ğ~î!åï0®ğîï2%şV $î@-ïP´ş $dî;ßïP´şr $î;ßïP´ş $dî;ßïQôşN $~î@-ïM’ğ~î;tïM’ğ{î@tïPmğ}î<ïOßğî@tïQCşÇ $î@tïJ˜şÇ $}î<ïI4ğ{î@tïIÂğî@-ïJ	ş $dî;ßïJ	şr $î;ßïJ	ş $dî;ßïKJşN $~î@-ïFèğ~î;tïFèğîC;ïJ»ş $«îC;ïMíşU $îF‘ï6»ş $V{îM<ïAûğîLõïBBş $dîH¦ïBBşr $îH¦ïBBş $dîH¦ïC‚şN $~îLõï? ğ~îH<ï? ğ}îHÊïAmğîM<ïBĞş9 $îOuï?ş $U~îNæï;=ğ{î/;ïPûğ{î/;ïNÃğ{î,tïOßğ~î0WïKZğ~î+WïLvğî+åïMíş $•î+åïMíş• $î0WïNş $rî+åïR_şr $~î0WïM’ğ{î/;ïJQğ{î/;ïHğ{î,tïI4ğ~î0WïD¯ğ~î+WïEËğî+åïGBş $•î+åïGBş• $î0WïGfş $rî+åïK´şr $~î0WïFèğ{î/;ï9¥ğ{î/;ï7lğ{î,tï8‰ğ~î0Wï4ğ~î+Wï5 ğî+åï6—ş $•î+åï6—ş• $î0Wï6»ş $rî+åï;	şr $~î0Wï6<ğ{î/;ï2ûğ{î/;ï0Âğ{î,tï1Şğ~î0Wï-Yğ~î+Wï.uğî+åï/ìş $•î+åï/ìş• $î0Wï0ş $rî+åï4^şr $~î0Wï/’ğ}î7ï%¥ğ}î?XïRğ}î?XïKmğ}îHÊïC¦ğ{î?æïG‰ğîF‘ïBĞş« ${î?æïTßğî9ÉïGBş	r ${î2ï7ûğ	î9Éï:ş $U}î?Xï4ğ}î?Xï:ÂğîC;ï3eş $«î@-ï2³ş $dî;ßï2³şr $î;ßï2³ş $dî;ßï3óşN $~î@-ï/’ğ~î;tï/’ğ{î@tï2lğ}î<ï1Şğî@tï3BşÇ $î@tï9íşÇ $}î<ï8‰ğ{î@tï9ğî@-ï9^ş $dî;ßï9^şr $î;ßï9^ş $dî;ßï:şN $~î@-ï6<ğ~î;tï6<ğ{î?æï=‰ğ{î?æï03ğîC;ï6—şU $î;tï%ş	 $î;-ï–ş $dî6ßï–şr $î6ßï–ş $dî6ßïÖşN $~î;-ïtğ~î6tïtğî/Éï%şÎ $î/Éïdş $ä~î/;ïğî/Éï³şÎ $î;-ï$ş $dî6ßï$şr $î6ßï$ş $dî6ßïdşN $~î;-ïğ~î6tïğî;tï³ş	 ${îAïlğ{îAïúğî0Wï9íş $î9Éï=Bş	r $î0Wï7´şÇ $î0WïJ˜ş« $î9ÉïGBş $yî0WïQCş« $î9ÉïQCş $yî9ÉïT˜ş	r $î0WïO
+şÇ ${î2ïOQğ	{î2ïH¦ğ	î0WïH_şÇ $î0Wï1	şÇ ${î2ï1Pğ	î0Wï3Bş« $î9Éï0ş $Uî9Éï/ìş	r ${î;tïOğ{î;tïİğ}î7ï#úğî:ï%^ş	 $î:ï&zş	 ${î:ï&Áğ{î:ï%¥ğ	~îäïM’ğ~îHïLvğ~îHïN¯ğ~îsïM’ğ~îïO=ğ~îïO=ğîsïJ˜ş« $~îäïFèğ~îHïEËğ~îHïHğ~îsïFèğ~îïH’ğ~îïH’ğîïI{ş	– $î¬ïJ˜ş $yîÈïMíş $]îÈïP&şÇ $îïR_ş	– ${îïR¦ğî
+ïKØş $«î
+ïK´ş  $îsïQCş9 $îsï9íş9 $î
+ï4^ş  $î
+ï4‚ş $«{îï;Pğîï;	ş	– $îÈï8ĞşÇ $îÈï6—ş $]î¬ï3Bş $yîï2%ş	– $~îäï/’ğ~îHï.uğ~îHï0®ğ~îsï/’ğ~îï1<ğ~îï1<ğîsï3Bş« $~îäï6<ğ~îHï5 ğ~îHï7Yğ~îsï6<ğ~îï7çğ~îï7çğ{îsï1Pğ	{îsï7ûğ	îsï7´ş] $îsï1	ş] ${îï2lğ{îïPûğ{îïJQğ{îï9¥ğ{îï2ûğ{îWïN4ğ{îWïG‰ğ{îWï6Şğ{îWï03ğ{îåï"Oğ{î.ïLŠğ{î.ïEßğ{î.ï53ğ{î.ï.‰ğ}îVïOğ}îVï3ğ}î
+ïğ	}î
+ïúğ
+}î
+ïİğ}î
+ïÁğ
+}îVï¤ğ}î
+ïˆğ
+}î
+ïkğ}î
+ïOğ
+}î
+ï2ğ	}î7ï!Áğ|îMÊïÎğ{îïOßğ{îïI4ğ{îï8‰ğ{îï1Şğ{îÈïOßğ{îÈïI4ğ{îÈï8‰ğ{îÈï1Şğ{îsïQŠğ{îsïJßğ{îsï:4ğ{îsï3‰ğ{îsïR¦ğ{îsïPmğ{îsïKûğ{îsïIÂğ{îsï;Pğ{îsï9ğ{îsï4¥ğ{îsï2lğ{îïQŠğ{îïOQğ{îïJßğ{îïH¦ğ{îï:4ğ{îï7ûğ{îï3‰ğ{îï1PğîÈïMíşä $îÈï6—şä ${îïPmğ{îïIÂğ{îï9ğ{îï2lğ{îåï#úğ{îï&Áğ{îï%¥ğ}î6tïÁğ}î6tïOğÿ        :        TVm$ˆÎšÉ Ê     ÎÔ ù         tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ º¤óà³ ¶ ¸ º   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (Stepper.PRESSSS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                          Jasmine Scanner Manual Appendix23A1.5PC board layoutPageDateRevDesignerProjectFiìeXEROXAs viewed from the component sideParcCSLJasmineReference05LS283LS283LS02LS00LM339LS14CrystalLS163LS163F3341LS174LS174LS174LS174LS257HM7603LS163LS163LS163i2114i2114i211482S147LS174LS138F3341LS240LS240LS00ABCDEJASMINE DIGITAL BOARD1234567PC Board LayoutMerinoA9/21/79PCLayout.SILRL1024G7905ADCMC8BCLM339LM360NLM2503NE5008CD4053LM733CA3140CA3140C1R1C2C3R2R3R4R5R6D1D2D3D4D5RRR789CRRRRRRRC11R121314R15R16R17R18R1920212210C45C6C7C8C9C1011D6H1H2IC1IC2IC3IC4IC5IC6IC7IC8IC9IC10TIP122TIP122TIP122TIP122C14C15C13C12 S74note: C2,C3polarity aremismarkedon PC board  ô uî·ïfñğuîG?ïfñğwî·ïbğwî­ïbğîäïdş GrîäïşMÊ GîQ®ïş G¹îäïşN Gî	rïdş Grîïdş Grî)ïdş GrîAïdş GrîDXïdş GrîM<ïdş Grö}îMÊïNğ}îDæïNğ}îA‘ïNğ}î5WïNğ}î
+ïNğ}î)¬ïNğ|îrïğîäïdş Grî4Éïdş Gr}î	rïğ!}î ï¤ğ}î ï‡ğ|î
+ï]ğ}î¬ïNğ	|îNXï]ğ{î¬ï-lğîï,	ş $Àîï,	ş‡ $îeï,,ş $îï/¥şd $îVï/¥şd $îºï,,ş $îVï,	ş‡ $îVï,	ş $À{îï-lğîï'ş $îï'ş² $îï',ş $äîï*ìş $îï%¥ş² $îï"ş $Àîï"ş $îï",ş ${îÖï#lğ{îÖïlğîï ¥ş² $îïş $Àîïş $îï,ş $îï+ş $îï+ş ${îïkğîïş² $îï¤ş ${î,ï(lğîVï',ş $îVï'ş $îåï'ş $ÀîVï*¥ş² ${îåï#lğîVï%¥ş² $îåï"ş $ÀîVï"ş $îVï",ş $îºïş $ÀîVïşd ${îºïlğîVï ¥ş‡ $îVï,ş $îVï+ş $îVï¤ş‡ ${îºïkğîVïşd $îºïş $À{î Èï-lğî¬ï/¥ş‡ $î&ï,	ş $Àî¬ï,	şd $î¬ï,,ş ${î!ï(lğî&ï'ş $Àî¬ï'şd $î¬ï*¥ş‡ $î¬ï',ş $î¬ï",ş $î¬ï%¥ş‡ $î¬ï"şd $î&ï"ş $À{î!ï#lğ{î!ïlğî&ïş $Àî¬ïşd $î¬ï ¥ş‡ $î¬ï,ş $î¬ï+ş $î¬ï¤ş‡ $î¬ïşd $î&ïş $À{î!ïkğ{î)ï-lğî(ï/¥ş‡ $î.eï,	ş $Àî(ï,	şd $î(ï,,ş ${î)eï(lğî.eï'ş $Àî(ï'şd $î(ï*¥ş‡ $î(ï',ş $î.eï"ş $Àî(ï"şd ${î)eï#lğî(ï%¥ş‡ $î(ï",ş $î(ï,ş $î(ï ¥ş‡ ${î)eïlğî(ïşd $î.eïş $Àî.eïş $Àî(ïşd ${î)eïkğî(ï¤ş‡ $î(ï+ş ${î1»ï³ğî0Wï¤ş] $î7ïş $Àî0Wïş9 $î0Wï+ş $î0Wï,ş $î0Wïş9 $î7ïş $Àî0Wï ¥ş] ${î1»ï³ğ{î1»ï#³ğî0Wï%¥ş] $î7ï"ş $Àî0Wï"ş9 $î0Wï",ş ${î2ï(³ğî0Wï*¥ş2 $î8fï'ş $Àî0Wï'ş $î0Wï',ş ${î1»ï-lğî6»ï,	ş $Àî0Wï,	şd $î0Wï/¥ş‡ $î0Wï,,ş ${î;-ï(lğî:Xï*¥ş‡ $î@»ï'ş $Àî:Xï'şd $î:Xï',ş $î:Xï,,ş $î:Xï,	şd $î@»ï,	ş $Àî:Xï/¥ş‡ ${î;tï-lğ{î<ï#³ğî:Xï%¥ş2 $îBfï"ş $Àî:Xï"ş $î:Xï",ş $î:Xï,ş $î:Xïş $î:Xï ¥ş2 ${î<ï³ğ{îC‚ï-lğîB­ï/¥ş² $îB­ï,	ş $îB­ï,,ş $îH<ï,,ş $îï3óşF GîNïş G :îïºşFØ Gîïºş G |îï-%ğ|îï(%ğ|îï#%ğ|îï%ğ|îï$ğîVï²şİ $îVï²ş $lîVï2ûş¹ $îïÖş $HîHÊï*Èş $îF‘ï*¥ş] $îF‘ïş $HîF‘ï]ş€ $îIïºş $ÇîIï–ş  $îHÊï-³şG $îHƒïş $òî<ïÏş $î<ïºş $9{î9;ï]ğ|îï0zğ|îï0zğ|î#ï0zğ|î*Éï0zğ|î3ï0zğ|î<Øï0zğ|îDæï0zğîVïİş $‡îVïAş $îóïºş $«îïºş $«îïAş $îïİş $‡î¬ïİş $‡î¬ïAş $î#Iïºş $«î'ºïİş $‡|î:ïëğ|î5æïëğ|îA‘ï]ğ|îEtï]ğ|î*;ï]ğî:ï9Éş Gî:ï9‚ş0å GîBïQôş GÖîBïQ­şÇ GîBï?æş GîBï9‚ş G«î:ïWƒş9 Gî"sïQôş GÖî"sïQ­ş+ Gî&ïQ­ş Gî&ïWƒşÈ GîºïDæş $îºïDÂş  $î,»ïDÂş $²îºïJQş$ ${î!ïGBğî;tïMíş€ $î=ôïMíş $¤î;tïUmş¤ $î;tïNş $€î4ÉïNş $€î4ÉïUmş¤ $î7IïMíş $¤î4ÉïMíş€ $î4Éï<ûş€ $î7Iï<ûş $¤î4ÉïD{ş¤ $î4Éï=ş $€î9‚ï=ş $€î9‚ïD{şë $î9‚ï<ûşÇ $î9;ïJßşë $î9;ïGş $äî9;ïFûşÇ $î<ïFûş $î=ï>¦şr $îA‘ï:ş $¹î=ï9íş• $î=ï9íş $İ{î=­ï;Şğ{î:ïB‰ğ{î:ïAmğ{î:ï@Pğ{î5ïBBğ{î5ïA&ğ{î9;ïI4ğ{î9;ïHğ{î;tïR_ğ{î;tïQCğ{î4ÉïR_ğ{î4ÉïQCğîsïLş $ÇîsïKûşò $îeïKûş $ëîsïNÃş ${îÖïLÑğîsï@—ş $îï@—ş $•îsïE	ş2 ${îïB‰ğî7ïGş $äî4ÉïFûşë $î4ÉïFûş $î4ÉïJßşÇ ${î5ïHíğ{î5ïGÑğî×ïKØş $î×ïK´şr $î#IïK´ş $2î×ïNÃş• ${îïLÑğîBïPJşÇ îBïNşÇ îBïKØşÇ îBïIŸşÇ îBïGfşÇ îBïE-şÇ îBïBôşÇ îBïO-şÇ îBïLôşÇ îBïJ»şÇ îBïH‚şÇ îBïFIşÇ îBïDşÇ îBïA×şÇ îBï@»şÇ îsï@»ş $rîIæï0zşÇ $îL­ï/‚ş $îIæï/^şë $îIæï/^ş $@îIæï2%şÇ $îL­ï1,ş $îIæï1	şë $îIæï1	ş $@{îJtï1Pğ{îJtï/¥ğîDï³ş] $îFJïÖş $îDïÏş9 $îFJï,ş $îDïş] ${îDŸïúğ{îDŸïOğî#ïKØş $Çî#ïK´ş $î$¬ïK´ş $ëî'sïK´ş $ëî%ÉïKØş $Çî'sïK´ş $î'sïN{ş@ $î(ïKØş $ÇîåïKØş $ÇîåïK´ş $îïK´ş $ëîåïN{ş@ $îïA&ş $ëîWïAIş $ÇîïA&ş $îïA&ş $ëîïCíş@ $îsï>^ş@ $îï;—ş $ëîsï;—ş $îsï;»ş $Çîï<×ş $Çîï<´ş $î:ï<´ş $ëîï?{ş@ $îÈï>^ş@ $îåï;—ş $ëîÈï;—ş $îÈï;»ş $Çî4Éï;—ş $@î4Éï;—şë $î7ï;»ş $î4Éï<´şÇ $î4Éï;	şÇ $î7ï:ş $î4Éï9íşë $î4Éï9íş $@î9;ï;—ş $@î9;ï;—şë $î<ï;»ş $î9;ï<´şÇ $î9;ï;	şÇ $î<ï:ş $î9;ï9íşë $î9;ï9íş $@î>Éï>íşë $îA‘ï?ş $î<ØïAmşÇ $î<Øï@Pşë $î<ïD{şÇ $î?XïC‚ş $î<ïC_şë $î<ïC_ş $@î<ïGBş $@î<ïGBşë $î?XïGfş $î<ïH_şÇ $î<ïJ˜şÇ $î?XïIŸş $î<ïI{şë $î<ïI{ş $@î8ïQCş $@î8ïQCşë $î:æïQfş $î8ïR_şÇ $î4ÉïF´şÇ $î7ïE»ş $î4ÉïE˜şë $î4ÉïE˜ş $@î3ïLfş $Çî3ïLBş $î4;ïLBş $ëî3ïO
+ş@ $î>ÉïA×ş $î>Éï?ş $î<Iï=ş $€î>Éï@	şÇ $î<Øï@tş $î?Ÿï@tş $î>ÉïA´şÇ $î>ÉïBĞşÇ $îA‘ïA×ş $îDï%ş9 $îB­ï,ş $ÇîB­ïş $îCÊïş $ëîB­ïÏş@ $îDï,ş $îBfï,ş $îDïÖş $îï¤ş $@îï¤şë $îVïÈş $îïÁşÇ $îï¤şÇ $îVï«ş $îïˆşë $îïˆş $@îïˆşë $îeï«ş $îï¤şÇ $îïÁşÇ $îeïÈş $îï¤şë $îï¤ş $@îóï¤ş $@îóï¤şë $î"ºïş $ ÕîóïÁşÇ $îóï¤şÇ $î"ºï«ş $dîóïˆşë $îóïˆş $@î(×ïˆş $‡î(×ïˆşë $î+ï«ş $î(×ï¤şÇ $î(×ïÁşÇ $î+ïÈş $î(×ï¤şë $î(×ïëş $ ùî+ïºş $«î'ºïAşä $î0WïAş $@î0WïAşë $î3ïdş $î0Wï]şÇ ${îBôïlğ{îBôïOğ{îïëğ{îsïëğ{î ïëğ{î)eïëğ{îïÏğ{îsïÏğ{î ïÏğ{î)eïÏğ{î1-ïˆğ{îï#³ğîÖï%ş@ $îóï"Oş $ëîÖï"Oş $îÖï"sş $ÇîÖïºş $ÇîÖï–ş $îóï–ş $ëîÖï ]ş@ ${îïúğ{îïúğîÖï]ş@ $îóï–ş $ëîÖï–ş $îÖïºş $ÇîÖï'ºş $ÇîÖï'—ş $îóï'—ş $ëîÖï*^ş@ ${îï"–ğ{îïİğ{îïİğ{îï(úğ{î#×ïM_ğ{î&ïM_ğ{î'ºïM_ğî#ïN{ş ${î3fïMíğ{îïBĞğ{îHïBĞğ{îºï=Bğ{î,ïM_ğ{î%ÉïKûğî%ÉïN{ş $î&åïKØş $Çî%ÉïK´ş@ $î)ïK´ş $î)ïN{ş ${î)eïM_ğî*;ïK´ş $ëî)ïK´ş $ë{î'sïKûğ{î)ïKûğîWïCíş $îsïAIş $ÇîWïA&ş@ ${î3ïLŠğ{î8­ïQŠğ{î=ïG‰ğ{î5WïEßğ{î5Wï;Şğ{î5Wï:4ğ{îWïAmğ{îïAmğ{îsï;Şğ{î#ïKûğ{îeï>^ğ{îï'Şğ{î,ïLBğ{î=ïIÂğ{î=ïC¦ğ{î=fï@—ğ{î9Éï;Şğ{î9Éï:4ğ{îï<ûğ{îï=Bğ{îï<%ğ{î?XïAûğ{î?Xï?4ğ{îïO
+ğ{îäïEPğ{îóïO
+ğ{î&åïE	ğ{î5ïUµğ{î5WïK&ğ{î5ïDÂğ{î9‚ïK&ğ{î9ÉïDÂğ{î;»ïUµğ{îïkğ{îVïkğ{î¬ïkğ{î(ïkğîï«ş $îïF´şÇ $îåïE»ş $îïE˜şë $îïE˜ş $@îï>íş $@îï>íşë $îåï?ş $îï@	şÇ ${î¬ïEßğ{î¬ï?4ğîïK´şÇ $îåïJ»ş $îïJ˜şë $îïJ˜ş $@{î¬ïJßğî4ÉïLBş $@î4ÉïLBşë $î7ïLfş $î4ÉïM_şÇ ${î5WïLŠğ|îï(%ğ{îGïúğ{îGïİğ{îGïÁğ	{îGï¤ğ        ‚        TVm$ÁÎšÉ Ê     ÎÔ         tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ º¤óà³ ¶ ¸ º   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (PCLayout.PRESSS                         Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                                                                                                Jasmine Scanner Manual Appendix24A1.6Power WiringPageDateRevDesignerProjectFileXEROX1CSLGAVEST<IBIS>tyuiTYUItyuiTYUItyuiTYUItyuiTYUItyuiTYUItyuiTYUItyuiTYUItyuiTYUItyuiTYUItyuiTYUItyuiTYUItyuiTYUIa34bSWITCHPLUGWHITEBLACKBLACKBLACKWHITEWHITE-12 VOLT POWER SUPPLY+5 VOLT POWER SUPPLYSCANNER BASIC WIRINGSCANNER.SILFUSE 3/4 AMPLNELENSMIRRORB1B2A1A2YELLOWYELLOWGREYGREYGROUNDSTEPPERMOTORINTERNAL CABLEANALOG BOARDDIGITAL BOARDJ-1BLACK+12 VOLTS  (YELLOW)GROUND   (BLACK)GROUND  +12 VOLTS  (YELLOW)GROUND   (BLACK)PIN #25PIN # 24PIN #23+5 VOLTS   (ORANGE)+5 VOLTS   (ORANGE)GROUND  GROUND  COMMON4/8/80  ô uî·ïfñğuîG?ïfñğwî·ïbğwî­ïbğîäïòş Grîäï«şOt GîSXï«ş G¹î
+ïòş GrîÈïòş Grî'sïòş Grî>Éïòş GrîBïòş GrîKïòş Grö{îK‘ïİğ{îB­ïİğ{î?Xïİğ{î3ïİğ{îïİğî2ïòş Gr{î(ïİğ|î ï•ğîäïşOt G|îLïëğ|î ïëğ|î«ïëğ|î?Xïëğ{î3­ï2ğ{î+WïİğîH<ïdş $Q­î
+ï@ş>^ $î
+ï@ş $QÑî8­ï^˜ş9 $î:æï]Ÿş $î8­ï]|ş] $î8­ï]|ş $@î8ï]|şU $î;tïVfş $9î8ïVCşy $î8ïVCş $]î8­ïT¼ş $«î8­ïT˜ş9 $î:æïT˜ş $Îî9;ïUµş $î:XïUJş $ î9;ïU&ş@ $î9;ïU&ş $ ²î7ï[®şr Õî=ï]|ş« $îCÊïZJş $Uî=ïZ&ş $yî>ÉïY¼ş kUî@tïY¼ş kUîBïY¼ş kUî>ÉïY.ş $ î<ïY
+şë $î<ïY
+ş $ëî9ÉïKJş $
+î@tïWƒş $Çî@tïW_ş $îFïW_ş $²î:æïLÑşU $î>;ïFIş $«î:æïF&şy $î:æïF&ş $Îî;tïF&ş9 $î=­ïE»ş $ î;tïE˜ş] $î;tïE˜ş $ ²î9ÉïK&ş $î>;ïK&ş« $î?æï¬ş $+î9Éï)AşV $îGïÖş $
+î9Éï³şy $î9Éï³ş $
+²î9ÉïşV $îGïş $î9Éïëşy $î9Éïëş $@î?Xï ]ş $î@tïóş $ î?XïÏş@ $î?XïÏş $ ²îA‘ïÏş $ ²îA‘ïÏş@ $îB­ïóş $ îA‘ï ]ş $îEtï$ş $@îEtï$ş ² $îFïHş $îEtïAş  $îBïHş $«îBï$şU $î?æïÖş $î?æï²ş $îEtïºş $ îEtï–ş  $îFï–ş $ ²î8ï–şy $î5æï$ş² $î4Éï?{şr $î9;ï=fş $9î4Éï=Bş• $î4Éï=Bş $]î5æï?{ş $Îî8ï?{ş $ëîïE»ş $UîÈïE»ş $Uî"sïE»ş $Uî)ïE»ş $Uî/ÉïE»ş $UîsïHíş!V $îsïE˜ş $yî%ÉïBBş $]îÈïBBş
+  $îÈïBfş $9î3ïC_ş $@î/ÉïC_şU $î/ÉïC‚ş $î,tïC_ş $@î)ïC_şU $î)ïC‚ş $î"sïC_ş $@îïC_şU $îïC‚ş $îsïC_ş $@îïC_şU $îïC‚ş $îÈïC_ş $@îsïC_şU $îsïC‚ş $îïE»ş $«îsïE»ş $«îÈïE»ş $«îÈïGBş$ $î%ÉïE»ş $«î%ÉïGBşÎ $î,tïE»ş $«î,tïGBşÎ $î3ïE˜ş $Îî2´ïD{ş Gî2´ïEtş Gî2ï<Yğî2ï=vğî/^ïD{ş Gî/^ïEtş Gî.¬ï<Yğî.¬ï=vğî,	ïD{ş Gî,	ïEtş Gî+Wï<Yğî+Wï=vğî(³ïD{ş Gî(³ïEtş Gî(ï<Yğî(ï=vğî^ïD{ş Gî^ïEtş Gî¬ï<Yğî¬ï=vğî³ïD{ş Gî³ïEtş Gîï<Yğîï=vğî"	ïD{ş Gî"	ïEtş Gî!Wï<Yğî!Wï=vğî%^ïD{ş Gî%^ïEtş Gî$¬ï<Yğî$¬ï=vğîïD{ş GîïEtş GîVï<YğîVï=vğî³ïD{ş Gî³ïEtş Gîï<Yğîï=vğî]ïD{ş Gî]ïEtş Gî¬ï<Yğî¬ï=vğîïD{ş GîïEtş GîVï<YğîVï=vğî5æïA&ş $ëî/ÉïHíş@ $î8ïBBş $$î3ïGBş$ $î;tïLÑş $@î=ïLÑş $@{î=­ïMğî;tïMíş $]{î9ÉïIÂğ{î>ÉïIÂğ{î<ïMğ{î;tïD4ğ{î5Wï>ğî=ïMíş $ ²î=ïN{şÇ $î?æïKJş $Uî=ïZ&ş« $î;tïP&şU $î>;ïP&şä $îBïP&ş $	–îBïY˜ş  $îB­ï$ş $5îBï$Aş ² $îBï ş $äîBïeş ${î=ïPmğ{î<ïW¦ğ{î6tïR¦ğ{î<Iï5Âğ{îC;ï5Âğ{îB­ïúğ{îIXïlğ	{îIXïOğ{îIXïOğ{îIXï2ğ{îsïÀğ{î(ï2ğ{î7ï_üğ{î?XïZnğ{îB­ïZnğ{îAïZnğî¬ï6—şÇ $îsï*ş $9î¬ï*^şë $î¬ï*^ş $]îåïş $%:îåï]ş  $îåï6—ş ² $îsïş: $î.¬ïş $ îsïyş] $î :ïzş $î&Wïdş $9î :ïAş@ $î :ïAş $]{î Èïğî Èï+ş $9î%Éï+ş $9î5æïş $)eî8ïsş $$óî:ïMíş+W $î7ïJ»ş $Uî:ïJ˜ş+z $î:ïJ˜ş $y|îWïK´ğîsï"–ş« $îï!ş $«îsï ìşÎ $îsï–şÎ $îïºş $«îsïAş« $îsïìş« $îïdş $«îsïAşÎ $îºïëş‡ $îïş $«îsï–ş« ${îºï3ğ{îºïˆğ{îºïİğ{îºï!3ğ{î¬ï!zğ{î¬ïÏğ{î¬ï%ğ{î¬ïzğî:ïÖş $îsï²şë $îsïúş $ëîºïAş Õ $îïş $ Õîºïkş ù $îºïkş $ ùîïkş $ ùîïkş ù $îóïş $ ÕîïAş Õ $îï–ş Õ $îóïäş $ ÕîïÁş ù $îïÁş $ ùîºïÁş $ kîºïÁş ù $îïäş $ Gîºï–ş Õ $îºïÏş Õ $îïş $ Õîºïúş ù $îºïúş $ ùîïúş $ ùîïúş ù $îóïş $ ÕîïÏş Õ $îsïÁşÇ $îïzş Õ $îóïÈş $ Õîï¤ş ù $îï¤ş $ ùîºï¤ş $ ùîºï¤ş ù $îïÈş $ Õîºïzş Õ $îºï3ş  $îï3ş Õ $îï3ş Õ $îïÏş Õ $îVï:ş $¹îïş ù $îïş $İî
+ï]ş $İî
+ï]ş ù $îdïş $¹î
+ï ş Õ $îÈïş $îÈïúşÇ $î
+Öï+ş $Uî
+Öïş¹ $îºïOş $ kîºï–ş Õ $îï+ş $ îïÏş $yî
+Öï#%ş] $î
+Öï :ş $îòï#%ş $@{î
+²ï%¥ğîïş $îdïúş@ $îïºş $ÈîïOş] $îÈïş $î:ïúş ² $îeïsş $îóïşÎ $îï*^ş $]îï*^şë $îÈï*ş $9îï6—şÇ $îsïş $%:îVïOşÇ $îïOş $ ùîïşÇ $îeïş $ ùîäï",ş $Vîäï"ş $îsï6Pş G $îsï6Pş  $îsï*¥ş  $îï)Ğş $ ²îÈï)Ğş $ ²îïş $«î:ï:ş $Hî:ïş9 $îóï+ş $Vîóïş€ $îï³şÖ ${îòï2³ğ{îòï1—ğîï]Ãş€ $îï\<ş $«îï\ş¤ $îï\ş $Îî
+ï\îş€ $îï\îş$ $î;tï\îş« $îCÊï\îşr $îï7%ş ² $îï7%ş $ kîVï6—şò $îHï6—ş $@îºï7´ş ² $îï7´ş ² $îï7ş $ Õîï6»ş $ îï6—ş  ${îdï<´ğîsïİş $îï+ş $ Õîsï¤ş $îï¤ş $ ùîºïş $ {î¬ïÏğ{îHï1Pğîï)ˆş $ ù{îï\§ğîºï7%ş $ ²îï7lş $ kîÖïUJş@òî
+ïT
+ş‡@î
+ï<ş@Hî
+ï:Âş€@îï:Âş Õ@îåï:Âş G@îï7Iş@¹îï7%ş $îºï:şº Gî1tï',ş Gºî1tï',ş	r Gîºï9;ş: Gî.ôï",ş GVî.ôï",şò Gî3ôïdş Gî3ôïş	r Gî=fïş Gîºï7×şH Gî-ïVş G Èî-ïş Gî0ïrş Gäî0ï+şÖ Gî@tï+ş G î:æï&ş kdî:æï!Vş kdîEtïş ÕdîEtïºş Õ îEtï+ş Õ«î?Xï ş kî?Xï¬ş ÕîA‘ï¬ş Õî<Øïäş Õî?æïäşd Õ{îB­ïˆğ{î¬ï;	ğ{î¬ï9‚ğ{î4‚ïÏğ{î2mï(ğ{î/Éï#ğ{î&ï;	ğ{î&ï9‚ğ{î&ï8ğ{îÏï8ğ{î2ûï–ğî¬ïäşe $î0ïäş $yî0ï :ş
+ $î:4ï :ş ² $î:æïeş kd{î¬ïrğ{î/;ï ¥ğî4ï!ş Gîòïäş $îòïäş $A{î
+ï&åğîAï#úşd ù{îB­ï2ğ        V        TVm$	ZÎšÉ Ê     ÎÔ         tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ º¤óà³ ¶ ¸ º   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (Scanner.PRESSSS                         Ò  €  d          •F ½    F  BootMesa.ScJasmine Scanner Manual Appendix25A1.7External CablePageDateRevDesignerProjectFileXEROX1CSLGAVEST<IBIS>4/8/80SCANNERSCANNERCABLE.SILCABLE FOR ALTO 2123456141516171878910192021222412ALL GROUNDS TIETO A COMMON POINT21201918149876161525119751121086NOTES:1. CABLE IS 10 FT. LONG2. CABLE IS 19 TWISTED PAIRS3. ALL PLUGS ARE AMP. P/N 205208-1   ô uî·ïfñğuîG?ïfñğwî·ïbğwî­ïbğîäïòş Grîäï«şOt GîSXï«ş G¹î
+ïòş GrîÈïòş Grî'sïòş Grî>Éïòş GrîBïòş GrîKïòş Grö{îK‘ïİğ{îB­ïİğ{î?Xïİğ{î3ïİğ{îïİğî2ïòş Gr{î(ïİğ|î ï•ğîäïşOt G|îLïëğ|î ïëğ|î«ïëğ|î?Xïëğ{î3­ï2ğ{î+Wïİğ{îB­ï2ğ{îsï¤ğ{î(ï2ğ{îsïÀğ{îsïX5ğ{îsïUüğ{îsïSÃğ{îsïQŠğ{îsïOQğ{îsïMğ{îsïJßğ{îsïH¦ğ{îsïFmğ{îsïD4ğ{îsïAûğ{îsï?Âğ{îsï=‰ğ{îsï;Pğ{îsï9ğ{îsï6Şğ{îsï4¥ğ{îsï2lğ{îsï03ğî:ïWíş*: $îïX|ş- $îïVCş- $î:ïUµş*: $î:ïS|ş*: $îïT
+ş- $îïQÑş- $î:ïQCş*: $î:ïO
+ş*: $îïO˜ş- $îïM_ş- $î:ïLÑş*: $î:ïJ˜ş*: $îïK&ş- $îïHíş- $î:ïH_ş*: $î:ï6—ş*: $îï7%ş- $îï9^ş- $î:ï8Ğş*: $î:ï;	ş*: $îï;—ş- $îï=Ğş- $î:ï=Bş*: $î:ï?{ş*: $îïBBş- $î:ïA´ş*: $î:ïCíş*: $îïD{ş- $îïF´ş- $î:ïF&ş*: $î:ï4^ş*: $îï4ìş- $îï2³ş- $î:ï2%ş*: $î:ï/ìş*: $îï0zş- $îï+ş $.¬îäï*ìş] $îäï*ìş $.ĞîäïY˜ş9 $î:ï?ş $s{îsï-úğ{îsï+Áğîï@	ş- $îï-úş kîï,Pş k{îÈï-lğ{îÈï,PğîBïA×ş $îBïA´ş9 $îDXïA´ş $³îBï[Cş] $îBï-×ş $rîBï-³ş9 $îDXï-³ş $–îBïA&ş] $î@QïAmş kİî@»ïYßşd kî@tï.óş k«î@tï.‰ş« k{îB­ï?Âğ{îB­ï=‰ğ{îB­ï;Pğ{îB­ï9ğ{îB­ï-úğ{îB­ï6Şğ{îB­ï4¥ğ{îB­ï2lğ{îB­ï03ğ{îB­ïYßğ{îB­ïX5ğ{îB­ïUüğ{îB­ïSÃğ{îB­ïQŠğ{îB­ïOQğ{îB­ïMğ{îB­ïJßğ{îB­ïH¦ğ{îB­ïFmğ{îB­ïD4ğ{îB­ïAûğ|î'sïÏğ|î'sï%ğ|î'sïzğ|î'sïÏğ"î:ï,Pş kOî:ï?ş ksÿ        R        TVm$ÆÎšÉ Ê     ÎÔ         tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ º¤óà¯ ³ · ¸ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (ScannerCable.PRESS                      Ò  €  d          •F ½    F  BootMesa.Scratch.                                      Jasmine Scanner Manual Appendix26A1.8 TC200 Paper Transport ModificationsXEROXFileProjectDesignerRevDatePageParc CSLJasmineTransport modsMalesonA1/2/80leading edge ofcutouts to bebeveled to matchtrailing edge bevelto be removedrear sectionthree descendingtabs to beremovedTransportMods.SIL08Red areas indicate sections to be modified on TC200 Transport assembly   ô uî·ïfñğuîG?ïfñğwî·ïbğ(úÿøÿîäïZJş+Wrî!Wï7×ş«Uî%Éï ş Uî-ï şr«îúï!åşÎîAï!ş Gî³ï"Şş G ²îï,ş&å î7ïş ù Õî7ïHş ù Õî7ïsş ù Õî6—ïÏş ù Õî6—ï ]ş ù Õî7ïsş ù Õî7ï,ş ù kî7´ï,ş ù kî7mïHş ù kî7&ï³ş ù kî6ßïóş ù kî6tï!3ş ù kî6Pï!ş ù kîÖï ]ş k@îïˆş k@îHï³ş k@îºïş k@îïlş kîúïş k@îÖï%ş k Õîkïsş k@î³ïş k@îkïş k@îsïş  kîÖïÖş k Gî!Wïóş9î ìïÁş k kî!ïVş k kî!ïş k kî!3ï¤ş k kîïE»şr î:ïE»şr î!åïE»şr î(ïE»şr î/;ïE»şr î!Wï$óş« ú ø îïF&şr $îïF&ş $]îïH_ş• $îïFIş $9î:ïF&ş $]î:ïH_şr $î¬ïFIş $9î:ïF&ş• $î!åïFIş $9î!åïF&şr $î&WïF&ş $]î!åïH_ş• $î(ïFIş $9î(ïF&şr $î-ïF&ş $]î(ïH_ş• $î/;ïFIş $9î/;ïF&şr $î3­ïF&ş $]î/;ïH_ş• $î;tïHíş $îÈïIş $äîÈïQÑşÇ $îïO»ş $9îïO˜şr $îïO˜ş $]îïQÑş9 $î:ïO»ş $9î:ïO˜şr $î¬ïO˜ş $]î¬ïQÑş9 $î!åïO»ş $9î!åïO˜şr $î&WïO˜ş $]î&WïQÑş9 $î(ïO»ş $9î(ïO˜şr $î-ïO˜ş $]î-ïQÑş9 $î/;ïO»ş $9î/;ïO˜şr $î3­ïO˜ş $]î3­ïQÑş« $î:XïQÑş $yî2ïU&şë $î2ïT-ş $î0WïT
+ş] $î0WïT
+ş $ $î+åïU&ş• $î+åïT-ş $î)¬ïT
+ş] $î)¬ïT
+ş $ $î%:ïU&ş• $î%:ïT-ş $î#ïT
+ş] $î#ïT
+ş $ $îïU&ş• $îïT-ş $îWïT
+ş] $îWïT
+ş $ $îåïU&ş• $îåïT-ş $î¬ïT
+ş] $î¬ïT
+ş $ $îÈïU&ş	 $îÈïQôş $Uî¬ïT-ş $îWïT-ş $î#ïT-ş $î)¬ïT-ş $î0WïT-ş $îäïZ&ş $•îäï^˜ş+W $î9;ïZJş $rî9;ïZ&ş9 $î;tïUØş $rî;tïUµş« $îBïH‚ş $Vî;tïH_şÎ $î;tï;-ş $Vî&Wï;	şA $î&Wï;	ş $î%Éï>íş ² $î%Éï>íş $Îî"sïE˜şy $î"sï;-ş $
+î"sï;	ş  $î#ï7×ş $Uî!Wï7´şÎ $î!Wï7´ş $yîï;	şy $îï;	ş $]îÈï=Bş] $îÈï6»ş $«î«ï6—ş@ $î«ï6—ş $@îVï7´şy $îVï7´ş $
+$îVïA´şU $î«ï7Iş $
+î;tïA´şU $î>Éï7×ş $
+ î;tï7´şy $î;tï7´ş $yîBïDş $rîA‘ïCíş ² $îA‘ïCíş $]î@tïF&ş@ $î@tïF&ş $]îïQfş $äîïQCş $î:ïBfş $ îÈïBBş $$î:ïQCş ² $î«ïAIş $îÈïBBş  $îVï=ôş $rî:ï=Ğş@ $î:ï=Ğş $•î@tïT-ş $î@tïT
+ş $îA‘ïJ-ş $
+ î@tïJ	ş@ $î@tïIş $î=ïHíşy $î=ïHíş $@î<ïJ	ş $
+$î<ïT
+ş $î=ïT
+ş $@î=ïU&şU $î<ïJ	ş $î;tïGfş $rî:ïQCş $ëîïY
+ş@ $î:XïU&ş $î:XïY
+ş $î:XïQfş $ î:XïQCş $î:ïWíş. $î:ïX|ş. $îïZ&şÇ $î$¬ïX|ş $Îî$¬ïZ&ş  $î%:ïXŸş $«îsïX|ş $ÎîsïZ&ş  $îïXŸş $«î8­ïX|ş $Îî8ïZ&ş ² $î8ïXŸş $«î	ºï8eş Õ Gî
+ï8¬ş G Gî
+ï8ş G Gî	İï8¬ş $ $î
+Hï8¬ş $ $î
+Hï8Bş $ $î	İï8Bş $ $î	İï@»ş $ $î
+Hï@»ş $ $î
+HïA&ş $ $î	İïA&ş $ $î
+ï@—ş G Gî
+ïA&ş G Gî	ºï@ßş Õ Gî	ºï?4ş Õ Gî
+ï?{ş G Gî
+ï>íş G Gî	İï?{ş $ $î
+Hï?{ş $ $î
+Hï?ş $ $î	İï?ş $ $î<ï@»ş Õ Gî<ØïAş G Gî<Øï@tş G Gî<´ïAş $ $î=ïAş $ $î=ï@—ş $ $î<´ï@—ş $ $î<´ï8Bş $ $î=ï8Bş $ $î=ï8¬ş $ $î<´ï8¬ş $ $î<Øï8ş G Gî<Øï8¬ş G Gî<ï8eş Õ Gî<ï=fş Õ Gî<Øï=­ş G Gî<Øï=ş G Gî<´ï=­ş $ $î=ï=­ş $ $î=ï=Bş $ $î<´ï=Bş $ $î-ûïGÑş $ $î.eïGÑş $ $î.eïH;ş $ $î-ûïH;ş $ $î.ïG­ş G Gî.ïH;ş G Gî-×ïGôş Õ GîVïG­ş Õ GîïGôş G GîïGfş G GîzïGôş $ $îäïGôş $ $îäïG‰ş $ $îzïG‰ş $ $î8‰ïF´ş $ $î8ôïF´ş $ $î8ôïGş $ $î8‰ïGş $ $î8­ïFş G Gî8­ïGş G Gî8fïFØş Õ Gî9ÉïNş Õ Gî:ïNXş G Gî:ïMÊş G Gî9íïNXş $ $î:XïNXş $ $î:XïMíş $ $î9íïMíş $ $î:æïIş $äîÈïHíş. $îÈïLÑş. $î9ÉïE	şÎ $î9Éï?ş $î8­ï?{ş@ $î8­ï?{ş $Îî9ÉïF´ş  $î:XïGÑş $î9ÉïFIş $ î8­ïF&ş $î:XïFØş $î9¦ïGÑş $ kî9‚ïGôş k $îAïIXş k $îA&ïI4ş $ kîA&ïTßş $ kîAïUş k $î<ïUş k $î<&ïTßş $ kî<&ïI4ş $ kî<ïIXş k $î8ïCíş ² $î8ïA×ş $9î8ïA´ş  $îVïzşr $îÈïzş $	îÈï ]ş  $îVï ]ş $@îäï!zş $yî:ï$ÏşÎ $î:ïºş $9îVï–ş $îVïş $îÈï$Ïş $•îÈï)Aş  $îVï$óş $rîÈï)Aş $•î«ï-³ş@ $î«ï ş $Vî«ï ]ş  $îVï(³ş« $îï(Hş $ îï(%ş)¬ $î8­ï$Ïş $•î8­ï)Aş $î9Éï$óş $rî9Éï'ş« $î;tï'ş $Îî9Éï)eş $rî9Éï-³ş« $î7ï,—şë $î7ï,,ş $ î7ï,	şÇ $î7ïT
+şy $î7ïSŸş $ î7ïS|şU $î;tï'ş $î<ï&ş $ î<ï&zşä $î@tï&zş $ ²î@tï'ş« $îBï!ş $îA‘ï!zş ² $îA‘ï!zş $@î@tï"–ş@ $î@tï"–ş $]î?Xïzş $@î;tï–ş $î;tï–ş $ëî;tï ]ş $î<ï ]ş $•î:Xïzş  $î<ï$Ïş $î<ï!zş9 $î>Éï!zş $yî>Éï"şÇ $îVï%ìş+W $îVï&zş+W $î¬ï&ş $ îåï%ìş $ ²îWï&ş $ îï%ìş $ ²î#ï&ş $ î%:ï&ş $ î)¬ï&ş $ î+åï&ş $ î0Wï&ş $ î2ï&ş $ î1tï ş $Uî-ï ]ş• $î-ï ]ş $yî0{ï!3ş $ kî0Wï!Vş k $î&Wï ş $Uî%Éï ]ş ² $î%Éï ]ş $yî#ï!ş $9î"sïóş $«î!WïÏş@ $î&Wï#³şİ $îäï$Ïşr $î!Wï%^ş« $î#ï#Öş $«î%Éï$Ïş² $î%Éï#Öş $î&Wï#Öş $î#ï$AşÇ $î#ï#³şÇ $î&Wï"ş« $î1tï"ş $îï,ş kòîï,ş k îï,ş k îï,ş k î#ï,ş k î(ï,ş k î2ï,ş k î#ï"şÇ $îï$óş kîï$óş kîï$óş kîï$óş kî#ï$eş k«î(ï$óş kî-ï$óş kî2ï$óş kî7ï$óş kîïzş@ $îïş $ îïìş $îÈïzş  $îVïş $ î"—ïş $ö{îrïÀğ}î(ïÀğî2ï Õş Gr}îïÀğ}î3ïÀğ}î?XïÀğ}îB­ïÀğ}îK‘ïÀğîKï Õş GrîBï Õş Grî>Éï Õş Grî'sï Õş Grî
+ï Õş Grîäï şO» GîSXï ş G¹îäï şOt Gîäï Õş Gr}îrïğ{îïğîÈï Õş Gr{î:ï¤ğ{î4;ïğ{î?æïğ{îC;ïğî-ï,ş kUî¬ïóş $ kîĞïˆş $ kîóïş $ kî ï³ş $ kî ¥ïş $ kî ïsş $ kî ^ïİş $ kî :ïHş $ kî ìï3ş $ î!ïÈş $ kî!3ï]ş $ kîï!ş $ kîAï!3ş $ kîeï Èş $ kîˆï ]ş $ kîúï"ş $ kî×ï"sş $ kî³ï"Şş $ kîï#Hş $ kî×ï#ş $ $îúï#lş $ $îAï#%ş $ $îï#Hş $ $îeï#ş $ $îˆï"Şş $ $îĞï"–ş $ $î¬ï"ºş $ $îóï"sş $ $î ï"Oş $ $î ^ï"ş $ $î :ï",ş $ $î ï!åş $ $î ¥ï!Áş $ $î ìï!zş $ $î Èï!ş $ $î!3ï!3ş $ $îï"şİ $î!Wï!ş $rî6—ï#Hş $ kî6»ï"Şş $ kî7ï"ş $ kî6ßï"sş $ kî7&ï!ş $ kî7Iï!3ş $ kî7ï ]ş $ kî7mï Èş $ kî7´ïóş $ kî8ôï3ş $ kî8­ïş $ kî8Ğïş $ kî8‰ïsş $ kî8ï³ş $ kî8BïHş $ kî7ûïş $ kî7×ïˆş $ kî9ïÈş $ kî9;ï]ş $ kî9‚ïˆş $ kî9_ïóş $ kî9¦ïş $ kî9Éï³ş $ kî:ïİş $ kî9íïHş $ kî:4ïsş $ kî8fïİş $ kî:ï#³ş G $î:Xïş $9î:{ï$Ïş $îˆï#Hş $ kîï"ş $ kîAï"sş $ kîdï"Şş $ kîÖï!3ş $ kî³ï Èş $ kîúï!ş $ kîkïóş $ kîï³ş $ $î$ïúş $ îHïAş $ ²îïˆş $ kîzïş $ kîVï³ş $ kîÁïóş $ kîOïş $ kîäï]ş $ kîïÈş $ kî+ï3ş $ kîºïİş $ kî–ïsş $ kîsïş $ kîİïHş $ kîëïsş $ kîïİş $ kî3ïHş $ kîï ]ş $ kî$ïúş $ kîHïúş $ kîëïìş  $îVï!zş  $î–ïşV $î¬ï#şO $î"sï!zş Õ $î!Wïóş $ kî Èïş $ î!ï!Vş $ ${îCÊïG‰ğ{îCÊïEßğ{îCÊïD4ğ{îCÊïB‰ğ{îCÊï\ğ{îCÊï]Ãğ{îDXïˆğ{îDXïİğ
+{îDXï3ğî!Wïóş $«{î(ïğ{îM<ïğ{îïkğF        l        TVm$¦ÎšÉ Ê     ÎÔ          tóÊÎ°Î½        ÿÿÿÿ    » ¼ ¾ º¤óà¯ µ · ¸ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (TransportMods.PRESS                     Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                            Jasmine Scanner Manual Appendix27Appendix 2. PROM MicrocodeA2.1PROM Blowing ProcedureBoth PROMs are blown with the Prolog PROM blower.  The Harris HM7603 32x8 PROM requiresthe PM9039 Personality Module, the PA16-2 Adaptor, and the 32x8(H) Configurator.  The TexasInstruments 74S472 512x8 PROM requires the PM9046 Personality Module, the PA20-1 Adapter,and the 512x8(L) Configurator.The easist way to blow a set of PROMs is to copy an existing PROM.  If you need to blow PROMsfrom scratch, you will need:[IVY]<Jasmine>JasProm.MB[???]<???>PNew.RUN.The command lines for the 74S472 and HM7603 respectively are:PNew jasprom.mb/f 22/t StateMem/m 0/c 0/b 0/a 0/sPNew jasprom.mb/f 7/t ControlMem/m 0,1,2,3,4/p 0/c 0/b 0/a 0/s.   ô uî·ïfñğuîG?ïfñğô Xqî!ïbğwî·ï_ğô wî­ï_ğô ‡uî·ï\ğDô ˆuî;3ï\ğô ©uî·ïZŠğ)ô ªuî'|ïZŠğ2ô ¯uî·ïYğ1ô °uî.FïYğ(ô uî·ïWğô ‚uî·ïTyğJô ƒuî:àïTyğô uî·ïRõğuî2ïQqğuî2ïOíğuî·ïNiğ=uî2ïLåğ1uî2ïKağ?ÿ        Ò        TVm$ zÎšÉ Ê     ÎÔ-         tóÊÎ°Î½         ÿÿ    » ¼ ¾ º¤Jasmine Scanner Manual Appendix28A2.2Microcode ListingTo produce JasProm.MB from the following source code, you will need:[MAXC]<Alto>BCPL.RUN[???]<???>RomDef.RUN.The command lines necessary are:BCPL.RUN JasminePromGen.BCPL//produces JasminePromGen.BRRomDef.RUN JasProm.MB JasminePromGen.BR.//J A S M I N E  P R O M  G E N//// generate PROMs for Jasmine scanner//RomDef jasprom.mb jasminepromgen.br//pnew jasprom.mb/f 22/t StateMem/m 0/c 0/b 0/a 0/s//pnew jasprom.mb/f 7/t ControlMem/m 0,1,2,3,4/p 0/c 0/b 0/a 0/s//12/13/78: first try//12/21/78: modify control mem to fix inverted signals//12/28/78: modify state mem for additional recharge cycle//(useless)//1/25/79: modify control mem to fix initialization sequence//1/27/79: modify control mem for inverted sample/delay clocks//modify state mem to remove additional cycle on recharge//4/30/79: fix Load sequence to access first, last locations//1/24/80: hold DCRestore high while A/D conversion is taking//place because there seems to be charge leaking into the//analog switch when DCRestore is low, even though the//AnalogOn' signal is high (shouldn't happen but does)//3/10/80: four cycle Recharge////The Alto supplies 8 data bits, and receives 8 data bits + ready flag from Jasmine//Data bits: 3 bits are decoded into 8 states://{Start',Load',Forward',Back',WE1',WE2',WE3',unused'}//1 bit enables the decode chip, and 4 bits are data//Forward',Back' are stepper motor drive signals//WE1',WE2',WE3' are write enables to the three 4x1024 RAMs//Input bits: two locations are used (both reading from XBUS)//one is "SafeLoc" (no state change caused by access)//the other is "StepLoc" (reading causes the FIFO to shift out)//PROM initialization//The PROM has 4 possible places it may be looping at startup://<Wait>,<Scan>,<Load>,<Init>//To go from <AnyState> to <Wait>, do://pulse Load', then pulse Start'//causing the following state transitions// currentState  Load' 0   Start' 0  Start' 1//--------------|---------|---------|---------//   <Wait>     | <Load>  | <Init2> |  <Wait>//   <Load>     | <Load>  | <Init2> |  <Wait>//   <Scan>     | <Init1> | <Init2> |  <Wait>//   <Init1>    | <Init1> | <Init2> |  <Wait>//   <Init2>    | <Init2> | <Init2> |  <Wait>//To load the scale/offset ROMs, Pulse LoadPrime to advance the address counters,//and then each 4-bit nybble is written by the appropriate WE signal and data//To Scan, pulse StartPrime//let count=0//until count eq nSamplesPerScanLine do// [ data!count=@SafeLoc repeatuntil data!count ls 0// [ count=count+1//  data!count=@StepLoc// ] repeatuntil data!count ge 0// ]////outgoing proceduresexternal [ RomDef  uî·ïfñğuîG?ïfñğwî·ïbğwî­ïbğuî·ï_ğDuî2ï]’ğuî2ï\ğuî·ïZŠğ ô €uî2ïYğuî' ïYğ
+ô uî-³ïYğuî2ïWğ(ô Ftî·ïTğtî·ïS_ğtî·ïR"ğ%tî·ïO§ğ%tî·ïNiğ3tî·ïM,ğ@tî·ïJ±ğtî·ïIsğ6tî·ïH6ğ:tî·ïFøğtî(ïFøğ	tî·ïE»ğ<tî·ïD}ğ>tî·ïC@ğtî(ïC@ğ7tî·ïBğ<tî·ï@Åğ=tî·ï?‡ğtî(ï?‡ğ7tî·ï>Jğtî(ï>Jğ4tî·ï=ğtî(ï=ğ4tî·ï;Ïğtî·ï:‘ğtî·ï9TğStî·ï8ğ.tî·ï6Ùğtî2ï6Ùğ4tî·ï5›ğ4tî·ï4^ğtî2ï4^ğ.tî·ï3 ğtî2ï3 ğ9tî·ï1ãğ=tî·ï0¥ğtî2ï0¥ğ3tî·ï/hğtî2ï/hğ=tî·ï,íğtî·ï+¯ğ>tî·ï*rğtî­ï*rğtî·ï)4ğ&tî·ï'÷ğtî­ï'÷ğtî·ï&¹ğ)tî·ï%|ğ-tî·ï$>ğ.tî·ï#ğ-tî·ï!Ãğ-tî·ï †ğ-tî·ïHğ-tî·ïğ-tî·ïğQtî·ïRğMtî·ï×ğtî·ïšğtî·ï\ğ'tî·ïğ4tî·ïáğtî2ïáğtî·ï¤ğtî2ï¤ğtî·ïfğtî2ïfğtî·ï)ğtî·ïëğtî·ïpğtî·ï
+3ğÿ        
+<        TVm$‚ÎšÉ Ê     ÎÔ/         tóÊÎ°Î½         Fÿÿ    » ¼ ¾ º¤óà¯ µ · ¸ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (TransportMods.PRESS           Jasmine Scanner Manual Appendix29 ]//incoming proceduresexternal [ WriteMem ]//internal manifest and structure declarationsstructure [ blankbit 7StartPrimebitLoadPrimebitSamplebitScanDonebitStatebit 5 ]structure [ blankbytebyteScanClkPrimebitRechargebitAnalogOnPrimebitDCRestorebitResetADPrimebitResetCtrsPrimebitScanStartbitblankbit ]//manifest names for state numbersmanifest [ WAIT=0SCAN1=1SCAN2=2SCAN3=3SCAN4=4SCAN5=5SCAN6=6SCANLOOP1=7SCANLOOP2=8SCANLOOP3=9SCANLOOP4=10SAMPLE1=11SAMPLE2=12SAMPLE3=13SAMPLE4=14SAMPLE5=15SAMPLE6=16SAMPLE7=17SAMPLE8=18SAMPLE9=19SAMPLE10=20SAMPLE11=21SAMPLE12=22FREESTATE=23LOAD1=24LOAD2=25LOADLOOP1=26LOADLOOP2=27LOADLOOP3=28LOADLOOP4=29INIT1=30INIT2=31 ]let RomDef() be [ let S147Mem=vec 512//Signetics 512x8 PROMlet HM7603Mem=vec 32//Harris 32x8 PROM//input variables are: StartPrime,LoadPrime,Sample,ScanDonefor State=0 to 31 do for Start=0 to 1 do  for Load=0 to 1 do  ô uî·ïfñğuîG?ïfñğô Ftî(ïbAğtî·ï_Æğtî·ï^‰ğtî(ï]Kğtî·ïZĞğ.tî·ïY“ğ	tî·ïXUğtî£ïXUğtî2ïWğ
+tî£ïWğtî2ïUÚğ	tî£ïUÚğtî2ïTğtî£ïTğtî2ïS_ğtî£ïS_ğtî2ïR"ğtîïR"ğtî·ïPäğtî·ïNiğ	tî·ïM,ğtîïM,ğtî2ïKîğtîïKîğtî2ïJ±ğtîïJ±ğtî2ïIsğtîïIsğtî2ïH6ğ	tî™ïH6ğtî2ïFøğtî£ïFøğtî2ïE»ğtîïE»ğtî2ïD}ğ	tîïD}ğtî2ïC@ğtî™ïC@ğtî·ïBğtî·ï?‡ğ"tî·ï>Jğtî·ï=ğ	tî2ï;Ïğtî2ï:‘ğtî2ï9Tğtî2ï8ğtî2ï6Ùğtî2ï5›ğtî2ï4^ğtî2ï3 ğtî2ï1ãğtî2ï0¥ğtî2ï/hğ
+tî2ï.*ğ
+tî2ï,íğ
+tî2ï+¯ğ
+tî2ï*rğ
+tî2ï)4ğ
+tî2ï'÷ğ
+tî2ï&¹ğ
+tî2ï%|ğ
+tî2ï$>ğtî2ï#ğtî2ï!Ãğrî2ï †ğtî2ïHğtî2ïğtî2ïÍğtî2ïğtî2ïRğtî2ïğtî2ï×ğtî2ïšğtî·ï\ğtî·ïáğtî·ï¤ğtîï¤ğtî2ïfğtî™ïfğtî2ïëğ;tî2ï®ğtî2ïpğtî2ï
+3ğÿ        Œ        TVm$ÎšÉ Ê     ÎÔ6         tóÊÎ°Î½         Fÿÿ    » ¼ ¾ º¤óà¯ µ · ¸ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (TransportMods.PRESS                     Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                            Jasmine Scanner Manual Appendix30for Sample=0 to 1 do for ScanDone=0 to 1 do  [ //set up Signetics PROM addresslet Saddr=StateSaddr<<StartPrime=not StartSaddr<<LoadPrime=not LoadSaddr<<Sample=SampleSaddr<<ScanDone=ScanDone//set up default values of output parameterslet nextState=State+1let ScanClk=0let Recharge=0let AnalogOn=0 //analog switch enablelet DCRestore=0let ResetAD=0let ResetCtrs=0let ScanStart=0switchon State into [ case WAIT: //standard wait state: branch on Start or Loadif Start&Load then[ nextState=WAIT;endcase] //NEVER HAPPENSif Start then [ nextState=SCAN1;endcase]if Load then [ nextState=LOAD1;endcase]nextState=WAITendcase//for reading a sample://pulse ScanClk//wait 500nsec for detector output//hold AnalogOn for 1 us (to transfer charge to hold register)//StartAD// wait 9 clock times for AD to complete, during which//Recharge+DCRestore//DCRestore+AnalogOn for 1 us (to do DCRestore)//DCRestore(to avoid glitches from analog switch)  case SCAN1: //set up for array startScanStart=1if Load then nextState=INIT1endcase  case SCAN2: //array start, (resetctrs for ScanClk)ResetCtrs=1ScanStart=1//array starts on falling edge of clockif Load then nextState=INIT1endcase  case SCAN3: //array start goes away while clock lowScanClk=1//counter reset on rising edge of clockResetCtrs=1if Load then nextState=INIT1endcase  case SCAN4: //delay for first "real" clock pulseif Load then nextState=INIT1endcase  case SCAN5: if Load then nextState=INIT1;endcase  case SCAN6: if Load then nextState=INIT1;endcase  case SCANLOOP1: //until ScanDone do . . .DCRestore=1//1/24/80 --last cycle of previous A/DScanClk=1if Load then [ nextState=INIT1;endcase]if ScanDone then nextState=WAIT//loop exitendcase  case SCANLOOP2: //wait 500 nsec after trailing edge of ScanClkif Load then nextState=INIT1endcase  case SCANLOOP3: //decide whether to use sample, or skipif Load then [ nextState=INIT1;endcase]if Sample then nextState=SAMPLE1 //do the sampleendcase case SCANLOOP4: //rechargeRecharge=1nextState=SCANLOOP1   ô uî·ïfñğuîG?ïfñğô Ftî­ïbAğtî­ïağtî­ï_Æğ#tî(ï^‰ğtî(ï]Kğtî(ï\ğtî(ïZĞğtî(ïY“ğtî(ïWğ,tî(ïUÚğtî(ïTğtî(ïS_ğtî(ïR"ğ%tî(ïPäğtî(ïO§ğtî(ïNiğtî(ïM,ğtî(ïKîğtî·ïJ±ğtî(ïJ±ğyî¾ïJ±ğ,tî£ïIsğtîïH6ğrî³ïH6ğtî!fïH6ğtî£ïFøğrîïFøğtî%XïFøğ	tî£ïE»ğrîCïE»ğtî%¸ïE»ğ	rî£ïD}ğtî£ïC@ğtî·ï@Åğtî·ï?‡ğtî2ï?‡ğtî·ï>Jğtî2ï>Jğ tî·ï=ğtî2ï=ğ<tî·ï;Ïğtî2ï;Ïğtî·ï:‘ğ6tî·ï9Tğtî­ï9Tğtî·ï8ğtî­ï8ğ-tî·ï6Ùğtî­ï6Ùğ	tîï6Ùğ&tî(ï4^ğyîXï4^ğtî£ï3 ğtî£ï1ãğrî®ï1ãğtî£ï0¥ğtî(ï/hğyîXï/hğ$tî£ï.*ğtî£ï,íğtîï,íğyî.ï,íğ%tî£ï+¯ğrî®ï+¯ğtî£ï*rğtî(ï)4ğyîXï)4ğ%tî£ï'÷ğ	tîï'÷ğyî.ï'÷ğ%tî£ï&¹ğtî£ï%|ğrî®ï%|ğtî£ï$>ğtî(ï#ğyîXï#ğ"tî£ï!Ãğrî®ï!Ãğtî£ï †ğtî(ïHğrî IïHğtî(òïHğtî(ïğrî Iïğtî(òïğtî(ïÍğyîoïÍğtî£ïğtîïğ&tî£ïRğ	tî£ïğrîCïğtî$ìïğ	tî£ï×ğrîï×ğtî){ï×ğtî£ïšğtî(ï\ğyîoï\ğ,tî£ïğrî®ïğtî£ïáğtî(ï¤ğyîoï¤ğ%tî£ïfğrîCïfğtî$ìïfğ	tî£ï)ğrîÁï)ğtî'®ï)ğyî)ï)ğtî£ïëğtî(ï®ğyî)ï®ğtî£ïpğ
+rî£ï
+3ğ        æ        TVm$"ÎšÉ Ê     ÎÔ:         tóÊÎ°Î½         Fÿÿ    » ¼ ¾ º¤óà¯ µ · ¸ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (TransportMods.PRESS                     Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                                                          Jasmine Scanner Manual Appendix31if Load then nextState=INIT1endcase  case SAMPLE1: //Grab output voltage in hold registerAnalogOn=1if Load then nextState=INIT1endcase  case SAMPLE2:AnalogOn=1if Load then nextState=INIT1endcase  case SAMPLE3:AnalogOn=1if Load then nextState=INIT1endcase  case SAMPLE4:AnalogOn=1if Load then nextState=INIT1endcase  case SAMPLE5://reset presented to SARResetAD=1if Load then nextState=INIT1endcase  case SAMPLE6://Q7 low, Q6-Q0 highRecharge=1DCRestore=1if Load then nextState=INIT1endcase  case SAMPLE7://Q7 correct,Q6 low, Q5-Q0 highAnalogOn=1Recharge=1//3/10/80DCRestore=1if Load then nextState=INIT1endcase  case SAMPLE8://Q7-Q6 correct,Q5 low, Q4-Q0 highAnalogOn=1Recharge=1//3/10/80DCRestore=1if Load then nextState=INIT1endcase  case SAMPLE9://Q7-Q5 correct,Q4 low, Q3-Q0 highAnalogOn=1Recharge=1//3/10/80DCRestore=1if Load then nextState=INIT1endcase  case SAMPLE10://Q7-Q4 correct,Q3 low, Q2-Q0 highAnalogOn=1DCRestore=1if Load then nextState=INIT1endcase  case SAMPLE11://Q7-Q3 correct,Q2 low, Q1-Q0 highDCRestore=1if Load then nextState=INIT1endcase  case SAMPLE12://Q7-Q2 correct, Q1 low, Q0 highDCRestore=1//1/24/80if Load then nextState=INIT1nextState=SCANLOOP1//finish AD while reading next sampleendcase  case LOAD1: //load scale/offset RAMSResetCtrs=1ScanClk=1if Start then nextState=INIT2endcase  case LOAD2: //counter load on clock rising edgeResetCtrs=1//wait here until Load goes low (to access 0th location) [4/30]if Load do nextState=LOAD2if Start then nextState=INIT2endcase  case LOADLOOP1: //step counter on every Load pulse  ô uî·ïfñğuîG?ïfñğô Ftî£ïbAğrî®ïbAğtî£ïağtî(ï_ÆğyîÎï_Æğ$tî£ï^‰ğ
+tî£ï]Kğrî®ï]Kğtî£ï\ğtî(ïZĞğtî£ïY“ğ
+tî£ïXUğrî®ïXUğtî£ïWğtî(ïUÚğtî£ïTğ
+tî£ïS_ğrî®ïS_ğtî£ïR"ğtî(ïPäğtî£ïO§ğ
+tî£ïNiğrî®ïNiğtî£ïM,ğtî(ïKîğtîïKîğyî.ïKîğtî£ïJ±ğ	tî£ïIsğrî®ïIsğtî£ïH6ğtî(ïFøğtîïFøğyî.ïFøğtî£ïE»ğ
+tî£ïD}ğtî£ïC@ğrî®ïC@ğtî£ïBğtî(ï@Åğtîï@Åğyî.ï@Åğtî£ï?‡ğ
+tî£ï>Jğ
+tîï>Jğ	tî£ï=ğtî£ï;Ïğrî®ï;Ïğtî£ï:‘ğtî(ï9Tğtîï9Tğyî.ï9Tğ tî£ï8ğ
+tî£ï6Ùğ
+tîï6Ùğ	tî£ï5›ğtî£ï4^ğrî®ï4^ğtî£ï3 ğtî(ï1ãğtîï1ãğyî.ï1ãğ tî£ï0¥ğ
+tî£ï/hğ
+tîï/hğ	tî£ï.*ğtî£ï,íğrî®ï,íğtî£ï+¯ğtî(ï*rğtîï*rğyî.ï*rğ tî£ï)4ğ
+tî£ï'÷ğtî£ï&¹ğrî®ï&¹ğtî£ï%|ğtî(ï$>ğtîï$>ğyî.ï$>ğ tî£ï#ğtî£ï!Ãğrî®ï!Ãğtî£ï †ğtî(ïHğtîïHğyî.ïHğtî£ïğtîïğ	tî£ïÍğrî®ïÍğrî£ïğtî$…ïğyî%Ÿïğ#tî£ïRğtî(ï×ğyî€ï×ğtî£ïšğtî£ï\ğ	tî£ïğrîzïğtî£ïáğtî(ï¤ğyî€ï¤ğ!tî£ïfğrî·ï)ğ?rî·ïëğtî£ï®ğrîzï®ğtî£ïpğtî(ï
+3ğyî—ï
+3ğ         0        TVm$ÎšÉ Ê     ÎÔA         tóÊÎ°Î½         Fÿÿ    » ¼ ¾ º¤óà¯ µ · ¸ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (TransportMods.PRESS                     Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                                                    Jasmine Scanner Manual Appendix32if Start then [ nextState=INIT2;endcase]unless Load do nextState=LOADLOOP1endcase  case LOADLOOP2:ScanClk=1if Start then nextState=INIT2endcase  case LOADLOOP3:if Start then [ nextState=INIT2;endcase]if Load then nextState=LOADLOOP3endcase  case LOADLOOP4:if Start then [ nextState=INIT2;endcase]//we miss the last location with this here code [4/30]if ScanDone then nextState=WAITnextState=LOADLOOP1endcase  case INIT1: //wait for Startif Start then [ nextState=INIT2;endcase]nextState=INIT1endcase  case INIT2: //wait for Start to fallif Start then [ nextState=INIT2;endcase]nextState=WAITendcase  default: nextState=WAITendcase]let Scommand=0Scommand<<ScanClkPrime=not ScanClkScommand<<Recharge=RechargeScommand<<AnalogOnPrime=not AnalogOnScommand<<DCRestore=DCRestoreScommand<<ResetADPrime=not ResetADScommand<<ResetCtrsPrime=not ResetCtrsScommand<<ScanStart=ScanStartS147Mem!Saddr=nextStateHM7603Mem!State=Scommand  ] //end of nested for loopsWriteMem(S147Mem,"StateMem",8,511)WriteMem(HM7603Mem,"ControlMem",8,31)  ]   ô uî·ïfñğuîG?ïfñğô Ftî£ïbAğrîïbAğtî$¸ïbAğ	tî£ïağrîûïağtî£ï_Æğtî(ï^‰ğtî£ï]Kğ	tî£ï\ğrîzï\ğtî£ïZĞğtî(ïY“ğtî£ïXUğrîïXUğtî$¸ïXUğ	tî£ïWğrî®ïWğtî£ïUÚğtî(ïTğtî£ïS_ğrîïS_ğtî$¸ïS_ğ	rî·ïR"ğ6tî£ïPäğrîïPäğrî£ïO§ğtî£ïNiğtî(ïKîğyî¦ïKîğtî£ïJ±ğrîÉïJ±ğtî$¸ïJ±ğ	rî£ïIsğtî£ïH6ğtî(ïFøğyî¦ïFøğtî£ïE»ğrîïE»ğtî$¸ïE»ğ	rî£ïD}ğtî£ïC@ğtî(ïBğrî©ïBğtî£ï@Åğtî(ï?‡ğtî(ï>Jğtî(ï=ğ"tî(ï;Ïğtî(ï:‘ğ$tî(ï9Tğtî(ï8ğ"tî(ï6Ùğ&tî(ï5›ğtî(ï4^ğtî(ï3 ğtî­ï1ãğtî2ï0¥ğ"tî2ï/hğ%tî·ï.*ğÿ        "        TVm$"ÎšÉ Ê     ÎÔG         tóÊÎ°Î½         Fÿÿ    » ¼ ¾ º¤óà¯ µ · ¸ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (TransportMods.PRESS                     Ò  €  d          •F ½    F  BootMesa.Scratch.                                                                                                                                                              Jasmine Scanner Manual Appendix33Appendix 3. RevisionsA3.1REV Gb: modifications to original PC boardsAnalog BoardConnect IC4 pin 21 to 22Cut trace to IC2 pin 5 (was connected to -5V)Connect IC2 pin 5 to C14 (GND)(C14 is now useless with both legs connected to GND)Add .1uF cap on IC8 from pin 5 to 8Add .01uF cap on IC5 from pin 1 to 13Remove resistors R20 and R21Add 10K pot with adjusting screw at top as follows:top leg to top hole of R21middle leg to bottom hole of R21bottom leg to top hole of R20(no connection to bottom hole of R20)initial setting is about 5KSubstitute 1M resistor for R12 (marked 80K)Substitute 820 ohm resistor for R10 (marked 5.1K)(NOTE: this resistor is the final gain set.  Increasing theresistance will increase the output values)Digital Boardreverse both 6.8uF caps (pc artwork is backwards)Cut the etch from Cable connection 19 to #6B pin 5Add wire from #1B pin 5 to #6B pin 5Add wire from #1B pin 1 to #1B pin 4Add wire from #1B pin 4 to #1B pin 14Add wire from #1B pin 3 to #3B pin 9Add wire from #1B pin 2 to Cable connection 19D0 NOTE: The D0 provides TTL termination on its printer port,but the F3341 FIFO is a MOS device.  For proper D0 operation,replace the F3341 with the pin-compatible MMI67401 TTL FIFO.The MMI67401 will work on Altos, but costs ten times as much.NOTE: #1B Must be an S74, not LS as indicated#6B may want to be an S138, although the twisted pair cable andsynchronizer modifications should allow the LS138 to work.Light BarRemove center two bulbsAdd foam tape to front of light bar base, to elevate lights   ô uî·ïfñğuîG?ïfñğô Xqî#Åïbğuî·ï_ğô wî­ï_ğ+wî·ïYğuî2ïUığuî2ïTyğ-uî2ïRõğuî­ïQqğ4uî2ïOíğ#uî2ïNiğ%uî2ïLåğuî2ïKağ3uî­ïIİğuî­ïHYğ uî­ïFÕğuî­ïEQğ%uî­ïCÍğuî2ïBIğ+uî2ï@Åğ1uî­ï?Ağ;uî­ï=¼ğ+ô Xwî·ï7¬ğuî2ï4¤ğ1uî2ï3 ğ2uî2ï1œğ$uî2ï0ğ$uî2ï.”ğ%uî2ï-ğ$uî2ï+Œğ.uî2ï(„ğ=uî2ï' ğ=uî2ï%|ğ<uî2ï#øğ=uî2ï ïğ-uî2ïkğ?uî2ïçğ:wî·ï[ğ	uî2ïSğuî2ïÏğ;ÿ                TVm$ ËÎšÉ Ê     ÎÔK          tóÊÎ°Î½         Xÿÿ    » ¼ ¾ º¤óà¯ µ · ¸ê   (Ja    LOGO
+
+‘
+’
+“
+”
+•
+–
+        
+TIMESROMANöZø   
+     
+TIMESROMANÎx¹   ©       	HELVETICA       @         
+TIMESROMANDESTFONT         
+TIMESROMAN            
+     GRAY                      
+TIMESROMAN
+’
+“
+”
+•
+  
+     HIPPOial =²¼ç rang   
+    	 
+TIMESROMAN
+“
+”
+•
+–
+      
+ ARROWS    P 0        
+     	HELVETICA   €  d        	HELVETICA           
+     	HELVETICA·ïLåvî­       GATES                       TEMPLATE
+•
+–
+—
+˜
+™
+   @             ¢     ©   $ 
+ ³   .  o   6     A  Í   L  ë   O  B   W 
+ •   a  —   d  f   l 	 Á   u  v   € 	 †   ‰  œ   ‹  ù   ¤  ú   ¨  K   Å  ò   İ  ×   ù 
+ Û    ş    {    ‘     ¤  -    /  `  6  ¬  :  ë  A  Ø  G  Í  K  & O  ÿÎšÉ Ê     ÎÔO    "    tóÊÎ°Î½         Xÿÿ    » ¼ ¾ º¤óà¯ µ · ¸ê   (JasmineABravo.PRESS                       (JasmineManual.PRESS                       (TransportMods.PRESS                     Ò  €  d          •F ½    F  BootMj/R "P   •À€}  ÿÿÿÿ t                                                                                                                                                                                                                                      JasmineManual.PRESS                                Maleson                        12-Aug-80 15:38:45                                                                                                                                                         

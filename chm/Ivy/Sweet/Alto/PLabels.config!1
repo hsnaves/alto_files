@@ -1,0 +1,1 @@
+-- PLabels.config-- edited by Sweet on  3-Aug-84 13:22:31PLabels: CONFIGURATION  LINKS: CODE  IMPORTS     ImageDefs, IODefs, MiscDefs, Press, Storage, StreamDefs,     SegmentDefs, String, StringDefs, SystemDefs, TimeDefs   CONTROL PrintLabels =BEGINPressOut;PressFontWidths;PrintLabels;END.

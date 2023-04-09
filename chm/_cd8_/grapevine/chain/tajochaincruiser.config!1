@@ -1,0 +1,1 @@
+-- File: TajoChainCruiser.config - last edit:-- HGM, 14-Nov-84 11:14:26-- Hankins.PA          20-Sep-84  9:29:23TajoChainCruiser: CONFIGURATION  IMPORTS FormSW, Heap,     Inline, MFile, Put, Runtime, Space, SpecialMFile, Tool   CONTROL NewChainCruiser =  BEGIN  NewChainCruiser;	  BitMap;  StorageGVImpl;END.

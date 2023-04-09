@@ -1,0 +1,1 @@
+* Standard preamble for xxxOccupied.mc files produced by MicroD* last edited April 23, 1979  3:41 PM	Insert[D0Lang];	NoMidasInit;LangVersion;MultDIB;

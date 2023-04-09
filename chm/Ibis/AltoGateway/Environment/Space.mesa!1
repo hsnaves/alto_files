@@ -1,0 +1,1 @@
+-- File: Space.Mesa,  Last Edit: HGM  October 19, 1980  10:43 PMSpace: DEFINITIONS =  BEGIN  Handle: TYPE = POINTER;  nullHandle: Handle;  wordsPerPage: CARDINAL = 256;  END.

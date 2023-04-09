@@ -1,0 +1,1 @@
+-- File: Indirect.mesa,  Last Edit: HGM  October 23, 1980  5:26 AMIndirect: DEFINITIONS =  BEGIN  GetParmFileName: PROCEDURE RETURNS [STRING];  END.

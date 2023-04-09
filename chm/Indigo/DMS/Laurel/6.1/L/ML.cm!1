@@ -1,0 +1,1 @@
+Bind /-p laurel/cType Laurel.errlogBoot NoSwapBcd[] Build["Laurel"]Laurel.image

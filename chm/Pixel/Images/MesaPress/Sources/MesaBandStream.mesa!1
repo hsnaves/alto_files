@@ -1,0 +1,1 @@
+-- MesaBandStream.mesa-- Last changed by Ken Pier,           March 11, 1982  11:52 AMMesaBandStream: DEFINITIONS = {InitBandFileBuffer:  PROC[];GetBand: PROC[to: POINTER, words: CARDINAL] RETURNS [wordsRead: CARDINAL];SkipBand: PROC[words: CARDINAL] RETURNS [wordsSkipped: CARDINAL];}.

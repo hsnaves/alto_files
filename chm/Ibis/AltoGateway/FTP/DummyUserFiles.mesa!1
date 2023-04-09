@@ -1,0 +1,1 @@
+-- DummyUserFiles.mesa,  Edit: HGM July 31, 1980  5:43 PM-- Copyright  Xerox Corporation 1979, 1980DIRECTORY  FTPPrivateDefs;DummyUserFiles: PROGRAM EXPORTS FTPPrivateDefs =  BEGIN  UserFilesLoaded: PUBLIC PROCEDURE = BEGIN END;  END.

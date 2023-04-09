@@ -1,0 +1,1 @@
+copy microcodeimage.binary _ jasmc.sbTableCompiler MicrocodeImage.binary/m D0MicrocodeDefs/iCopy JasMC.BCD _ MicrocodeImage.BCD

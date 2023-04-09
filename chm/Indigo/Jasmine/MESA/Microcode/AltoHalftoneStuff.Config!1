@@ -1,0 +1,1 @@
+DIRECTORY	MicrocodeImage: FROM "AltoHalftoneImage";AltoHalftoneStuff: CONFIGURATION 	IMPORTS SegmentDefs	EXPORTS AltoMicrocodeDefs, RamDefs	CONTROL RamLoad =BEGINMicrocodeImage;RamLoad;END.

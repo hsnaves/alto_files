@@ -1,0 +1,1 @@
+-- RemoteTTY.config-- Edited by Brotz, June 25, 1982  5:20 PMRemoteTTY: CONFIGURATION  IMPORTS Answer, ccD, dsD, Editor, exD, inD, Inline, intCommon, opD, Process, PupStream,    Storage, Stream, String, vmD  CONTROL ChatServer = BEGINLaurelTTYInterface;LaurelTTYEditor;ChatServer;END.  -- of RemoteTTY --(635)\f1

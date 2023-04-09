@@ -1,0 +1,1 @@
+-- Transport Mechanism: back door interface to NameInfo-- [Juniper]<DMS>User>NameInfoSpecialDefs.mesa-- Andrew Birrell  28-Aug-80 13:52:00NameInfoSpecialDefs: DEFINITIONS =BEGINCleanUp:	PROC;END.

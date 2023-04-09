@@ -1,0 +1,1 @@
+-- file:  InsertMailDefs.Mesa-- edited by Brotz, December 15, 1980  11:29 AMDIRECTORY  vmD: FROM "VirtualMgrDefs";InsertMailDefs: DEFINITIONS =BEGINInsertVMInMailFile: PROCEDURE  [message: vmD.VirtualMessagePtr, tocIndex: vmD.TOCIndex _ 0];END.  -- of InsertMailDefs --(635)\f1

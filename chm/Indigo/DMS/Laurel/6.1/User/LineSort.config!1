@@ -1,0 +1,1 @@
+-- LineSort.config-- Created by Schroeder.-- Edited by Brotz, 23 Nov. 1981 9:17 am PST (Monday)-- Edited by Taft, May 9, 1983  6:51 PMLineSort: CONFIGURATION  IMPORTS AltoFile, csD, DiskIODefs, IODefs, Storage, String, VMDefs  CONTROL LineSorter = BEGINBTreeSupport;BTree2;BTree;LineSorter;END.  -- of LineSort --

@@ -1,0 +1,1 @@
+-- LocalTTY.config-- Edited by Brotz, June 25, 1982  5:19 PMLocalTTY: CONFIGURATION  IMPORTS Answer, ccD, dsD, Editor, exD, inD, Inline, intCommon, IODefs, opD, Storage,    String, StreamDefs, vmD  CONTROL LocalTTYDriver = BEGINLaurelTTYInterface;LaurelTTYEditor;LocalTTYDriver;END.  -- of LocalTTY --(635)\f1

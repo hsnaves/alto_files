@@ -1,0 +1,1 @@
+-- DummyServerMail.mesa,  Edit: HGM July 31, 1980  5:45 PM-- Copyright  Xerox Corporation 1979, 1980DIRECTORY  FTPPrivateDefs;DummyServerMail: PROGRAM EXPORTS FTPPrivateDefs =  BEGIN  ServerMailLoaded: PUBLIC PROCEDURE = BEGIN END;  END.

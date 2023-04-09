@@ -1,0 +1,1 @@
+IfsEventMgrInit.bcpl IfsEventMgr.bcpl ^^IfsRs.decl IfsRsMgrInit.bcpl ^IfsRsMgrRes.bcpl IfsRsMgrSwap.bcpl IfsRsMgrRare.bcpl IfsRsMgrOEP.bcpl ^^IfsCtxMgr.bcpl IfsContextInit.bcpl ^

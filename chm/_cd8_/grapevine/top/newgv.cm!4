@@ -1,0 +1,1 @@
+-- Copyright (C) 1984, 1985  by Xerox Corporation. All rights reserved. -- NewGV.cm  -  Bind and MakeBoot part of MakeGV.cm-- HGM, 17-Sep-85 11:03:54Binder VMem ServerMisc Server GVDLion/-cMakeBoot GVDLion[Parm: GV, Parm: Pilot, Parm: GV, bcd: Server]/d

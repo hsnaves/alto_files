@@ -1,0 +1,1 @@
+TFU createfile/c Press.bits 2000TFU createfile/c Press.scratch 1000TFU createfile/c Press.bands 1000TFU createfile/c Press.fonts 1000TFU createfile/c Press.lo1 100TFU createfile/c Press.lo2 100TFU createfile/c Press.meter 4//Don't forget to put on a real press.fonts!!

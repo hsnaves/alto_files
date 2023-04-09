@@ -1,0 +1,1 @@
+-- File: File.Mesa,  Last Edit: HGM  September 25, 1980  5:04 PMDIRECTORY  AltoFileDefs USING [FP, NullFP],  SegmentDefs USING [AccessOptions];File: DEFINITIONS =  BEGIN  Capability: TYPE = RECORD [    fID: AltoFileDefs.FP, permissions: SegmentDefs.AccessOptions];  nullCapability: Capability = [AltoFileDefs.NullFP, 0];  END.

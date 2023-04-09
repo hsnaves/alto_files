@@ -1,0 +1,1 @@
+-- ByteBltTest.config-- last modified May 18, 1983  5:05 PM by TaftByteBltTest: CONFIGURATION  IMPORTS ByteBltDefs, csD, Inline, IODefs, LaurelExecDefs, Process, TimeDefs  CONTROL ByteBltTestImpl =  BEGIN  ByteBltTestImpl;  RandomCardImpl;  END.

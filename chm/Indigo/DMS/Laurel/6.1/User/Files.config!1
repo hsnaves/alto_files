@@ -1,0 +1,1 @@
+-- Files.config-- written by Barth:  September 22, 1980  4:00 PM-- edited by Brotz:  November 19, 1981  10:02 AMFiles: CONFIGURATION  IMPORTS Core, csD, DirectoryDefs, ImageDefs, IODefs, LaurelExecDefs, SegmentDefs,    Storage, StreamDefs, String, TimeDefs, VMDefs, VMSpecial  CONTROL FilesMain =BEGINFilesMain;Match;END.  -- of Files.config --(635)\f1

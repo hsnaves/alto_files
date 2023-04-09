@@ -1,0 +1,1 @@
+-- File: SequinImpl.config-- Last edited by Levin:   2-Jul-81  9:09:37SequinImpl: CONFIGURATION LINKS: CODE  IMPORTS BufferDefs, FrameOps, ProcessDefs, PupDefs, Storage, Time  EXPORTS Sequin  CONTROL SequinImplA =  BEGIN  SequinImplA;  SequinImplB;  END.

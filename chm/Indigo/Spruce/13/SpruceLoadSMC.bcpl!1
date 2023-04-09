@@ -1,0 +1,1 @@
+//  LoadShowMC - initialization routine for OVInterpretget "SpruceMisc.d"   external LoadShowMC	// defined here   external [ InitRam; SRamImage ]let LoadShowMC() be InitRam(SRamImage, ShowRMR)// January 30, 1980 2:20 PM, invented

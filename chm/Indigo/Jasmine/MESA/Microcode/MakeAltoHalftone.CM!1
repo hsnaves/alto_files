@@ -1,0 +1,1 @@
+mu bankmc.mupackmu bankmc.mb bankmc.brtablecompiler MakeModule["bankmc.br","MicrocodeImage","AltoMicrocodeDefs"]Copy AltoHalftoneImage.BCD _ MicrocodeImage.BCDbind altohalftonestuff/cbind halftone/c

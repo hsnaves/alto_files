@@ -1,0 +1,1 @@
+// BackupAltoWorld.cm, HGM, March 14, 1981  1:00 PM// Save all the source files without thinking about anything...Delete *$Real.image // Reload Executive to avoid "Emergencies"@DeleteAltoThings.cm@WriteDirectory.~Real.imageFTP Idun Dump/C StarOtherAlto.dm *.config *.cm source.* object.* *.bootmesaFTP Idun Dump/C StarSourcesAlto.dm *.mesa

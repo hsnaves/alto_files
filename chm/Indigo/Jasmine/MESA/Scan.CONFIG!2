@@ -1,0 +1,1 @@
+DIRECTORY	MicrocodeImage: FROM "JasMC";Scan: CONFIGURATION 	IMPORTS ImageDefs, IODefs, MemoryOps, MiscDefs, SegmentDefs, StreamDefs, StringDefs, SystemDefs,		XMesaDefs 	CONTROL ScanImpl =BEGINGraphics;JasmineUtil;JasmineCalibrate;Microcode;MicrocodeImage;AltoHalftoneStuff; --includes halftone, jasmine driversHalftoneImpl;ScanImpl;END.

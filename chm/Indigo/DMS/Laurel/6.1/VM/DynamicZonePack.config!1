@@ -1,0 +1,1 @@
+-- File: DynamicZonePack.config-- Last edited by Levin:   5-Oct-80 18:49:30DynamicZonePack: CONFIGURATION LINKS: CODE  IMPORTS FSPDefs, SegmentDefs, Storage, StringDefs, SystemDefs  EXPORTS DynamicZone =  BEGIN  DynamicZoneHot;  DynamicZoneCold;  END.

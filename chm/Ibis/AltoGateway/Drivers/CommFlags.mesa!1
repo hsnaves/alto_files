@@ -1,0 +1,1 @@
+-- File: CommFlags.Mesa,--  Last Edit: HGM  January 8, 1981  1:37 AMCommFlags: DEFINITIONS =  BEGIN  doStats: BOOLEAN = TRUE;  doErrors: BOOLEAN = TRUE;  doDebug: BOOLEAN = doStats;  doStorms: BOOLEAN = doStats; -- Lightning in Router(s)  doShow: BOOLEAN = doStats; -- Show Pups  doSpy: BOOLEAN = doStats; -- Spy on arriving Packets  END.

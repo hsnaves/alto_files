@@ -1,0 +1,1 @@
+-- File: HeapSortDefs.Mesa,  Last Edit: HGM  July 4, 1979  12:01 PMHeapSortDefs: DEFINITIONS =  BEGIN  HeapSort: PROCEDURE [    base: POINTER, length: CARDINAL,    less: PROCEDURE [UNSPECIFIED, UNSPECIFIED] RETURNS [BOOLEAN]];  END.

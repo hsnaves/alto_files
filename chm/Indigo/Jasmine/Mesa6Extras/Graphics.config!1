@@ -1,0 +1,1 @@
+--WATCH OUT:--  "CONTROL Long" forces the BOOLEAN "DMachine" to be set correctly--  before any BITBLT functions are calledGraphics: CONFIGURATION	IMPORTS	StreamDefs,SystemDefs,StringDefs,SegmentDefs	EXPORTS LongDefs, GraphicsDefs	CONTROL	Long =BEGINBitmapFns;BoxFns;TextFns;Long;END.

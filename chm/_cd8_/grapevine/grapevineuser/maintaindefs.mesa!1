@@ -1,0 +1,1 @@
+-- Transport mechanism - public DEFS for Maintain-- [Indigo]<Grapevine>Maintain>MaintainDefs.mesa-- Andrew Birrell  18 Jan. 1982 10:04 am PST (Monday)DIRECTORY  GlassDefs USING [Handle];MaintainDefs: DEFINITIONS =  BEGIN  DoIt: PROC [str: GlassDefs.Handle, user, userPwd: STRING];  END.

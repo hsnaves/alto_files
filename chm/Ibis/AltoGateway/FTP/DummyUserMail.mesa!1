@@ -1,0 +1,1 @@
+-- DummyUserMail.mesa,  Edit: HGM July 31, 1980  5:44 PM-- Copyright  Xerox Corporation 1979, 1980DIRECTORY  FTPPrivateDefs;DummyUserMail: PROGRAM EXPORTS FTPPrivateDefs =  BEGIN  UserMailLoaded: PUBLIC PROCEDURE = BEGIN END;  END.

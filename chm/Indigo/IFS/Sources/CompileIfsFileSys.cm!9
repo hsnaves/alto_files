@@ -1,0 +1,1 @@
+Bcpl/fo IfsOpen.bcpl IfsGetCreate.bcpl IfsCreate1.bcpl IfsCreate2.bcpl IfsExtend.bcpl IfsDDMgrRes.bcpl IfsDDMgrSwap.bcpl IfsDisksOEP.bcpl IfsBTreeRes.bcpl IfsBTreeSwap.bcpl IfsBTreeOEP.bcpl IfsDirOpen.bcpl IfsDirDelRen.bcpl IfsDirLookup.bcpl IfsDirParse.bcpl IfsDirUtil.bcpl IfsDirCheck.bcpl IfsDirAdmin.bcpl IfsDirOEP.bcplAsm/e IfsDirKey.asmAsm/e IfsDirCompareRecords.asm

@@ -1,0 +1,57 @@
+
+; IfsBcplTricks.asm; Copyright Xerox Corporation 1979, 1980; Last modified February 29, 1980  7:22 PM by Taft; - use new XMLoad instruction, make it work on non-XM Altos; Last modified by Butterfield, October 10, 1979  8:15 PM; - FramesCaller, make it work for extended calls - 10/10; - swat extended calls to FrameSize, ReturnTo, and GotoLabel - 10/10; - RetryCall, make extended call retryable - 10/9/79; Derived from BcplTricks.asm:; Last modified July 13, 1979  10:23 PM by TaftcallersFrame = 0savedPC = 1temp = 2extraArguments = 3XARGS = -4XJMP = -3XPC = -2.dusr XJMP0 = 64034.dusr XMLoad = 63420	; AC0 _ (@AC1 in bank AC0).dusr XMStore = 63421	; (@AC1 in bank AC0) _ AC3.dusr swat = 77400getframe = 370return = 366
+.ent FrameSize, MyFrame.ent CallersFrame, FramesCaller
+.ent CallFrame, GotoFrame
+.ent CoCall, CoReturn
+.ent ReturnTo, ReturnFrom
+.ent GotoLabel, RetryCall
+	.srel
+FrameSize:	.FrameSize
+MyFrame:	.MyFrame
+CallersFrame:	.CallersFrameFramesCaller:	.FramesCaller
+CallFrame:	.CallFrame
+GotoFrame:	.GotoFrame
+CoCall:		.CoCall
+CoReturn:	.CoReturn
+ReturnTo:	.ReturnToReturnFrom:	.ReturnFromGotoLabel:	.GotoLabelRetryCall:	.RetryCall
+
+	.nrel
+; FrameSize(proc) returns the frame size required by proc.
+.FrameSize:	sta 3 savedPC,2	mov 0 3	lda 0 0,3	lda 1 cMinus4	and 1 0	lda 1 cXJMP0	sne 0 1	 swat
+	lda 0 2,3
+	jmp DonecMinus4: -4cXJMP0: XJMP0; MyFrame() returns pointer to current frame.
+.MyFrame:	mov 2 0
+	jmp 1,3
+; CallersFrame([f]) returns pointer to frame that calls f.; Default f=current frame
+.CallersFrame:	sta 3 savedPC,2	lda 1 0,3		;get number of arguments	snz 1 1	 mov 2 0		;use present frame	mov 0 3	lda 0 callersFrame,3	jmp Done; FramesCaller(foo) returns the address to which the caller of; the frame foo sent control, provided that he made the call; with a jsris or jsrii, and that there has been no monkey-business; with the frame subsequently.; If the call was not made with a jsris or jsrii it returns 0.; If foo is omitted it defaults to the caller's frame..FramesCaller:	sta 3 savedPC,2	lda 1 0,3	snz 1 1			; default the argument?	 mov 2 0	mov 0 3			; 3 has frame in question	lda 3 callersFrame,3	; get frame of caller	sta 3 temp,2		; save the frame in temp in case jsris; figure out whether normal or extended caller	sub 0 0			; assume normal (bank 0)	lda 1 cXARGS	add 3 1	lda 3 savedPC,3	se 1 3	 jmp FcGetCallInst	lda 0 XJMP-XARGS,3	; extended caller, set 0 to XJMP & 3	lda 1 c3	and 1 0	lda 3 XPC-XARGS,3	; set 3 to XPC - 1	adc 1 1	add 1 3; compute the address of the jsrxx instruction using ac3 for the pcFcGetCallInst:	sta 0 extraArguments 2	; save bank number	adc 1 1			; backup the pc	add 3 1	XMLoad			; get the call instruction; find out what the opcode is	lda 3 opJsris	sub 3 0	lda 3 cLmask	and 0 3 szr	 jmp NotJsris; calling instruction was jsris	sta 3 extraArguments 2	; jsris gets indirect word from bank zero	lda 1 temp,2		; jsris uses stack pointer for base	jmp FcFinishUpNotJsris: lda 3 opJsriiMinusJsris	sub 3 0;	lda 3 cLMask		; opJsriiMinusJsris = cLMask	and 0 3 szr	 jmp NotJsrii; calling instruction was jsrii, uses instruction address for baseFcFinishUp:; ac0 now has just the address field -- the opcode is zero.; the next three instructions extend the sign of the address field, now in 0	lda 3 c200	andzl 0 3	sub 3 0; now add in the base (PC or frame) specified by the opcode	add 0 1			; address of indirect word	lda 0 extraArguments 2	; bank number	XMLoad			; get the indirect word	mov 0 3			; ac0 now has address of static	lda 0 0,3		; get contents of static	jmp DoneNotJsrii: mkzero 0 0	; return zero if can't recognize opcode	jmp Donec3:		3c200:		200opJsriiMinusJsris:	; (jsrii .)-(jsris 0) -- assembler chokes on thiscLmask:		177400cRmask:		377opJsris:	jsris 0
+; CallFrame(destframe[, arg 1[, arg 2]]); Sends control to the specified frame and links it back to this one.
+.CallFrame:	sta 3 savedPC,2
+	mov 0 3
+	sta 2 callersFrame,3
+Callf1:	mov 1 0
+	lda 1 extraArguments,2
+Callf2:	mov 3 2Done:
+	lda 3 savedPC,2
+	jmp 1,3
+; GotoFrame(destframe[, arg 1[, arg 2]])
+; Just like CallFrame, but doesn't plant the return link.; This is like Mesa's transfer.
+.GotoFrame:	sta 3 savedPC,2
+	mov 0 3
+	jmp Callf1
+
+; CoCall(a, b) = CallFrame(MyFrame()>>F.callersFrame, a, b)
+.CoCall:	sta 3 savedPC,2
+	lda 3 callersFrame,2
+	sta 2 callersFrame,3
+	jmp Callf2
+; CoReturn(a, b)
+; Just like CoCall, but doesn't plant the return link
+.CoReturn:	sta 3 savedPC,2
+	lda 2 callersFrame,2	jmp Done
+
+; ReturnTo(label); Does a return to the specified label
+.ReturnTo:	lda 2 callersFrame,2
+	mov 0 3
+	jmp 0,3; GotoLabel(frame, label, v); Sends control to the specified label in the specified frame,; and passes v in AC0.GotoLabel:	mov 0 3	lda 0 extraArguments,2	mov 3 2	mov 1 3	jsr 0,3	;in case proc head, must find #args in @ac3	 1; RetryCall(p1, p2); Repeats the call which appears to have given control to the caller; of RetryCall with p1 and p2 as the first two arguments, and the other; arguments unchanged.RetryCall:	nop	lda 2 callersFrame,2	lda 3 savedPC,2	sta 0 temp,2	lda 0 cXARGS	add 2 0	sne 3 0	 jmp RetryXCall	lda 0 temp,2	jmp -1,3RetryXCall:	dsz XPC,2	dsz XPC,2	lda 0 temp,2	jmp XJMP,2cXARGS:	XARGS
+; ReturnFrom(fnOrFrame, v); Looks for a frame f which is either equal to fnOrFrame,; or has FramesCaller(f) equal to fnOrFrame.  It then cuts back; the stack to f and simulates a return from f with v as the value.; If it runs into trouble it returns 0; local variables for this routinefnOrFrame = 4v = 5nextFrame = 6count = 7.ReturnFrom:	sta 3 savedPC,2	jsr @getframe	 count+1	 nop	lda 0 cRmask	sta 0 count,2	mov 2 3; the frame we just looked at is in 3RfLoop:	lda 0 callersFrame,3; if we've looked at too many frames, give up	dsz count 2; if the next frame is 0, give up	snz 0 0	 jmp RfFailed; if the next frame is equal to the last one, give up	sne 0 3	 jmp RfFailed	sta 0 nextFrame,2; is the next frame equal to fnOrFrame?	lda 1 fnOrFrame,2	sne 0 1	 jmp FoundFrame; is its caller equal to fnOrFrame?	jsr .FramesCaller	 1	lda 1 fnOrFrame,2	sne 0 1	 jmp FoundFrame; it's not the one we want; charge on	lda 3 nextFrame,2	jmp RfLoopFoundFrame: lda 0 v,2	lda 2 nextFrame,2	lda 2 callersFrame,2	;get his caller (return FROM him)	jmp DoneRfFailed: mkzero 0 0	jsr @return
+	.end
